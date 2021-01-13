@@ -1,0 +1,8 @@
+{{ if gt (len .Entry.Incoming) 0}}
+<div class='incoming'>
+  ⇣ ({{len .Entry.Incoming}})
+  {{range $incoming := .Entry.Incoming}}
+  <a href="./{{$incoming.Filename}}.html">{{$incoming.Name}}</a>&nbsp;
+  {{end}}
+</div>
+{{end}}

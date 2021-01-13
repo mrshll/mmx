@@ -1,0 +1,7 @@
+<article>
+  <a name="{{.Entry.Filename}}" href="{{.Entry.Parent.Filename}}.html#{{.Entry.Filename}}">
+    <strong><em>{{.Entry.Name}}</em> - {{.Entry.Bref}}</strong>
+  </a>
+  {{.Entry.Body | noescape}}
+  {{template "incoming.html" .}}
+</article>

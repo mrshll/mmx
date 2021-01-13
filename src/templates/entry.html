@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+{{template "head.html" .}}
+
+<body>
+  <div class='content'>
+    {{template "header.html" .}}
+    <h2>{{.Entry.Bref | noescape}}</h2>
+    {{.Entry.Body | noescape}}
+    {{template "incoming.html" .}}
+  </div>
+</body>
+
+{{template "footer.html" .}}
+
+</html>
+<html>

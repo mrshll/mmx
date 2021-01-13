@@ -1,0 +1,69 @@
+Home
+  HOST : home
+  BODY : 
+
+Research
+  HOST : home
+  BREF : Notes on topics of interest.
+  BODY :
+    <p>test</p>
+
+Gardening
+  HOST : research
+  BREF : Learning to grow vegetables and flowers in raised beds
+  BODY : 
+    <p>under construction, this is one of my new {projects} </p>
+
+About
+  HOST : home
+  BREF : 
+  BODY :
+    <p>
+      I'm 29 and live in Medford, MA. I grew up in Nashville, TN.
+    </p>
+    <p>
+      I make {music|short songs}, am learning to grow living things, and am trying to
+      make writing a more regular activity. I used to be a strong rock climbing
+      -- you could find me in the local rock gym on most days; these days you
+      can find me in the Middlesex Fells running on the trails.
+    </p>
+    <p>
+      About 5 years ago, I found my work misaligned with my concept of impact.
+      Shortly after, I started Upstream Tech with my pal {https://twitter.com/aldenks|Alden Keefe Sampson} to see
+      if we could use our skills to aid efforts in environmental conservation and
+      renewable energy. It's going well so far, we think. We really enjoy our work,
+      are humbled by those we work with, and the team is more than {https://upstream.tech/team|20 amazing people}. Along the way, I have learned a lot about the complexities -- and
+      context -- of water/climate/energy, the excitement and terrors of growing a
+      remote team, and (in the most cliche way possible) myself.
+    </p>
+
+Self-sufficient informatics
+  HOST : research
+  BREF : Communication, computing, and creation.
+  BODY : 
+    <p>Sparked by reading {projects}</p>
+
+Projects
+  HOST : home
+  BREF : na
+  BODY : 
+    na
+
+Building a static site compiler
+  HOST : projects
+  BREF : An exercise in organization, self-built tooling, and learning GoLang
+  BODY : 
+    <p>I've historically defaulted to the technology du jour to build and rebuild
+    my personal and company webpages. It's worked fine - there have been
+    moments of fantastic efficiency, and others of abysmal reverse
+    engineering of an errant Gatsby plugin.</p>
+
+    <p>In the spirit of {self-sufficient informatics}, and heavily inspired
+    by others on the {https://webring.xxiivv.com/|webring}, I sought out to
+    simplify my dependencies, build something myself, and learn some new
+    technologies in the process.</p>
+
+Music
+  HOST : projects
+  BREF : foo
+  BODY : 
