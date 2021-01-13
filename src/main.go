@@ -317,7 +317,7 @@ func main() {
 			continue
 		}
 
-		filepath := "../site/" + entry.Filename + ".html"
+		filepath := "../docs/" + entry.Filename + ".html"
 		f, err := os.OpenFile(filepath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 		check(err)
 
