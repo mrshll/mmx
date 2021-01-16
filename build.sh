@@ -7,4 +7,6 @@ cp -r links/* docs/links/
 mkdir -p docs/img
 cp -r data/img/* docs/img/
 
+cp CNAME docs/CNAME
+
 cd src && go run main.go && cd ../
