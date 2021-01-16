@@ -1,9 +1,9 @@
 #!bin/sh
-mkdir -p doc
+mkdir -p docs
 mkdir -p links
-cp -r links/* doc/links/
+cp -r links/* docs/links/
 
 mkdir -p img
-cp -r data/img/* doc/img/
+cp -r data/img/* docs/img/
 
 cd src && go run main.go && cd ../

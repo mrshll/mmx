@@ -400,7 +400,7 @@ func renderEntryHTML(e Entry) string {
 	return htmlStr
 }
 
-func makeHome(entries []Entry) string {
+func makeIndex(entries []Entry) string {
 	sortedEntries := make([]Entry, len(entries))
 	copy(sortedEntries, entries)
 	sort.Slice(sortedEntries, func(i, j int) bool {
@@ -463,15 +463,15 @@ func main() {
 			continue
 		}
 
-		filepath := "../doc/" + entry.Filename + ".html"
+		filepath := "../docs/" + entry.Filename + ".html"
 		f, err := os.OpenFile(filepath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 		check(err)
 
 		fmt.Println(i, filepath)
 		var htmlStr string
-		if entry.Filename == "home" {
+		if entry.Filename == "index" {
 			// special case to render timeline
-			htmlStr = makeHome(entries)
+			htmlStr = makeIndex(entries)
 			entry.Body = htmlStr
 		}
 		htmlStr = renderEntryHTML(entry)

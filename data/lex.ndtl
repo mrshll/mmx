@@ -1,10 +1,10 @@
-Home
-  HOST : home
+Index
+  HOST : index
   BODY : 
 
 
 About
-  HOST : home
+  HOST : index
   BREF : 
   BODY :
     ![A person walking towards a bamboo forest](./img/redturtle024.jpg)
@@ -24,7 +24,7 @@ About
     remote team, and (in the most cliche way possible) myself.
 
 Research & Notes
-  HOST : home
+  HOST : index
   BREF : Notes on topics of interest.
   BODY :
 
@@ -35,7 +35,7 @@ Self-sufficient informatics
     <p>Sparked by reading {projects}</p>
 
 Projects
-  HOST : home
+  HOST : index
   BREF : na
   BODY : 
     na
@@ -58,7 +58,7 @@ mmx
 
     The site's compiler is written in {https://golang.org|Go}. It can generate a graph of entries from a modified version of {https://wiki.xxiivv.com/site/indental.html|Indental} as well as markdown with frontmatter. 
     
-    Entries have names, hosts, titles, and bodies. They optionally have dates. A host can optionally embed its children - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {home} is a special case that has its own generator function to render the timeline.
+    Entries have names, hosts, titles, and bodies. They optionally have dates. A host can optionally embed its children - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {index} is a special case that has its own generator function to render the timeline.
 
     Go's {https://golang.org/pkg/text/template/|templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string (it's a "functional component" after all).
 
