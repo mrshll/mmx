@@ -6,7 +6,12 @@
 <body>
   <div class='content'>
     {{template "header.html" .}}
-    <h2>{{.Entry.Bref | noescape}}</h2>
+
+    {{if not .Entry.Date.IsZero}}
+    <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
+    {{end}}
+
+    <h5>{{.Entry.Bref | noescape}}</h5>
     {{.Entry.Body | noescape}}
     {{template "incoming.html" .}}
   </div>

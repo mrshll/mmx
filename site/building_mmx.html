@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<!DOCTYPE html>
+
+<head>
+  <meta name='description' content='Building mmx - An exercise in self-built tooling and learning GoLang' />
+  <meta name='thumbnail' content='' />
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link rel='alternate' type='application/rss+xml' title='RSS Feed' href='./links/rss.xml' />
+  <link rel='stylesheet' type='text/css' href='./links/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='./links/skeleton.css'>
+  <link rel='stylesheet' type='text/css' href='./links/main.css'>
+  <title>mrshll.com - Building mmx</title>
+</head>
+
+<body>
+  <div class='content'>
+    <header>
+  <h1>
+    <a href='home.html'>
+      mrshll.com
+    </a>
+  </h1>
+</header>
+
+<nav>
+  <nav><ul><li><a href='garden.html'>Garden/</a><mark></li><li><a href='music.html'>Music/</a><mark></li><li><a href='upstream_tech.html'>Upstream Tech/</a><mark></li><li><mark><a href='mmx.html'>mmx/</a><mark></li></ul><ul><li><mark><a href='building_mmx.html'>Building mmx/</a><mark></li></ul><ul></ul></nav>
+</nav>
+
+<div style='color: #ccc; margin: 20px 0;'>⠁⠝⠙ ⠎⠓⠁⠙⠕⠺⠆</div>
+
+    
+    <div style='color:#ccc'>last updated 2020-01-15</div>
+    
+
+    <h5>An exercise in self-built tooling and learning GoLang</h5>
+    <p>I&rsquo;ve historically defaulted to the technology du jour to build and rebuild
+my personal and company webpages. It&rsquo;s worked fine - there have been
+moments of fantastic efficiency, and others of abysmal reverse
+engineering of an errant Gatsby plugin.</p>
+
+<p>In the spirit of <a href='self-sufficient_informatics.html'>{self-sufficient informatics}</a>, and heavily inspired
+by others on the <a href='https://webring.xxiivv.com/' target='_blank'>[webring]</a>, I sought out to
+simplify my dependencies, build something myself, and learn some new
+technologies in the process.</p>
+
+<p>To start, I mapped out my hoped-for characteristics of the end result.
+I landed on:</p>
+
+<ul>
+<li>low friction (so as to promote more writing);</li>
+<li>low-level (no automagic frameworks or dependencies; and</li>
+<li>extendable (I want this to be somethign that evolves with me over the next 5, 10, 15 years).</li>
+</ul>
+
+<p><a href='https://github.com/XXIIVV/oscean/' target='_blank'>[Devine Lu Linvega&rsquo;s Oscean]</a> served
+as the primary inspiration. I spent a weekend pouring over their wiki,
+the underlying C-code, and the ecosystem of file formats and prorgams
+they created. I could (and <strike>should</strike> will) write a whole
+post on the great things I continue to learn from them. The act of
+reading through their code and reverse engineering the site compilation
+was one of the most fun weekends I&rsquo;ve had in a while. I promise I am fun.
+I gained an understanding of their technical approach to linking and
+render disparate databases, while simultaneously exploring the content of
+those databases themselves.</p>
+
+<p>I opted for GoLang as a learning opportunity. Compared to my usual
+Javascript, GoLang is miles closer to C - the last time I thought about
+pointers was my senior year of college, if that. I never imagined saying
+this, but I missed pointers! My impression of GoLang so far is fine. I
+hardly tapped into the features it is known for, such as concurrancy. But
+this project served as a gentle introduction.</p>
+
+<p>Another reason I wanted to create the compiler myself was so that I could add
+features over time that are typically only available on &ldquo;platforms,&rdquo; such as
+bidirectional linking and other memex-style data graph functions.
+I noticed that Oscean as well as others on the webring were able to do
+this. How cool.</p>
+
+<p>In a moment of doubt, I played with <a href='https://www.11ty.dev/' target='_blank'>[11ty]</a> as well as
+<a href='https://github.com/mathieudutour/gatsby-digital-garden' target='_blank'>[gatsby plugins]</a>
+that promised functionality I sought. But after speedbumps with
+each, always grappling with the obfuscation that make them &ldquo;magic,&rdquo; I felt
+confident that I was on the right path.</p>
+
+<p>For my pages, I opted to use a modified version of the human readable
+<a href='https://wiki.xxiivv.com/site/indental.html' target='_blank'>[Indental]</a> format, and started
+by porting a portion of my site to it, and writing a parser to convert it
+to Go structs. From there, I linked the structs into a hierarchical tree
+and created various rendering functions that converted the ndtl entries
+into html, resting a bit on Go&rsquo;s native templating engine. It works
+remarkably well, and I am able to easily add features and improvements
+over time. For example, I recently added the ability for an entry&rsquo;s body
+to contain markdown.</p>
+
+<p>Other features of established web frameworks are replicatable with bash,
+usually. For instance, &ldquo;live reloading&rdquo; was achieved with the following
+bash:</p>
+
+<pre><code>#!/bin/sh
+bash build.sh
+while inotifywait -qqre modify ./src ./links ./data; do
+  bash build.sh
+done
+</code></pre>
+
+    
+<div class='incoming'>
+  ⇣ (1)
+  
+  <a href="./mmx.html">mmx</a>&nbsp;
+  
+</div>
+
+  </div>
+</body>
+
+<footer>
+  <a href="https://twitter.com/marsh">
+    <img src="img/twitter.png" style="height: 1.8rem" />
+  </a>
+  <a href="https://github.com/mmoutenot">
+    <img src="img/github.png" style="height: 2rem" />
+  </a>
+  <a href="https://webring.xxiivv.com/#random">
+    <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem" />
+  </a>
+  <span>Marshall Moutenot © 2020</span>
+</footer>
+
+</html>
+<html>

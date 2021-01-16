@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"html/template"
 	"log"
+	"math/rand"
 	"os"
 	"path/filepath"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 
@@ -19,6 +21,7 @@ type Entry struct {
 	Name          string
 	Filename      string
 	Bref          string
+	Date          time.Time
 	Host          string
 	Parent        *Entry
 	EmbedChildren bool
@@ -32,6 +35,14 @@ type TemplateContent struct {
 	Entry         Entry
 	Children      []Entry
 	NavHTMLString string
+}
+
+func getEntryFilename(e Entry) string {
+	if e.Parent != nil && e.Parent.EmbedChildren {
+		return fmt.Sprintf("%s.html#%s", e.Parent.Filename, e.Filename)
+	}
+
+	return fmt.Sprintf("%s.html", e.Filename)
 }
 
 func check(e error) {
@@ -102,14 +113,14 @@ func loadIndental(file *os.File) []Entry {
 		if depth == 0 && line != "" {
 			catchBody = false
 			name := line
-			entries = append(entries, Entry{Name: name, Filename: strings.ToLower(strings.ReplaceAll(name, " ", "_"))})
+			filename := strings.ToLower(strings.ReplaceAll(name, " ", "_"))
+			entries = append(entries, Entry{Name: name, Filename: filename})
 		} else if depth == 1 && !catchBody {
 			catchBody = false
 			key, value := parseIndentalLine(line)
-			// if key == "DATE" {
-			// entries[lastEntryIndex].Date = parseDate(value)
-			/*} else*/
-			if key == "HOST" {
+			if key == "DATE" && value != "" {
+				entries[lastEntryIndex].Date = parseDate(value)
+			} else if key == "HOST" {
 				entries[lastEntryIndex].Host = value
 			} else if key == "BREF" {
 				entries[lastEntryIndex].Bref = value
@@ -120,7 +131,6 @@ func loadIndental(file *os.File) []Entry {
 			}
 		} else if depth >= 2 {
 			if catchBody {
-				fmt.Println(line)
 				entries[lastEntryIndex].Body += line[4:] + "\n"
 			}
 		} else if line == "" && catchBody {
@@ -131,20 +141,60 @@ func loadIndental(file *os.File) []Entry {
 	return entries
 }
 
-func loadJournal() []Entry {
-	file, err := os.Open("../data/journal.ndtl")
-	check(err)
-	defer file.Close()
+func parseFrontLine(line string) (string, string) {
+	delimiterIndex := strings.Index(line, ":")
 
-	return loadIndental(file)
+	if delimiterIndex == -1 {
+		panic(fmt.Sprintf("No delmiter found in Indental line: %s", line))
+	}
+
+	key := strings.TrimSpace(line[0:delimiterIndex])
+	val := strings.TrimSpace(line[delimiterIndex+1 : len(line)])
+	return key, val
 }
 
-func loadLex() []Entry {
-	file, err := os.Open("../data/lex.ndtl")
-	check(err)
-	defer file.Close()
+func loadMd(file *os.File) Entry {
+	scanner := bufio.NewScanner(file)
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 
-	return loadIndental(file)
+	i := 0
+	captureFront := false
+	e := Entry{}
+
+	for scanner.Scan() {
+		i++
+
+		line := scanner.Text()
+		if i == 1 {
+			captureFront = true
+			continue
+		}
+
+		if captureFront {
+			if line == "---" {
+				captureFront = false
+				continue
+			}
+
+			key, val := parseFrontLine(line)
+			if key == "name" {
+				e.Name = val
+				e.Filename = strings.ToLower(strings.ReplaceAll(val, " ", "_"))
+			} else if key == "date" {
+				e.Date = parseDate(val)
+			} else if key == "host" {
+				e.Host = val
+			} else if key == "bref" {
+				e.Bref = val
+			}
+		} else {
+			e.Body += line + "\n"
+		}
+	}
+
+	return e
 }
 
 func findEntry(entries []Entry, name string) *Entry {
@@ -156,6 +206,36 @@ func findEntry(entries []Entry, name string) *Entry {
 	panic(fmt.Sprintf("No parent found with name %s", name))
 }
 
+func makeHr() string {
+	poem := []string{
+		"⠠⠞⠓⠑ ⠺⠕⠕⠙ ⠞⠓⠗⠥⠎⠓⠂ ⠊⠞ ⠊⠎⠖ ⠠⠝⠕⠺ ⠠⠊ ⠅⠝⠕⠺",
+		"⠺⠓⠕ ⠎⠊⠝⠛⠎ ⠞⠓⠁⠞ ⠉⠇⠑⠁⠗ ⠁⠗⠏⠑⠛⠛⠊⠕⠂",
+		"⠞⠓⠗⠑⠑ ⠋⠁⠗ ⠝⠕⠞⠑⠎ ⠺⠑⠁⠧⠊⠝⠛",
+		"⠊⠝⠞⠕ ⠞⠓⠑ ⠑⠧⠑⠝⠊⠝⠛",
+		"⠁⠍⠕⠝⠛ ⠇⠑⠁⠧⠑⠎",
+		"⠁⠝⠙ ⠎⠓⠁⠙⠕⠺⠆",
+		"⠕⠗ ⠁⠞ ⠙⠁⠺⠝ ⠊⠝ ⠞⠓⠑ ⠺⠕⠕⠙⠎⠂ ⠠⠊⠄⠧⠑ ⠓⠑⠁⠗⠙",
+		"⠞⠓⠑ ⠎⠺⠑⠑⠞ ⠁⠎⠉⠑⠝⠙⠊⠝⠛ ⠞⠗⠊⠏⠇⠑ ⠺⠕⠗⠙",
+		"⠑⠉⠓⠕⠊⠝⠛ ⠕⠧⠑⠗",
+		"⠞⠓⠑ ⠎⠊⠇⠑⠝⠞ ⠗⠊⠧⠑⠗ —",
+		"⠃⠥⠞ ⠝⠑⠧⠑⠗",
+		"⠎⠑⠑⠝ ⠞⠓⠑ ⠃⠊⠗⠙.",
+	}
+
+	poemLine := poem[rand.Intn(len(poem))]
+	return fmt.Sprintf("<div style='color: #ccc; margin: 20px 0;'>%s</div>", poemLine)
+
+}
+func replaceHr(b string) string {
+	hrRegex := regexp.MustCompile(`(?i)<hr ?\/?>`)
+	matches := hrRegex.FindAllString(b, -1)
+	for _, match := range matches {
+		b = strings.Replace(b, match, makeHr(), 1)
+	}
+
+	return b
+}
+
 func processBody(e Entry, entries []Entry) string {
 	refRegex := regexp.MustCompile(`{[^{}]*}`)
 	b := e.Body
@@ -165,6 +245,7 @@ func processBody(e Entry, entries []Entry) string {
 		cleanMatch := match[1 : len(match)-1]
 		matchParts := strings.Split(cleanMatch, "|")
 
+		isModule := cleanMatch[0] == '^'
 		isExternal := strings.Contains(cleanMatch, "http")
 
 		var display string
@@ -175,7 +256,11 @@ func processBody(e Entry, entries []Entry) string {
 		}
 
 		var link string
-		if isExternal {
+		if isModule {
+			if strings.Contains(matchParts[0], "^bandcamp") {
+				link = fmt.Sprintf("<iframe style='border: 0; width: 400px; height: 300px;' src='https://bandcamp.com/EmbeddedPlayer/album=%s/size=large/bgcol=ffffff/artwork=small/transparent=true/' seamless></iframe>", matchParts[1])
+			}
+		} else if isExternal {
 			// external link
 			link = fmt.Sprintf("<a href='%s' target='_blank'>[%s]</a>", matchParts[0], display)
 		} else {
@@ -186,10 +271,9 @@ func processBody(e Entry, entries []Entry) string {
 			e.Outgoing = append(e.Outgoing, refEntry)
 			refEntry.Incoming = append(refEntry.Incoming, &e)
 
-			link = fmt.Sprintf("<a href='./%s.html'>{%s}</a>", refEntry.Filename, display)
+			link = fmt.Sprintf("<a href='%s'>{%s}</a>", getEntryFilename(*refEntry), display)
 		}
 
-		fmt.Println(link, display)
 		b = strings.Replace(b, match, link, 1)
 	}
 
@@ -212,7 +296,22 @@ func linkEntries(entries []Entry) {
 func makeSubNav(e Entry, target Entry) string {
 	subnav := "<ul>"
 	max := 8
-	for i, cPtr := range e.Children {
+
+	sortedChildren := make([]*Entry, len(e.Children))
+	copy(sortedChildren, e.Children)
+	sort.Slice(sortedChildren, func(i, j int) bool {
+		if sortedChildren[i].Date.IsZero() && sortedChildren[j].Date.IsZero() {
+			return sortedChildren[i].Name < sortedChildren[j].Name
+		} else if sortedChildren[i].Date.IsZero() {
+			return true
+		} else if sortedChildren[j].Date.IsZero() {
+			return false
+		}
+
+		return sortedChildren[i].Date.After(sortedChildren[j].Date)
+	})
+
+	for i, cPtr := range sortedChildren {
 		child := *cPtr
 		if i >= max {
 			if i == max {
@@ -226,12 +325,10 @@ func makeSubNav(e Entry, target Entry) string {
 			continue // this occurs in the case of root node, i.e. Home
 		}
 
-		if e.EmbedChildren {
-			subnav += fmt.Sprintf("<li><a href='%s.html#%s'>%s/</a><mark></li>", e.Filename, child.Filename, child.Name)
-		} else if child.Name == target.Name {
-			subnav += fmt.Sprintf("<li><mark><a href='%s.html'>%s/</a><mark></li>", child.Filename, child.Name)
+		if child.Name == target.Name {
+			subnav += fmt.Sprintf("<li><mark><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
 		} else {
-			subnav += fmt.Sprintf("<li><a href='%s.html'>%s</a></li>", child.Filename, child.Name)
+			subnav += fmt.Sprintf("<li><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
 		}
 	}
 
@@ -269,7 +366,8 @@ func makeNav(e Entry) string {
 
 func renderEntryHTML(e Entry) string {
 	templateFuncs := template.FuncMap{
-		"noescape": noescape,
+		"noescape":   noescape,
+		"formatDate": formatDate,
 	}
 	tmpl := template.Must(template.New("entry.html").Funcs(templateFuncs).ParseGlob("./templates/*.html"))
 	embededChildTmpl := template.Must(template.New("embeddedChild.html").Funcs(templateFuncs).ParseFiles("./templates/embeddedChild.html", "./templates/incoming.html"))
@@ -285,6 +383,7 @@ func renderEntryHTML(e Entry) string {
 			check(err)
 
 			embeddedHTMLStr += tpl.String()
+			embeddedHTMLStr += makeHr()
 		}
 	}
 
@@ -296,11 +395,48 @@ func renderEntryHTML(e Entry) string {
 	check(err)
 
 	htmlStr := tpl.String()
+	htmlStr = replaceHr(htmlStr)
+
 	return htmlStr
 }
 
+func makeHome(entries []Entry) string {
+	sortedEntries := make([]Entry, len(entries))
+	copy(sortedEntries, entries)
+	sort.Slice(sortedEntries, func(i, j int) bool {
+		return sortedEntries[i].Date.After(sortedEntries[j].Date)
+	})
+
+	readingIcon := "<span style='margin-right:10px'>📖</span>"
+	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
+
+	homeBody := ""
+	y, _, _ := time.Now().Date()
+	for _, e := range sortedEntries {
+		if e.Date.IsZero() {
+			continue
+		}
+		if e.Date.Year() < y {
+			y = e.Date.Year()
+			homeBody += fmt.Sprintf("<div style='font-size:12px;font-weight:bold;margin-top:20px'>%v</div>", y)
+		}
+
+		icon := elseIcon
+		if e.Parent.Filename == "reading" {
+			icon = readingIcon
+		}
+
+		homeBody += fmt.Sprintf("<div>%s<a href='%s'>%s</a> <em>%s</em></div>", icon, getEntryFilename(e), e.Name, formatDate(e.Date))
+	}
+	return homeBody
+}
+
 func main() {
+	rand.Seed(time.Now().Unix())
+
 	var entries []Entry
+
+	// load .ndtl
 	matches, _ := filepath.Glob("../data/*.ndtl")
 	for _, match := range matches {
 		file, err := os.Open(match)
@@ -310,6 +446,16 @@ func main() {
 		entries = append(entries, loadIndental(file)...)
 	}
 
+	// load .md
+	matches, _ = filepath.Glob("../data/**/*.md")
+	for _, match := range matches {
+		file, err := os.Open(match)
+		check(err)
+		defer file.Close()
+
+		entries = append(entries, loadMd(file))
+	}
+
 	linkEntries(entries[:])
 
 	for i, entry := range entries {
@@ -317,12 +463,18 @@ func main() {
 			continue
 		}
 
-		filepath := "../docs/" + entry.Filename + ".html"
+		filepath := "../site/" + entry.Filename + ".html"
 		f, err := os.OpenFile(filepath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 		check(err)
 
 		fmt.Println(i, filepath)
-		htmlStr := renderEntryHTML(entry)
+		var htmlStr string
+		if entry.Filename == "home" {
+			// special case to render timeline
+			htmlStr = makeHome(entries)
+			entry.Body = htmlStr
+		}
+		htmlStr = renderEntryHTML(entry)
 		f.WriteString(htmlStr)
 	}
 

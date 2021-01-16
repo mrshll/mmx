@@ -1,5 +1,5 @@
 #!/bin/sh
-cd src && go run main.go && cd ../
+bash build.sh
 while inotifywait -qqre modify ./src ./links ./data; do
-   cd src && go run main.go && cd ../
+  bash build.sh
 done
