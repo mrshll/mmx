@@ -40,14 +40,11 @@ type TemplateContent struct {
 func getEntryFilename(e Entry) string {
 	var filename string
 	if e.Parent != nil && e.Parent.EmbedChildren {
-		fmt.Println(e.Name, "has parent")
 		filename = fmt.Sprintf("%s.html#%s", e.Parent.Filename, e.Filename)
 	} else {
-		fmt.Println(e.Name, "does not have parent")
 		filename = fmt.Sprintf("%s.html", e.Filename)
 	}
 
-	fmt.Println(e.Name, filename)
 	return filename
 }
 
@@ -126,6 +123,8 @@ func loadIndental(file *os.File) []Entry {
 			key, value := parseIndentalLine(line)
 			if key == "DATE" && value != "" {
 				entries[lastEntryIndex].Date = parseDate(value)
+			} else if key == "FILE" {
+				entries[lastEntryIndex].Filename = value
 			} else if key == "HOST" {
 				entries[lastEntryIndex].Host = value
 			} else if key == "BREF" {
@@ -487,11 +486,4 @@ func main() {
 	}
 
 	fmt.Println("---")
-
-	// noteFiles, err := ioutil.ReadDir("./notes")
-	// check(err)
-
-	// for _, f := range noteFiles {
-	// 	fmt.Println(f.Name())
-	// }
 }
