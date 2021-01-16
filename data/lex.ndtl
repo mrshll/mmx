@@ -24,6 +24,8 @@ About
     context -- of water/climate/energy, the excitement and terrors of growing a
     remote team, and (in the most cliche way possible) myself.
 
+    This site is called {mmx}. It is my place to write, research and share ideas.
+
 Research & Notes
   HOST : home
   BREF : Notes on topics of interest.
@@ -37,9 +39,48 @@ Self-sufficient informatics
 
 Projects
   HOST : home
-  BREF : na
   BODY : 
-    na
+    ### Active
+    - {mmx}, this site.
+    - {@carbonfreegrid}, a Twitter bot that tweets daily statistics about the previous day's U.S. energy production, highlighting low- and high-carbon generation.
+
+    ### Previous/Dormant
+    - {werm.world}, (a briefly) successful attempt to create a micro social network for a few dozen friends.
+    - {https://github.com/Mutual-Aid-Medford-and-Somerville/mamas-needs-offers|MAMAS Needs/Offers}, a website that listed "needs" and "offers" for mutual aid in Somerville and Medford. It pulled from a spreadsheet as the backing database for easy management and updating.
+    - {https://github.com/mrshll/climatework.org|climatework.org}, a website that listed jobs in climate-focused fields such as renewable energy and conservation.
+    - Into The Static, a site that collected all videos from a social media site for an inputted keyword and played them in a neverending sequence.
+    - Future Phone, an application that allowed you to leave yourself a voicemail which would be redelivered far in the future.
+
+werm.world
+  HOST : projects
+  BODY : 
+    <img src='./img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem;'/>
+    ~2019. In one of my earlier bouts of {self-sufficient informatics}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
+
+    <img src='./img/werm-world-2.png' style='float:right; height: 30rem'/>
+
+    The site is a mobile-optimize React application, backed by Firebase with a few serverless functions for async operations such as image processing and email notification of new posts. The first iteration of the site, which allowed for posting of images, was built in a weekend and additional functionality like posting other types of media (text, audio) were added over time. One experimental feature was added to allow multiple media (from any user) to be attached horizontally to a post, with a horizontal scrolling element added to see them.
+
+    Users were organized into groups, and each group had one long feed of posts.
+
+    Usage died off for a variety of reasons. I hope to revive this project, potentially as a bona-fide app so that notifications can be sent (not by email). Everyone who used it remembers it fondly.
+
+@carbonfreegrid
+  HOST : projects
+  BREF : @carbonfreegrid
+  BODY : 
+    Github: https://github.com/mrshll/carbon-free-grid-bot
+
+    Twitter: https://twitter.com/carbonfreegrid
+
+    A daily twitter bot highlighting our progress towards a carbon free grid.
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Energy generation yesterday (Feb 19) was<br>🏭 ███▆▁▁ 63.0% high-carbon<br>🌱 ██▂▁▁▁ 37.0% low-carbon</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530987723022336?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Generation breakdown by source:<br>🔥 ⣿⣿⣤⣀⣀⣀ 40.1% natural gas<br>⚛️ ⣿⣄⣀⣀⣀⣀ 21.6% nuclear<br>⚫ ⣿⣄⣀⣀⣀⣀ 20.4% coal<br>💧 ⣤⣀⣀⣀⣀⣀ 8.0% hydro<br>🌬️ ⣤⣀⣀⣀⣀⣀ 6.0% wind<br>❓ ⣄⣀⣀⣀⣀⣀ 1.6% other<br>☀️ ⣄⣀⣀⣀⣀⣀ 1.4% solar<br>🛢️ ⣄⣀⣀⣀⣀⣀ 0.8% petroleum</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530988670881793?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Regional breakdown (by % generation that is low-carbon)<br>⣿⣿⣿⣶⣀⣀ NY<br>⣿⣿⣿⣤⣀⣀ TEN<br>⣿⣿⣿⣄⣀⣀ CAR<br>⣿⣿⣷⣀⣀⣀ NE<br>⣿⣿⣷⣀⣀⣀ NW<br>⣿⣿⣦⣀⣀⣀ CENT<br>⣿⣿⣤⣀⣀⣀ SW<br>⣿⣿⣄⣀⣀⣀ MIDA<br>⣿⣿⣀⣀⣀⣀ CAL<br>⣿⣷⣀⣀⣀⣀ SE<br>⣿⣦⣀⣀⣀⣀ MIDW<br>⣿⣤⣀⣀⣀⣀ TEX<br>⣶⣀⣀⣀⣀⣀ FLA</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530989480402945?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
 
 Upstream Tech
   HOST : Projects
@@ -47,21 +88,37 @@ Upstream Tech
   BODY : 
     Upstream Tech is a public benefit corporation founded in 2016 by Marshall and Alden.
 
-
-
 mmx
   HOST : projects
   BREF : This site is called mmx
   BODY : 
     ![A person building something with bamboo, from The Red Turtle](./img/redturtle020.jpg)
 
-    It was {building mmx|built} at the start of 2021. Largely inspired by others on {https://webring.xxiivv.com/|webring}, especially {https://wiki.xxiivv.com/site/home.html|Devine}, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a tower of tangled javascript dependencies) were ported over.
+    mmx was {building mmx|built} at the start of 2021. Largely inspired by others on {https://webring.xxiivv.com/|webring}, especially {https://wiki.xxiivv.com/site/home.html|Devine}, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a tower of tangled javascript dependencies) were ported over.
 
     The site's compiler is written in {https://golang.org|Go}. It can generate a graph of entries from a modified version of {https://wiki.xxiivv.com/site/indental.html|Indental} as well as markdown with frontmatter. 
     
     Entries have names, hosts, titles, and bodies. They optionally have dates. A host can optionally embed its children - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {home} is a special case that has its own generator function to render the timeline.
 
     Go's {https://golang.org/pkg/text/template/|templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string (it's a "functional component" after all).
+
+    <blockquote>
+      The wood thrush, it is! Now I know<br/>
+      who sings that clear arpeggio,<br/>
+      three far notes weaving<br/>
+      into the evening<br/>
+      among leaves<br/>
+      and shadow;<br/><br/>
+      or at dawn in the woods, I've heard<br/>
+      the sweet ascending triple word<br/>
+      echoing over<br/>
+      the silent river —<br/>
+      but never<br/>
+      seen the bird.
+    </blockquote>
+    - _Learning the Name_ by Ursula K. Le Guin
+
+    A poem by Ursula K. Le Guin is encoded into unicode's representation of braille and used as the hr across the site.
 
 
 Music

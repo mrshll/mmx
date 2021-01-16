@@ -211,7 +211,7 @@ func findEntry(entries []Entry, name string) *Entry {
 	panic(fmt.Sprintf("No parent found with name %s", name))
 }
 
-func makeHr() string {
+func makeHr(i int) string {
 	poem := []string{
 		"⠠⠞⠓⠑ ⠺⠕⠕⠙ ⠞⠓⠗⠥⠎⠓⠂ ⠊⠞ ⠊⠎⠖ ⠠⠝⠕⠺ ⠠⠊ ⠅⠝⠕⠺",
 		"⠺⠓⠕ ⠎⠊⠝⠛⠎ ⠞⠓⠁⠞ ⠉⠇⠑⠁⠗ ⠁⠗⠏⠑⠛⠛⠊⠕⠂",
@@ -227,15 +227,15 @@ func makeHr() string {
 		"⠎⠑⠑⠝ ⠞⠓⠑ ⠃⠊⠗⠙.",
 	}
 
-	poemLine := poem[rand.Intn(len(poem))]
+	poemLine := poem[i%len(poem)]
 	return fmt.Sprintf("<div style='color: #ccc; margin: 20px 0;'>%s</div>", poemLine)
-
 }
+
 func replaceHr(b string) string {
 	hrRegex := regexp.MustCompile(`(?i)<hr ?\/?>`)
 	matches := hrRegex.FindAllString(b, -1)
-	for _, match := range matches {
-		b = strings.Replace(b, match, makeHr(), 1)
+	for i, match := range matches {
+		b = strings.Replace(b, match, makeHr(i), 1)
 	}
 
 	return b
@@ -378,7 +378,7 @@ func renderEntryHTML(e Entry) string {
 
 	var children []Entry
 	var embeddedHTMLStr string
-	for _, cPtr := range e.Children {
+	for i, cPtr := range e.Children {
 		children = append(children, *cPtr)
 		if e.EmbedChildren {
 			var tpl bytes.Buffer
@@ -387,7 +387,7 @@ func renderEntryHTML(e Entry) string {
 			check(err)
 
 			embeddedHTMLStr += tpl.String()
-			embeddedHTMLStr += makeHr()
+			embeddedHTMLStr += makeHr(i)
 		}
 	}
 
@@ -416,6 +416,8 @@ func makeIndex(entries []Entry) string {
 
 	homeBody := ""
 	y, _, _ := time.Now().Date()
+	y++ // increment y so that the first date is less than current and we write it
+
 	for _, e := range sortedEntries {
 		if e.Date.IsZero() {
 			continue
