@@ -38,11 +38,17 @@ type TemplateContent struct {
 }
 
 func getEntryFilename(e Entry) string {
+	var filename string
 	if e.Parent != nil && e.Parent.EmbedChildren {
-		return fmt.Sprintf("%s.html#%s", e.Parent.Filename, e.Filename)
+		fmt.Println(e.Name, "has parent")
+		filename = fmt.Sprintf("%s.html#%s", e.Parent.Filename, e.Filename)
+	} else {
+		fmt.Println(e.Name, "does not have parent")
+		filename = fmt.Sprintf("%s.html", e.Filename)
 	}
 
-	return fmt.Sprintf("%s.html", e.Filename)
+	fmt.Println(e.Name, filename)
+	return filename
 }
 
 func check(e error) {
@@ -287,7 +293,6 @@ func processBody(e Entry, entries []Entry) string {
 func linkEntries(entries []Entry) {
 	for i := range entries {
 		parentPtr := findEntry(entries[:], entries[i].Host)
-		entries[i].Body = processBody(entries[i], entries)
 		entries[i].Parent = parentPtr
 		(*parentPtr).Children = append((*parentPtr).Children, &(entries[i]))
 	}
@@ -457,6 +462,9 @@ func main() {
 	}
 
 	linkEntries(entries[:])
+	for i := range entries {
+		entries[i].Body = processBody(entries[i], entries)
+	}
 
 	for i, entry := range entries {
 		if entry.Parent.EmbedChildren {
