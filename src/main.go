@@ -24,7 +24,7 @@ type Entry struct {
 	Date          time.Time
 	Host          string
 	Parent        *Entry
-	EmbedChildren bool
+	EmbedInParent bool
 	Children      []*Entry
 	Body          string
 	Incoming      []*Entry
@@ -39,7 +39,7 @@ type TemplateContent struct {
 
 func getEntryFilename(e Entry) string {
 	var filename string
-	if e.Parent != nil && e.Parent.EmbedChildren {
+	if e.Parent != nil && e.EmbedInParent {
 		filename = fmt.Sprintf("%s.html#%s", e.Parent.Filename, e.Filename)
 	} else {
 		filename = fmt.Sprintf("%s.html", e.Filename)
@@ -129,8 +129,8 @@ func loadIndental(file *os.File) []Entry {
 				entries[lastEntryIndex].Host = value
 			} else if key == "BREF" {
 				entries[lastEntryIndex].Bref = value
-			} else if key == "EMBC" && value == "true" {
-				entries[lastEntryIndex].EmbedChildren = true
+			} else if key == "EMBD" && value == "true" {
+				entries[lastEntryIndex].EmbedInParent = true
 			} else {
 				catchBody = key == "BODY"
 			}
@@ -299,7 +299,7 @@ func linkEntries(entries []Entry) {
 
 func makeSubNav(e Entry, target Entry) string {
 	subnav := "<ul>"
-	max := 8
+	max := 10
 
 	sortedChildren := make([]*Entry, len(e.Children))
 	copy(sortedChildren, e.Children)
@@ -380,7 +380,7 @@ func renderEntryHTML(e Entry) string {
 	var embeddedHTMLStr string
 	for i, cPtr := range e.Children {
 		children = append(children, *cPtr)
-		if e.EmbedChildren {
+		if cPtr.EmbedInParent {
 			var tpl bytes.Buffer
 			tmplContent := TemplateContent{Entry: *cPtr}
 			err := embededChildTmpl.Execute(&tpl, tmplContent)
@@ -411,10 +411,20 @@ func makeIndex(entries []Entry) string {
 		return sortedEntries[i].Date.After(sortedEntries[j].Date)
 	})
 
+	var activeProjectsBody string
+	for _, e := range entries {
+		if e.Name == "Active Projects" {
+			activeProjectsBody = e.Body
+			break
+		}
+	}
+
 	readingIcon := "<span style='margin-right:10px'>📖</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
 
-	homeBody := ""
+	homeBody := "<h5>Active Projects</h5>"
+	homeBody += activeProjectsBody
+	homeBody += "<hr/><h5>Timeline</h5>"
 	y, _, _ := time.Now().Date()
 	y++ // increment y so that the first date is less than current and we write it
 
@@ -434,6 +444,7 @@ func makeIndex(entries []Entry) string {
 
 		homeBody += fmt.Sprintf("<div>%s<a href='%s'>%s</a> <em>%s</em></div>", icon, getEntryFilename(e), e.Name, formatDate(e.Date))
 	}
+
 	return homeBody
 }
 
@@ -468,7 +479,7 @@ func main() {
 	}
 
 	for i, entry := range entries {
-		if entry.Parent.EmbedChildren {
+		if entry.EmbedInParent {
 			continue
 		}
 

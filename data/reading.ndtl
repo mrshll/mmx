@@ -1,17 +1,18 @@
 Reading
   HOST : home
-  EMBC : true
   BREF : 
   BODY : 
 
 East of Eden
   HOST : reading
+  EMBD : true
   BREF : John Steinbeck 
   BODY : 
     In progress
 
 The Making of Prince of Persia
   HOST : reading
+  EMBD : true
   DATE : 2021-01-01
   BREF : Jordan Mechner
   BODY : 
@@ -23,6 +24,7 @@ The Making of Prince of Persia
 
 The Lathe of Heaven
   HOST : reading
+  EMBD : true
   DATE : 2020-12-28
   BREF : Ursula K. Le Guinn 
   BODY : 
@@ -50,6 +52,7 @@ The Lathe of Heaven
 
 All the Light We Cannot See
   HOST : reading
+  EMBD : true
   DATE : 2020-11-01
   BREF : Anthony Doerr
   BODY : 
@@ -57,6 +60,7 @@ All the Light We Cannot See
 
 The Good Life Lab
   HOST : reading
+  EMBD : true
   BREF : Wendy Jehanara Tremayne
   DATE : 2020-07-23
   BODY : 
@@ -65,6 +69,7 @@ The Good Life Lab
 
 Braiding Sweetgrass
   HOST : reading
+  EMBD : true
   BREF : Robin Wall Kimmerer
   DATE : 2020-09-30
   BODY : 
@@ -74,6 +79,7 @@ Braiding Sweetgrass
 
 The Art of Fermentation
   HOST : reading
+  EMBD : true
   BREF : Sandor Ellix Katz
   DATE : 2020-07-09
   BODY : 
@@ -89,6 +95,7 @@ The Art of Fermentation
 
 Born to Run
   HOST : reading
+  EMBD : true
   BREF : Christopher McDougall
   DATE : 2020-06-03
   BODY : 
@@ -102,18 +109,21 @@ Born to Run
 
 Where the Crawdads Sing
   HOST : reading
+  EMBD : true
   BREF : Delia Owens
   DATE : 2020-03-28
   BODY :
 
 Exhalation: Stories
   HOST : reading
+  EMBD : true
   BREF : Ted Chiang
   DATE : 2020-03-23
   BODY :
 
 The Overstory 
   HOST : reading
+  EMBD : true
   BREF : Richard Powers
   DATE : 2020-01-20
   BODY : 
@@ -130,6 +140,7 @@ The Overstory
     
 The Left Hand of Darkness
   HOST : reading
+  EMBD : true
   BREF : Ursila K. Le Guin
   DATE : 2019-12-06
   BODY : 
@@ -159,6 +170,7 @@ The Left Hand of Darkness
 
 Born a Crime
   HOST : reading
+  EMBD : true
   BREF : Trevor Noah
   DATE : 2019-12-30
   BODY : 
@@ -168,6 +180,7 @@ Born a Crime
 
 A Wizard of Earthsea
   HOST : reading
+  EMBD : true
   BREF : Ursila K. Le Guin
   DATE : 2019-11-16
   BODY : 
@@ -187,6 +200,7 @@ A Wizard of Earthsea
 
 1984
   HOST : reading
+  EMBD : true
   BREF : George Orwell
   DATE : 2019-11-02
   BODY : 
@@ -203,6 +217,7 @@ A Wizard of Earthsea
 
 Principles
   HOST : reading
+  EMBD : true
   DATE : 2019-10-04
   BREF : Ray Dalio
   BODY : 
@@ -212,6 +227,7 @@ Principles
 
 Working
   HOST : reading
+  EMBD : true
   DATE : 2019-09-24
   BREF : Robert Caro
   BODY : 
@@ -219,6 +235,7 @@ Working
 
 Bicycle Diaries
   HOST : reading
+  EMBD : true
   BREF : David Byrne
   DATE : 2019-08-07
   BODY : 
@@ -228,6 +245,7 @@ Bicycle Diaries
 
 My Brilliant Friend
   HOST : reading
+  EMBD : true
   BREF : Elena Ferrante
   DATE : 2019-06-30
   BODY : 
@@ -235,6 +253,7 @@ My Brilliant Friend
 
 Foundation
   HOST : reading
+  EMBD : true
   BREF : Isaac Asimov
   DATE : 2019-05-09
   BODY : 
@@ -242,6 +261,7 @@ Foundation
 
 Circe
   HOST : reading
+  EMBD : true
   BREF : Madeline Miller
   DATE : 2019-01-18
   BODY : 
@@ -255,6 +275,7 @@ Circe
 
 Ancillary Justice
   HOST : reading
+  EMBD : true
   BREF : Ann Leckie
   DATE : 2018-12-02
   BODY : 
@@ -262,6 +283,7 @@ Ancillary Justice
 
 The Knight/The Wizard
   HOST : reading
+  EMBD : true
   BREF : Gene Wolfe
   DATE : 2018-11-22
   BODY : 
@@ -269,6 +291,7 @@ The Knight/The Wizard
 
 Rules of Civility
   HOST : reading
+  EMBD : true
   BREF : Amor Towles
   DATE : 2018-09-17
   BODY :
@@ -288,6 +311,7 @@ Rules of Civility
 
 Ball Lightning
   HOST : reading
+  EMBD : true
   DATE : 2018-09-03
   BREF : Cixin Liu 
   BODY : 
@@ -299,6 +323,7 @@ Ball Lightning
 
 High Rise
   HOST : reading
+  EMBD : true
   DATE : 2018-08-19
   BREF : J.G. Ballard 
   BODY : 
@@ -306,6 +331,7 @@ High Rise
 
 Mortal Engines
   HOST : reading
+  EMBD : true
   DATE : 2018-07-29
   BREF : Philip Reeve
   BODY : 
@@ -313,6 +339,7 @@ Mortal Engines
 
 Exit West
   HOST : reading
+  EMBD : true
   DATE : 2018-05-31
   BREF : Mohsin Hamid
   BODY : 
@@ -328,6 +355,7 @@ Exit West
 
 Sleeping Giants
   HOST : reading
+  EMBD : true
   DATE : 2018-04-11
   BREF : Sylvain Neuvel
   BODY : 
@@ -335,6 +363,7 @@ Sleeping Giants
 
 Sing, Unburied, Sing
   HOST : reading
+  EMBD : true
   DATE : 2018-03-17
   BREF : Jesmyn Ward
   BODY :

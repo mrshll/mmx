@@ -1,6 +1,6 @@
 <article>
   <a name="{{.Entry.Filename}}" href="{{.Entry.Parent.Filename}}.html#{{.Entry.Filename}}">
-    <strong><em>{{.Entry.Name}}</em> - {{.Entry.Bref}}</strong>
+    <h5><em>{{.Entry.Name}}</em>{{if .Entry.Bref}} - {{.Entry.Bref}}{{end}}</h5>
   </a>
   {{.Entry.Body | noescape}}
   {{template "incoming.html" .}}

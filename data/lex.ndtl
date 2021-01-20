@@ -40,12 +40,19 @@ Self-sufficient informatics
 Projects
   HOST : home
   BODY : 
-    ### Active
+
+Active Projects
+  HOST : Projects
+  EMBD : true
+  BODY : 
     - {mmx}, this site.
     - {Upstream Tech}, a public benefit corporation founded in 2016.
     - {@carbonfreegrid}, a Twitter bot that tweets daily statistics about the previous day's U.S. energy production, highlighting low- and high-carbon generation.
 
-    ### Previous/Dormant
+Dormant Projects
+  HOST : Projects
+  EMBD : true
+  BODY : 
     - {werm.world}, (a briefly) successful attempt to create a micro social network for a few dozen friends.
     - {https://github.com/Mutual-Aid-Medford-and-Somerville/mamas-needs-offers|MAMAS Needs/Offers}, a website that listed "needs" and "offers" for mutual aid in Somerville and Medford. It pulled from a spreadsheet as the backing database for easy management and updating.
     - {https://github.com/mrshll/climatework.org|climatework.org}, a website that listed jobs in climate-focused fields such as renewable energy and conservation.
@@ -190,8 +197,19 @@ Music
     __Pre__ was created between the years 2013 and 2019 entirely in iPad with the app Korg Gadget along with bluetooth midi peripherals.
 
     {^bandcamp|1442648585}
+
 Garden
   HOST : projects
   BREF : Growing food and getting dirty
   BODY : 
     Being largely confined at home in 2020, I took on many personal and introspective projects. One of the major draws for me to move slightly out of the city was to have more space for outdoor projects. I hope 2021 will be a season of bounty, where I can look forward to tending the beds daily and sharing the harvest with my neighbors and friends. I also hope to transform the vegetables into {the art of fermentation|experimental ferments}
+
+Space mystery game concept
+  HOST : research & notes
+  BREF : A mystery point-and-click concept set in space
+  BODY : 
+    My attempts to make games thus far have been thwarted by shiny tools and a tendency to over-complicate the building process. I've played with both Godot and Unity, and while initial experiments have clearly illustrated their power as game engines, this game concept strips away any complex game/physics/graphics mechanics to focus on narrative and design.
+
+    The game is a Myst-like, set on a spacecraft. The player navigates between rooms and views within the rooms, such as a close-up of a control panel or viewport. Various elements within each view are interactive. Puzzles related to this narrative will present themselves over time to enable access to new areas of the ships, or modify previous views that have already been visited.
+
+    The game starts with the player awaking from a hibernation pod. There are no other evident signs of other crew members, and the player cannot remember why they are on the spacecraft.
