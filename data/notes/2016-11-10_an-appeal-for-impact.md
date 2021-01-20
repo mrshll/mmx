@@ -1,5 +1,5 @@
 ---
-name: An Appeal For Impact
+name: An appeal for impact
 date: 2016-11-10
 bref: An Appeal For Impact
 host: research & notes

@@ -265,6 +265,9 @@ func processBody(e Entry, entries []Entry) string {
 			if strings.Contains(matchParts[0], "^bandcamp") {
 				link = fmt.Sprintf("<iframe style='border: 0; width: 400px; height: 300px;' src='https://bandcamp.com/EmbeddedPlayer/album=%s/size=large/bgcol=ffffff/artwork=small/transparent=true/' seamless></iframe>", matchParts[1])
 			}
+			if strings.Contains(matchParts[0], "^youtube") {
+				link = fmt.Sprintf("<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/%s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>", matchParts[1])
+			}
 		} else if isExternal {
 			// external link
 			link = fmt.Sprintf("<a href='%s' target='_blank'>[%s]</a>", matchParts[0], display)
@@ -346,7 +349,7 @@ func makeNav(e Entry) string {
 		panic(fmt.Sprintf("No parent found with name %s", e.Name))
 	}
 	if e.Parent.Parent == nil {
-		panic(fmt.Sprintf("No parent found with name %s", e.Parent.Name))
+		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Name, e.Name))
 	}
 
 	// this happens for our root node

@@ -16,7 +16,7 @@ About
     -- you could find me in the local rock gym on most days; these days you
     can find me in the Middlesex Fells running on the trails.
 
-    About 5 years ago, I found my work misaligned with my concept of impact.
+    About 5 years ago, I found my work misaligned with my concept of {an appeal for impact|impact}.
     Shortly after, I started {https://upstream.tech|Upstream Tech} with my pal {https://twitter.com/aldenks|Alden} to see
     if we could use our skills to aid efforts in environmental conservation and
     renewable energy. It's going well so far, we think. We really enjoy our work,
@@ -35,14 +35,13 @@ Self-sufficient informatics
   HOST : research & notes
   BREF : Communication, computing, and creation.
   BODY : 
-    <p>Sparked by reading {projects}</p>
 
 Projects
   HOST : home
   BODY : 
 
 Active Projects
-  HOST : Projects
+  HOST : projects
   EMBD : true
   BODY : 
     - {mmx}, this site.
@@ -50,7 +49,7 @@ Active Projects
     - {@carbonfreegrid}, a Twitter bot that tweets daily statistics about the previous day's U.S. energy production, highlighting low- and high-carbon generation.
 
 Dormant Projects
-  HOST : Projects
+  HOST : projects
   EMBD : true
   BODY : 
     - {werm.world}, (a briefly) successful attempt to create a micro social network for a few dozen friends.
@@ -59,9 +58,33 @@ Dormant Projects
     - {Into The Static}, internet videos on thematic shuffle.
     - Future Phone, an application that allowed you to leave yourself a voicemail which would be redelivered far in the future.
     - Latitune was a app created at the end of college with {https://www.benweitzman.com/|Ben Weitzman} (who is a brilliant software developer). The app allowed users to "drop" songs at locations, and to see and listen to songs that were within a certain radius. We created a prototype, but with school wrapping up it never fully came to fruition. We had planned a feature where as you walked, the app would accumulate songs passed by into a playlist. {https://github.com/mrshll/latitune-ios|Source code}.
+    - {Snappi} was one of the first applications I released in a polished form to the world. 
+
+Snappi
+  HOST : dormant projects
+  BODY : 
+    ![Snappi logo](./img/snappi-1.png)
+
+    {https://github.com/mrshll/Snappi|Source Code}
+
+    Snappi was developed while living in San Francisco and working at Mozilla in the Summer of 2012. At Mozilla I was on the infosec team, and my project was to containerize Firefox's process. The project to sandbox Firefox was incredibly difficult, and progress to understand the build process was slow. To mix it up, I spent spare time developing a native OSX application that allowed quick sharing of files and screenshots. It integrated with services like Evernote and Dropbox.
+
+    {^youtube|rt7zivSrJeE}
+
+    Thankfully, I've gotten better at making these videos.
+
+    > Snappi is the quickest way to share screenshots and files with your friends. Once you take a screenshot or select one or more files, a unique, shortened link will be generated and copied to your clipboard; all you have to do is press paste!
+
+    > Snappi is lightweight, unobtrusive and runs in the background of your desktop. Each file is automatically uploaded to an Evernote notebook, keeping everything neat, organized and accessible.
+
+
+    It was a great way to learn Objective-C, not to mention the end-to-end process of designing and market a tool to the public. It was my first time too as being the sole recipient of customer input and feedback. Even though the tool itself was lighthearted, I took any input seriously and made improvements quickly. 
+
+    ![Screenshot of Snappi](./img/snappi-2.png)
+    ![Screenshot of Snappi](./img/snappi-3.png)
 
 Into the Static
-  HOST : projects
+  HOST : dormant projects
   BODY :
     ![screenshot of intothestatic.com](./img/into-the-static.jpeg)
     Into The Static (previously hosted at intothestatic.com) was an application that collected videos from Instagram for a specified keyword and played them in a neverending sequence. As new videos were posted, they were pushed into the front of the queue so you often got the feeling like you were watching a network of "live" CCTV cameras. One of my favorite moments was watching #snow right at the first snowfall of the year, as videos punctuated the static in increasing frequency. More sobering was using it to see a livestream of protests in Venezuela in 2014.
@@ -94,7 +117,7 @@ Into the Static
     {http://www.influencia.net/fr/actualites/in,data-creativite,tous-reseaux-menent-ils-television,4336.html|source}
 
 werm.world
-  HOST : projects
+  HOST : dormant projects
   BODY : 
     <img src='./img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
     ~2019. In one of my earlier bouts of {self-sufficient informatics}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
@@ -108,7 +131,7 @@ werm.world
     Usage died off for a variety of reasons. I hope to revive this project, potentially as a bona-fide app so that notifications can be sent (not by email). Everyone who used it remembers it fondly.
 
 @carbonfreegrid
-  HOST : projects
+  HOST : active projects
   BREF : @carbonfreegrid
   BODY : 
     Github: https://github.com/mrshll/carbon-free-grid-bot
@@ -125,7 +148,7 @@ werm.world
 
 
 Upstream Tech
-  HOST : Projects
+  HOST : active projects
   BREF : Upstream Tech
   BODY : 
     {https://upstream.tech|Upstream Tech} is a public benefit corporation founded in 2016 by Marshall and Alden. It currently provides two services:
@@ -154,7 +177,7 @@ Upstream Tech
     During this time period, we were fortunate to be joined by many friends, past colleagues, and people we met along the way. The team is now over {https://upstream.tech/team|20 people}.
 
 mmx
-  HOST : projects
+  HOST : active projects
   BREF : This site is called mmx
   BODY : 
     ![A person building something with bamboo, from The Red Turtle](./img/redturtle020.jpg)
@@ -187,7 +210,7 @@ mmx
 
 
 Music
-  HOST : projects
+  HOST : active projects
   BREF : Very short songs released under the name "mrshll"
   BODY : 
     __During__ is my latest collection of songs, primarily created on the OP-Z, which my coworker Kevin sent me after showing me it's magic.
@@ -199,7 +222,7 @@ Music
     {^bandcamp|1442648585}
 
 Garden
-  HOST : projects
+  HOST : active projects
   BREF : Growing food and getting dirty
   BODY : 
     Being largely confined at home in 2020, I took on many personal and introspective projects. One of the major draws for me to move slightly out of the city was to have more space for outdoor projects. I hope 2021 will be a season of bounty, where I can look forward to tending the beds daily and sharing the harvest with my neighbors and friends. I also hope to transform the vegetables into {the art of fermentation|experimental ferments}
@@ -208,7 +231,7 @@ Space mystery game concept
   HOST : research & notes
   BREF : A mystery point-and-click concept set in space
   BODY : 
-    My attempts to make games thus far have been thwarted by shiny tools and a tendency to over-complicate the building process. I've played with both Godot and Unity, and while initial experiments have clearly illustrated their power as game engines, this game concept strips away any complex game/physics/graphics mechanics to focus on narrative and design.
+    My attempts to make games thus far have been thwarted by shiny tools and a tendency to over-complicate the building process. I've played with both Godot and Unity, and while initial experiments have clearly illustrated their power as game engines, this game concept strips away my typical rabbit holes (complex game/physics/graphics) to focus on narrative and game mechanics.
 
     The game is a Myst-like, set on a spacecraft. The player navigates between rooms and views within the rooms, such as a close-up of a control panel or viewport. Various elements within each view are interactive. Puzzles related to this narrative will present themselves over time to enable access to new areas of the ships, or modify previous views that have already been visited.
 
