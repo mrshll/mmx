@@ -43,6 +43,8 @@
 <div style='color: #ccc; margin: 20px 0;'>⠠⠞⠓⠑ ⠺⠕⠕⠙ ⠞⠓⠗⠥⠎⠓⠂ ⠊⠞ ⠊⠎⠖ ⠠⠝⠕⠺ ⠠⠊ ⠅⠝⠕⠺</div>
 
     
+    <div style='color:#ccc'>last updated 2020-01-18</div>
+    
 
     <h5>This site is called mmx</h5>
     <p><img src="img/redturtle020.jpg" alt="A person building something with bamboo, from The Red Turtle" /></p>
@@ -54,6 +56,8 @@
 <p>Entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally embed itself in a parent - <a href='reading.html'>{reading}</a> being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. <a href='index.html'>{home}</a> is a special case that has its own generator function to render the timeline.</p>
 
 <p>Go&rsquo;s <a href='https://golang.org/pkg/text/template/' target='_blank'>[templating engine]</a> is lightly used, but it&rsquo;s often more straightforward to generate the html directly into a string (it&rsquo;s a &ldquo;functional component&rdquo; after all).</p>
+
+<p>If you want to learn more, see the <a href='https://github.com/mrshll/mmx' target='_blank'>[source code]</a>.</p>
 
 <h6>Building mmx</h6>
 
@@ -88,6 +92,8 @@ while inotifywait -qqre modify ./src ./links ./data; do
   bash build.sh
 done
 </code></pre>
+
+<p>The site is hosted using Github pages. This is great, because there is no build step. I check in the built files (in /doc) and they are served within seconds. CNAME setup was a breeze.</p>
 
 <p><blockquote>
   The wood thrush, it is! Now I know<br/>
