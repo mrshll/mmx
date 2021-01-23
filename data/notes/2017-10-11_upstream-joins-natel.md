@@ -10,7 +10,7 @@ We have big, happy news to share with you today. Upstream is joining {https://ww
 
 To those of you who know us well, this may come as a surprise. Heck — we weren’t even planning on raising money! But when we first met Gia and Abe Schneider in Boston earlier this year, it became immediately clear that we had the same mission “to create economic forces that drive environmental good.” To add to that, Natel’s board is an incredible group motivated by environmental conservation.
 
-![Natel’s massive hangar in Alameda](./img/natel-hanger.png)
+![Natel’s massive hangar in Alameda](img/natel-hanger.png)
 _Natel’s massive hangar in Alameda_
 
 So what does this mean for our work?

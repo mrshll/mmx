@@ -27,6 +27,7 @@ type Entry struct {
 	EmbedInParent bool
 	Children      []*Entry
 	Body          string
+	FirstImageSrc string
 	Incoming      []*Entry
 	Outgoing      []*Entry
 }
@@ -479,6 +480,12 @@ func main() {
 	linkEntries(entries[:])
 	for i := range entries {
 		entries[i].Body = processBody(entries[i], entries)
+
+		imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
+		imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
+		if len(imgMatches) > 0 {
+			entries[i].FirstImageSrc = imgMatches[0][1]
+		}
 	}
 
 	for i, entry := range entries {

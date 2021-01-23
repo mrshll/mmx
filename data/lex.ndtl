@@ -8,7 +8,7 @@ About
   HOST : home
   BREF : 
   BODY :
-    ![A person walking towards a bamboo forest](./img/redturtle024.jpg)
+    ![A person walking towards a bamboo forest](img/redturtle024.jpg)
     I'm 29 and live in Medford, MA. I grew up in Nashville, TN.
 
     I make {music|short songs}, am {garden|learning to grow living things}, and am trying to
@@ -64,7 +64,7 @@ Dormant Projects
 Snappi
   HOST : dormant projects
   BODY : 
-    ![Snappi logo](./img/snappi-1.png)
+    ![Snappi logo](img/snappi-1.png)
 
     {https://github.com/mrshll/Snappi|Source Code}
 
@@ -81,13 +81,13 @@ Snappi
 
     It was a great way to learn Objective-C, not to mention the end-to-end process of designing and market a tool to the public. It was my first time too as being the sole recipient of customer input and feedback. Even though the tool itself was lighthearted, I took any input seriously and made improvements quickly. 
 
-    ![Screenshot of Snappi](./img/snappi-2.png)
-    ![Screenshot of Snappi](./img/snappi-3.png)
+    ![Screenshot of Snappi](img/snappi-2.png)
+    ![Screenshot of Snappi](img/snappi-3.png)
 
 Into the Static
   HOST : dormant projects
   BODY :
-    ![screenshot of intothestatic.com](./img/into-the-static.jpeg)
+    ![screenshot of intothestatic.com](img/into-the-static.jpeg)
     Into The Static (previously hosted at intothestatic.com) was an application that collected videos from Instagram for a specified keyword and played them in a neverending sequence. As new videos were posted, they were pushed into the front of the queue so you often got the feeling like you were watching a network of "live" CCTV cameras. One of my favorite moments was watching #snow right at the first snowfall of the year, as videos punctuated the static in increasing frequency. More sobering was using it to see a livestream of protests in Venezuela in 2014.
 
     Oddly, folks noticed, and at one point the database had indexed over a million videos as people tested out different keywords.
@@ -120,10 +120,10 @@ Into the Static
 werm.world
   HOST : dormant projects
   BODY : 
-    <img src='./img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
+    <img src='img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
     ~2019. In one of my earlier bouts of {self-sufficient informatics}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
 
-    <img src='./img/werm-world-2.png' style='float:right; height: 30rem'/>
+    <img src='img/werm-world-2.png' style='float:right; height: 30rem'/>
 
     The site is a mobile-optimize React application, backed by Firebase with a few serverless functions for async operations such as image processing and email notification of new posts. The first iteration of the site, which allowed for posting of images, was built in a weekend and additional functionality like posting other types of media (text, audio) were added over time. One experimental feature was added to allow multiple media (from any user) to be attached horizontally to a post, with a horizontal scrolling element added to see them.
 
@@ -161,18 +161,18 @@ Upstream Tech
     
     The first non-consulting project was a remote compliance tool for water transfers in the Western U.S. In the West, water rights are purchased or leased by conservation organizations with the aim to transfer water from agriculture use to environmental use to increase flows in streams and rivers for the benefit of freshwater species. Our service allowed organizations to remotely monitor that this transfer indeed occurred and that the water was not used on the farm field - a monitoring process that would typically require costly in-person visits througout the season. These visits diverted resources that could otherwise be applied to additional conservation projects. A classifer was used to predict the liklihood that a field was irrigated or not. The bones of this application later became our data processing pipeline for satellite imagery and machine learning.
 
-    ![An Upstream Tech prototype](./img/upstream-proto-1.jpg)
+    ![An Upstream Tech prototype](img/upstream-proto-1.jpg)
 
     From there, we became fascinated with anachronous design and complexity of water rights. We built a system that digitized a number of states' water rights, and used the same classifier as before to predict year-over-year water use. An aim was to build a database of water rights that on paper appeared low-value, but reliably applied water to their fields. Another was to identify farm fields that had not used water for a certain number of consecutive years, which would invalidate the claim - a radical and contentious application of technology which would have been dangerous to release without a fuller understanding of the politics and local contexts. Even with some of these databases built, we learned that water rights require handshakes and hat tips and we were trying to apply a scalable solution to a problem that wasn't ready to "scale." So we switched gears back to our compliance monitoring.
 
     We met with The Nature Conservancy's {https://www.scienceforconservation.org/science-in-action/birdreturns|Bird Returns} program via an introduction from our advisor Brian Richter, the then Director of International Water at The Nature Conservancy. The program applies management guidelines to rice fields in the Pacific Flyway, providing vital habitat for migratory birds in the Spring and Fall. After discussion with the team's leads, Katie Andrews and Ethan Inlander, we determined that our previous compliance monitoring software could be used to monitor projects in the BirdReturns portfolio. We launched this program, and over time it evolved into what is now Lens.
 
-    ![The team visited a project location in the Sacramento area](./img/birdreturns-1.jpg)
+    ![The team visited a project location in the Sacramento area](img/birdreturns-1.jpg)
     _The team visited a project location in the Sacramento area_
 
     In parallel, we met Gia Schneider from Natel Energy via a meandering series of introductions. Natel Energy developes a hydropower turbine that uniquely allows for 100% safe fish passage. After breakfast together in Boston, we realized we were working on the same underlying problems from very different angles: Natel Energy via hardware and project development; Upstream Tech via software solutions - both with the aim at improving the health of watersheds and building climate resilience. After a few months of discussion and brainstorming, we decided to {upstream joins natel energy|join forces}. Learning about hydropower via Gia and the Natel team, we realized there was an opportunity to apply our machine learning and satellite technology to watershed management and planning, and more specifically starting with hydropower operations. This was the birth of our second product, HydroForecast.
 
-    ![Natel's hanger in Alameda, CA](./img/natel-hanger.png)
+    ![Natel's hanger in Alameda, CA](img/natel-hanger.png)
     _Natel's hanger in Alameda, CA_
 
     During this time period, we were fortunate to be joined by many friends, past colleagues, and people we met along the way. The team is now over {https://upstream.tech/team|20 people}.
@@ -181,7 +181,7 @@ mmx
   HOST : active projects
   BREF : This site is called mmx
   BODY : 
-    ![A person building something with bamboo, from The Red Turtle](./img/redturtle020.jpg)
+    ![A person building something with bamboo, from The Red Turtle](img/redturtle020.jpg)
 
     mmx was built at the start of 2021. Largely inspired by others on {https://webring.xxiivv.com/|webring}, especially {https://wiki.xxiivv.com/site/home.html|Devine}, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
 
@@ -259,7 +259,7 @@ Music
 
     Before, I DJ'd on the radio on WMFO and WRVU in Boston and Nashville respectively, and played records around the Boston area under different names. 
 
-    ![My face in front of a setup on top of the library roof](./img/dj-tufts.jpg)
+    ![My face in front of a setup on top of the library roof](img/dj-tufts.jpg)
     _One of my most memorable nights was playing atop the Library's roof at Tufts_
 
 Garden

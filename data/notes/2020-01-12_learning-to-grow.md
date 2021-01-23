@@ -31,7 +31,7 @@ coincidentally closed doors around the same time. So I inherited her
 garden too.
 
 ![Our garden at 20 Prescott in
-Somerville](./img/garden_prescott.jpg)
+Somerville](img/garden_prescott.jpg)
 
 I had two stellar seasons in these plots. In the first, I picked up where
 Ladawn left off, harvesting copious pole beans, tomatos, eggplants,
@@ -39,7 +39,7 @@ herbs. The next, we planted a wider assortment, with the prized and
 celebrated crop being the Pumpkins.
 
 ![3 pumpkins we grew, with an assortment of other
-veggies.](./img/pumpkins.jpg) _Looking back at these pictures, I
+veggies.](img/pumpkins.jpg) _Looking back at these pictures, I
 am astounded we grew these_
 
 I think the success of our first dance with this garden was in part due
@@ -49,7 +49,7 @@ busily pollinating the garden. Difficulty I've had with pumpkins in the
 past is in the polination, the flowers being as fragile and ephemeral as
 they are. But with an army of bees and other garden pals, it worked out.
 
-![Various flowers in our garden](./img/flowers.jpg)
+![Various flowers in our garden](img/flowers.jpg)
 
 <HR />
 
@@ -95,7 +95,7 @@ seasame oil. I got it all over my clothes as I worked (and didn't care).
 The construction was simple, held together by 3" galvanized screws.
 
 ![Two raised beds, partially
-constructed.](./img/beds_construction.png) _I also raised the rain
+constructed.](img/beds_construction.png) _I also raised the rain
 barrel so that it's just high enough to feed the beds_
 
 We use a compost company for weekly pickup - and they do bulk 50-50
@@ -106,14 +106,14 @@ outside and the dirt was already there. I never saw the delivery occur,
 so as far as I know the delivery occurs by a visit from the licensed dirt
 wizard, who summons the requested cubic feet into place.
 
-![Roughly 7 cubic yards of dirt](./img/dirt.jpg)
+![Roughly 7 cubic yards of dirt](img/dirt.jpg)
 
 Can't go to the gym because of COVID? Shovel dirt! I spent the next few
 weeks, hours per day, shoveling dirt. I got my climbing callouses back.
 My back and arms were sore! How could it possibly take so long, you ask?
 Well.
 
-![Steps up to the back yard](./img/where_the_dirt_has_to_go.jpg)
+![Steps up to the back yard](img/where_the_dirt_has_to_go.jpg)
 _Notice the pumpkins on the stairs. These were not grown by us, but next
 year they will be._
 
@@ -132,14 +132,14 @@ were filled. It was immensly satisfying to pour the last few shovelfuls
 into the beds.
 
 ![Two raised beds in the back yard, one filled, one partially filled with
-woody debris](./img/filling.jpg)
+woody debris](img/filling.jpg)
 
 The two front beds were on the aforementioned slope, so I opted to do a
 combination of digging into the hill to level the beds and to terrace
 them. I think they turned out great, although I'm a bit worried about
 accelerated rot because of how they are situated.
 
-![Two raised beds in the front yard](./img/front_beds.jpg)
+![Two raised beds in the front yard](img/front_beds.jpg)
 
 With the beds completed, I now spend the winter planning what to grow,
 ordering seeds, and trying to start seedlings in my basement. My plan,
