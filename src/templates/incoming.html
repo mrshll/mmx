@@ -2,7 +2,11 @@
 <div class='incoming'>
   ⇣ ({{len .Entry.Incoming}})
   {{range $incoming := .Entry.Incoming}}
+  {{if $incoming.EmbedInParent}}
+  <a href="./{{$incoming.Parent.Filename}}.html#{{$incoming.Filename}}">{{$incoming.Name}}</a>&nbsp;
+  {{else}}
   <a href="./{{$incoming.Filename}}.html">{{$incoming.Name}}</a>&nbsp;
+  {{end}}
   {{end}}
 </div>
 {{end}}
