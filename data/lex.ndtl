@@ -47,6 +47,7 @@ Active Projects
     - {mmx}, this site.
     - {Upstream Tech}, a public benefit corporation founded in 2016.
     - {Garden}, my 4 raised beds and basement grow-lab.
+    - {paste.date}, a scheduling program
     - {@carbonfreegrid}, a Twitter bot that tweets daily statistics about the previous day's U.S. energy production, highlighting low- and high-carbon generation.
 
 Dormant Projects
@@ -60,6 +61,15 @@ Dormant Projects
     - Future Phone, an application that allowed you to leave yourself a voicemail which would be redelivered far in the future.
     - Latitune was a app created at the end of college with {https://www.benweitzman.com/|Ben Weitzman} (who is a brilliant software developer). The app allowed users to "drop" songs at locations, and to see and listen to songs that were within a certain radius. We created a prototype, but with school wrapping up it never fully came to fruition. We had planned a feature where as you walked, the app would accumulate songs passed by into a playlist. {https://github.com/mrshll/latitune-ios|Source code}.
     - {Snappi} was one of the first applications I released in a polished form to the world. 
+
+paste.date
+  HOST : active projects
+  BODY : 
+    In what is certainly my most mundane project to date, I've created an application that loads calendar events from Google Calendar via a {https://twitter.com/marsh/status/1353404000469659648|prayer to the OAuth gods}, and uses lots of date and timezone math to find availablities based on the specified meeting parameters. I haven't had the opportunity to solve an algorithmically interesting problem recently -- so much of my technical work lately is technical piping and static sites. So it was fun to sit down and design an approach to solve a backpack-type problem.
+
+    ![Screenshot of paste.date](img/pastedate-1.png)
+
+    I was prompted to build this by the existing solutions' reliance on flashy formatted pastes into an email and the ever-presumptive "calendar link." I wanted a simple program that give me plaintext times that I could quickly copy and paste. I might add a link option at a later date, but I'd keep it simple. It currently lives on localhost, but I hope to wrap up signup and iron out the last few bugs this month.
 
 Snappi
   HOST : dormant projects
