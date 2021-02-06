@@ -55,6 +55,13 @@ func check(e error) {
 	}
 }
 
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
 func spad(line string, c rune) int {
 	i := 0
 	for _, runeValue := range line {
@@ -246,9 +253,11 @@ func processBody(e Entry, entries []Entry) string {
 	refRegex := regexp.MustCompile(`{[^{}]*}`)
 	b := e.Body
 
-	matches := refRegex.FindAllString(b, -1)
+	offset := 0
+	matches := refRegex.FindAllStringIndex(b, -1)
 	for _, match := range matches {
-		cleanMatch := match[1 : len(match)-1]
+		cleanMatch := b[match[0]+1+offset : match[1]-1+offset]
+		fmt.Println(match, cleanMatch, offset)
 		matchParts := strings.Split(cleanMatch, "|")
 
 		isModule := cleanMatch[0] == '^'
@@ -283,7 +292,8 @@ func processBody(e Entry, entries []Entry) string {
 			link = fmt.Sprintf("<a href='%s'>{%s}</a>", getEntryFilename(*refEntry), display)
 		}
 
-		b = strings.Replace(b, match, link, 1)
+		b = b[:match[0]+offset] + link + b[match[1]+offset:]
+		offset += len(link) - (match[1] - match[0])
 	}
 
 	// convert markdown
