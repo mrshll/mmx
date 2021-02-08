@@ -249,6 +249,15 @@ func replaceHr(b string) string {
 	return b
 }
 
+func appendEntryIfMissing(entries []*Entry, entryToAppend *Entry) []*Entry {
+	for _, e := range entries {
+		if e == entryToAppend {
+			return entries
+		}
+	}
+	return append(entries, entryToAppend)
+}
+
 func processBody(e Entry, entries []Entry) string {
 	refRegex := regexp.MustCompile(`{[^{}]*}`)
 	b := e.Body
@@ -287,7 +296,7 @@ func processBody(e Entry, entries []Entry) string {
 				panic(fmt.Sprintf("No entry found with name %s", matchParts[0]))
 			}
 			e.Outgoing = append(e.Outgoing, refEntry)
-			refEntry.Incoming = append(refEntry.Incoming, &e)
+			refEntry.Incoming = appendEntryIfMissing(refEntry.Incoming, &e)
 
 			link = fmt.Sprintf("<a href='%s'>{%s}</a>", getEntryFilename(*refEntry), display)
 		}

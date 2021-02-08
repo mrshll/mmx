@@ -5,12 +5,17 @@ Projects
 Plan
   HOST : projects
   BODY : 
-    - [+] {mmx} fix bug where only first internal ref is linked
     - [ ] {garden} migrate plan to {mmx}
+    - [ ] {garden} design wire enclosure
+    - [ ] {garden} set up heating pads for seedlings
+    - [ ] {garden} order additional materials
     - [ ] {@carbonfreegrid} add energy usage total to daily tweet
     - [ ] {paste.date} refactor and add tests, esp. for time zone edge cases
     - [ ] {paste.date} add OAuth flow for backend
     - [ ] {paste.date} allow calendar select
+    - [ ] {plotter} design incrementing generative illustration to mark pages
+    - [+] {mmx} deduplicate backlinks
+    - [+] {mmx} fix bug where only first internal ref is linked
 
 
 Active Projects
@@ -23,6 +28,11 @@ Active Projects
     - {paste.date}, a scheduling program
     - {@carbonfreegrid}, a Twitter bot that tweets daily statistics about the previous day's U.S. energy production, highlighting low- and high-carbon generation.
 
+Plotter
+  HOST : active projects
+  BODY : 
+    Various experiments in generative art and creating code, rendered physical by my AxiDraw.
+
 paste.date
   HOST : active projects
   BODY : 
@@ -31,7 +41,6 @@ paste.date
     ![Screenshot of paste.date](img/pastedate-1.png)
 
     I was prompted to build this by the existing solutions' reliance on flashy formatted pastes into an email and the ever-presumptive "calendar link." I wanted a simple program that give me plaintext times that I could quickly copy and paste. I might add a link option at a later date, but I'd keep it simple. It currently lives on localhost, but I hope to wrap up signup and iron out the last few bugs this month.
-
 
 @carbonfreegrid
   HOST : active projects
@@ -53,12 +62,26 @@ Garden
   HOST : active projects
   BREF : Growing food and getting dirty
   BODY : 
-    Being largely confined at home in 2020, I took on many personal and introspective projects. One of the major draws for me to move slightly out of the city was to have more space for outdoor projects. I hope 2021 will be a season of bounty, where I can look forward to tending the beds daily and sharing the harvest with my neighbors and friends. I also hope to transform the vegetables into {the art of fermentation|experimental ferments}
+    Being largely confined at home in 2020, I took on many personal and introspective projects. One of the major draws for me to move slightly out of the city was to have more space for outdoor projects. I hope 2021 will be a season of bounty, where I can look forward to tending the beds daily and sharing the harvest with my neighbors and friends. I also hope to transform the vegetables into {the art of fermentation|experimental ferments}.
 
-    1. {Setting up the garden}
-    1. Planning and patience
-    1. Starting the seeds
-    1. ???
+    1. {Setting up the raised beds}
+    2. {garden research|Research on supplies, materials, seeds and techniques}
+
+Garden Research
+  HOST : garden
+  BREF : Research on supplies, materials, seeds, and techniques
+  BODY : 
+    ###### Seed suppliers
+    - {https://www.rareseeds.com/|Baker Creek}: Heirloom and rare seeds. A massive variety of interesting (and eye-catching) plants. Unclear exactly how much more difficult these are to cultivate than the more basic varieties. They have a concise {https://www.rareseeds.com/growing-guide|growing guide} for most of the species I plan to grow.
+    - {https://www.botanicalinterests.com/|Botanical Interests}: Basic seeds that seem more mainstream than the wild and rare varieties. They are available at the local garden store and affordable, so I usually find myself with many of their seed packets in my cache. They also a {https://www.botanicalinterests.com/product/Sowing-Guides|sowing guide}. They have both vegetables and flowers.
+    - {https://wildseedproject.net/|Wild Seed Project}: A Maine-based native plant-focused seed organization that focuses primarily on pollinators. I currently have dozens of their seeds in a winter box in the back. Fingers crossed until Spring.
+    - {https://sowtrueseed.com/|Sow True Seed}: Open-pollinated, heirloom and organic seeds. They also have mixes for sprouted seeds. They have {https://sowtrueseed.com/blogs/planting|in-depth growing guides} for specific plants that include harvesting seeds for next planting.
+
+    ###### Starting supplies
+    There are a number of commercial starter tray/pot options. I first got a few dozen pressed-peat starters. I am inclined to just use household materials and recyclables to make as many as I can. There are methods to make {https://www.instructables.com/DIY-Newspaper-Pots/|plant pots out of newspaper}.
+
+    I've found that the compost I ordered in bulk is too dense and rough to start seeds - they've done far better in a loose and soft soil.
+    
 
 
 Upstream Tech

@@ -1,5 +1,5 @@
 ---
-name: Setting up the garden
+name: Setting up the raised beds
 host: garden
 bref: Learning to grow (plants)
 date: 2020-01-12
