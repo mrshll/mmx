@@ -266,7 +266,6 @@ func processBody(e Entry, entries []Entry) string {
 	matches := refRegex.FindAllStringIndex(b, -1)
 	for _, match := range matches {
 		cleanMatch := b[match[0]+1+offset : match[1]-1+offset]
-		fmt.Println(match, cleanMatch, offset)
 		matchParts := strings.Split(cleanMatch, "|")
 
 		isModule := cleanMatch[0] == '^'
