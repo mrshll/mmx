@@ -149,7 +149,7 @@ mmx
 
     I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant Gatsby plugin.
 
-    In the spirit of {self-sufficient informatics}, and heavily inspired by others on the {https://webring.xxiivv.com/|webring}, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
+    In the spirit of {low tech}, and heavily inspired by others on the {https://webring.xxiivv.com/|webring}, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
 
     To start, I mapped out my hoped-for characteristics of the end result.
     I landed on: 
@@ -260,7 +260,7 @@ werm.world
   HOST : dormant projects
   BODY : 
     <img src='img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
-    ~2019. In one of my earlier bouts of {self-sufficient informatics}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
+    ~2019. In one of my earlier bouts of {low tech}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
 
     <img src='img/werm-world-2.png' style='float:right; height: 30rem'/>
 
