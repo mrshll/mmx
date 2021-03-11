@@ -442,11 +442,13 @@ func makeIndex(entries []Entry) string {
 	}
 
 	readingIcon := "<span style='margin-right:10px'>📖</span>"
+	projectsIcon := "<span style='margin-right:10px'>🖌</span>"
+	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
 
 	homeBody := "<h5>Active Projects</h5>"
 	homeBody += activeProjectsBody
-	homeBody += "<hr/><h5>Timeline</h5>"
+	homeBody += "<hr/><h5>Update Timeline</h5>"
 	y, _, _ := time.Now().Date()
 	y++ // increment y so that the first date is less than current and we write it
 
@@ -460,11 +462,18 @@ func makeIndex(entries []Entry) string {
 		}
 
 		icon := elseIcon
+		crumb := ""
 		if e.Parent.Filename == "reading" {
 			icon = readingIcon
+		} else if e.Parent.Filename == "active_projects" || e.Parent.Filename == "dormant_projects" {
+			icon = projectsIcon
+		} else if e.Filename == "music" || e.Parent.Filename == "music" {
+			icon = musicIcon
+		} else if e.Parent.Name != "Home" {
+			crumb = fmt.Sprintf("<a href='%s'>%s</a> > ", getEntryFilename(*e.Parent), e.Parent.Name)
 		}
 
-		homeBody += fmt.Sprintf("<div>%s<a href='%s'>%s</a> <em>%s</em></div>", icon, getEntryFilename(e), e.Name, formatDate(e.Date))
+		homeBody += fmt.Sprintf("<div>%s %s<a href='%s'>%s</a> <em>%s</em></div>", icon, crumb, getEntryFilename(e), e.Name, formatDate(e.Date))
 	}
 
 	return homeBody
