@@ -112,16 +112,3 @@ footer > * {
     padding: 2rem 2.2rem;
   }
 }
-
-/* for image caption */
-.gatsby-resp-image-wrapper + em,
-img + em {
-  font-style: normal;
-  display: inherit;
-  text-align: center;
-  font-size: 90%;
-}
-
-img[src$='.gif'] {
-  margin: 0 auto;
-}
