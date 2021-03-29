@@ -429,6 +429,8 @@ In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {ht
 
 ~For my pages, I opted to use a modified version of the human readable {https://wiki.xxiivv.com/site/indental.html, Indental} format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.~
 
+I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, mmxup, inspired by Indental and {https://thomasorus.com/kaku.html, kaku}. The code for {https://github.com/mrshll/mmx/blob/main/src/mmxup.go, mmx's compiler} is short and has been fun to write and extend.
+
 Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" was achieved with the following bash:
 
 ```
