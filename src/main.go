@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"html/template"
-	"math/rand"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -14,13 +13,13 @@ import (
 )
 
 type Entry struct {
-	Doc           MmxDoc
+	MmxDoc
 	Parent        *Entry
 	EmbedInParent bool
 	Children      []*Entry
 	FirstImageSrc string
-	Incoming      []*Entry
-	Outgoing      []*Entry
+	Inbound       []*Entry
+	Outbound      []*Entry
 }
 
 type TemplateContent struct {
@@ -29,12 +28,17 @@ type TemplateContent struct {
 	NavHTMLString string
 }
 
+type MakeIndexOptions struct {
+	DatesOnly bool
+	ShowBref  bool
+}
+
 func getEntryFilename(e Entry) string {
 	var filename string
 	if e.Parent != nil && e.EmbedInParent {
-		filename = fmt.Sprintf("%s.html#%s", e.Parent.Doc.Slug, e.Doc.Slug)
+		filename = fmt.Sprintf("%s.html#%s", e.Parent.Slug, e.Slug)
 	} else {
-		filename = fmt.Sprintf("%s.html", e.Doc.Slug)
+		filename = fmt.Sprintf("%s.html", e.Slug)
 	}
 
 	return filename
@@ -90,113 +94,9 @@ func parseIndentalLine(line string) (string, string) {
 	return key, value
 }
 
-// func loadIndental(file *os.File) []Entry {
-
-// 	var entries []Entry
-// 	var catchBody bool
-
-// 	scanner := bufio.NewScanner(file)
-// 	if err := scanner.Err(); err != nil {
-// 		log.Fatal(err)
-// 	}
-
-// 	for scanner.Scan() {
-// 		line := scanner.Text()
-// 		depth := spad(line, ' ') / 2
-// 		lastEntryIndex := len(entries) - 1
-
-// 		if depth == 0 && line != "" {
-// 			catchBody = false
-// 			name := line
-// 			filename := strings.ToLower(strings.ReplaceAll(name, " ", "_"))
-// 			entries = append(entries, Entry{Name: name, Filename: filename})
-// 		} else if depth == 1 && !catchBody {
-// 			catchBody = false
-// 			key, value := parseIndentalLine(line)
-// 			if key == "DATE" && value != "" {
-// 				entries[lastEntryIndex].Date = parseDate(value)
-// 			} else if key == "FILE" {
-// 				entries[lastEntryIndex].Filename = value
-// 			} else if key == "HOST" {
-// 				entries[lastEntryIndex].Host = value
-// 			} else if key == "BREF" {
-// 				entries[lastEntryIndex].Bref = value
-// 			} else if key == "EMBD" && value == "true" {
-// 				entries[lastEntryIndex].EmbedInParent = true
-// 			} else {
-// 				catchBody = key == "BODY"
-// 			}
-// 		} else if depth >= 2 {
-// 			if catchBody {
-// 				entries[lastEntryIndex].Body += line[4:] + "\n"
-// 			}
-// 		} else if line == "" && catchBody {
-// 			entries[lastEntryIndex].Body += "\n"
-// 		}
-// 	}
-
-// 	return entries
-// }
-
-// func parseFrontLine(line string) (string, string) {
-// 	delimiterIndex := strings.Index(line, ":")
-
-// 	if delimiterIndex == -1 {
-// 		panic(fmt.Sprintf("No delmiter found in Indental line: %s", line))
-// 	}
-
-// 	key := strings.TrimSpace(line[0:delimiterIndex])
-// 	val := strings.TrimSpace(line[delimiterIndex+1 : len(line)])
-// 	return key, val
-// }
-
-// func loadMd(file *os.File) Entry {
-// 	scanner := bufio.NewScanner(file)
-// 	if err := scanner.Err(); err != nil {
-// 		log.Fatal(err)
-// 	}
-
-// 	i := 0
-// 	captureFront := false
-// 	e := Entry{}
-
-// 	for scanner.Scan() {
-// 		i++
-
-// 		line := scanner.Text()
-// 		if i == 1 {
-// 			captureFront = true
-// 			continue
-// 		}
-
-// 		if captureFront {
-// 			if line == "---" {
-// 				captureFront = false
-// 				continue
-// 			}
-
-// 			key, val := parseFrontLine(line)
-// 			if key == "name" {
-// 				e.Name = val
-// 				e.Filename = strings.ToLower(strings.ReplaceAll(val, " ", "_"))
-// 			} else if key == "date" {
-// 				e.Date = parseDate(val)
-// 			} else if key == "host" {
-// 				e.Host = val
-// 			} else if key == "bref" {
-// 				e.Bref = val
-// 			}
-// 		} else {
-// 			e.Body += line + "\n"
-// 		}
-// 	}
-
-// 	return e
-// }
-
 func findEntry(entries []Entry, name string) *Entry {
 	for i := range entries {
-		if strings.ToLower(entries[i].Doc.Name) == strings.ToLower(name) {
+		if strings.ToLower(entries[i].Name) == strings.ToLower(name) {
 			return &entries[i]
 		}
 	}
@@ -242,87 +142,69 @@ func appendEntryIfMissing(entries []*Entry, entryToAppend *Entry) []*Entry {
 	return append(entries, entryToAppend)
 }
 
-// func processBody(e Entry, entries []Entry) string {
-// 	refRegex := regexp.MustCompile(`{[^{}]*}`)
-// 	b := e.Body
-
-// 	offset := 0
-// 	matches := refRegex.FindAllStringIndex(b, -1)
-// 	for _, match := range matches {
-// 		cleanMatch := b[match[0]+1+offset : match[1]-1+offset]
-// 		matchParts := strings.Split(cleanMatch, "|")
-
-// 		isModule := cleanMatch[0] == '^'
-// 		isExternal := strings.Contains(cleanMatch, "http")
-
-// 		var display string
-// 		if len(matchParts) > 1 {
-// 			display = strings.Join(matchParts[1:], " ")
-// 		} else {
-// 			display = matchParts[0]
-// 		}
-
-// 		var link string
-// 		if isModule {
-// 			if strings.Contains(matchParts[0], "^bandcamp") {
-// 				link = fmt.Sprintf("<iframe style='border: 0; width: 400px; height: 300px;' src='https://bandcamp.com/EmbeddedPlayer/album=%s/size=large/bgcol=ffffff/artwork=small/transparent=true/' seamless></iframe>", matchParts[1])
-// 			}
-// 			if strings.Contains(matchParts[0], "^youtube") {
-// 				link = fmt.Sprintf("<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/%s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>", matchParts[1])
-// 			}
-// 		} else if isExternal {
-// 			// external link
-// 			link = fmt.Sprintf("<a href='%s' target='_blank'>[%s]</a>", matchParts[0], display)
-// 		} else {
-// 			refEntry := findEntry(entries, matchParts[0])
-// 			if refEntry == nil {
-// 				panic(fmt.Sprintf("No entry found with name %s", matchParts[0]))
-// 			}
-// 			e.Outgoing = append(e.Outgoing, refEntry)
-// 			refEntry.Incoming = appendEntryIfMissing(refEntry.Incoming, &e)
-
-// 			link = fmt.Sprintf("<a href='%s'>{%s}</a>", getEntryFilename(*refEntry), display)
-// 		}
-
-// 		b = b[:match[0]+offset] + link + b[match[1]+offset:]
-// 		offset += len(link) - (match[1] - match[0])
-// 	}
-
-// 	// convert markdown
-// 	output := markdown.ToHTML([]byte(b), nil, nil)
-// 	b = string(output)
-
-// 	return b
-// }
-
 func linkEntries(entries []Entry) {
 	for i := range entries {
-		parentPtr := findEntry(entries[:], entries[i].Doc.Host)
+		// link Host
+		parentPtr := findEntry(entries[:], entries[i].Host)
 		entries[i].Parent = parentPtr
 		(*parentPtr).Children = append((*parentPtr).Children, &(entries[i]))
+
+		// find incoming
+		aTagPattern := regexp.MustCompile(`<a.*?href='([\S ]+?)'>.*?<\/a>`)
+		matches := aTagPattern.FindAllStringSubmatch(entries[i].Body, -1)
+		for _, match := range matches {
+			aTag := match[0]
+			outboundHref := match[1]
+
+			if strings.HasPrefix(outboundHref, "http") || strings.HasPrefix(outboundHref, "#") {
+				// external
+				continue
+			} else if outboundHref[0] == '^' {
+				// module
+				// TODO: handle in mmxup
+				continue
+			} else {
+
+				outboundEntry := findEntry(entries, outboundHref)
+
+				if outboundEntry == nil {
+					panic(fmt.Sprintf("No entry found with name '%s' in body of '%s'", outboundHref, entries[i].Body))
+				}
+
+				newATag := strings.Replace(aTag, outboundHref, getEntryFilename(*outboundEntry), 1)
+				entries[i].Body = strings.Replace(entries[i].Body, aTag, newATag, 1)
+
+				entries[i].Outbound = append(entries[i].Outbound, outboundEntry)
+				outboundEntry.Inbound = appendEntryIfMissing(outboundEntry.Inbound, &entries[i])
+			}
+		}
 	}
+}
+
+func sortEntries(entries []*Entry) []*Entry {
+	sorted := make([]*Entry, len(entries))
+	copy(sorted, entries)
+	sort.Slice(sorted, func(i, j int) bool {
+		a := sorted[i]
+		b := sorted[j]
+		if a.Date.IsZero() && b.Date.IsZero() {
+			return a.Name < b.Name
+		} else if a.Date.IsZero() {
+			return true
+		} else if b.Date.IsZero() {
+			return false
+		}
+
+		return a.Date.After(b.Date)
+	})
+	return sorted
 }
 
 func makeSubNav(e Entry, target Entry) string {
 	subnav := "<ul>"
-	max := 10
+	max := 6
 
-	sortedChildren := make([]*Entry, len(e.Children))
-	copy(sortedChildren, e.Children)
-	sort.Slice(sortedChildren, func(i, j int) bool {
-		docA := sortedChildren[i].Doc
-		docB := sortedChildren[j].Doc
-		if docA.Date.IsZero() && docB.Date.IsZero() {
-			return docA.Name < docB.Name
-		} else if docA.Date.IsZero() {
-			return true
-		} else if docB.Date.IsZero() {
-			return false
-		}
-
-		return docA.Date.After(docB.Date)
-	})
-
+	sortedChildren := sortEntries(e.Children)
 	for i, cPtr := range sortedChildren {
 		child := *cPtr
 		if i >= max {
@@ -333,14 +215,14 @@ func makeSubNav(e Entry, target Entry) string {
 			continue
 		}
 
-		if child.Doc.Name == e.Doc.Name {
+		if child.Name == e.Name {
 			continue // this occurs in the case of root node, i.e. Now
 		}
 
-		if child.Doc.Name == target.Doc.Name {
-			subnav += fmt.Sprintf("<li><mark><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Doc.Name)
+		if child.Name == target.Name {
+			subnav += fmt.Sprintf("<li><mark><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
 		} else {
-			subnav += fmt.Sprintf("<li><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Doc.Name)
+			subnav += fmt.Sprintf("<li><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
 		}
 	}
 
@@ -351,24 +233,24 @@ func makeSubNav(e Entry, target Entry) string {
 func makeNav(e Entry) string {
 	nav := "<nav>"
 	if e.Parent == nil {
-		panic(fmt.Sprintf("No parent found with name %s", e.Doc.Name))
+		panic(fmt.Sprintf("No parent found with name %s", e.Name))
 	}
 	if e.Parent.Parent == nil {
-		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Doc.Name, e.Doc.Name))
+		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Name, e.Name))
 	}
 
 	// this happens for our root node
-	if e.Parent.Parent.Doc.Name == e.Parent.Doc.Name {
+	if e.Parent.Parent.Name == e.Parent.Name {
 		nav += makeSubNav(*e.Parent.Parent, e)
 	} else {
 		nav += makeSubNav(*e.Parent.Parent, *e.Parent)
 	}
 
-	if e.Parent.Parent.Doc.Name != e.Parent.Doc.Name {
+	if e.Parent.Parent.Name != e.Parent.Name {
 		nav += makeSubNav(*e.Parent, e)
 	}
 
-	if e.Parent.Doc.Name != e.Doc.Name {
+	if e.Parent.Name != e.Name {
 		nav += makeSubNav(e, e)
 	}
 
@@ -399,7 +281,7 @@ func renderEntryHTML(e Entry) string {
 		}
 	}
 
-	e.Doc.Body += embeddedHTMLStr
+	e.Body += embeddedHTMLStr
 
 	var tpl bytes.Buffer
 	tmplContent := TemplateContent{Entry: e, Children: children, NavHTMLString: makeNav(e)}
@@ -412,12 +294,8 @@ func renderEntryHTML(e Entry) string {
 	return htmlStr
 }
 
-func makeIndex(entries []Entry) string {
-	sortedEntries := make([]Entry, len(entries))
-	copy(sortedEntries, entries)
-	sort.Slice(sortedEntries, func(i, j int) bool {
-		return sortedEntries[i].Doc.Date.After(sortedEntries[j].Doc.Date)
-	})
+func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) string {
+	sortedEntries := sortEntries(entries)
 
 	// var activeProjectsBody string
 	// for _, e := range entries {
@@ -432,43 +310,53 @@ func makeIndex(entries []Entry) string {
 	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
 
-	nowBody := "<h5>Now</h5>"
-	// nowBody := "<h5>Active Projects</h5>"
-	// nowBody += activeProjectsBody
-	nowBody += "<h5>Updates</h5>"
+	body := indexEntry.Body
+	// body := "<h5>Active Projects</h5>"
+	// body += activeProjectsBody
+	// body += "<h5>Updates</h5>"
 	y, _, _ := time.Now().Date()
 	y++ // increment y so that the first date is less than current and we write it
 
 	for _, e := range sortedEntries {
-		if e.Doc.Date.IsZero() {
+		if e.Date.IsZero() && options.DatesOnly {
 			continue
 		}
-		if e.Doc.Date.Year() < y {
-			y = e.Doc.Date.Year()
-			nowBody += fmt.Sprintf("<div style='font-size:12px;font-weight:bold;margin-top:20px'>%v</div>", y)
+		if !e.Date.IsZero() && e.Date.Year() < y {
+			y = e.Date.Year()
+			body += fmt.Sprintf("<div style='font-size:12px;font-weight:bold;margin-top:20px'>%v</div>", y)
 		}
 
 		icon := elseIcon
 		crumb := ""
-		if e.Parent.Doc.Slug == "reading" {
+		if e.Parent.Slug == "reading" {
 			icon = readingIcon
-		} else if e.Parent.Doc.Slug == "active_projects" || e.Parent.Doc.Slug == "dormant_projects" {
+		} else if e.Parent.Slug == "active_projects" || e.Parent.Slug == "dormant_projects" {
 			icon = projectsIcon
-		} else if e.Doc.Slug == "music" || e.Parent.Doc.Slug == "music" {
+		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
-		} else if e.Parent.Doc.Name != "Now" {
-			crumb = fmt.Sprintf("<a href='%s'>%s</a> > ", getEntryFilename(*e.Parent), e.Parent.Doc.Name)
+		} else if e.Parent.Slug != indexEntry.Slug {
+			crumb = fmt.Sprintf("<a href='%s'>%s</a> > ", getEntryFilename(*e.Parent), e.Parent.Name)
 		}
 
-		nowBody += fmt.Sprintf("<div>%s %s<a href='%s'>%s</a> <em>%s</em></div>", icon, crumb, getEntryFilename(e), e.Doc.Name, formatDate(e.Doc.Date))
+		margin := 0
+		if options.ShowBref {
+			margin = 10
+		}
+
+		body += fmt.Sprintf("<div style='margin-bottom:%dpx'>%s %s<a href='%s'>%s</a>", margin, icon, crumb, getEntryFilename(*e), e.Name)
+		if !e.Date.IsZero() {
+			body += fmt.Sprintf("<em style='color:lightgrey'> %s</em>", formatDate(e.Date))
+		}
+		if options.ShowBref {
+			body += fmt.Sprintf("<br/><span style='margin-left: 32px'>%s</span>", e.Bref)
+		}
+		body += "</div>"
 	}
 
-	return nowBody
+	return body
 }
 
 func main() {
-	rand.Seed(time.Now().Unix())
-
 	var entries []Entry
 
 	// load .mmx
@@ -480,78 +368,40 @@ func main() {
 
 		docs := parseFile(file)
 		for _, doc := range docs {
-			entries = append(entries, Entry{
-				Doc: doc,
-			})
+			entry := Entry{MmxDoc: doc}
+			entries = append(entries, entry)
 		}
 	}
 
 	linkEntries(entries[:])
 
-	// load .ndtl
+	for i := range entries {
+		if entries[i].IsIndex {
+			entries[i].Body = makeIndex(entries[i], entries[i].Children, MakeIndexOptions{ShowBref: true})
+		}
 
-	// load .ndtl
-	// matches, _ := filepath.Glob("../data/*.ndtl")
-	// for _, match := range matches {
-	// 	file, err := os.Open(match)
-	// 	check(err)
-	// 	defer file.Close()
-
-	// 	entries = append(entries, loadIndental(file)...)
-	// }
-
-	// load .md
-	// matches, _ = filepath.Glob("../data/**/*.md")
-	// for _, match := range matches {
-	// 	file, err := os.Open(match)
-	// 	check(err)
-	// 	defer file.Close()
-
-	// 	entries = append(entries, loadMd(file))
-	// }
-	// matches, _ := filepath.Glob("../data/*.ndtl")
-	// for _, match := range matches {
-	// 	file, err := os.Open(match)
-	// 	check(err)
-	// 	defer file.Close()
-
-	// 	entries = append(entries, loadIndental(file)...)
-	// }
-
-	// load .md
-	// matches, _ = filepath.Glob("../data/**/*.md")
-	// for _, match := range matches {
-	// 	file, err := os.Open(match)
-	// 	check(err)
-	// 	defer file.Close()
-
-	// 	entries = append(entries, loadMd(file))
-	// }
-	// for i := range entries {
-	// 	entries[i].Body = processBody(entries[i], entries)
-
-	// 	imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
-	// 	imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
-	// 	if len(imgMatches) > 0 {
-	// 		entries[i].FirstImageSrc = imgMatches[0][1]
-	// 	}
-	// }
+		imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
+		imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
+		if len(imgMatches) > 0 {
+			entries[i].FirstImageSrc = imgMatches[0][1]
+		}
+	}
 
 	for i, entry := range entries {
-		// 	if entry.EmbedInParent {
-		// 		continue
-		// 	}
-
-		filepath := "../docs/" + entry.Doc.Slug + ".html"
+		filepath := "../docs/" + entry.Slug + ".html"
 		f, err := os.OpenFile(filepath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 		check(err)
 
 		fmt.Println(i, filepath)
 		var htmlStr string
-		if entry.Doc.Slug == "index" {
+		if entry.Slug == "index" {
 			// special case to render timeline
-			htmlStr = makeIndex(entries)
-			entry.Doc.Body = htmlStr
+			var entryPtrs []*Entry
+			for i := range entries {
+				entryPtrs = append(entryPtrs, &entries[i])
+			}
+			htmlStr = makeIndex(entry, entryPtrs, MakeIndexOptions{DatesOnly: true})
+			entry.Body = htmlStr
 		}
 		htmlStr = renderEntryHTML(entry)
 		f.WriteString(htmlStr)
