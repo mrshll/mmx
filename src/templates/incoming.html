@@ -3,9 +3,9 @@
   ⇣ ({{len .Entry.Incoming}})
   {{range $incoming := .Entry.Incoming}}
   {{if $incoming.EmbedInParent}}
-  <a href="./{{$incoming.Parent.Filename}}.html#{{$incoming.Filename}}">{{$incoming.Name}}</a>&nbsp;
+  <a href="./{{$incoming.Parent.Doc.Slug}}.html#{{$incoming.Doc.Slug}}">{{$incoming.Doc.Name}}</a>&nbsp;
   {{else}}
-  <a href="./{{$incoming.Filename}}.html">{{$incoming.Name}}</a>&nbsp;
+  <a href="./{{$incoming.Doc.Slug}}.html">{{$incoming.Doc.Name}}</a>&nbsp;
   {{end}}
   {{end}}
 </div>

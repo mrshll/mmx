@@ -4,14 +4,14 @@
   <meta name='author' content='Marshall Moutenot'>
   <meta name='keywords' content='Marshall Moutenot, mrshll, upstream tech, climate tech' />
   <meta name='license' content='name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/' />
-  <meta name='description' content='{{.Entry.Name}} - {{.Entry.Bref}}' />
+  <meta name='description' content='{{.Entry.Doc.Name}} - {{.Entry.Doc.Bref}}' />
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <meta property='og:type' content='website' />
-  <meta property='og:title' content='{{.Entry.Name}}' />
-  <meta property='og:description' content='{{.Entry.Bref}}' />
+  <meta property='og:title' content='{{.Entry.Doc.Name}}' />
+  <meta property='og:description' content='{{.Entry.Doc.Bref}}' />
   <meta name='twitter:creator' content='@marsh' />
-  <meta name='twitter:title' content='{{.Entry.Name}}' />
-  <meta name='twitter:description' content='{{.Entry.Bref}}' />
+  <meta name='twitter:title' content='{{.Entry.Doc.Name}}' />
+  <meta name='twitter:description' content='{{.Entry.Doc.Bref}}' />
   <!-- <meta name='thumbnail' content='' /> -->
   {{if .Entry.FirstImageSrc}}
   <meta name='twitter:image' content='https://mrshll.com/{{.Entry.FirstImageSrc}}' />
@@ -21,5 +21,5 @@
   <link rel='stylesheet' type='text/css' href='./links/normalize.css'>
   <link rel='stylesheet' type='text/css' href='./links/skeleton.css'>
   <link rel='stylesheet' type='text/css' href='./links/main.css'>
-  <title>mrshll.com - {{.Entry.Name}}</title>
+  <title>mrshll.com - {{.Entry.Doc.Name}}</title>
 </head>

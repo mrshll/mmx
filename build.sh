@@ -9,4 +9,4 @@ cp -r data/img/* docs/img/
 
 cp CNAME docs/CNAME
 
-cd src && go run main.go && cd ../
+cd src && go run main.go mmxup.go && cd ../

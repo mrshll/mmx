@@ -1,0 +1,1237 @@
+====
+
+name: Now
+host: now
+bref: Now
+slug: index
+body:
+
+<div id='recent-img'>
+<img src='img/2021-03-27.jpg'/>
+_Seedlings, 2020-03-27_
+</div>
+
+* Reading
+* : {East of Eden}
+* : {Twelve Tomorrows}
+
+* Projects
+* : Growing the {Upstream Tech} team this Spring and Summer
+* : Starting The Mountain Goat in Western MA with my brother
+* : Creating my own markup language for {mmx, this site}
+* : Spending time in the {garden}
+* : {gamedev, Making a game} about birds and buffalo
+
+_Last updated {^buildtime}_
+
+---
+
+====
+
+name: Research & Notes
+host: now
+bref: Notes on topics of interest.
+indx: true
+
+====
+
+name: About
+host: now
+bref:
+date: 2021-01-02
+body:
+
+[img/redturtle024.jpg, A screen capture from Red Turtle by Studio Ghibli]
+I'm 29 and live in Medford, MA. I grew up in Nashville, TN.
+
+I make {music, short songs}, am {garden, learning to grow living things}, and am trying to
+make writing a more regular activity. I used to be a strong rock climbing
+-- you could find me in the local rock gym on most days; these days you
+can find me in the Middlesex Fells running on the trails.
+
+About 5 years ago, I found my work misaligned with my concept of {an appeal for impact, impact}.
+Shortly after, I started {https://upstream.tech, Upstream Tech} with my pal {https://twitter.com/aldenks, Alden} to see
+if we could use our skills to aid efforts in environmental conservation and
+renewable energy. It's going well so far, we think. We really enjoy our work,
+are humbled by those we work with, and the team is more than {https://upstream.tech/team, 20 amazing people}. Along the way, I have learned a lot about the complexities -- and
+context -- of water/climate/energy, the excitement and terrors of growing a
+remote team, and (in the most cliche way possible) myself.
+
+This site is called {mmx}. It is my place to write, research and share ideas.
+
+====
+
+name: Inventory
+host: about
+bref: The things I use most days
+date: 2021-02-01
+body:
+
+I am opinionated about my tools, but I oscillate wildly between upcycled stand-ins and high quality last-forevers. In general the goal is to have fewer "items," but new hobbies and projects often come with their accoutrements. And I am a person who has a lot of {projects}.
+
+This list captures the tools and miscellanea that I would be hamstrung without.
+
+## Computing
+
+[./img/i3.png, i3]
+**{https://i3wm.org/, i3wm}** - i3 is a tiling window manager built for X11. It organizes windows across screens in non-overlapping frames. This may sound familiar; many other operating systems have keyboard shortcut-driven approximations wherein you can snap windows around. i3 supports a powerful combination of shortcuts (built for someone with VI bindings etched into their brain) that manipulate the tree of tiled windows. It's easily customized and there are entire OS distributions built around it like {https://github.com/regolith-linux, Regolith Linux}.
+
+**{https://regolith-linux.org/, Regolith}** - a linux distribution built on Ubuntu, GNOME, and i3. It has fantastic package defaults and a design methodology that works out of the box while still allowing for needed customization.
+
+[./img/moonlander.png, Moonlander keyboard]
+**{https://www.zsa.io/moonlander/, Moonlander Mark I}** - an impulse buy one day realizing the core role typing plays in my life and profession. This keyboard is incredible - mainly due to its onboard firmware that remaps keys before any instruction is sent to the OS. This is important for me because I rely on a few key remappings - ESC to CAP, for example. The first two weeks of owning the keyboard were brutal. I could hardly write a word without misfires. Having spent time with it, I now think my typing is more efficient, and my hands do not move, even for symbols and modifier keys. It was a great investment.
+
+## Communication
+
+**{https://www.fastmail.com/, fastmail}** - minimal and clean hosted email for my domain.
+
+====
+
+name: Tufts Talk 2020-02-23
+host: Research & Notes
+bref: Notes ahead of my talk to the Tufts CS and Entrepreneurship Communities
+date: 2021-02-23
+body:
+
+## What sparked you to get the entrepreneurship bug
+
+One possibility is that both of my parents were self-employed. My dad is a music producer and my mom was a photographer and then a real estate agent. Observing their ability to set their terms of work, and pursuing their work in ways that made it rewarding to them probably stuck with me.
+
+In middle and high school, I'd sell gaming computers - order the components of Newegg and slap them together for friends at school. I also made websites and did neighborhood tech support. I think the ability to use technology as a means towards self-sufficiency was embedded at a very young age. Towards the end of high school, I ran a summer camp for computer, video editing, Flash -yes flash- animation, and other fun things. That was the first time I developed a spreadsheet to model revenue, expenses like paying my co-teachers, and the snacks we'd get from our costco runs. That was super fun and since we were winging it, it didn't carry the baggage of a full-fledged "startup."
+
+From that point on, I think there was a lot of pressure to start something. Observing all of the other students in my CS classes was exciting, but also daunting. It was exciting because I knew these folks would be my colleagues throughout my career. It was daunting because everyone else was so darn smart! I probably had a few dozen false start apps and ideas, usually getting sucked in to learning a new framework and forgetting to follow through on the concept or MVP.
+
+My first job at Crashlytics made things click - how to create something of value to real users and grow it.
+
+## Biggest lesson learned in your entrepreneurship journey?
+
+Big picture learning: Success is in the people and the execution, not the idea. I've been lucky to surround myself with some really talented folks, and the number of bad ideas outnumber the ones that have worked out 10-to-1. I'm not sure if this is just my luck, or if this is a universal truth, but it seems like you cross paths with folks you work with in your career often. I currently work with many people I've worked with at previous companies or know from Tufts. What does that mean? Work with empathy and care for your colleagues. You'll cross paths again. If you're a leader, lead with empathy. Push, but not too hard. Listen and change depending on what you hear.
+
+## Tell the one unexpected encounter you have had in this journey?
+
+Any time something positive happens I am surprised. Shouldn't we be out of money? Is this large customer sure that they want to work with the new team versus the old school engineering firm that's been around for a geological age?
+
+One thing that was very unexpected was an invitation to the United Nations to testify about remote sensing and machine learning's potential to build resiliency in the face of climate change. Amadou and I dressed up and went to one the big chambers in the UN NYC headquarters that to me exist only in pictures. I received a lesson on how to properly thank the delegates for their questions and was shoved on stage to give a presentation and do Q&A. That was pretty surreal.
+
+## If you had to do it all over again, what would you have done differently?
+
+If you ask any mid-stride entrepreneur that question, they'd probably say "this" (referring to what they are doing at present) "... but sooner." We had some odd angles for our projects to start. We were deep in water markets, trying to build analytical systems to conserve water and move water to higher economic usage. It was complex. I learned a lot about that world, but wouldn't start with that again. It's the classic case of trial and error.
+
+We were acquired in 2018 by Natel Energy. It's been a bizarrely perfect relationship, where we've been able to lean on their fundraising process and grow the team, and provide them with a diversified business model and a nice chunk of cash flow which balances out their core long-term hardware business. I think any person who's gone through an acquisition wonders "what if?" Not super productive, but certainly something that pops into my head from time to time.
+
+====
+
+name: Business Tools
+host: Research & Notes
+bref: Tools for tackling the less exciting parts of business
+date: 2021-02-21
+body:
+
+## Formation
+* {https://stripe.com/atlas, Stripe Atlas} : Shortcut to incorporate
+
+## Banking
+Stripe Atlas used to magically create a bank account with a bank, Azlo, - but it was closed down by its parent company.
+
+* {https://mercury.com, Mercury} : TODO
+
+* {https://banknovo.com/, Novo} : TODO
+
+====
+
+name: Low Tech
+host: research & notes
+bref: Off-grid computing, low tech, and peer-to-peer web
+date: 2021-03-10
+body:
+
+[img/button.gif]
+[img/mmx_button.gif]
+
+# Bookmarks
+- {https://www.are.na/blog/the-internet's-back-to-the-land-movement}
+- {https://indieweb.org}
+- {https://solar.lowtechmagazine.com/, Low Tech Magazine's solar powered website}
+
+# Tools and protocols
+- {https://cabal.chat/}
+
+====
+
+name: Music
+host: now
+bref: Very short songs released under the name "mrshll"
+date: 2021-02-08
+body:
+
+_During_ is my latest collection of songs, primarily created on the OP-Z, which my coworker Kevin sent me after showing me it's magic.
+
+<div>
+{^bandcamp, 2884089779}
+</div>
+
+---
+
+_Pre_ was created between the years 2013 and 2019 entirely in iPad with the app Korg Gadget along with bluetooth midi peripherals.
+
+<div>
+{^bandcamp, 1442648585}
+</div>
+
+---
+
+Before, I DJ'd on the radio on WMFO and WRVU in Boston and Nashville respectively, and played records around the Boston area under different names.
+
+[img/dj-tufts.jpg, My face in front of a setup on top of the library roof]
+_One of my most memorable nights was playing atop the Library's roof at Tufts_
+
+====
+
+name: The Three Sisters
+host: garden
+date: 2020-11-08
+bref: The Three Sisters
+body:
+
+Corn should be planted first so that it can grow tall above the other crops. Plant seeds for Sister Bean 2-3 weeks later, or at least when the corn is a few inches tall. When the beans are sending out tendrils to climb the corn will be tall enough to support them. Plant Sister Squash seeds 1 week later after the beans have emerged. You don't want the large squash leaves to shade out young corn and bean seedlings before they have time to establish.
+
+>>>
+For millennia, from Mexico to Montana, women have mounded up the earth and laid these three seeds in the ground, all in the same square foot of soil. When the colonists on the Massachusetts shore first saw indigenous gardens, they inferred that the savages did not know how to farm. To their minds, a garden meant straight rows of single species, not a three-dimensional sprawl of abundance. And yet they ate their fill and asked for more, and more again.
+
+Once planted in the May-moist earth, the corn seed takes on water quickly, its seed coat thin and its starchy contents, the endosperm, drawing water to it. The moisture triggers enzymes under the skin that cleave the starch into sugars, fueling the growth of the corn embryo that is nestled in the point of the seed. Thus corn is the first to emerge from the ground, a slender white spike that greens within hours of finding the light. A single leaf unfurls, and then another. Corn is all alone at first, while the others are getting ready.
+
+Drinking in soil water, the bean seed swells and bursts its speckled coat and sends a rootling down deep in the ground. Only after the root is secure does the stem bend to the shape of a hook and elbow its way above ground. Beans can take their time in finding the light because they are well provisioned: their first leaves were already packaged in the two halves of the bean seed. This pair of fleshy leaves now breaks the soil surface to join the corn, which is already six inches tall.
+
+Pumpkins and squash take their time—they are the slow sister. It may be weeks before the first stems poke up, still caught in their seed coat until the leaves split its seams and break free. I’m told that our ancestors would put the squash seeds in a deerskin bag with a little water or urine a week before planting to try to hurry them along. But each plant has its own pace and the sequence of their germination, their birth order, is important to their relationship and to the success of the crop.
+
+The corn is the firstborn and grows straight and stiff; it is a stem with a lofty goal. Laddering upward, leaf by long-ribbed leaf, it must grow tall quickly. Making a strong stem is its highest priority at first. It needs to be there for its younger sister, the bean. Beans put out a pair of heart-shaped leaves on just a stub of a stem, then another pair, and another, all low to the ground. The bean focuses on leaf growth while the corn concentrates on height. Just about the time that the corn is knee high, the bean shoot changes its mind, as middle children are wont to do. Instead of making leaves, it extends itself into a long vine, a slender green string with a mission. In this teenage phase, hormones set the shoot tip to wandering, inscribing a circle in the air, a process known as circumnutation. The tip can travel a meter in a day, pirouetting in a loopy circle dance until it finds what it’s looking for—a corn stem or some other vertical support. Touch receptors along the vine guide it to wrap itself around the corn in a graceful upward spiral. For now, it holds back on making leaves, giving itself over to embracing the corn, keeping pace with its height growth. Had the corn not started early, the bean vine would strangle it, but if the timing is right, the corn can easily carry the bean.
+
+Meanwhile, the squash, the late bloomer of the family, is steadily extending herself over the ground, moving away from the corn and beans, setting up broad lobed leaves like a stand of umbrellas waving at the ends of hollow petioles. The leaves and vines are distinctly bristly, giving second thoughts to nibbling caterpillars. As the leaves grow wider, they shelter the soil at the base of the corn and beans, keeping moisture in, and other plants out.
+
+Native people speak of this gardening style as the Three Sisters.
+>>> _{Braiding Sweetgrass}_ by Robin Wall Kimmerer
+
+====
+
+name: Space myst
+host: research & notes
+date: 2021-01-18
+bref: A mystery point-and-click concept set in space
+body:
+
+My attempts to make games thus far have been thwarted by shiny tools and a tendency to over-complicate the building process. I've played with both Godot and Unity, and while initial experiments have clearly illustrated their power as game engines, this game concept strips away my typical rabbit holes (complex game/physics/graphics) to focus on narrative and game mechanics.
+
+The game is a Myst-like, set on a spacecraft. The player navigates between rooms and views within the rooms, such as a close-up of a control panel or viewport. Various elements within each view are interactive. Puzzles related to this narrative will present themselves over time to enable access to new areas of the ships, or modify previous views that have already been visited.
+
+The game starts with the player awaking from a hibernation pod. There are no other evident signs of other crew members, and the player cannot remember why they are on the spacecraft.
+
+====
+
+name: gamedev
+host: projects
+bref: Experiments in game design and development
+date: 2021-03-28
+body:
+
+TODO
+
+====
+
+name: Projects
+host: now
+indx: true
+
+====
+
+name: Plan
+host: projects
+body:
+- [ ] {garden} migrate plan to {mmx}
+- [ ] {garden} design wire enclosure
+- [ ] {garden} order additional materials
+- [ ] {@carbonfreegrid} add energy usage total to daily tweet
+- [ ] {paste.date} refactor and add tests, esp. for time zone edge cases
+- [ ] {paste.date} add OAuth flow for backend
+- [ ] {paste.date} allow calendar select
+- [ ] {plotter} design incrementing generative illustration to mark pages
+- [ ] {mmx} write page on micro radio station
+- [ ] {mmx} add inventory
+- [x] {garden} set up heating pads for seedlings
+- [x] {mmx} deduplicate backlinks
+- [x] {mmx} fix bug where only first internal ref is linked
+- [x] {https://climatework.mrshll.com, climatework} relaunch
+
+====
+
+name: Future.Phone
+host: projects
+date: 2014-03-01
+bref: Leave yourself a voicemail to be redelivered far in the future
+
+====
+
+name: Plotter
+host: projects
+date: 2020-06-01
+bref: Various experiments in generative art and creating code, actualized by a pen plotter
+
+====
+
+name: Latitune
+host: projects
+date: 2012-11-01
+bref: Drop songs in places for others to pick up
+body:
+
+Latitune was a app created at the end of college with {https://www.benweitzman.com/, Ben Weitzman} (who is a brilliant software developer). The app allowed users to "drop" songs at locations, and to see and listen to songs that were within a certain radius. We created a prototype, but with school wrapping up it never fully came to fruition. We had planned a feature where as you walked, the app would accumulate songs passed by into a playlist.
+
+{https://github.com/mrshll/latitune-ios, Source code}.
+
+====
+
+name: paste.date
+host: projects
+bref: An act of mundanity? A cry for help? A scheduling program
+date: 2021-01-23
+body:
+
+In what is certainly my most mundane project to date, I've created an application that loads calendar events from Google Calendar via a {https://twitter.com/marsh/status/1353404000469659648, prayer to the OAuth gods}, and uses lots of date and timezone math to find availablities based on the specified meeting parameters. I haven't had the opportunity to solve an algorithmically interesting problem recently -- so much of my technical work lately is technical piping and static sites. So it was fun to sit down and design an approach to solve a backpack-type problem.
+
+[img/pastedate-1.png, Screenshot of paste.date]
+
+I was prompted to build this by the existing solutions' reliance on flashy formatted pastes into an email and the ever-presumptive "calendar link." I wanted a simple program that give me plaintext times that I could quickly copy and paste. I might add a link option at a later date, but I'd keep it simple. It currently lives on localhost, but I hope to wrap up signup and iron out the last few bugs this month.
+
+====
+
+name: @carbonfreegrid
+host: projects
+bref: A Twitter bot that tweets daily statistics about the previous day's U.S. energy production
+date: 2020-12-12
+body:
+
+Github: https://github.com/mrshll/carbon-free-grid-bot
+
+Twitter: https://twitter.com/carbonfreegrid
+
+A daily twitter bot highlighting our progress towards a carbon free grid.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Energy generation yesterday (Feb 19) was<br>🏭 ███▆▁▁ 63.0% high-carbon<br>🌱 ██▂▁▁▁ 37.0% low-carbon</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530987723022336?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Generation breakdown by source:<br>🔥 ⣿⣿⣤⣀⣀⣀ 40.1% natural gas<br>⚛️ ⣿⣄⣀⣀⣀⣀ 21.6% nuclear<br>⚫ ⣿⣄⣀⣀⣀⣀ 20.4% coal<br>💧 ⣤⣀⣀⣀⣀⣀ 8.0% hydro<br>🌬️ ⣤⣀⣀⣀⣀⣀ 6.0% wind<br>❓ ⣄⣀⣀⣀⣀⣀ 1.6% other<br>☀️ ⣄⣀⣀⣀⣀⣀ 1.4% solar<br>🛢️ ⣄⣀⣀⣀⣀⣀ 0.8% petroleum</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530988670881793?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Regional breakdown (by % generation that is low-carbon)<br>⣿⣿⣿⣶⣀⣀ NY<br>⣿⣿⣿⣤⣀⣀ TEN<br>⣿⣿⣿⣄⣀⣀ CAR<br>⣿⣿⣷⣀⣀⣀ NE<br>⣿⣿⣷⣀⣀⣀ NW<br>⣿⣿⣦⣀⣀⣀ CENT<br>⣿⣿⣤⣀⣀⣀ SW<br>⣿⣿⣄⣀⣀⣀ MIDA<br>⣿⣿⣀⣀⣀⣀ CAL<br>⣿⣷⣀⣀⣀⣀ SE<br>⣿⣦⣀⣀⣀⣀ MIDW<br>⣿⣤⣀⣀⣀⣀ TEX<br>⣶⣀⣀⣀⣀⣀ FLA</p>&mdash; Carbon-Free Grid 🌎 (@carbonfreegrid) <a href="https://twitter.com/carbonfreegrid/status/1230530989480402945?ref_src=twsrc%5Etfw">February 20, 2020</a></blockquote>
+
+====
+
+name: Garden
+host: projects
+bref: Growing food and getting dirty with my 4 raised beds and basement
+date: 2021-03-10
+body:
+
+Being largely confined at home in 2020, I took on many personal and introspective projects. One of the major draws for me to move slightly out of the city was to have more space for outdoor projects. I hope 2021 will be a season of bounty, where I can look forward to tending the beds daily and sharing the harvest with my neighbors and friends. I also hope to transform the vegetables into {the art of fermentation, experimental ferments}.
+
++ {Setting up the raised beds}
++ {garden research, Research on supplies, materials, seeds and techniques}
+
+====
+
+name: Garden Research
+host: garden
+bref: Research on supplies, materials, seeds, and techniques
+date: 2021-02-10
+body:
+
+# Seed suppliers
+- {https://www.rareseeds.com/, Baker Creek}: Heirloom and rare seeds. A massive variety of interesting (and eye-catching) plants. Unclear exactly how much more difficult these are to cultivate than the more basic varieties. They have a concise {https://www.rareseeds.com/growing-guide, growing guide} for most of the species I plan to grow.
+- {https://www.botanicalinterests.com/, Botanical Interests}: Basic seeds that seem more mainstream than the wild and rare varieties. They are available at the local garden store and affordable, so I usually find myself with many of their seed packets in my cache. They also a {https://www.botanicalinterests.com/product/Sowing-Guides, sowing guide}. They have both vegetables and flowers.
+- {https://wildseedproject.net/, Wild Seed Project}: A Maine-based native plant-focused seed organization that focuses primarily on pollinators. I currently have dozens of their seeds in a winter box in the back. Fingers crossed until Spring.
+- {https://sowtrueseed.com/, Sow True Seed}: Open-pollinated, heirloom and organic seeds. They also have mixes for sprouted seeds. They have {https://sowtrueseed.com/blogs/planting, in-depth growing guides} for specific plants that include harvesting seeds for next planting.
+
+# Starting supplies
+There are a number of commercial starter tray/pot options. I first got a few dozen pressed-peat starters. I am inclined to just use household materials and recyclables to make as many as I can. There are methods to make {https://www.instructables.com/DIY-Newspaper-Pots/, plant pots out of newspaper}.
+
+I've found that the compost I ordered in bulk is too dense and rough to start seeds - they've done far better in a loose and soft soil.
+
+====
+
+name: Upstream Tech
+host: projects
+bref: A public benefit corporation founded in 2016
+date: 2021-02-11
+body:
+
+{https://upstream.tech, Upstream Tech} is a public benefit corporation founded in 2016 by Marshall and Alden. It currently provides two services:
+
++ {https://upstream.tech/lens, Lens}, monitoring software for environmental organizations.
++ {https://upstream.tech/hydroforecast, HydroForecast}, a hydrologic forecasting service used by renewable energy utilities and conservation organizations.
+
+In it's early days, we did a number of consulting projects, including two citizen science applications: the New York State's Herp Shark Count for the Galapagos Islands. After attending a lecture by Dr. Grey Nearing, who later became an advisor and briefly our Director of Research, we honed in a satellites and machine learning as tools we could leverage given our previous experience and technical strengths.
+
+The first non-consulting project was a remote compliance tool for water transfers in the Western U.S. In the West, water rights are purchased or leased by conservation organizations with the aim to transfer water from agriculture use to environmental use to increase flows in streams and rivers for the benefit of freshwater species. Our service allowed organizations to remotely monitor that this transfer indeed occurred and that the water was not used on the farm field - a monitoring process that would typically require costly in-person visits througout the season. These visits diverted resources that could otherwise be applied to additional conservation projects. A classifer was used to predict the liklihood that a field was irrigated or not. The bones of this application later became our data processing pipeline for satellite imagery and machine learning.
+
+[img/upstream-proto-1.jpg, An Upstream Tech prototype]
+
+From there, we became fascinated with anachronous design and complexity of water rights. We built a system that digitized a number of states' water rights, and used the same classifier as before to predict year-over-year water use. An aim was to build a database of water rights that on paper appeared low-value, but reliably applied water to their fields. Another was to identify farm fields that had not used water for a certain number of consecutive years, which would invalidate the claim - a radical and contentious application of technology which would have been dangerous to release without a fuller understanding of the politics and local contexts. Even with some of these databases built, we learned that water rights require handshakes and hat tips and we were trying to apply a scalable solution to a problem that wasn't ready to "scale." So we switched gears back to our compliance monitoring.
+
+We met with The Nature Conservancy's {https://www.scienceforconservation.org/science-in-action/birdreturns, Bird Returns} program via an introduction from our advisor Brian Richter, the then Director of International Water at The Nature Conservancy. The program applies management guidelines to rice fields in the Pacific Flyway, providing vital habitat for migratory birds in the Spring and Fall. After discussion with the team's leads, Katie Andrews and Ethan Inlander, we determined that our previous compliance monitoring software could be used to monitor projects in the BirdReturns portfolio. We launched this program, and over time it evolved into what is now Lens.
+
+[img/birdreturns-1.jpg, The team visited a project location in the Sacramento area]
+_The team visited a project location in the Sacramento area_
+
+In parallel, we met Gia Schneider from Natel Energy via a meandering series of introductions. Natel Energy developes a hydropower turbine that uniquely allows for 100% safe fish passage. After breakfast together in Boston, we realized we were working on the same underlying problems from very different angles: Natel Energy via hardware and project development; Upstream Tech via software solutions - both with the aim at improving the health of watersheds and building climate resilience. After a few months of discussion and brainstorming, we decided to {upstream joins natel energy, join forces}. Learning about hydropower via Gia and the Natel team, we realized there was an opportunity to apply our machine learning and satellite technology to watershed management and planning, and more specifically starting with hydropower operations. This was the birth of our second product, HydroForecast.
+
+[img/natel-hanger.png, Natel's hanger in Alameda, CA]
+_Natel's hanger in Alameda, CA_
+
+During this time period, we were fortunate to be joined by many friends, past colleagues, and people we met along the way. The team is now over {https://upstream.tech/team, 20 people}.
+
+====
+
+name: mmx
+host: projects
+bref: This site is called mmx
+date: 2021-01-18
+body:
+
+[img/redturtle020.jpg, A person building something with bamboo, from The Red Turtle]
+
+mmx was built at the start of 2021. Largely inspired by others on {https://webring.xxiivv.com/, webring}, especially {https://wiki.xxiivv.com/site/home.html, Devine}, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
+
+The site's compiler is written in {https://golang.org, Go}. It can generate a graph of entries from a modified version of {https://wiki.xxiivv.com/site/indental.html, Indental} as well as markdown with frontmatter.
+
+Entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally embed itself in a parent - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {now} is a special case that has its own generator function to render the timeline.
+
+Go's {https://golang.org/pkg/text/template/, templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string (it's a "functional component" after all).
+
+If you want to learn more, see the {https://github.com/mrshll/mmx, source code}.
+
+# Building mmx
+
+I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant Gatsby plugin.
+
+In the spirit of {low tech}, and heavily inspired by others on the {https://webring.xxiivv.com/, webring}, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
+
+To start, I mapped out my hoped-for characteristics of the end result.
+I landed on:
+
+- low friction (so as to promote more writing);
+- low-level (no automagic frameworks or dependencies; and
+- extendable (I want this to be somethign that evolves with me over the next 5, 10, 15 years).
+
+{https://github.com/XXIIVV/oscean/, Devine Lu Linvega's Oscean} served as the primary inspiration. I spent a weekend pouring over their wiki, the underlying C-code, and the ecosystem of file formats and prorgams they created. I could (and <strike>should</strike> will) write a whole post on the great things I continue to learn from them. The act of reading through their code and reverse engineering the site compilation was one of the most fun weekends I've had in a while. I promise I am fun. I gained an understanding of their technical approach to linking and render disparate databases, while simultaneously exploring the content of those databases themselves.
+
+I opted for GoLang as a learning opportunity. Compared to my usual Javascript, GoLang is miles closer to C - the last time I thought about pointers was my senior year of college, if that. I never imagined saying this, but I missed pointers! My impression of GoLang so far is fine. I hardly tapped into the features it is known for, such as concurrancy. But this project served as a gentle introduction.
+
+Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.
+
+In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {https://github.com/mathieudutour/gatsby-digital-garden, gatsby plugins} that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that I was on the right path.
+
+For my pages, I opted to use a modified version of the human readable {https://wiki.xxiivv.com/site/indental.html, Indental} format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.
+
+Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" was achieved with the following bash:
+
+```
+#!/bin/sh
+bash build.sh
+while inotifywait -qqre modify ./src ./links ./data; do
+  bash build.sh
+done
+```
+
+The site is hosted using Github pages. This is great, because there is no build step. I check in the built files (in /doc) and they are served within seconds. CNAME setup was a breeze.
+
+---
+
+>>>
+The wood thrush, it is! Now I know<br/>
+who sings that clear arpeggio,<br/>
+three far notes weaving<br/>
+into the evening<br/>
+among leaves<br/>
+and shadow;<br/><br/>
+or at dawn in the woods, I've heard<br/>
+the sweet ascending triple word<br/>
+echoing over<br/>
+the silent river —<br/>
+but never<br/>
+seen the bird.
+>>> _Learning the Name_ by Ursula K. Le Guin
+
+A poem by Ursula K. Le Guin is encoded into unicode's representation of braille and used as the hr across the site.
+
+====
+
+name: Snappi
+host: projects
+bref: Share screenshots and files
+date: 2011-08-12
+body:
+
+[img/snappi-1.png, Snappi logo]
+
+{https://github.com/mrshll/Snappi, Source Code}
+
+Snappi was developed while living in San Francisco and working at Mozilla in the Summer of 2012. At Mozilla I was on the infosec team, and my project was to containerize Firefox's process. The project to sandbox Firefox was incredibly difficult, and progress to understand the build process was slow. To mix it up, I spent spare time developing a native OSX application that allowed quick sharing of files and screenshots. It integrated with services like Evernote and Dropbox.
+
+{^youtube, rt7zivSrJeE}
+
+Thankfully, I've gotten better at making these videos.
+
+> Snappi is the quickest way to share screenshots and files with your friends. Once you take a screenshot or select one or more files, a unique, shortened link will be generated and copied to your clipboard; all you have to do is press paste!
+
+> Snappi is lightweight, unobtrusive and runs in the background of your desktop. Each file is automatically uploaded to an Evernote notebook, keeping everything neat, organized and accessible.
+
+It was a great way to learn Objective-C, not to mention the end-to-end process of designing and market a tool to the public. It was my first time too as being the sole recipient of customer input and feedback. Even though the tool itself was lighthearted, I took any input seriously and made improvements quickly.
+
+[img/snappi-2.png, Screenshot of Snappi]
+[img/snappi-3.png, Screenshot of Snappi]
+
+====
+
+name: Into the Static
+host: projects
+bref: Internet videos on a real time, thematic shuffle
+date: 2014-02-12
+body:
+
+[img/into-the-static.jpeg, screenshot of intothestatic.com]
+Into The Static (previously hosted at intothestatic.com) was an application that collected videos from Instagram for a specified keyword and played them in a neverending sequence. As new videos were posted, they were pushed into the front of the queue so you often got the feeling like you were watching a network of "live" CCTV cameras. One of my favorite moments was watching #snow right at the first snowfall of the year, as videos punctuated the static in increasing frequency. More sobering was using it to see a livestream of protests in Venezuela in 2014.
+
+Oddly, folks noticed, and at one point the database had indexed over a million videos as people tested out different keywords.
+
+>>>
+Dear TV,
+
+You’ve had a good run.
+
+Love,
+Into the Static
+
+It’s the latest innovation in time-wasting excellence, it compiles and plays all the best/weirdest/randomest Vine and Instagram videos out there, and it’s online now.
+
+This. Now... this is a treasure. Basically, it’s like one very sick (and intelligent) individual took all the best short videos in the world and put them on shuffle. And it’s every bit as bizarre and terrifying as that sounds.
+
+Here’s what you do. You go to the site, you log in with your Instagram account—if you don’t have one, you can still watch the videos—and you type in whatever hashtag your heart and/or insatiable curiosity desires. Then, this thing trolls the entire Vinesphere/Instagramaverse and plays you whatever it finds. And that’s when amazing happens.
+>>> {https://www.urbandaddy.com/articles/30451/one-vine-day-the-internets-weirdest-hits-on-shuffle, source}
+
+There was international coverage as well. They had a more sober view on the possibility to view important world events like the then ongoing unrest in Ukraine and Venezuela.
+
+>>>
+La révolution digitale avec ses objets connectés et ses nouveaux canaux ou medias, fait bien son œuvre. Elle réinvente les modes de communication et de vie et on l’expérimente avec délectation, attention, folie ou effroi, chaque jour.
+...
+Et ainsi regarder en direct leur émission composée de ces vidéos de 15 secondes postées qui abordent n’importe quel sujet, de la remise d’un prix tel que les Golden Globe aux luttes civiles en Ukraine ou au Venezuela en passant par un lâcher de ballons ou un spectacle d'un artiste de rue en pleine action.
+>>>  {http://www.influencia.net/fr/actualites/in,data-creativite,tous-reseaux-menent-ils-television,4336.html, source}
+
+====
+name: MAMAS Needs & Offers
+host: projects
+date: 2020-04-01
+bref: A website that listed "needs" and "offers" for mutual aid in Somerville and Medford
+body:
+
+It pulled from a spreadsheet as the backing database for easy management and updating by the community.
+
+{https://github.com/Mutual-Aid-Medford-and-Somerville/mamas-needs-offers, MAMAS Needs/Offers}
+
+====
+
+name: werm.world
+host: projects
+date: 2020-10-12
+bref: A (briefly) successful attempt to create a micro social network for a few dozen friends
+body:
+
+<img src='img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
+~2019. In one of my earlier bouts of {low tech}, I sought to decrease all time spent on large corporations' social media sites. The minor irony being that I relied on Google cloud infrastructure for fast implementation. An acceptable concession.
+
+<img src='img/werm-world-2.png' style='float:right; height: 30rem'/>
+
+The site is a mobile-optimize React application, backed by Firebase with a few serverless functions for async operations such as image processing and email notification of new posts. The first iteration of the site, which allowed for posting of images, was built in a weekend and additional functionality like posting other types of media (text, audio) were added over time. One experimental feature was added to allow multiple media (from any user) to be attached horizontally to a post, with a horizontal scrolling element added to see them.
+
+Users were organized into groups, and each group had one long feed of posts.
+
+Usage died off for a variety of reasons. I hope to revive this project, potentially as a bona-fide app so that notifications can be sent (not by email). Everyone who used it remembers it fondly.
+
+====
+
+name: Reading
+host: now
+indx: true
+bref:
+body:
+
+====
+
+name: Twelve Tomorrows
+host: Reading
+bref: Various Authors
+body:
+
+In progress
+
+====
+
+name: East of Eden
+host: reading
+bref: John Steinbeck
+body:
+
+In progress
+
+====
+
+name: The Redemption of Time
+host: reading
+date: 2021-03-10
+bref: Baoshu
+body:
+
+The author's preface captures what I imagine is the pervasive sentiment shared by readers of The Rememberance of Earth's Past original trilogy. The story's universe is so immersive, the detailed inspection of the mechanics therein are so compelling, that when the books came to a conclusion there is a feeling of loss. This feeling is not uncommon for immersive novels; what is uncommon is that a fan, so stricken by this loss, sits down and rips out a sequel novel in a few weeks - a novel so aligned with the voice and style as Cixin Liu (if not more juvenile in a few areas) that it is blessed by the publisher and author, making the series a ~~trilogy~~ tetralogy. I hesitate to say it, but I may have enjoyed this book as much or more than any of the original ones. This new author was able to convincingly explain plot holes from the original trilogy and complete complex story arcs that literally bend understanding of space and time. 5 bags of cosmic popcorn out of 5.
+
+====
+
+name: Children of Time
+host: reading
+date: 2021-02-25
+bref: Adrian Tchaikovsky
+body:
+
+I was in the mood for science fiction (which in retrospect is the status quo), and saw this recommended by a handful of acquaintances. The novel's start had the breath and awe of the Three Body Trilogy, but the depth of science became shallower as the book progressed - not necessarily bad, but the first chapter readied me for some hard science fiction. Although some of the unique concepts held fast (sentience evolving from humanity's own biological experiments), some of the novel concepts were glossed over.
+
+I've noticed that many of the most gripping novels, especially in this genre, follow the pattern of chapters alternating timelines rushing towards a collision in their narratives. It works - there were some nights where I would read well past midnight.
+
+====
+
+name: The Making of Prince of Persia
+host: reading
+date: 2021-01-01
+bref: Jordan Mechner
+body:
+
+This book is the collected journal entries from the creator of Prince of Persia, an early video game that broke many technical and artistic boundaries.
+
+For someone's meandering and often angsty journal entries, I was captivated. I could relate some of Jordan's challenges as he became an adult, in the creative expression and the tension between pursuing art and work, or art as work.
+
+> Everyone has their own particular form of self-destruction. Mine, I’m starting to think, is standing outside myself, watching myself live my life, turning my face so as to give the cameras a better angle, and thus missing the whole thing.
+
+====
+
+name: The Lathe of Heaven
+host: reading
+date: 2020-12-28
+bref: Ursula K. Le Guinn
+body:
+
+Le Guin's foresight amazes me. So much has come to pass that is easy to take her prescience for granted. To quote her foreword in The Left Hand of Darkness:
+
+> “The purpose of a thought-experiment, as the term was used by Schrödinger and other physicists, is not to predict the future - indeed Schrödinger most famous thought experiment goes to show that the "future," on the quantum level, cannot be predicted - but to describe reality, the present world. Science fiction is not predictive; it is descriptive. Predictions are uttered by prophets (free of charge), by clairvoyants (who usually charge a fee, and are therefore more honored in their day than prophets), and by futurologists (salaried). Prediction is the business of prophets, clairvoyants, and futurologists. It is not the business of novelists. A novelist's business is lying. Science fiction is not predictive; it is descriptive. Predictions are uttered by prophets (free of charge), by clairvoyants (who usually charge a fee, and are therefore more honored in their day than prophets), and by futurologists (salaried). Prediction is the business of prophets, clairvoyants, and futurologists. It is not the business of novelists. A novelist's business is lying.”
+
+The following excerpts especially stuck with me, given my work in climate, energy and water. I'm not including any passages that include plot points, only environmental descriptions, so fear not if you haven't read it. And when you do read this, **keep in mind that the book was published in 1971**.
+
+On a changing climate:
+
+> Blue sky, snow from foothills to peak. Years ago, in the sixties or seventies, no doubt. The Greenhouse Effect had been quite gradual, and Haber, born in 1962, could clearly remember the blue skies of his childhood. Nowadays the eternal snows were gone from all the world's mountains, even Everest, even Erebus, fiery-throated on the waste Antarctic shore. But of course they might have colored a modern photograph, faked the blue sky and white peak; no telling.
+
+> Rain was an old Portland tradition, but the warmth—70° F. on the second of March—was modern, a result of air pollution. Urban and industrial effluvia had not been controlled soon enough to reverse the cumulative trends already at work in the mid-Twentieth Century; it would take several centuries for the CO2 to clear out of the air, if it ever did. New York was going to be one of the larger casualties of the Greenhouse Effect, as the polar ice kept melting and the sea kept rising; indeed all Boswash was imperiled. There were some compensations. San Francisco Bay was already on the rise, and would end up covering all the hundreds of square miles of landfill and garbage dumped into it since 1848. As for Portland, with eighty miles and the Coast Range between it and the sea, it was not threatened by rising water: only by falling water.
+
+> "Come on up with me," he said. "It's raining already." In fact it was, the endless warm drizzle of spring—the ice of Antarctica, falling softly on the heads of the children of those responsible for melting it.
+
+On rivers:
+
+> The Willamette was a useful element of the environment, like a very large, docile draft animal harnessed with straps, chains, shafts, saddles, bits, girths, hobbles. If it hadn't been useful of course it would have been concreted over, like the hundreds of little creeks and streams that ran in darkness down from the hills of the city under the streets and buildings.
+
+On cars:
+
+> Roads were not kept up the way they were when the Highway was king; there were rough bits and pot-holes. But Heather frequently got up to the speed limit (45 mph) as she drove through the broad, moonlit-twilit valley, crossing the Yamhill River four times or was it five, passing through Dundee and Grand Ronde, one a live village and the other deserted, as dead as Karnak, and coming at last into the hills, into the forests.
+
+====
+
+name: All the Light We Cannot See
+host: reading
+date: 2020-11-01
+bref: Anthony Doerr
+body:
+
+[TODO]
+
+====
+
+name: The Good Life Lab
+host: reading
+bref: Wendy Jehanara Tremayne
+date: 2020-07-23
+body:
+
+This book caught my eye simply because Sandor Katz (from "The Art of Fermentation," which was revelatory) is listed as a co-author. It was a quick read about a jaunt from NYC bustle to New Mexico homesteading. The self reliance and creativity was interesting, and I enjoyed reading about the projects' specifics. Some of the ethos (soap is _free_ if you make it from \~\~nature\~\~, man) and ego made the book feel like an extremely long Medium dot com post. Agnes Varda wore it better in [Les Glaneurs et La Glaneuse](https://en.wikipedia.org/wiki/The_Gleaners_and_I).
+
+====
+
+name: Braiding Sweetgrass
+host: reading
+bref: Robin Wall Kimmerer
+date: 2020-09-30
+body:
+
+Indigenous wisdom, scientific knowledge, and the teachings of plants - braided like the sweetgrass itself. Dr. Kimmerer brought my own relationship with the natural world into focus. I am realizing my mini-book reports regularly tiptoe into hyperbole, but her focus on gratitude, on observation, on patience and familiarity has shown me a new way to exist in and advocate for a better relationship with the natural world.
+
+Many climate change solutions ignore the respect, admiration, and coexistence with the ash trees, the wetlands, and the reefs. They continued to be inwardly focused. "Humans made the problem, humans alone can fix it." Techno-optimists will bring about some solution that doesn't require us to get our feet muddy. Reading this book felt like joining Kimmerer for a series of lectures, long walks, and conversations at the edge of her spring-fed pond. The most important lessons for me were those of gratitude, personhood of beings, human or not, and the danger of human arrogance.
+
+====
+
+name: The Art of Fermentation
+host: reading
+bref: Sandor Ellix Katz
+date: 2020-07-09
+body:
+
+If 6 months ago you told me, "Marshall fermentation will change your life" I'd take a jaw defying crunch of a raw carrot and shake my head. But the pandemic caused a huge shift in my relationship with food consumption. For many folks, the most significant change was the inability to dine out. For me, it was the shift of popping in the grocery store every day or two to trying to stretch a single trip for over a week. The lifestyle of nightly grocery visits all started in my years in Somerville, always within a few blocks of The Temple of Market Basket. There's something so satisfying to wander the aisles of a grocery store, grabbing a few weird ingredients and looking at all the pretty packages and produce.
+
+But with the pandemic and my stretched out food stores I, and most of the world it seems, turned to sourdough, kombucha and other bubbly craft as a form of entertainment. Or perhaps in the hope that the yeasties would provide the in-person kinship our virtual hangouts lacked.
+
+The book doesn't have recipes - it focuses on principles. It meanders through topics like vegetables (kraut, kimchi, pickles, beans) to misos to alcoholic beverages (mead, wine, beer, sake). There's so much that I can't figure out how to string it together in a sentence! He also covers all of the basics about equipment, the scientific benefits, the non-food applications of fermentation, how to start a commercial fermentation operation, molds and tempeh... the list continues. But the best part about Sandor's book isn't the depth *and* breadth approach to fermentation. It's the relationship he has with food, and the cultural lens through which he views fermentation. Sandor names "fermentation as a coevolutionary force," and his writing weaves in a cultural revivalist manifesto about minimizing waste, respecting the land and the food and reverence and respect towards cultures not your own.
+
+> Our growing awareness as individuals creating change in our own lives, and communities can (and must) build into galvanizing social movements. While reviving local food systems, we can also address inequitable access to resources by becoming part of existing movements for food justice and food sovereignty. While making use of indigenous wisdom in our cultural revival efforts, we can also acknowledge and act in solidarity with indigenous peoples struggling for survival. While trying to limit our own carbon footprints and environmental impact, we can also join social movements demanding the same of corporations and government policies. Personal actions can be powerful, but nothing like the force of collective action.
+
+I started the book looking for a few hot tips on how to fill my hours at home. I finished a radicalized fermentation and cultural revivalist.
+
+====
+
+name: Born to Run
+host: reading
+bref: Christopher McDougall
+date: 2020-06-03
+body:
+
+I had been putting off this book for a while, for no reason in particular. When Katz's The Art of Fermentation mentioned the fermentation process of pinole practiced by the Rarámuri (the same indigenous people featured in McDougall's book), I  was excited to pick it up.
+
+The narrative is gripping - learning about the Rarámuri and their ethos of running not as task or exercise, but as way of life was so much fun. So too was learning about the origins of the North American ultra running community. I've followed the current pack of rad runners, but to hear about the original folks was inspiring.
+
+I had some issues with McDougall's framing. He insisted on saying that the Rarámuri were a "lost people" and framed a race with non-indigenous runners as "new world versus old world." I really didn't get this, except to exaggerate the spectacle. He also acknowledged that they were called Rarámuri, but then proceeded to call them by their colonial name "Tarahumara" for the remainder of the book. It's clear from McDougall's writing that he had reverence and awe with the Rarámuri people, so this discontinuity in the writing was odd.
+
+All said, having read this book I find myself running more on my toes, in older shoes, in a less transactional way. Excited for my next ultra marathon!
+
+====
+
+name: Where the Crawdads Sing
+host: reading
+bref: Delia Owens
+date: 2020-03-28
+body:
+
+====
+
+name: Exhalation: Stories
+host: reading
+bref: Ted Chiang
+date: 2020-03-23
+body:
+
+====
+
+name: The Overstory
+host: reading
+bref: Richard Powers
+date: 2020-01-20
+body:
+
+> ...the word tree and the word truth come from the same root.
+
+A colleague of mine said that her masters studies in forestry were effectively two years of mourning. I don't think I will truly understand. But I do think Powers brings a piece of that elegy to the masses.
+
+There has been a recent - and welcome - rush of enthusiasm to "solve climate change." The optimism is important, and necessary, but at times it feels like it ignores the battles already lost in the anthropocene. Carbon sequestration and emission control is crucial, of course. So too is the preservation of our last old growth forests, older than modern civilization. The two feel the same to me: the curbing of human appetite.
+
+Given the subject matter, The Overstory is no light read. But it is engrossing to whip through the protagonists' lives as if you the reader were witnessing their stories as a tree would. I'm perplexed by Power's ability to write so fluidly about different cultures, the characters so convincing.
+
+Many of my closest friends have told me that the book has changed their lives. Among them, my younger brother recently sought out one of the few
+deciduous conifers in the world, the {https://mountauburn.org/metasequoiaglyptostroboides/|metasequoia glyptostroboides} which happened to be in a nearby cemetery.
+
+====
+
+name: The Left Hand of Darkness
+host: reading
+bref: Ursila K. Le Guin
+date: 2019-12-06
+body:
+
+Continuing on my Le Guin streak, this was a great novel to follow _A Wizard of Earthsea_. It's remarkably different in tone, the intended audience seeming to be a more mature one. The tone is solemn, probing, and at times bleak.
+
+The story explores a world called Winter, the inhabitants of which have the unique quality of being gender fluid biologically. The story is primarily told from the point of view of an emissary from another planet, who grapples with his own sexuality and transphobia.
+
+It was immediately obvious how influential this story has become. Later works by authors like Jemisin mirror the structure of interleaving folklore and historic record into the narrative.
+
+The version I read had a great foreword by Charlie Jane Anders and an afterword by the author herself. I liked this line from those analyses:
+
+> Predictions are uttered by prophets (free of charge), by clairvoyants (who usually charge a fee, and are therefore more honored in their day than prophets), and by futurologists (salaried). Prediction is the business of prophets, clairvoyants, and futurologists. It is not the business of novelists. A novelist’s business is lying.
+
+And from the novel itself:
+
+> ...with a musty chill on the air as if the drafts blew in not from other rooms but from other centuries.
+
+This incredible anticar sentiment won my heart:
+
+> Gethenians could make their vehicles go faster, but they do not. If asked why not, they answer “Why?” Like asking Terrans why all our vehicles must go so fast; we answer “Why not?”
+
+And how science fiction authors like Le Guin so clearly understood the relationship of nature and climate still astounds me.
+
+> CO2 released by the volcanoes into the atmosphere will in time serve as an insulator, holding in the long-wave heat-energy reflected from the earth, while permitting direct solar heat to enter undiminished. The average world temperature, he says, would in the end be raised some thirty degrees, till it attains 72°. I am glad I shall not be present.
+
+In all, this was my favorite book of 2019. I closed out the year running an ultra marathon through two feet of snow. My thoughts returning to the book I had finished the night before: of Genly Ai and Estraven skiing hundreds of miles across the glacial north. Only their thoughts, and their company, keeping the biting cold at bay.
+
+====
+
+name: Born a Crime
+host: reading
+bref: Trevor Noah
+date: 2019-12-30
+body:
+
+This book was recommended to me by my teammate Eliza, specifically to listen to as an audiobook. Upon starting it up, I immediately realized why. Read by the author (host of The Daily Show) gave the coming of age story a quality I haven't experienced in an audiobook before. It was something closer to a podcast like This American Life than your typical non-descript British accented delivery.
+
+Noah's story ultimately was of his relationship with his mother. I listened to it end-to-end on a drive from Boston to Nashville coincidentally to visit my mother. Somewhere near Roanoke, the story's ending brought me to tears, and gave me a newfound appreciation for motherhood.
+
+====
+
+name: A Wizard of Earthsea
+host: reading
+bref: Ursila K. Le Guin
+date: 2019-11-16
+body:
+
+In the past, I haven't been one to reread books for no reason other than I have too many books I _haven't_ read on my shelf, ready to go. My memory of the plot was like viewing it through the fog Ged summons when he first realizes his inate power. And to really relive my childhood, I didn't actually reread it per se; I borrowed the library's audiobook, recreating the fantasy-novel-on-a-roadtrip feeling I haven't felt since I was a kid. The recording, delivered via the library's app, even told us to flip the tape to side B, but only after rewinding it fully. No detail spared for immersive effect!
+
+Story vehicle aside, Le Guin's writing is incredible. That she can weave such profound imagery and themes into what is ultimately a 200-page YA novel is incredible. Some of my favorites:
+
+On death:
+
+> For a word to be spoken, there must be silence. Before, and after.
+
+> Only in silence the word, only in dark the light, only in dying life: bright the hawk's flight on the empty sky.
+
+On learning:
+
+> From that time forth he believed that the wise man is one who never sets himself apart from other living things, whether they have speech or not, and in later years he strove long to learn what can be learned, in silence, from the eyes of animals, the flight of birds, the great slow gestures of trees.
+
+====
+
+name: 1984
+host: reading
+bref: George Orwell
+date: 2019-11-02
+body:
+
+As it likely has been throughout the past decades, 1984 is frequently referenced as the "told you so" of dystopic novels. I expected the likeness with current events to be limited to "society is crushed and the ruling class are evil," but the parallels of our protagonist's employment at the Ministry of Truth with today's controversy surrounding social media, censorship, and "fake news" (yikes I can't believe I typed that) is stark and uncomfortable.
+
+Of the science fiction from decades past that I've read recently, this one has aged the best. And that's unfortunate.
+
+> You had to live—did live, from habit that became instinct—in the assumption that every sound you made was overheard, and, except in darkness, every movement scrutinised.
+
+Okay Google! Define "scrutinized." Hey Alexa! "Turn on the living room lights."
+
+> At one time it had been a sign of madness to believe that the earth goes round the sun: today, to believe that the past is unalterable.
+
+====
+
+name: Principles
+host: reading
+date: 2019-10-04
+bref: Ray Dalio
+body:
+
+🤮 I stopped a couple of chapters in. Self-congratulatory nonsense. A lucky life masquerading as enlightenment.
+
+If you must, he delivers the entirety of the book's content in {https://www.youtube.com/watch?v=B9XGUpQZY38|this 30 minute video}. One of those blog posts stretched and massaged into a book (in this case I think it actually did start as a much smaller post, which has since been hidden away).
+
+====
+
+name: Working
+host: reading
+date: 2019-09-24
+bref: Robert Caro
+body:
+
+I first heard about Caro when my partner, Alejandra, slammed down the 1,336 page tome The Power Broker. This much less intimidating book was a great introduction to Caro's eloquence, and actually quite glad it was my first: it highlights his approach to the craft of biographical research and writing. That background, I feel, will give me a deeper appreciation for the works I plan to read soon.
+
+====
+
+name: Bicycle Diaries
+host: reading
+bref: David Byrne
+date: 2019-08-07
+body:
+
+Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hall of Famer. Who knew he was such a bike nut? Well, apparently he is, and a [a big NYC bike advocate to boot](https://www.youtube.com/watch?v=37IDIUOJA6s). And I learned later that my dad met him on the way up to a studio and David was always sweaty and clutching a bike helmet. Badass! He travels with a folding bike wherever he goes. This book was his reflections on the cities he had traveled to, with short snippets of his experience of the city and its design via bike. From there, Byrne riffs (hah) on the history, culture, and personal relationships to the place. I read it at a point where I was returning to my love of bicycling, so I especially appreciated this lens. As a nice cross-over, he mentions city planning via Robert Moses (one of Caro's subjects) and references Caro's work, as well as _The Life and Death of Great American Cities_ which I look forward to reading.
+
+> Then, suddenly, we’re out of town. Herons skim wetlands and wade in brackish water. East Coast second-growth forests appear—skinny little trees, densely packed.
+
+name: My Brilliant Friend
+host: reading
+bref: Elena Ferrante
+date: 2019-06-30
+body:
+
+Sometimes it's nice to dip into crème de la crème popular culture. This was surprisingly enjoyable, and I enjoyed feeling immersed in the small Italian neighborhood. And a great change from _Foundation_ wherein there were only male characters?!
+
+====
+
+name: Foundation
+host: reading
+bref: Isaac Asimov
+date: 2019-05-09
+body:
+
+A few pages in, I thought to myself "science fiction doesn't typically age well, does it?" It's hard to imagine the experience of reading it in the year of its publication. And in the many ways it is unfathomable in its foresight, it's "anti-woke" with social forecasts and characters. I've seen Asimov fans say "It's not about the characters!!1" and in a small way, maybe they're right? But a dozen pages into _Foundation_, I realized there hadn't been a female character introduced. A couple hundred(!) pages later, and it was still a boyz club in space. Cool ideas indeed, but the story, and the characters, were forgettable at best.
+
+====
+
+name: Circe
+host: reading
+bref: Madeline Miller
+date: 2019-01-18
+body:
+
+Ever since I dove into Neil Gaiman's _Sandman_ in highschool, I have been an absolute sucker for retelling of mythology. This book is no exception. Recommended to me by both my mom and brother, the pacing, character development, and atmosphere are perfect. Her prose is beautiful without feeling like a classic from literature class. I highlighted a number of passages that stood out in this way. For example:
+
+> But in a solitary life, there are rare moments when another soul dips near yours, as stars once a year brush the earth. Such a constellation was he to me.
+
+and
+
+> Some stories he told me by daylight. Others came only when the fire was burnt out, and there was no one to know his face but the shadows.
+
+====
+
+name: Ancillary Justice
+host: reading
+bref: Ann Leckie
+date: 2018-12-02
+body:
+
+The premise for this book was enough to catch my science fiction junkie attention, and it came as a recommendation from a new friend, John. Set in a feudalistic galactic civilization future, there are multi-bodied AI consiousnesses that are sentient tools of a crazy ruler. Typing that out it sounds very odd. Anyway, the protagonist is one of these beings, which makes for an interesting multi-body point of view.
+
+====
+
+name: The Knight & The Wizard
+host: reading
+bref: Gene Wolfe
+date: 2018-11-22
+body:
+
+This series was recommended to me by one of my best pals, Quinault, so I had to pick it up. There is something so bizarre about these books, something that made them foggy -- incoherent at times -- and made me half-expect for the protagonist to wake up with a gasp for air realizing that the whole fantasy plot was a dream. We follow a kid who wanders away from his brother and into a messy fantasy world where he lives the rest of his life becoming a knight. It twists cliché into creativity -- more creative than any fantasy book I've read recently. When I finished, I was completely perplexed. There's constant subtext and references, making it challenging, rewarding, and likely for 50% of readers to absolutely hate it.
+
+====
+
+name: Rules of Civility
+host: reading
+bref: Amor Towles
+date: 2018-09-17
+body:
+I read this following up _A Gentleman In Moscow_ (recommended to me by my mom and brother), which was one of my favorite books last year. The author's writing style is refreshing, and although there are conflicts throughout his novels, they generally relieve stress. _Rules of Civility_ was not quite as list-topping as _A Gentleman In Moscow_, but I enjoyed it nevertheless. Embedded in a woman's journey to and through New York City is fascinating historical research about the city in 1938.
+
+Some highlights:
+
+> If we earn fifty cents an hour, we admire the rich and pity the poor, and we reserve the full force of our venom for those who make a penny more or a penny less.
+
+> He always looked his best, I thought to myself, when circumstances called for him to be a boy and a man at the same time.
+
+> In our twenties, when there is still so much time ahead of us, time that seems ample for a hundred indecisions, for a hundred visions and revisions—we draw a card, and we must decide right then and there whether to keep that card and discard the next, or discard the first card and keep the second. And before we know it, the deck has been played out and the decisions we have just made will shape our lives for decades to come.
+
+and particularly pleasant to revisit as I write this at the cusp of Autumn:
+
+> Come September, despite the waning hours, despite the leaves succumbing to the weight of gray autumnal rains, there is a certain relief to having the long days of summer behind us; and there’s a paradoxical sense of rejuvenation in the air.
+
+====
+
+name: Ball Lightning
+host: reading
+date: 2018-09-03
+bref: Cixin Liu
+body:
+
+Following a deep obsession with Liu's _Remberance of Earth's Past_ trilogy, I picked up a standalone novel of his about the quirky science of harnessing the power of ball lightning. As always with his books, there are fascinating forward-thinking ideas, and in this case they are far more terrestrially focused than the trilogy. There is a bit more lost in translation, I think, and everything is so military-focused I found it exhausting. That could be a reflection of the realities in China (and heck, in the US too, who am I kidding). All in all, it was not quite as compelling as the triology, but certainly a fun and interesting read.
+
+At the very end was context-setting that I wish had been at the beginning:
+
+> Those books set the foundation for my concept of science fiction and were a catalyst for the later Three-Body trilogy; however, their influence did not extend to Ball Lightning. When I wrote this novel in 2003, I already had a mostly complete Three-Body series, but I felt that Chinese readers would respond more readily to a novel like Ball Lightning at that time. China’s science fiction was born more than a century ago, at the close of the Qing Dynasty, but for most of its history it developed in relative isolation, and for a long period was entirely cut off from modern western science fiction. The field’s independent development gave the work of that period a distinct style, a difference that is clearly evident from a comparison of Ball Lightning and the Three-Body series. Chinese science fiction during that closed-off period was dominated by the invention story, a form that was preoccupied with the description of a futuristic technological device and speculation on its immediate positive effects, but which barely touched the invention’s deeper social implications, much less the tremendous ways such technology would transform society. And so it is with Ball Lightning: the emergence of such a powerful technological force is bound to have huge, far-reaching effects on human society—in politics, economics, and even in culture. The book addresses none of this. But this similarity to early-period Chinese science fiction is only skin-deep; at its heart, this is not a Chinese-style story. The ball lightning described in the book may resemble that sort of futuristic device, but the flights of fancy it gives rise to are nowhere to be found in the science fiction of that period. And while the book is set in a China that is altogether real, those little balls of lightning seem like they’re trying to transcend that reality, like how a man’s tie, within the confines of its narrow dimensions, has the freedom to indulge in a riot of colors and patterns unbounded by the rigid formula of a business suit. In a way, Ball Lightning is a prequel to the Three-Body series, since it concludes with the first appearance of the aliens that would eventually threaten humanity and features a version of Ding Yi, who also appears in later books.
+
+====
+
+name: High Rise
+host: reading
+date: 2018-08-19
+bref: J.G. Ballard
+body:
+
+The book examines an insular high rise community gone awry. Petty complaints devolve into all out destruction. Class -- I mean, floor -- warfare breaks out, and tenants become primal, raiding other floors, destroying property, and worse. Similar to _Foundation_ I don't think there was a single female character, except as objects of war and conquest. It was a pretty disgusting book and I skimmed the last half in search of redemption. There was none.
+
+====
+
+name: Mortal Engines
+host: reading
+date: 2018-07-29
+bref: Philip Reeve
+body:
+
+Okay, who saw the Peter Jackson trailer of the giant city-ships consuming smaller city-ships and wasn't blown away? The trailer, at least, had a lot going for it. I had high hopes for the novel, but sadly they materialized in an especially "young" young adult novel. I couldn't get past some of the poor writing in spite of the somewhat interesting world building.
+
+====
+
+name: Exit West
+host: reading
+date: 2018-05-31
+bref: Mohsin Hamid
+body:
+
+This was an absolutely beautiful and timely novel. Recommended to me by my mom! Hamid's stentence structure is head-rattling to start, but once the rhythm is picked up by the reader, the structure feels comforting. Each sentence is crafted to have just the right cadence and flow, reminding me of Halldór Laxness.
+
+> Saeed and Nadia knew what the buildup to conflict felt like, and so the feeling that hung over London in those days was not new to them, and they faced it not with bravery, exactly, and not with panic either, not mostly, but instead with a resignation shot through with moments of tension, with tension ebbing and flowing, and when the tension receded there was calm, the calm that is called the calm before the storm, but is in reality the foundation of a human life, waiting there for us between the steps of our march to our mortality, when we are compelled to pause and not act but be.
+
+The novel examines civilian life during war and the subsequent migration that is often needed. It blends magical realism with intense reality and is centered on a tragic romance. I highly recommend reading this book!
+
+> Saeed’s father felt as he walked back to campus and his son drove back to work that he had made a mistake with his career, that he should have done something else with his life, because then he might have had the money to send Saeed abroad. Perhaps he had been selfish, his notion of helping the youth and the country through teaching and research merely an expression of vanity, and the far more decent path would have been to pursue wealth at all costs.
+
+> ...to love is to enter into the inevitability of one day not being able to protect what is most valuable to you.
+
+====
+
+name: Sleeping Giants
+host: reading
+date: 2018-04-11
+bref: Sylvain Neuvel
+body:
+
+Recommended to me by my downstairs neighbor, Kate, this book is held up by its premise. Strange ultra-massive bodyparts start to be uncovered across the world of some large humanoid machine. It's structured as a series of military transcripts you're reading after the fact. It's a quick read, and equally fast paced.
+
+====
+
+name: Sing, Unburied, Sing
+host: reading
+date: 2018-03-17
+bref: Jesmyn Ward
+body:
+
+This novel journeys through the parts of the south that feel totally alien from my barely-southern upbringing. It is a journey through Mississippi's past and present, examining race, incarceration, coming of age, addiction, and inequality. It is haunting and brought me to tears.
+
+> Growing up out here in the country taught me things. Taught me that after the first fat flush of life, time eats away at things: it rusts machinery, it matures animals to become hairless and featherless, and it withers plants.
+
+Hard truths put plainly. Poetically. Passages like this make me look forward to her other books:
+
+> I like the way the highway cuts through the forests, curves over hills heading north, sure and rolling. I like the trees reaching out on both sides, the pines thicker and taller up here, spared the stormy beating the ones on the coast get that keeps them spindly and delicate. But that doesn’t stop people from cutting them down to protect their houses during storms or to pad their wallets. So much could be happening in those trees.
+
+====
+
+name: An appeal for impact
+date: 2016-11-10
+bref: An Appeal For Impact
+host: research & notes
+body:
+
+As technologists, we have the privilege to exist in an era hungry for tweets, likes, cars that drive themselves, apps for exercise, sites to share other sites — and that gives us the opportunity to choose what we work on.
+
+This is a simple appeal:
+
+Make sure that what you spend 40+ hours a week working on — pouring energy, thoughtfulness and concern into — has impact.
+
+We know that technology has already had a profound impact on social interaction, but instead of working to change our lifestyles, we need to work to change lives.
+
+There are two paths: A mentor of mine once told me that in order to have the most impact, they would use this technology boom and amass wealth to then donate and redistribute. They may very well be right, and their success has allowed them to build a school and help whole communities.
+
+The other path to impact is more direct. Find an intersection — the convergence of a cause and your skill sets — and pour everything in.
+
+Don’t quit your job to be a “digital nomad.” Don’t start a company just to call yourself a founder. If you’re a technologist, you’re in the right place at the right time. **Solve a real problem**.
+
+If you do choose the first route, consider recurring donations to the {https://www.eff.org/, Electronic Frontier Foundation}, the {https://www.aclu.org/, ACLU}, the {https://splcenter.org, Southern Poverty Law Center}, the {http://www.ucsusa.org, Union of Concerned Scientists} and the {https://www.nrdc.org, Natural Resources Defense Council} to name just a few.
+
+If you want to be more direct, find an organization tackling the toughest climate problems. Look at {http://greentownlabs.com/member-companies/, the members of Greentown Labs}, {http://www.imagineh2o.org/portfolio, the previous classes of Imagine H2O} and non-profits like {http://www.nature.org/, The Nature Conservancy} and {http://www.tu.org/, Trout Unlimited}— they need technology to push forward. I strongly recommend Bret Victor’s webpage {http://worrydream.com/ClimateChange/, What can a technologist do about climate change?} which in part inspired me to quit my job to {upstream tech, work on these problems}.
+
+Consider the technological needs of education. {http://www.bridgeinternationalacademies.com/company/about/, Bridge International Academies} uses incredible technology to bring high quality education to “families who live on less that \$2 USD per day.” {https://www.panoramaed.com/, Panorama Education}, {http://ellevationeducation.com/, Ellevation Education} and {https://betterlesson.com/, Better Lesson} are all trying to help harness data to make our schools more effective for their students. Khan Academy has made an education accessible to anyone, and they’re {https://www.khanacademy.org/careers, hiring like crazy}. At the very least, volunteer at an {https://hourofcode.com/us, Hour of Code} near you.
+
+Check out {https://opencounter.com/, OpenCounter} and {https://www.codeforamerica.org, Code for America}. See if you can help {https://thelastmile.org/, The Last Mile}, an organization that “prepares incarcerated individuals for successful reentry through business and technology training.” The Electronic Frontier Foundation is {https://www.eff.org/about/opportunities/jobs, looking for a new Front-End Web Developer}!
+
+Whichever of these routes you take, the world will be a better place because of it.
+
+====
+
+name: Upstream Joins Natel Energy
+host: upstream tech
+bref: Upstream Joins Natel Energy
+date: 2017-10-11
+body:
+
+Hello Upstream friends, customers and supporters!
+
+We have big, happy news to share with you today. Upstream is joining {https://www.natelenergy.com, Natel Energy}!
+
+To those of you who know us well, this may come as a surprise. Heck — we weren’t even planning on raising money! But when we first met Gia and Abe Schneider in Boston earlier this year, it became immediately clear that we had the same mission “to create economic forces that drive environmental good.” To add to that, Natel’s board is an incredible group motivated by environmental conservation.
+
+[img/natel-hanger.png, Natel’s massive hangar in Alameda]
+_Natel’s massive hangar in Alameda_
+
+So what does this mean for our work?
+
+- We now have the support to grow Upstream’s existing products into an integrated dashboard for planning and monitoring freshwater project implementation.
+- We are growing {https://upstream.tech/about, our team} so that we can move faster and explore new applications of our technology. Interested in satellite imagery/machine learning/helping the environment? Get in touch!
+- We are working closely with Natel’s development team (surprise!) to create repeatable, economically viable conservation finance projects by leveraging Upstream’s platform to scale Natel’s {https://www.natelenergy.com/restoration-hydro/, Restoration Hydro}.
+
+We couldn’t be more excited about the coming years. Our goal in starting Upstream was modest: to apply ourselves to pressing issues with {an appeal for impact}. We never expected to be collaborating with the leaders in environmental conservation, clean energy and natural resource management, but here we are — and we are just getting started!
+
+Marshall Moutenot & Alden Keefe Sampson
+
+====
+
+name: My Climate Journey Podcast
+bref: My Climate Journey Podcast
+host: upstream tech
+date: 2019-08-15
+body:
+
+I met Jason early on in his climate journey. Via Twitter I think? Always
+funny when I realize that retrospectively. We exchanged a couple of thoughts
+online and then had a coffee. A few months later, he had his podcast up and running
+and I had been enjoying the episodes.
+
+I especially enjoyed the episode with {https://www.myclimatejourney.co/episodes/pamela-templer, Pamela Templer} of Boston University. Her explanations were approachable and down to earth. The episode with {https://www.myclimatejourney.co/episodes/pat-brown, Pat Brown} of Impossible Foods was unsurprisingly a favorite as well. Right now, I have a long backlog to catch up on.
+
+I wanted to discuss how we arrived at Upstream Tech, as unlikely contributors to climate change solutions, and how I think everyone can -- and many more people need to -- {an appeal for impact, play a role in implementing creative, urgent solutions}.
+
+<iframe
+  height="200px"
+  width="100%"
+  frameborder="no"
+  scrolling="no"
+  seamless
+  src="https://player.simplecast.com/fb83d8e0-2958-4f50-a0df-4c30154c8a0c?dark=false"
+></iframe>
+
+====
+
+name: Two Years In - How We Work at Upstream
+bref: Two Years In - How We Work at Upstream
+host: upstream tech
+date: 2018-02-26
+body:
+
+[img/how-we-work-1.png, Obviously my desktop background…]
+_Obviously my desktop background…_
+
+Ah yes, the unflappable entrepreneur: knowing from Day 1 that their business will last decades — nay a century! Not I.
+
+If you told me, approximately two years ago, that Upstream would not only last two years, but continually gain momentum I’d respond “of course, of course!” but my stomach would ache with uncertainty. Alden and I were, after all, {an appeal for impact} (we still are — check back in a few decades).
+
+Our thesis is this: It is possible for folks _in our line of work_ to make a living working on something that also has positive social and environmental returns.
+
+It’s sort of like the “triple bottom line” of investing (financial, social and environmental returns), but for day-to-day work. There are, of course professions where this is the default: teaching, social work, activism, journalism, etc. In our case we were looking specifically at technology’s role. And so far, so good! 2 years in, we’re working with some of the most incredible conservation groups, growing the team, and learning from some of the brightest folks in this line of work. We’ve also {upstream joins natel energy, joined Natel Energy}, which has opened many new doors and allowed us the stability to take greater risks.
+
+It seemed appropriate at this milestone to reflect a bit, not just on how we started, but how we work — the minutia that make the day-to-day successful. Did I mention we are a remote team? Some of this may be obvious, all of it can be improved, but here is a glimpse into how we work:
+
+## Morning intentions
+
+I mentioned this above with #upstream-intentions. Part of how we kick off our day is with a group video chat hitting a few important items for each team member:
+
++  How did yesterday go?
++  What’s the plan for today?
++  Do you need anyone’s help?
+
+[img/how-we-work-2.png, #upstream-intentions]
+_#upstream-intentions_
+
+It’s a pretty basic framework that keeps morning meetings concise and thoughtful. There have been plenty of occasions where someone may be wrapping a big effort up and isn’t sure what the next best thing is to work on. In those cases we look at current and prospective partners and hash out what might be the highest value next work.
+
+## Upstream IRL
+
+I’m a strong believer in the power and potential of remote work for the right team. However, there are always some things that are better done in person. Take cooking together, for example.
+
+[img/how-we-work-8.jpeg, Amadou and Alden cook up the world’s tastiest pasta from scratch.]
+Amadou and Alden cook up the world’s tastiest pasta from scratch.
+
+Team bonding and long term planning are two such items for our team. Once a quarter, we pick a location and meet up in person. Sometimes it’s San Francisco at Natel Energy’s office. I’ve hosted in Somerville. Most recently, we rented an Airbnb in the Berkshires for a contemplative, hiking and cooking-filled week together. Business plans we had talked about for ages clicked in new ways. Technical scopes coalesced in turn. We left the week with a renewed energy (renewable energy?!), a stronger bond and a clear path forward with our work.
+
+## 1-on-1s
+
+We all do 1-on-1s with one another on a regular basis. We try not to reschedule or push back. They’re important! Informal phone calls while on walks or video chats. Simple, but possibly the most important time for communicating with your remote teammates.
+
+## Show and tell
+
+I’ve worked at companies where there is a set “Show and Tell” slot on the calendar. It works great for large teams. Since we are small (and remote), we try to have a constant show and tell: do something neat over the weekend? Put it in slack! New screenshots of the prettier graphs you’re developing? ⌘V! Want to do a video walkthrough of a surprisingly accurate ML model? Drop a hangout link and show us. Constant sharing and celebration of work has made it just as exciting as running over to someone’s desk, and is far more inclusive.
+
+[img/how-we-work-9.png]
+
+It’s been an awesome few years, and I’m excited for many more to come. I’m sure most of how we work is par for the startup course these days, but I hope for some, it’s an interesting look into our daily routine.
+
+And obligatorily: if the way we work sounds fun and our mission resonates, our team is {https://upstream.tech/about, hiring})! Send me a message at marshall@upstream.tech 🙋‍
+
+====
+
+name: Web nostalgia
+bref: What happened to the web's sparkle?
+date: 2020-12-06
+host: research & notes
+body:
+
+There is something precious about a webpage. It's what excited me so much when I first encountered the internet as a kid. A blank canvas, yes, but also a nook to spark into existence. A manifestation of self. I'm talking about Web 1.0. Before it got fancy. A good site name, some content written as much for the creator as for the visitor. Sprinkled with a few of the early gifs and counter snippets. I miss that.
+
+[img/gokupowerup.gif, An example of a gif from my youth: Goku from Dragon Ball Z powering up]
+_A classico gif you'd likely find on 8 year old Marsh's website_
+
+There were some companies in the mix - Geocities and the like - but they were entirely optional. The web was more like, well, a web: meandering connections between distant nodes. Linking to others sites, a process of discovery between diligent research and bespoke digital collections. There was always a personality behind it. What we have isn't a mesh. It's a series of superhighways with clusters of content at the offramps. The only way someone might discover this (if at all) would be through the link in my bio on Twitter. Perhaps it's because the old scenic byways of the internet are forgotten and the only way we can travel is at 70 mph.
+
+====
+
+name: Setting up the raised beds
+host: garden
+bref: Learning to grow (plants)
+date: 2020-01-12
+body:
+
+I inherited a garden. Actually, I took over a friend's apartment lease and the garden happened to come it. Alden and Anna, the bequeathers, had to make a short-notice move because of family member's failing health. Quinalt and I had been living in a large apartment building on the other side of Union Square - our last choice, and the result of the typical Boston everyone-moves-on-the-same-day scramble. We jumped at the chance to move into their lovely 2nd story apartment.
+
+Alden and Anna had just built two modest plots, maybe 4x4 each. I remember Alden handing me sugar peas on a previous visit. Basil and tomatoes growing tall.
+
+The downstairs neighbor, Ladawn, (it was a three-story, with one tenant on each floor) had two longer plots, maybe 3x12 in total. Brick stood at the perimeter to give it a few inches of rise. Every year, Ladawn's plants grew thick as small trees. Her cherry tomato plants would hang heavy, and her pole beans up their trellis would block the sun. She was also the weekly DJ at River Gods, one of the best bars in Cambridge. Her plants probably considered her a river god as well. She told me her secret once: to absolutely douse the plants every other day. To flood irrigate them. One day, about a year after Alden and Anna moved, she packed up an antique VW camper van and drove to Portland. River Gods coincidentally closed doors around the same time. So I inherited her garden too.
+
+[img/garden_prescott.jpg, Our garden at 20 Prescott in Somerville]
+
+I had two stellar seasons in these plots. In the first, I picked up where Ladawn left off, harvesting copious pole beans, tomatos, eggplants, herbs. The next, we planted a wider assortment, with the prized and celebrated crop being the Pumpkins.
+
+[img/pumpkins.jpg, 3 pumpkins we grew, with an assortment of other veggies.]
+_Looking back at these pictures, I am astounded we grew these_
+
+I think the success of our first dance with this garden was in part due to the haphazard scattering of wildflower seeds by Alejandra. That and a rash of wild mint that flowered early. We'd regularly have dozens of bees busily pollinating the garden. Difficulty I've had with pumpkins in the past is in the polination, the flowers being as fragile and ephemeral as they are. But with an army of bees and other garden pals, it worked out.
+
+[img/flowers.jpg, Various flowers in our garden]
+
+<HR />
+
+This garden is sadly no more. When we moved out, the landlord weedwacked the whole area down to the bare soil - a nuissance, things growing like that. But I've since moved to a house in Medford. And while the yards are partly shaded by a beautiful, big American Walnut in the back and a Black Oak in the front, there are two slices of the yards that get tons of sunlight.
+
+I went "whole hog" in the most vegetarian sense of the word. In these slices of sunlight, I built 4 raised beds with a combined volume of 8 cubic yards, and about 128 square ft of area (double what I had at this apartment).
+
+The process of building and planning them was a perfect quarantine activity. I did a wild amount of research on wood types, natural wood treatments, soil types, Hügelkultur, seed suppliers, etc. I made it more difficult than in needed to be, but the process was as rewarding as the eventual results.
+
+I decided to go with spruce pine. It's relatively "sustainable" - moreso because it's a fast growing regional softwood than because it has that pervasive stamp that I'm expected to take at face value. Cedar, which is the gold standard of rot-resistant raised bed material is also over $10/ft, which would have made this a very expensive endeavour indeed. Spruce pine, on the other limb, was $10 an 8'x4'x2" board. I opted for 24" tall beds because we live on a rock. And because it seemed like a challenge to get that much dirt back there to fill them. As simple as the design is, it was fun to sketch out a few configurations and realize the subtle changes impact on volume and area.
+
+I found that raw linseed oil was one of the best and most readily available non-toxic treatments for the wood. Every week, I'd trot down to the tiny hardware store and buy all of the raw linseed oil on their shelves. They now know me as the linseed oil guy. Linseed oil also comes in a boiled version, which causes it to dry much faster, but these days has a number of chemical additives. So stick to raw, even if it takes many days or weeks to dry (depending on temp). I meticulously painted each board a few times before construction. The smell is fantastic - a woody, toasted sweetness. The closest thing I can think of is toasted seasame oil. I got it all over my clothes as I worked (and didn't care). The construction was simple, held together by 3" galvanized screws.
+
+[img/beds_construction.png, Two raised beds, partially constructed.]
+_I also raised the rain barrel so that it's just high enough to feed the beds_
+
+We use a compost company for weekly pickup - and they do bulk 50-50 compost/soil deliveries. So I did some math and ordered 7 cubic feet, knowing I'd do my best to fill the very bottom with fallen limbs, leaves and other woody debris. I laid down a tarp and the next day I stepped outside and the dirt was already there. I never saw the delivery occur, so as far as I know the delivery occurs by a visit from the licensed dirt wizard, who summons the requested cubic feet into place.
+
+[img/dirt.jpg, Roughly 7 cubic yards of dirt]
+
+Can't go to the gym because of COVID? Shovel dirt! I spent the next few weeks, hours per day, shoveling dirt. I got my climbing callouses back. My back and arms were sore! How could it possibly take so long, you ask? Well.
+
+[img/where_the_dirt_has_to_go.jpg, Steps up to the back yard] _Notice the pumpkins on the stairs. These were not grown by us, but next year they will be._
+
+The dirt's trip to the back yard was no walk in the park, unless your park involves multiple steps and a incline you realize, suddenly, is _steep_. Multiple tactics were employed, including a wheelbarrow up haphazard wooden boards placed over stairs (hard), dual-wielded 5-gallon buckets (exhausting).
+
+As I mentioned, I had heard about Hügelkultur, the german horticultural technique of mounding over decaying wood debris, from a colleague Abby. There had been recent windstorms in the area, so I collected as many fallen limbs as I could — scaring some of my neighbors by asking for their yard waste bags. Load followed load, and before I knew it the beds were filled. It was immensly satisfying to pour the last few shovelfuls into the beds.
+
+[img/filling.jpg, Two raised beds in the back yard, one filled, one partially filled with woody debris]
+
+The two front beds were on the aforementioned slope, so I opted to do a combination of digging into the hill to level the beds and to terrace them. I think they turned out great, although I'm a bit worried about accelerated rot because of how they are situated.
+
+[img/front_beds.jpg, Two raised beds in the front yard]
+
+With the beds completed, I now spend the winter planning what to grow, ordering seeds, and trying to start seedlings in my basement. My plan, loosely, is to grow the {The Three Sisters} combo of corn, beans and squash in mounds in the back raised beds, interspersed with herbs, peppers and tomatoes, with a mixture of raddishes, peas, flowers, cabbage and oakra in the front. 98 days until Spring. 140 days until the last frost.
+
+====
