@@ -19,7 +19,23 @@ func TestApplyRulesLink(t *testing.T) {
 }
 
 func TestApplyRulesCode(t *testing.T) {
+
+	codeblockTest := "```" +
+		`
+#!/bin/sh
+bash build.sh
+while inotifywait -qqre modify ./src ./links ./data; do
+  bash build.sh
+done
+` + "```"
+	codeblockTestExpectation := `<pre><code>#!/bin/sh
+bash build.sh
+while inotifywait -qqre modify ./src ./links ./data; do
+  bash build.sh
+done</code></pre>`
+
 	checkResult(applyRules("```\nfoo()\n```"), "<pre><code>foo()</code></pre>", t)
+	checkResult(applyRules(codeblockTest), codeblockTestExpectation, t)
 }
 
 func TestApplyRulesBlockquote(t *testing.T) {

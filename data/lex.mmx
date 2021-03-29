@@ -402,7 +402,7 @@ The site's compiler is written in {https://golang.org, Go}. It can generate a gr
 
 Entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally embed itself in a parent - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {now} is a special case that has its own generator function to render the timeline.
 
-Go's {https://golang.org/pkg/text/template/, templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string (it's a "functional component" after all).
+Go's {https://golang.org/pkg/text/template/, templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string.
 
 If you want to learn more, see the {https://github.com/mrshll/mmx, source code}.
 
@@ -427,7 +427,7 @@ Another reason I wanted to create the compiler myself was so that I could add fe
 
 In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {https://github.com/mathieudutour/gatsby-digital-garden, gatsby plugins} that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that I was on the right path.
 
-For my pages, I opted to use a modified version of the human readable {https://wiki.xxiivv.com/site/indental.html, Indental} format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.
+~For my pages, I opted to use a modified version of the human readable {https://wiki.xxiivv.com/site/indental.html, Indental} format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.~
 
 Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" was achieved with the following bash:
 
@@ -456,7 +456,7 @@ echoing over<br/>
 the silent river —<br/>
 but never<br/>
 seen the bird.
->>> _Learning the Name_ by Ursula K. Le Guin
+>>> Learning the Name by Ursula K. Le Guin
 
 A poem by Ursula K. Le Guin is encoded into unicode's representation of braille and used as the hr across the site.
 

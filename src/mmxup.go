@@ -110,7 +110,7 @@ func applyRules(body string) string {
 		// headers
 		// matches markdown-style headers that take the full line
 		Rule{
-			pattern:   regexp.MustCompile(`(?m)^(#+)(.*)$`),
+			pattern:   regexp.MustCompile(`(?m)^(#+)[^!](.*)$`),
 			processor: createTitle,
 		},
 		// embed
@@ -127,7 +127,7 @@ func applyRules(body string) string {
 		// code fences
 		// matches multiline code blocks surrounded by ```
 		Rule{
-			pattern:   regexp.MustCompile(`\x60{3}\n(.*)\n\x60{3}`),
+			pattern:   regexp.MustCompile(`(?m)\x60{3}\n([\s\S])+?\n\x60{3}`),
 			processor: createCodeBlock,
 		},
 		// inline code
@@ -222,7 +222,7 @@ func createTitle(match []string, body string) string {
 }
 
 func createCodeBlock(match []string, body string) string {
-	code := strings.TrimSpace(match[1])
+	code := strings.TrimSpace(match[0][3 : len(match[0])-3])
 	html := fmt.Sprintf("<pre><code>%s</code></pre>", code)
 	return strings.Replace(body, match[0], html, 1)
 }
