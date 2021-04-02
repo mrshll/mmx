@@ -75,7 +75,7 @@ blockquote cite {
   background-color: lightgrey;
 }
 
-footer > * {
+footer .footer-row > *{
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 3rem;
@@ -129,6 +129,31 @@ dl dd {
   border-radius: .5rem;
   overflow: hidden;
   padding-left: 1rem;
+}
+
+#low-tech-webring {
+  position: relative;
+}
+
+#low-tech-webring:hover table {
+  visibility: visible;
+}
+
+
+#low-tech-webring table {
+  position: absolute;
+  left: -10rem;
+  visibility: hidden;
+  padding: 0 1rem;
+  display: block;
+  bottom: 0;
+  border: 1px solid lightgrey;
+  background-color: white;
+  width: 40rem;
+}
+
+#low-tech-webring table td {
+  border: 0;
 }
 
 @media screen and (max-width: 600px) {
