@@ -10,7 +10,16 @@ import (
 	"sort"
 	"strings"
 	"time"
+	"bufio"
+	"log"
 )
+
+type JrnlRecord struct {
+	Date string
+	ImgPath string
+	Description string
+	Parent *Entry
+}
 
 type Entry struct {
 	MmxDoc
@@ -20,6 +29,7 @@ type Entry struct {
 	FirstImageSrc string
 	Inbound       []*Entry
 	Outbound      []*Entry
+	JrnlRecords []JrnlRecord
 }
 
 type TemplateContent struct {
@@ -356,6 +366,42 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 	return body
 }
 
+func _linkJrnl (jrnlRecord JrnlRecord, entryPtr *Entry) {
+	(*entryPtr).JrnlRecords = append((*entryPtr).JrnlRecords, jrnlRecord)
+	if (entryPtr.Slug != "index") {
+		_linkJrnl(jrnlRecord, entryPtr.Parent)
+	}
+}
+
+func linkJrnl (entries []Entry) {
+	file, err := os.Open("../data/mmx.jrnl")
+	check(err)
+
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
+	for scanner.Scan() {
+		line := scanner.Text()
+		args := strings.Split(line, ", ")
+		// default link to now if no parent specified
+		entryPtr := findEntry(entries[:], "now")
+		if len(args) == 3 {
+			entryPtr = findEntry(entries[:], args[2])
+		}
+		record := JrnlRecord{
+			ImgPath: args[0],
+			Date: formatDate(parseDate(args[0][:10])),
+			Description: args[1],
+			Parent: entryPtr,
+		}
+		_linkJrnl(record, entryPtr)
+	}
+}
+
 func main() {
 	var entries []Entry
 
@@ -374,6 +420,7 @@ func main() {
 	}
 
 	linkEntries(entries[:])
+	linkJrnl(entries[:])
 
 	for i := range entries {
 		if entries[i].IsIndex {

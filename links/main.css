@@ -36,6 +36,7 @@ mark {
 nav {
   font-size: 1.2rem;
   display: flex;
+  overflow-x: auto;
 }
 
 article {
@@ -102,7 +103,7 @@ dl dd {
   padding: 0.4rem 0.8rem;
 }
 
-.content img {
+#entry-body img, #jrnl-recent img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -115,24 +116,41 @@ dl dd {
   margin-bottom: 1.6rem;
 }
 
-.content img + em {
-  display: block; 
+#entry-body img + em, #jrnl-recent img + em {
+  display: block;
   background-color: lightgray;
   padding: .4rem .6rem;
   margin-top: -1.6rem;
   margin-bottom: 1.6rem;
 }
 
-#recent-img {
-  float:right;
+#jrnl-recent {
+  right: -20rem;
+  position: absolute;
   width: 20rem;
-  border-radius: .5rem;
-  overflow: hidden;
-  padding-left: 1rem;
 }
 
-#low-tech-webring {
+#jrnl-gallery {
+  line-height: 0;
+  column-count: 2;
+  column-gap: 0;
+}
+
+#jrnl-gallery .jrnl-record {
   position: relative;
+}
+
+#jrnl-gallery .jrnl-record img {
+  width: 100%;
+  height: auto;
+}
+
+#jrnl-gallery .jrnl-record img + em {
+  position: absolute;
+  bottom: .2rem;
+  left: 1rem;
+  line-height: 1.4;
+  background-color: lightgray;
 }
 
 #low-tech-webring:hover table {
@@ -141,22 +159,26 @@ dl dd {
 
 
 #low-tech-webring table {
-  position: absolute;
-  left: -10rem;
+  position: fixed;
   visibility: hidden;
   padding: 0 1rem;
   display: block;
-  bottom: 0;
   border: 1px solid lightgrey;
   background-color: white;
-  width: 40rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #low-tech-webring table td {
   border: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+  }
+
   .content {
     padding: 2rem 2.2rem;
   }
@@ -165,9 +187,14 @@ dl dd {
     padding: 2rem 2.2rem;
   }
 
-  #recent-img {
-    float: none;
-    max-width: 40rem;
+  #jrnl-recent {
+    position: relative;
     width: 100%;
+    padding: 0;
+    right: auto;
+  }
+
+  #jrnl-gallery {
+    column-count: 1;
   }
 }

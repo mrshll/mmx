@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-{{template "head.html" .}}
+    {{template "head.html" .}}
 
-<body>
-  <div class='content'>
-    {{template "header.html" .}}
+    <body>
+        <div class='content'>
+            {{template "header.html" .}}
 
-    {{if not .Entry.Date.IsZero}}
-    <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
-    {{end}}
+            {{if not .Entry.Date.IsZero}}
+            <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
+            {{end}}
 
-    <h5>{{.Entry.Bref | noescape}}</h5>
-    {{.Entry.Body | noescape}}
-    {{template "incoming.html" .}}
-  </div>
-</body>
+            <h5>{{.Entry.Bref | noescape}}</h5>
+            {{if gt (len .Entry.JrnlRecords) 0}}
+            <div id='jrnl-recent'>
+                {{$record := (index .Entry.JrnlRecords 0)}}
+                <img src="img/jrnl/{{$record.ImgPath}}"/>
+                <em>
+                    <a href="{{$record.Parent.Slug}}.html">{{$record.Description}}<br/>{{$record.Date}}</a>
+                </em>
+            </div>
+            {{end}}
 
-{{template "footer.html" .}}
+            <section id='entry-body'>
+            {{.Entry.Body | noescape}}
+            </section>
+
+            {{if gt (len .Entry.JrnlRecords) 1}}
+            <hr/>
+            <div id="jrnl-gallery">
+                {{range $record := (slice .Entry.JrnlRecords 1)}}
+                {{if eq $record.Parent.Slug $.Entry.Slug}}
+                <div class="jrnl-record">
+                    <img src="img/jrnl/{{$record.ImgPath}}"/>
+                    <em>{{$record.Description}}; {{$record.Date}}</em>
+                </div>
+                {{end}}
+                {{end}}
+            </div>
+            {{end}}
+
+            {{template "incoming.html" .}}
+        </div>
+    </body>
+
+    {{template "footer.html" .}}
 
 </html>
 <html>

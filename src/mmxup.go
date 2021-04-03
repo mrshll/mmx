@@ -297,11 +297,23 @@ func createLink(match []string, body string) string {
 func createImage(match []string, body string) string {
 	args := strings.Split(match[1], ",")
 	src := args[0]
+
+	// positional args
+	// 0. src
+	// 1. alt
+	// 3. style
+
 	alt := ""
 	if len(args) > 1 {
 		alt = strings.TrimSpace(args[1])
 	}
-	html := fmt.Sprintf("<img src='%s' alt='%s'/>", src, alt)
+
+	style := ""
+	if len(args) > 2 {
+		style = strings.TrimSpace(args[2])
+	}
+
+	html := fmt.Sprintf("<img src='%s' alt='%s' style='%s'/>", src, alt, style)
 	return strings.Replace(body, match[0], html, 1)
 }
 
