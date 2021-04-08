@@ -340,7 +340,7 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 		crumb := ""
 		if e.Parent.Slug == "reading" {
 			icon = readingIcon
-		} else if e.Parent.Slug == "active_projects" || e.Parent.Slug == "dormant_projects" {
+		} else if e.Parent.Slug == "projects" {
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
