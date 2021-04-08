@@ -7,6 +7,7 @@ slug: index
 body:
 
 * Reading
+* : {The Vegetable Gardener's Bible}
 * : {East of Eden}
 * : {Twelve Tomorrows}
 
@@ -538,12 +539,22 @@ body:
 
 ====
 
-name: Twelve Tomorrows
+name: The Vegetable Gardener's Bible
 host: Reading
-bref: Various Authors
+bref: Edward C. Smith
 body:
 
 In progress
+
+====
+
+name: Twelve Tomorrows
+host: Reading
+bref: Various Authors (2018)
+date: 2020-05-02
+body:
+
+
 
 ====
 
