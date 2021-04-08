@@ -62,7 +62,8 @@ func parseFile(file *os.File) []MmxDoc {
 }
 
 func makeSlug(name string) string {
-	return strings.ToLower(strings.ReplaceAll(name, " ", "_"))
+	replacer := strings.NewReplacer(" ", "_", "'", "_", "\"", "_")
+	return strings.ToLower(replacer.Replace(name))
 
 }
 
