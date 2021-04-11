@@ -271,6 +271,9 @@ func createEmbed(match []string, body string) string {
 	} else if module == "buildtime" {
 		t := time.Now()
 		embedHtml = fmt.Sprintf("<span>%s</span>", t.Format("2006-01-02 3:04PM MST"))
+	} else if module == "twitter" {
+		id := strings.TrimSpace(args[1])
+		embedHtml = fmt.Sprintf("<blockquote class='twitter-tweet'><a href='https://twitter.com/x/status/%s'></a></blockquote> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>", id)
 	} else {
 		panic(fmt.Sprintf("Unsupported module '%s' in embed", module))
 	}
