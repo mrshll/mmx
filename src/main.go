@@ -229,10 +229,15 @@ func makeSubNav(e Entry, target Entry) string {
 			continue // this occurs in the case of root node, i.e. Now
 		}
 
+		display := child.Name
+		if len(child.Children) > 0 {
+			display += "/"
+		}
+
 		if child.Name == target.Name {
-			subnav += fmt.Sprintf("<li><mark><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
+			subnav += fmt.Sprintf("<li><mark><a href='%s'>%s</a><mark></li>", getEntryFilename(child), display)
 		} else {
-			subnav += fmt.Sprintf("<li><a href='%s'>%s/</a><mark></li>", getEntryFilename(child), child.Name)
+			subnav += fmt.Sprintf("<li><a href='%s'>%s</a><mark></li>", getEntryFilename(child), display)
 		}
 	}
 
@@ -344,7 +349,9 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
-		} else if e.Parent.Slug != indexEntry.Slug {
+		}
+
+		if e.Parent.Slug != indexEntry.Slug {
 			crumb = fmt.Sprintf("<a href='%s'>%s</a> > ", getEntryFilename(*e.Parent), e.Parent.Name)
 		}
 
