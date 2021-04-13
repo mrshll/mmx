@@ -84,6 +84,26 @@ footer .footer-row > *{
   font-size: 1.2rem;
 }
 
+hr {
+    border: none;
+    border-top: 1px dashed lightgray;
+    color: lightgray;
+    overflow: visible;
+    text-align: right;
+    height: 5px;
+    width: 10rem;
+    margin-left: 0;
+}
+
+hr:after {
+    background: #fff;
+    content: '⌁';
+    padding: 0 4px;
+    position: relative;
+    top: -2.3rem;
+    font-size: 2.8rem;
+}
+
 dl dd {
   margin-top: .2rem;
   margin-bottom: .4rem;

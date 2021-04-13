@@ -68,23 +68,6 @@ func noescape(str string) template.HTML {
 	return template.HTML(str)
 }
 
-func parseIndentalLine(line string) (string, string) {
-	delimiterIndex := strings.Index(line, ":")
-
-	if delimiterIndex == -1 {
-		panic(fmt.Sprintf("No delmiter found in Indental line: %s", line))
-	}
-
-	key := line[2 : delimiterIndex-1]
-	var value string
-
-	if delimiterIndex < len(line)-1 {
-		value = line[delimiterIndex+2 : len(line)]
-	}
-
-	return key, value
-}
-
 func findEntry(entries []Entry, name string) *Entry {
 	for i := range entries {
 		if strings.ToLower(entries[i].Name) == strings.ToLower(name) {
@@ -92,36 +75,6 @@ func findEntry(entries []Entry, name string) *Entry {
 		}
 	}
 	panic(fmt.Sprintf("No parent found with name %s", name))
-}
-
-func makeHr(i int) string {
-	poem := []string{
-		"⠠⠞⠓⠑ ⠺⠕⠕⠙ ⠞⠓⠗⠥⠎⠓⠂ ⠊⠞ ⠊⠎⠖ ⠠⠝⠕⠺ ⠠⠊ ⠅⠝⠕⠺",
-		"⠺⠓⠕ ⠎⠊⠝⠛⠎ ⠞⠓⠁⠞ ⠉⠇⠑⠁⠗ ⠁⠗⠏⠑⠛⠛⠊⠕⠂",
-		"⠞⠓⠗⠑⠑ ⠋⠁⠗ ⠝⠕⠞⠑⠎ ⠺⠑⠁⠧⠊⠝⠛",
-		"⠊⠝⠞⠕ ⠞⠓⠑ ⠑⠧⠑⠝⠊⠝⠛",
-		"⠁⠍⠕⠝⠛ ⠇⠑⠁⠧⠑⠎",
-		"⠁⠝⠙ ⠎⠓⠁⠙⠕⠺⠆",
-		"⠕⠗ ⠁⠞ ⠙⠁⠺⠝ ⠊⠝ ⠞⠓⠑ ⠺⠕⠕⠙⠎⠂ ⠠⠊⠄⠧⠑ ⠓⠑⠁⠗⠙",
-		"⠞⠓⠑ ⠎⠺⠑⠑⠞ ⠁⠎⠉⠑⠝⠙⠊⠝⠛ ⠞⠗⠊⠏⠇⠑ ⠺⠕⠗⠙",
-		"⠑⠉⠓⠕⠊⠝⠛ ⠕⠧⠑⠗",
-		"⠞⠓⠑ ⠎⠊⠇⠑⠝⠞ ⠗⠊⠧⠑⠗ —",
-		"⠃⠥⠞ ⠝⠑⠧⠑⠗",
-		"⠎⠑⠑⠝ ⠞⠓⠑ ⠃⠊⠗⠙.",
-	}
-
-	poemLine := poem[i%len(poem)]
-	return fmt.Sprintf("<div style='color: #ccc; margin: 20px 0;'>%s</div>", poemLine)
-}
-
-func replaceHr(b string) string {
-	hrRegex := regexp.MustCompile(`(?i)<hr ?\/?>`)
-	matches := hrRegex.FindAllString(b, -1)
-	for i, match := range matches {
-		b = strings.Replace(b, match, makeHr(i), 1)
-	}
-
-	return b
 }
 
 func appendEntryIfMissing(entries []*Entry, entryToAppend *Entry) []*Entry {
@@ -264,7 +217,7 @@ func renderEntryHTML(e Entry) string {
 
 	var children []Entry
 	var embeddedHTMLStr string
-	for i, cPtr := range e.Children {
+	for _, cPtr := range e.Children {
 		children = append(children, *cPtr)
 		if cPtr.EmbedInParent {
 			var tpl bytes.Buffer
@@ -273,7 +226,6 @@ func renderEntryHTML(e Entry) string {
 			check(err)
 
 			embeddedHTMLStr += tpl.String()
-			embeddedHTMLStr += makeHr(i)
 		}
 	}
 
@@ -285,7 +237,6 @@ func renderEntryHTML(e Entry) string {
 	check(err)
 
 	htmlStr := tpl.String()
-	htmlStr = replaceHr(htmlStr)
 
 	return htmlStr
 }
