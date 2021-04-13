@@ -60,25 +60,6 @@ func check(e error) {
 	}
 }
 
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-
-func spad(line string, c rune) int {
-	i := 0
-	for _, runeValue := range line {
-		if runeValue == c {
-			i++
-		} else {
-			break
-		}
-	}
-	return i
-}
-
 func formatDate(d time.Time) string {
 	return d.Format("2006-01-02")
 }
