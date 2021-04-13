@@ -104,8 +104,7 @@ func linkEntries(entries []Entry) {
 				// external
 				continue
 			} else if outboundHref[0] == '^' {
-				// module
-				// TODO: handle in mmxup
+				// module; embed handled in mmxup
 				continue
 			} else {
 
