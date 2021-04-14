@@ -47,6 +47,10 @@ p {
   margin-bottom: 1.2rem;
 }
 
+ol, ul, dl {
+  margin: 1rem 0;
+}
+
 nav ul {
   padding: 0;
   margin-right: 2rem;
@@ -113,6 +117,10 @@ dl dd {
   margin-top: 2rem;
   border: 1px solid lightgrey;
   padding: 0.4rem 0.8rem;
+}
+
+#entry-body {
+  margin: 2rem 0;
 }
 
 #entry-body img, #jrnl-recent img {
