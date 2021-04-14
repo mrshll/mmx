@@ -356,7 +356,7 @@ func main() {
 		}
 
 		if len(entries[i].JrnlRecords) > 0 {
-			entries[i].FirstImageSrc = fmt.Sprintf("img/%s", entries[i].JrnlRecords[0].ImgPath)
+			entries[i].FirstImageSrc = fmt.Sprintf("img/jrnl/%s", entries[i].JrnlRecords[0].ImgPath)
 		} else {
 			imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
 			imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
