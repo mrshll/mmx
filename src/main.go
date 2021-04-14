@@ -355,10 +355,14 @@ func main() {
 			entries[i].Body = makeIndex(entries[i], entries[i].Children, MakeIndexOptions{ShowBref: true})
 		}
 
-		imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
-		imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
-		if len(imgMatches) > 0 {
-			entries[i].FirstImageSrc = imgMatches[0][1]
+		if len(entries[i].JrnlRecords) > 0 {
+			entries[i].FirstImageSrc = entries[i].JrnlRecords[0].ImgPath
+		} else {
+			imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
+			imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
+			if len(imgMatches) > 0 {
+				entries[i].FirstImageSrc = imgMatches[0][1]
+			}
 		}
 	}
 
