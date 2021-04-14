@@ -7,11 +7,10 @@
         <div class='content'>
             {{template "header.html" .}}
 
+            <h5>{{.Entry.Bref | noescape}}</h5>
             {{if not .Entry.Date.IsZero}}
             <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
             {{end}}
-
-            <h5>{{.Entry.Bref | noescape}}</h5>
             {{if gt (len .Entry.JrnlRecords) 0}}
             <div id='jrnl-recent'>
                 {{$record := (index .Entry.JrnlRecords 0)}}
@@ -27,7 +26,6 @@
             </section>
 
             {{if gt (len .Entry.JrnlRecords) 1}}
-            <hr/>
             <div id="jrnl-gallery">
                 {{range $record := (slice .Entry.JrnlRecords 1)}}
                 {{if eq $record.Parent.Slug $.Entry.Slug}}

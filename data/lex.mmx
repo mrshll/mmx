@@ -6,6 +6,8 @@ bref: Now
 slug: index
 body:
 
+_Last compiled {^buildtime}_
+
 * Reading
 * : {The Vegetable Gardener's Bible}
 * : {East of Eden}
@@ -17,9 +19,7 @@ body:
 * : Spending time in the {garden}
 * : {gamedev, Making a game} about birds and buffalo
 
-_Last updated {^buildtime}_
-
----
+# Then
 
 ====
 
@@ -255,6 +255,7 @@ TODO
 ====
 
 name: Projects
+bref: Projects
 host: now
 indx: true
 

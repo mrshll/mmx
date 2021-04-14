@@ -243,25 +243,15 @@ func renderEntryHTML(e Entry) string {
 func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) string {
 	sortedEntries := sortEntries(entries)
 
-	// var activeProjectsBody string
-	// for _, e := range entries {
-	// 	if e.Name == "Active Projects" {
-	// 		activeProjectsBody = e.Body
-	// 		break
-	// 	}
-	// }
-
 	readingIcon := "<span style='margin-right:10px'>📖</span>"
 	projectsIcon := "<span style='margin-right:10px'>🖌</span>"
 	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
 
 	body := indexEntry.Body
-	// body := "<h5>Active Projects</h5>"
-	// body += activeProjectsBody
-	// body += "<h5>Updates</h5>"
+
 	y, _, _ := time.Now().Date()
-	y++ // increment y so that the first date is less than current and we write it
+	y++ // increment y so that the first year is less than current and we write it
 
 	for _, e := range sortedEntries {
 		if e.Date.IsZero() && options.DatesOnly {

@@ -95,14 +95,6 @@ hr {
     margin-left: 0;
 }
 
-hr:after {
-    background: #fff;
-    content: '⌁';
-    padding: 0 4px;
-    position: relative;
-    top: -2.3rem;
-    font-size: 2.8rem;
-}
 
 dl dd {
   margin-top: .2rem;
