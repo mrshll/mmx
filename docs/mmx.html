@@ -43,7 +43,10 @@
 </nav>
 
 
+            
             <h5>This site is called mmx</h5>
+            
+
             
             <div style='color:#ccc'>last updated 2021-01-18</div>
             
@@ -51,8 +54,7 @@
 
             <section id='entry-body'>
             
-<img src='img/redturtle020.jpg' alt='A person building something with bamboo' style='from The Red Turtle'/>
-
+<p><img src='img/redturtle020.jpg' alt='A person building something with bamboo' style='from The Red Turtle'/></p>
 <p>mmx was built at the start of 2021. Largely inspired by others on <a href='https://webring.xxiivv.com/' target='_blank'>{^webring}</a>, especially <a href='https://wiki.xxiivv.com/site/home.html' target='_blank'>{^Devine}</a>, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.</p>
 <p>The site's compiler is written in <a href='https://golang.org' target='_blank'>{^Go}</a>. It can generate a graph of entries from a modified version of <a href='https://wiki.xxiivv.com/site/indental.html' target='_blank'>{^Indental}</a> as well as markdown with frontmatter.</p>
 <p>Entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally embed itself in a parent - <a href='reading.html'>{reading}</a> being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. <a href='index.html'>{now}</a> is a special case that has its own generator function to render the timeline.</p>
@@ -70,8 +72,7 @@ I landed on:</p>
 <p>I opted for GoLang as a learning opportunity. Compared to my usual Javascript, GoLang is miles closer to C - the last time I thought about pointers was my senior year of college, if that. I never imagined saying this, but I missed pointers! My impression of GoLang so far is fine. I hardly tapped into the features it is known for, such as concurrancy. But this project served as a gentle introduction.</p>
 <p>Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.</p>
 <p>In a moment of doubt, I played with <a href='https://www.11ty.dev/' target='_blank'>{^11ty}</a> as well as <a href='https://github.com/mathieudutour/gatsby-digital-garden' target='_blank'>{^gatsby plugins}</a> that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that I was on the right path.</p>
-<del>For my pages, I opted to use a modified version of the human readable <a href='https://wiki.xxiivv.com/site/indental.html' target='_blank'>{^Indental}</a> format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.</del>
-
+<p><del>For my pages, I opted to use a modified version of the human readable <a href='https://wiki.xxiivv.com/site/indental.html' target='_blank'>{^Indental}</a> format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.</del></p>
 <p>I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, mmxup, inspired by Indental and <a href='https://thomasorus.com/kaku.html' target='_blank'>{^kaku}</a>. The code for <a href='https://github.com/mrshll/mmx/blob/main/src/mmxup.go' target='_blank'>{^mmx's compiler}</a> is short and has been fun to write and extend.</p>
 <p>Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" was achieved with the following bash:</p>
 <pre><code>#!/bin/sh

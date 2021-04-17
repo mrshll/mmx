@@ -9,6 +9,7 @@ body:
 _Last compiled {^buildtime}_
 
 * Reading
+* : {A Visit From The Goon Squad}
 * : {The Vegetable Gardener's Bible}
 * : {East of Eden}
 
@@ -178,7 +179,7 @@ body:
 name: Music
 host: now
 bref: Very short songs released under the name "mrshll"
-date: 2021-02-08
+date: 2021-04-17
 body:
 
 _During_ is my latest collection of songs, primarily created on the OP-Z, which my coworker Kevin sent me after showing me it's magic.
@@ -257,7 +258,7 @@ TODO
 name: Projects
 bref: Projects
 host: now
-indx: true
+indx: full
 
 ====
 

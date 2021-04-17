@@ -2,16 +2,27 @@
 
 name: Reading
 host: now
-indx: true
+indx: compact
 bref: Reading log
 body:
 
 ====
 
+name: A Visit From The Goon Squad
+host: Reading
+body:
+
+by Jennifer Egan
+
+In progress
+
+====
+
 name: The Vegetable Gardener's Bible
 host: Reading
-bref: Edward C. Smith
 body:
+
+by Edward C. Smith
 
 In progress
 
@@ -19,9 +30,10 @@ In progress
 
 name: Twelve Tomorrows
 host: Reading
-bref: Various Authors (2018)
 date: 2021-04-02
 body:
+
+by Various Authors (2018)
 
 Autumn before the pandemic my friend Russ rented out Morrocan Hospitality, a restaurant that sadly did not weather the storm of COVID, on two occasions: first for his Birthday and then as a friends-giving of sorts. Tagine after tagine were placed onto the long table, which was formed by combining every surface in the small restaurant into one. Russ, ever generous, flipped the concept of "birthday" and gave each group of diners a different book. For Alejandra and I, it was _Twelve Tomorrows_.
 
@@ -35,8 +47,9 @@ I look forward to reading the other entries in this series.
 
 name: East of Eden
 host: reading
-bref: John Steinbeck
 body:
+
+by John Steinbeck
 
 In progress
 
@@ -45,8 +58,9 @@ In progress
 name: The Redemption of Time
 host: reading
 date: 2021-03-10
-bref: Baoshu
 body:
+
+by Baoshu
 
 The author's preface captures what I imagine is the pervasive sentiment shared by readers of _The Rememberance of Earth's Past_ original trilogy. The story's universe is so immersive, the detailed inspection of the mechanics therein are so compelling, that when the books came to a conclusion there is a feeling of loss. This feeling is not uncommon for immersive novels; what is uncommon is that a fan, so stricken by this loss, sits down and rips out a sequel novel in a few weeks - a novel so aligned with the voice and style as Cixin Liu (if not more juvenile in a few areas) that it is blessed by the publisher and author, making the series a ~~trilogy~~ tetralogy. I hesitate to say it, but I may have enjoyed this book as much or more than any of the original ones. This new author was able to convincingly explain plot holes from the original trilogy and complete complex story arcs that literally bend understanding of space and time. 5 bags of cosmic popcorn out of 5.
 
@@ -55,8 +69,9 @@ The author's preface captures what I imagine is the pervasive sentiment shared b
 name: Children of Time
 host: reading
 date: 2021-02-25
-bref: Adrian Tchaikovsky
 body:
+
+by Adrian Tchaikovsky
 
 I was in the mood for science fiction (which in retrospect is the status quo), and saw this recommended by a handful of acquaintances. The novel's start had the breath and awe of the Three Body Trilogy, but the depth of science became shallower as the book progressed - not necessarily bad, but the first chapter readied me for some hard science fiction. Although some of the unique concepts held fast (sentience evolving from humanity's own biological experiments), some of the novel concepts were glossed over.
 
@@ -67,8 +82,9 @@ I've noticed that many of the most gripping novels, especially in this genre, fo
 name: The Making of Prince of Persia
 host: reading
 date: 2021-01-01
-bref: Jordan Mechner
 body:
+
+by Jordan Mechner
 
 This book is the collected journal entries from the creator of Prince of Persia, an early video game that broke many technical and artistic boundaries.
 
@@ -81,8 +97,9 @@ For someone's meandering and often angsty journal entries, I was captivated. I c
 name: The Lathe of Heaven
 host: reading
 date: 2020-12-28
-bref: Ursula K. Le Guinn
 body:
+
+by Ursula K. Le Guinn
 
 Le Guin's foresight amazes me. So much has come to pass that is easy to take her prescience for granted. To quote her foreword in The Left Hand of Darkness:
 
@@ -111,8 +128,9 @@ On cars:
 name: All the Light We Cannot See
 host: reading
 date: 2020-11-01
-bref: Anthony Doerr
 body:
+
+by Anthony Doerr
 
 [TODO]
 
@@ -120,9 +138,10 @@ body:
 
 name: The Good Life Lab
 host: reading
-bref: Wendy Jehanara Tremayne
 date: 2020-07-23
 body:
+
+by Wendy Jehanara Tremayne
 
 This book caught my eye simply because Sandor Katz (from "The Art of Fermentation," which was revelatory) is listed as a co-author. It was a quick read about a jaunt from NYC bustle to New Mexico homesteading. The self reliance and creativity was interesting, and I enjoyed reading about the projects' specifics. Some of the ethos (soap is _free_ if you make it from \~\~nature\~\~, man) and ego made the book feel like an extremely long Medium dot com post. Agnes Varda wore it better in [Les Glaneurs et La Glaneuse](https://en.wikipedia.org/wiki/The_Gleaners_and_I).
 
@@ -130,9 +149,10 @@ This book caught my eye simply because Sandor Katz (from "The Art of Fermentatio
 
 name: Braiding Sweetgrass
 host: reading
-bref: Robin Wall Kimmerer
 date: 2020-09-30
 body:
+
+by Robin Wall Kimmerer
 
 Indigenous wisdom, scientific knowledge, and the teachings of plants - braided like the sweetgrass itself. Dr. Kimmerer brought my own relationship with the natural world into focus. I am realizing my mini-book reports regularly tiptoe into hyperbole, but her focus on gratitude, on observation, on patience and familiarity has shown me a new way to exist in and advocate for a better relationship with the natural world.
 
@@ -142,9 +162,10 @@ Many climate change solutions ignore the respect, admiration, and coexistence wi
 
 name: The Art of Fermentation
 host: reading
-bref: Sandor Ellix Katz
 date: 2020-07-09
 body:
+
+by Sandor Ellix Katz
 
 If 6 months ago you told me, "Marshall fermentation will change your life" I'd take a jaw defying crunch of a raw carrot and shake my head. But the pandemic caused a huge shift in my relationship with food consumption. For many folks, the most significant change was the inability to dine out. For me, it was the shift of popping in the grocery store every day or two to trying to stretch a single trip for over a week. The lifestyle of nightly grocery visits all started in my years in Somerville, always within a few blocks of The Temple of Market Basket. There's something so satisfying to wander the aisles of a grocery store, grabbing a few weird ingredients and looking at all the pretty packages and produce.
 
@@ -160,9 +181,10 @@ I started the book looking for a few hot tips on how to fill my hours at home. I
 
 name: Born to Run
 host: reading
-bref: Christopher McDougall
 date: 2020-06-03
 body:
+
+by Christopher McDougall
 
 I had been putting off this book for a while, for no reason in particular. When Katz's The Art of Fermentation mentioned the fermentation process of pinole practiced by the Rarámuri (the same indigenous people featured in McDougall's book), I  was excited to pick it up.
 
@@ -176,25 +198,28 @@ All said, having read this book I find myself running more on my toes, in older 
 
 name: Where the Crawdads Sing
 host: reading
-bref: Delia Owens
 date: 2020-03-28
 body:
+
+by Delia Owens
 
 ====
 
 name: Exhalation: Stories
 host: reading
-bref: Ted Chiang
 date: 2020-03-23
 body:
+
+by Ted Chiang
 
 ====
 
 name: The Overstory
 host: reading
-bref: Richard Powers
 date: 2020-01-20
 body:
+
+by Richard Powers
 
 > ...the word tree and the word truth come from the same root.
 
@@ -211,9 +236,10 @@ deciduous conifers in the world, the {https://mountauburn.org/metasequoiaglyptos
 
 name: The Left Hand of Darkness
 host: reading
-bref: Ursila K. Le Guin
 date: 2019-12-06
 body:
+
+by Ursila K. Le Guin
 
 Continuing on my Le Guin streak, this was a great novel to follow _A Wizard of Earthsea_. It's remarkably different in tone, the intended audience seeming to be a more mature one. The tone is solemn, probing, and at times bleak.
 
@@ -243,9 +269,10 @@ In all, this was my favorite book of 2019. I closed out the year running an ultr
 
 name: Born a Crime
 host: reading
-bref: Trevor Noah
 date: 2019-12-30
 body:
+
+by Trevor Noah
 
 This book was recommended to me by my teammate Eliza, specifically to listen to as an audiobook. Upon starting it up, I immediately realized why. Read by the author (host of The Daily Show) gave the coming of age story a quality I haven't experienced in an audiobook before. It was something closer to a podcast like This American Life than your typical non-descript British accented delivery.
 
@@ -255,9 +282,10 @@ Noah's story ultimately was of his relationship with his mother. I listened to i
 
 name: A Wizard of Earthsea
 host: reading
-bref: Ursila K. Le Guin
 date: 2019-11-16
 body:
+
+by Ursila K. Le Guin
 
 In the past, I haven't been one to reread books for no reason other than I have too many books I _haven't_ read on my shelf, ready to go. My memory of the plot was like viewing it through the fog Ged summons when he first realizes his inate power. And to really relive my childhood, I didn't actually reread it per se; I borrowed the library's audiobook, recreating the fantasy-novel-on-a-roadtrip feeling I haven't felt since I was a kid. The recording, delivered via the library's app, even told us to flip the tape to side B, but only after rewinding it fully. No detail spared for immersive effect!
 
@@ -277,9 +305,10 @@ On learning:
 
 name: 1984
 host: reading
-bref: George Orwell
 date: 2019-11-02
 body:
+
+by George Orwell
 
 As it likely has been throughout the past decades, 1984 is frequently referenced as the "told you so" of dystopic novels. I expected the likeness with current events to be limited to "society is crushed and the ruling class are evil," but the parallels of our protagonist's employment at the Ministry of Truth with today's controversy surrounding social media, censorship, and "fake news" (yikes I can't believe I typed that) is stark and uncomfortable.
 
@@ -296,8 +325,9 @@ Okay Google! Define "scrutinized." Hey Alexa! "Turn on the living room lights."
 name: Principles
 host: reading
 date: 2019-10-04
-bref: Ray Dalio
 body:
+
+by Ray Dalio
 
 🤮 I stopped a couple of chapters in. Self-congratulatory nonsense. A lucky life masquerading as enlightenment.
 
@@ -308,8 +338,9 @@ If you must, he delivers the entirety of the book's content in {https://www.yout
 name: Working
 host: reading
 date: 2019-09-24
-bref: Robert Caro
 body:
+
+by Robert Caro
 
 I first heard about Caro when my partner, Alejandra, slammed down the 1,336 page tome The Power Broker. This much less intimidating book was a great introduction to Caro's eloquence, and actually quite glad it was my first: it highlights his approach to the craft of biographical research and writing. That background, I feel, will give me a deeper appreciation for the works I plan to read soon.
 
@@ -317,9 +348,10 @@ I first heard about Caro when my partner, Alejandra, slammed down the 1,336 page
 
 name: Bicycle Diaries
 host: reading
-bref: David Byrne
 date: 2019-08-07
 body:
+
+by David Byrne
 
 Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hall of Famer. Who knew he was such a bike nut? Well, apparently he is, and a [a big NYC bike advocate to boot](https://www.youtube.com/watch?v=37IDIUOJA6s). And I learned later that my dad met him on the way up to a studio and David was always sweaty and clutching a bike helmet. Badass! He travels with a folding bike wherever he goes. This book was his reflections on the cities he had traveled to, with short snippets of his experience of the city and its design via bike. From there, Byrne riffs (hah) on the history, culture, and personal relationships to the place. I read it at a point where I was returning to my love of bicycling, so I especially appreciated this lens. As a nice cross-over, he mentions city planning via Robert Moses (one of Caro's subjects) and references Caro's work, as well as _The Life and Death of Great American Cities_ which I look forward to reading.
 
@@ -327,9 +359,10 @@ Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hal
 
 name: My Brilliant Friend
 host: reading
-bref: Elena Ferrante
 date: 2019-06-30
 body:
+
+by Elena Ferrante
 
 Sometimes it's nice to dip into crème de la crème popular culture. This was surprisingly enjoyable, and I enjoyed feeling immersed in the small Italian neighborhood. And a great change from _Foundation_ wherein there were only male characters?!
 
@@ -337,9 +370,10 @@ Sometimes it's nice to dip into crème de la crème popular culture. This was su
 
 name: Foundation
 host: reading
-bref: Isaac Asimov
 date: 2019-05-09
 body:
+
+by Isaac Asimov
 
 A few pages in, I thought to myself "science fiction doesn't typically age well, does it?" It's hard to imagine the experience of reading it in the year of its publication. And in the many ways it is unfathomable in its foresight, it's "anti-woke" with social forecasts and characters. I've seen Asimov fans say "It's not about the characters!!1" and in a small way, maybe they're right? But a dozen pages into _Foundation_, I realized there hadn't been a female character introduced. A couple hundred(!) pages later, and it was still a boyz club in space. Cool ideas indeed, but the story, and the characters, were forgettable at best.
 
@@ -347,9 +381,10 @@ A few pages in, I thought to myself "science fiction doesn't typically age well,
 
 name: Circe
 host: reading
-bref: Madeline Miller
 date: 2019-01-18
 body:
+
+by Madeline Miller
 
 Ever since I dove into Neil Gaiman's _Sandman_ in highschool, I have been an absolute sucker for retelling of mythology. This book is no exception. Recommended to me by both my mom and brother, the pacing, character development, and atmosphere are perfect. Her prose is beautiful without feeling like a classic from literature class. I highlighted a number of passages that stood out in this way. For example:
 
@@ -363,9 +398,10 @@ and
 
 name: Ancillary Justice
 host: reading
-bref: Ann Leckie
 date: 2018-12-02
 body:
+
+by Ann Leckie
 
 The premise for this book was enough to catch my science fiction junkie attention, and it came as a recommendation from a new friend, John. Set in a feudalistic galactic civilization future, there are multi-bodied AI consiousnesses that are sentient tools of a crazy ruler. Typing that out it sounds very odd. Anyway, the protagonist is one of these beings, which makes for an interesting multi-body point of view.
 
@@ -373,9 +409,10 @@ The premise for this book was enough to catch my science fiction junkie attentio
 
 name: The Knight & The Wizard
 host: reading
-bref: Gene Wolfe
 date: 2018-11-22
 body:
+
+by Gene Wolfe
 
 This series was recommended to me by one of my best pals, Quinault, so I had to pick it up. There is something so bizarre about these books, something that made them foggy -- incoherent at times -- and made me half-expect for the protagonist to wake up with a gasp for air realizing that the whole fantasy plot was a dream. We follow a kid who wanders away from his brother and into a messy fantasy world where he lives the rest of his life becoming a knight. It twists cliché into creativity -- more creative than any fantasy book I've read recently. When I finished, I was completely perplexed. There's constant subtext and references, making it challenging, rewarding, and likely for 50% of readers to absolutely hate it.
 
@@ -383,9 +420,11 @@ This series was recommended to me by one of my best pals, Quinault, so I had to 
 
 name: Rules of Civility
 host: reading
-bref: Amor Towles
 date: 2018-09-17
 body:
+
+by Amor Towles
+
 I read this following up _A Gentleman In Moscow_ (recommended to me by my mom and brother), which was one of my favorite books last year. The author's writing style is refreshing, and although there are conflicts throughout his novels, they generally relieve stress. _Rules of Civility_ was not quite as list-topping as _A Gentleman In Moscow_, but I enjoyed it nevertheless. Embedded in a woman's journey to and through New York City is fascinating historical research about the city in 1938.
 
 Some highlights:
@@ -405,8 +444,9 @@ and particularly pleasant to revisit as I write this at the cusp of Autumn:
 name: Ball Lightning
 host: reading
 date: 2018-09-03
-bref: Cixin Liu
 body:
+
+by Cixin Liu
 
 Following a deep obsession with Liu's _Remberance of Earth's Past_ trilogy, I picked up a standalone novel of his about the quirky science of harnessing the power of ball lightning. As always with his books, there are fascinating forward-thinking ideas, and in this case they are far more terrestrially focused than the trilogy. There is a bit more lost in translation, I think, and everything is so military-focused I found it exhausting. That could be a reflection of the realities in China (and heck, in the US too, who am I kidding). All in all, it was not quite as compelling as the triology, but certainly a fun and interesting read.
 
@@ -419,8 +459,9 @@ At the very end was context-setting that I wish had been at the beginning:
 name: High Rise
 host: reading
 date: 2018-08-19
-bref: J.G. Ballard
 body:
+
+by J.G. Ballard
 
 The book examines an insular high rise community gone awry. Petty complaints devolve into all out destruction. Class -- I mean, floor -- warfare breaks out, and tenants become primal, raiding other floors, destroying property, and worse. Similar to _Foundation_ I don't think there was a single female character, except as objects of war and conquest. It was a pretty disgusting book and I skimmed the last half in search of redemption. There was none.
 
@@ -429,8 +470,9 @@ The book examines an insular high rise community gone awry. Petty complaints dev
 name: Mortal Engines
 host: reading
 date: 2018-07-29
-bref: Philip Reeve
 body:
+
+by Philip Reeve
 
 Okay, who saw the Peter Jackson trailer of the giant city-ships consuming smaller city-ships and wasn't blown away? The trailer, at least, had a lot going for it. I had high hopes for the novel, but sadly they materialized in an especially "young" young adult novel. I couldn't get past some of the poor writing in spite of the somewhat interesting world building.
 
@@ -439,8 +481,9 @@ Okay, who saw the Peter Jackson trailer of the giant city-ships consuming smalle
 name: Exit West
 host: reading
 date: 2018-05-31
-bref: Mohsin Hamid
 body:
+
+by Mohsin Hamid
 
 This was an absolutely beautiful and timely novel. Recommended to me by my mom! Hamid's stentence structure is head-rattling to start, but once the rhythm is picked up by the reader, the structure feels comforting. Each sentence is crafted to have just the right cadence and flow, reminding me of Halldór Laxness.
 
@@ -457,8 +500,9 @@ The novel examines civilian life during war and the subsequent migration that is
 name: Sleeping Giants
 host: reading
 date: 2018-04-11
-bref: Sylvain Neuvel
 body:
+
+by Sylvain Neuvel
 
 Recommended to me by my downstairs neighbor, Kate, this book is held up by its premise. Strange ultra-massive bodyparts start to be uncovered across the world of some large humanoid machine. It's structured as a series of military transcripts you're reading after the fact. It's a quick read, and equally fast paced.
 
@@ -467,8 +511,9 @@ Recommended to me by my downstairs neighbor, Kate, this book is held up by its p
 name: Sing, Unburied, Sing
 host: reading
 date: 2018-03-17
-bref: Jesmyn Ward
 body:
+
+by Jesmyn Ward
 
 This novel journeys through the parts of the south that feel totally alien from my barely-southern upbringing. It is a journey through Mississippi's past and present, examining race, incarceration, coming of age, addiction, and inequality. It is haunting and brought me to tears.
 

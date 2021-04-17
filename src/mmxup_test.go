@@ -14,8 +14,9 @@ func TestApplyRulesHeaders(t *testing.T) {
 }
 
 func TestApplyRulesLink(t *testing.T) {
-	checkResult(applyRules("{foo, bar}"), "<a href='foo'>bar</a>", t)
-	checkResult(applyRules("{foo, bar} {bop}"), "<a href='foo'>bar</a> <a href='bop'>bop</a>", t)
+	checkResult(applyRules("{foo, bar}"), "<p><a href='foo'>{bar}</a></p>", t)
+	checkResult(applyRules("{foo, bar} {bop}"), "<p><a href='foo'>{bar}</a> <a href='bop'>{bop}</a></p>", t)
+	checkResult(applyRules("{https://foo, bar}"), "<p><a href='https://foo' target='_blank'>{^bar}</a></p>", t)
 }
 
 func TestApplyRulesCode(t *testing.T) {
@@ -45,7 +46,7 @@ func TestApplyRulesBlockquote(t *testing.T) {
 }
 
 func TestApplyRulesEm(t *testing.T) {
-	checkResult(applyRules("_foo_"), "<em>foo</em>", t)
-	checkResult(applyRules("_foo_ bar"), "<em>foo</em> bar", t)
-	checkResult(applyRules("<a href='foo_bar_biff>foo</a>"), "<a href='foo_bar_biff>foo</a>", t)
+	checkResult(applyRules("_foo_"), "<p><em>foo</em></p>", t)
+	checkResult(applyRules("_foo_ bar"), "<p><em>foo</em> bar</p>", t)
+	checkResult(applyRules("<a href='foo_bar_biff>foo</a>"), "<p><a href='foo_bar_biff>foo</a></p>", t)
 }

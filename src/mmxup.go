@@ -17,7 +17,7 @@ type MmxDoc struct {
 	Bref    string
 	Body    string
 	Date    time.Time
-	IsIndex bool
+	Index 	string
 }
 
 type Rule struct {
@@ -92,7 +92,7 @@ func parsePage(text string) MmxDoc {
 		} else if strings.HasPrefix(line, "bref: ") {
 			doc.Bref = line[HEAD_LEN:]
 		} else if strings.HasPrefix(line, "indx: ") {
-			doc.IsIndex = line[HEAD_LEN:] == "true"
+			doc.Index = line[HEAD_LEN:]
 		} else if line == "body:" {
 			body := text[cursor+HEAD_LEN:]
 			doc.Body = applyRules(body)
@@ -207,8 +207,10 @@ func applyRules(body string) string {
 
 func createParagraph(match []string, body string) string {
 	text := strings.TrimSpace(match[1])
-	if text[0] == '<' {
+	for _, skipTag := range []string{"<hr/>", "<div>", "<pre>", "<blockquote>", "<ul>", "<ol>", "<dl>", "<h"} {
+		if strings.HasPrefix(text, skipTag) {
 		return body
+	}
 	}
 
 	html := fmt.Sprintf("<p>%s</p>", text)

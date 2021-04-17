@@ -351,8 +351,10 @@ func main() {
 	linkJrnl(entries[:])
 
 	for i := range entries {
-		if entries[i].IsIndex {
+		if entries[i].Index == "full" {
 			entries[i].Body = makeIndex(entries[i], entries[i].Children, MakeIndexOptions{ShowBref: true})
+		} else if entries[i].Index == "compact" {
+			entries[i].Body = makeIndex(entries[i], entries[i].Children, MakeIndexOptions{ShowBref: false})
 		}
 
 		if len(entries[i].JrnlRecords) > 0 {
