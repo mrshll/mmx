@@ -21,7 +21,7 @@
                 {{$record := (index .Entry.JrnlRecords 0)}}
                 <img src="img/jrnl/{{$record.ImgPath}}"/>
                 <em>
-                    <a href="{{$record.Parent.Slug}}.html">{{$record.Description}}<br/>{{$record.Date}}</a>
+                    <a href="{{$record.Parent.Slug}}.html">{{$record.Description}}; <wbr>{{$record.Date}}</a>
                 </em>
             </div>
             {{end}}
@@ -36,7 +36,7 @@
                 {{if eq $record.Parent.Slug $.Entry.Slug}}
                 <div class="jrnl-record">
                     <img src="img/jrnl/{{$record.ImgPath}}"/>
-                    <em>{{$record.Description}}; {{$record.Date}}</em>
+                    <em>{{$record.Description}}; <wbr>{{$record.Date}}</em>
                 </div>
                 {{end}}
                 {{end}}

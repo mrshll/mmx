@@ -24,10 +24,20 @@ _Last compiled {^buildtime}_
 
 ====
 
-name: Research & Notes
+name: Notes
 host: now
 bref: Notes on topics of interest.
 indx: true
+
+====
+
+name: Sunday Marathon 2021
+host: notes
+bref:
+date: 2021-04-18
+body:
+
+A pseudo-tradition marathon the sunday before the real marathon. In 2021 it was run on Sunday 4/18 starting at my house in Medford and traveling South through Everett until Boston's Belle Isle Marsh Reservation and continuing to Revere Beach, where I turned North until the neck of Nahant. From there, I found the Northern Strand bike path and took it westward home through Lynn, Saugus, Malden and Medford.
 
 ====
 
@@ -62,7 +72,7 @@ body:
 ====
 
 name: The Fells
-host: research & notes
+host: Notes
 bref: The Middlesex Fells
 date: 2021-04-10
 body:
@@ -106,7 +116,7 @@ This list captures the tools and miscellanea that I would be hamstrung without.
 ====
 
 name: Tufts Talk 2020-02-23
-host: Research & Notes
+host: Notes
 bref: Notes ahead of my talk to the Tufts CS and Entrepreneurship Communities
 date: 2021-02-23
 body:
@@ -140,7 +150,7 @@ We were acquired in 2018 by Natel Energy. It's been a bizarrely perfect relation
 ====
 
 name: Business Tools
-host: Research & Notes
+host: Notes
 bref: Tools for tackling the less exciting parts of business
 date: 2021-02-21
 body:
@@ -158,7 +168,7 @@ Stripe Atlas used to magically create a bank account with a bank, Azlo, - but it
 ====
 
 name: Low Tech
-host: research & notes
+host: Notes
 bref: Off-grid computing, low tech, and peer-to-peer web
 date: 2021-03-10
 body:
@@ -232,7 +242,7 @@ Native people speak of this gardening style as the Three Sisters.
 ====
 
 name: Space myst
-host: research & notes
+host: Notes
 date: 2021-01-18
 bref: A mystery point-and-click concept set in space
 body:
@@ -551,7 +561,7 @@ Usage died off for a variety of reasons. I hope to revive this project, potentia
 name: An appeal for impact
 date: 2016-11-10
 bref: An Appeal For Impact
-host: research & notes
+host: Notes
 body:
 
 As technologists, we have the privilege to exist in an era hungry for tweets, likes, cars that drive themselves, apps for exercise, sites to share other sites — and that gives us the opportunity to choose what we work on.
@@ -693,7 +703,7 @@ And obligatorily: if the way we work sounds fun and our mission resonates, our t
 name: Web nostalgia
 bref: What happened to the web's sparkle?
 date: 2020-12-06
-host: research & notes
+host: Notes
 body:
 
 There is something precious about a webpage. It's what excited me so much when I first encountered the internet as a kid. A blank canvas, yes, but also a nook to spark into existence. A manifestation of self. I'm talking about Web 1.0. Before it got fancy. A good site name, some content written as much for the creator as for the visitor. Sprinkled with a few of the early gifs and counter snippets. I miss that.
