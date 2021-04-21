@@ -33,7 +33,6 @@ indx: true
 
 name: Sunday Marathon 2021
 host: notes
-bref:
 date: 2021-04-18
 body:
 
@@ -392,7 +391,7 @@ During this time period, we were fortunate to be joined by many friends, past co
 name: mmx
 host: projects
 bref: This site is called mmx
-date: 2021-01-18
+date: 2021-04-20
 body:
 
 [img/redturtle020.jpg, A person building something with bamboo, from The Red Turtle]
@@ -447,21 +446,20 @@ The site is hosted using Github pages. This is great, because there is no build 
 ---
 
 >>>
-The wood thrush, it is! Now I know<br/>
-who sings that clear arpeggio,<br/>
-three far notes weaving<br/>
-into the evening<br/>
-among leaves<br/>
-and shadow;<br/><br/>
-or at dawn in the woods, I've heard<br/>
-the sweet ascending triple word<br/>
-echoing over<br/>
-the silent river —<br/>
-but never<br/>
+The wood thrush, it is! Now I know
+who sings that clear arpeggio,
+three far notes weaving
+into the evening
+among leaves
+and shadow;
+
+or at dawn in the woods, I've heard
+the sweet ascending triple word
+echoing over
+the silent river —
+but never
 seen the bird.
 >>> Learning the Name by Ursula K. Le Guin
-
-A poem by Ursula K. Le Guin is encoded into unicode's representation of braille and used as the hr across the site.
 
 ====
 
