@@ -24,6 +24,13 @@ _Last {mmx, compiled} {^buildtime}_
 
 ====
 
+name: Jrnl
+host: now
+bref: Photo Jrnl
+body:
+
+====
+
 name: Notes
 host: now
 bref: Notes on topics of interest.

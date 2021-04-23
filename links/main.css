@@ -150,12 +150,6 @@ dl dd {
   width: 40rem;
 }
 
-#jrnl-gallery {
-  line-height: 0;
-  column-count: 2;
-  column-gap: 0;
-}
-
 #jrnl-gallery .jrnl-record {
   position: relative;
 }
@@ -167,10 +161,11 @@ dl dd {
 
 #jrnl-gallery .jrnl-record img + em {
   position: absolute;
-  bottom: .2rem;
-  left: 1rem;
-  line-height: 1.4;
+  bottom: 1rem;
+  left: .4rem;
+  font-size: 1.4rem;
   background-color: lightgray;
+  padding: 0 .4rem;
 }
 
 #low-tech-webring:hover table {
@@ -215,9 +210,5 @@ dl dd {
 
   footer {
     padding: 2rem 2.2rem 0;
-  }
-
-  #jrnl-gallery {
-    column-count: 1;
   }
 }

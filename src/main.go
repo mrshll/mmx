@@ -29,7 +29,7 @@ type Entry struct {
 	FirstImageSrc string
 	Inbound       []*Entry
 	Outbound      []*Entry
-	JrnlRecords []JrnlRecord
+	JrnlRecords []*JrnlRecord
 }
 
 type TemplateContent struct {
@@ -294,7 +294,7 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 	return body
 }
 
-func _linkJrnl (jrnlRecord JrnlRecord, entryPtr *Entry) {
+func _linkJrnl (jrnlRecord *JrnlRecord, entryPtr *Entry) {
 	(*entryPtr).JrnlRecords = append((*entryPtr).JrnlRecords, jrnlRecord)
 	if (entryPtr.Slug != "index") {
 		_linkJrnl(jrnlRecord, entryPtr.Parent)
@@ -312,11 +312,12 @@ func linkJrnl (entries []Entry) {
 		log.Fatal(err)
 	}
 
+	jrnlEntry := findEntry(entries[:], "jrnl")
 	for scanner.Scan() {
 		line := scanner.Text()
 		args := strings.Split(line, ", ")
 		// default link to now if no parent specified
-		entryPtr := findEntry(entries[:], "now")
+		entryPtr := findEntry(entries[:], "jrnl")
 		if len(args) == 3 {
 			entryPtr = findEntry(entries[:], args[2])
 		}
@@ -326,8 +327,14 @@ func linkJrnl (entries []Entry) {
 			Description: args[1],
 			Parent: entryPtr,
 		}
-		_linkJrnl(record, entryPtr)
+		_linkJrnl(&record, entryPtr)
+
+		if entryPtr.Slug != "jrnl" {
+			// if not default, always also append it manually to the jrnl entry
+			jrnlEntry.JrnlRecords = append(jrnlEntry.JrnlRecords, &record)
+		}
 	}
+	print(len(jrnlEntry.JrnlRecords))
 }
 
 func main() {

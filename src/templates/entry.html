@@ -33,7 +33,7 @@
             {{if gt (len .Entry.JrnlRecords) 1}}
             <div id="jrnl-gallery">
                 {{range $record := (slice .Entry.JrnlRecords 1)}}
-                {{if eq $record.Parent.Slug $.Entry.Slug}}
+                {{if or (eq $.Entry.Slug "jrnl") (eq $record.Parent.Slug $.Entry.Slug)}}
                 <div class="jrnl-record">
                     <img src="img/jrnl/{{$record.ImgPath}}"/>
                     <em>{{$record.Description}}; <wbr>{{$record.Date}}</em>
