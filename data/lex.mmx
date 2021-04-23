@@ -6,7 +6,7 @@ bref: Now
 slug: index
 body:
 
-_Last compiled {^buildtime}_
+_Last {mmx, compiled} {^buildtime}_
 
 * Reading
 * : {A Visit From The Goon Squad}
@@ -388,19 +388,42 @@ During this time period, we were fortunate to be joined by many friends, past co
 
 ====
 
+name: mmxup
+host: mmx
+bref: Pages on this site are written in mmxup
+date: 2021-04-22
+body:
+
+{https://github.com/mrshll/mmx/blob/main/src/mmxup.go, Source code}
+
+{mmxup} entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
+
+```
+ ====
+ name: mmxup
+ host: mmx
+ bref: Pages on this site are written in mmxup
+ date: 2021-04-22
+ body:
+ {mmxup} entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
+ ====
+```
+
+The markup resembles markdown with a few key differences inspired by {https://wiki.xxiivv.com/site/indental.html} (for metadata) and {https://thomasorus.com/kaku.html} (for markup syntax), with unique design decisions based on my preferences.
+
+====
+
 name: mmx
 host: projects
 bref: This site is called mmx
-date: 2021-04-20
+date: 2021-04-22
 body:
 
 [img/redturtle020.jpg, A person building something with bamboo, from The Red Turtle]
 
 mmx was built at the start of 2021. Largely inspired by others on {https://webring.xxiivv.com/, webring}, especially {https://wiki.xxiivv.com/site/home.html, Devine}, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
 
-The site's compiler is written in {https://golang.org, Go}. It can generate a graph of entries from a modified version of {https://wiki.xxiivv.com/site/indental.html, Indental} as well as markdown with frontmatter.
-
-Entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally embed itself in a parent - {reading} being a key example. A reference graph is linked after the entries are generated, enabling inbound and outbound relationships to be formed. {now} is a special case that has its own generator function to render the timeline.
+The site's compiler is written in {https://golang.org, Go}. It generates the static site you are reading by building a graph of entries from a bespoke markup language {mmxup}.
 
 Go's {https://golang.org/pkg/text/template/, templating engine} is lightly used, but it's often more straightforward to generate the html directly into a string.
 
@@ -408,30 +431,28 @@ If you want to learn more, see the {https://github.com/mrshll/mmx, source code}.
 
 # Building mmx
 
-I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant Gatsby plugin.
+I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant configuration or plugin.
 
 In the spirit of {low tech}, and heavily inspired by others on the {https://webring.xxiivv.com/, webring}, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
 
-To start, I mapped out my hoped-for characteristics of the end result.
-I landed on:
+To start, I mapped out my hoped-for characteristics of the end result. I landed on:
 
-- low friction (so as to promote more writing);
-- low-level (no automagic frameworks or dependencies; and
-- extendable (I want this to be somethign that evolves with me over the next 5, 10, 15 years).
++ low friction, so as to promote more writing;
++ low-level - no automagic frameworks or dependencies
++ long-term, with limited dependencies and render to straight html; and
++ extendable (I want this to be somethign that evolves with me over the next 5, 10, 15 years).
 
-{https://github.com/XXIIVV/oscean/, Devine Lu Linvega's Oscean} served as the primary inspiration. I spent a weekend pouring over their wiki, the underlying C-code, and the ecosystem of file formats and prorgams they created. I could (and <strike>should</strike> will) write a whole post on the great things I continue to learn from them. The act of reading through their code and reverse engineering the site compilation was one of the most fun weekends I've had in a while. I promise I am fun. I gained an understanding of their technical approach to linking and render disparate databases, while simultaneously exploring the content of those databases themselves.
+{https://github.com/XXIIVV/oscean/, Devine Lu Linvega's Oscean} served as the primary inspiration. I spent a weekend pouring over their wiki, the underlying C-code, and the ecosystem of file formats and prorgams they created. I could (and <strike>should</strike> will) write a whole post on the great things I continue to learn from them. The act of reading through their code and reverse engineering the site compilation was one of the most fun weekends I've had in a while. I gained an understanding of their technical approach to linking and render disparate databases, while simultaneously exploring the content of those databases themselves.
 
-I opted for GoLang as a learning opportunity. Compared to my usual Javascript, GoLang is miles closer to C - the last time I thought about pointers was my senior year of college, if that. I never imagined saying this, but I missed pointers! My impression of GoLang so far is fine. I hardly tapped into the features it is known for, such as concurrancy. But this project served as a gentle introduction.
+I opted for GoLang as a learning opportunity. Compared to my day-to-day work languages of Javascript and Python, GoLang is miles closer to C. The last time I thought about pointers was my senior year of college, if that. I never imagined saying this, but I missed pointers! My impression of GoLang so far is fine. I hardly tapped into the features it is known for, such as concurrancy. But this project served as a gentle introduction.
 
-Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.
+Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "hosted platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.
 
-In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {https://github.com/mathieudutour/gatsby-digital-garden, gatsby plugins} that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that I was on the right path.
+In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {https://github.com/mathieudutour/gatsby-digital-garden, gatsby plugins} that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that growing something from seed was the right path.
 
-~For my pages, I opted to use a modified version of the human readable {https://wiki.xxiivv.com/site/indental.html, Indental} format, and started by porting a portion of my site to it, and writing a parser to convert it to Go structs. From there, I linked the structs into a hierarchical tree and created various rendering functions that converted the ndtl entries into html, resting a bit on Go's native templating engine. It works remarkably well, and I am able to easily add features and improvements over time. For example, I recently added the ability for an entry's body to contain markdown.~
+I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, {mmxup}.
 
-I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, mmxup, inspired by Indental and {https://thomasorus.com/kaku.html, kaku}. The code for {https://github.com/mrshll/mmx/blob/main/src/mmxup.go, mmx's compiler} is short and has been fun to write and extend.
-
-Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" was achieved with the following bash:
+Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" is achieved with the following bash:
 
 ```
 #!/bin/sh
@@ -441,7 +462,7 @@ while inotifywait -qqre modify ./src ./links ./data; do
 done
 ```
 
-The site is hosted using Github pages. This is great, because there is no build step. I check in the built files (in /doc) and they are served within seconds. CNAME setup was a breeze.
+The site is hosted using Github pages. This is great, because there is no build step. I check in the built html files (in /doc) and they are served within seconds. CNAME setup was a breeze.
 
 ---
 

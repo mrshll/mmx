@@ -225,7 +225,7 @@ func createTitle(match []string, body string) string {
 }
 
 func createCodeBlock(match []string, body string) string {
-	code := strings.TrimSpace(match[0][3 : len(match[0])-3])
+	code := match[0][4 : len(match[0])-4]
 	html := fmt.Sprintf("<pre><code>%s</code></pre>", code)
 	return strings.Replace(body, match[0], html, 1)
 }
