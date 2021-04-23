@@ -271,26 +271,6 @@ indx: full
 
 ====
 
-name: Plan
-host: projects
-body:
-- [ ] {garden} migrate plan to {mmx}
-- [ ] {garden} design wire enclosure
-- [ ] {paste.date} refactor and add tests, esp. for time zone edge cases
-- [ ] {paste.date} add OAuth flow for backend
-- [ ] {paste.date} allow calendar select
-- [ ] {plotter} design incrementing generative illustration to mark pages
-- [ ] {mmx} write page on micro radio station
-- [x] {@carbonfreegrid} add energy usage total to daily tweet
-- [x] {mmx} add inventory
-- [x] {garden} order additional materials
-- [x] {garden} set up heating pads for seedlings
-- [x] {mmx} deduplicate backlinks
-- [x] {mmx} fix bug where only first internal ref is linked
-- [x] {https://climatework.mrshll.com, climatework} relaunch
-
-====
-
 name: Future.Phone
 host: projects
 date: 2014-03-01
