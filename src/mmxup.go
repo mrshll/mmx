@@ -239,8 +239,8 @@ func createCode(match []string, body string) string {
 func createBlockquote(match []string, body string) string {
 	quote := strings.Replace(match[0], ">>>\n", "<p>", 1)
 	numPs := strings.Count(quote, "\n")
-	quote = strings.Replace(quote, "\n", "</p><p>", numPs-1)
 	quote = strings.Replace(quote, "\n>>>", "</p>", 1)
+	quote = strings.Replace(quote, "\n", "</p><p>", numPs-1)
 
 	// clean up empty paragraphs
 	quote = strings.Replace(quote, "<p></p>", "", -1)
