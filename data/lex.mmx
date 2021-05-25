@@ -101,7 +101,7 @@ bref: The things I use most days
 date: 2021-02-01
 body:
 
-I am opinionated about my tools, but I oscillate wildly between upcycled stand-ins and high quality last-forevers. In general the goal is to have fewer "items," but new hobbies and projects often come with their accoutrements. And I am a person who has a lot of {projects}.
+I am opinionated about my tools, but I oscillate wildly between upcycled stand-ins and high quality last-forevers. In general the goal is to have fewer "items," to avoid the  but new hobbies and projects often come with their accoutrements. And I am a person who has a lot of {projects}.
 
 This list captures the tools and miscellanea that I would be hamstrung without.
 
@@ -113,7 +113,7 @@ This list captures the tools and miscellanea that I would be hamstrung without.
 **{https://regolith-linux.org/, Regolith}** - a linux distribution built on Ubuntu, GNOME, and i3. It has fantastic package defaults and a design methodology that works out of the box while still allowing for needed customization.
 
 [./img/moonlander.png, Moonlander keyboard]
-**{https://www.zsa.io/moonlander/, Moonlander Mark I}** - an impulse buy one day realizing the core role typing plays in my life and profession. This keyboard is incredible - mainly due to its onboard firmware that remaps keys before any instruction is sent to the OS. This is important for me because I rely on a few key remappings - ESC to CAP, for example. The first two weeks of owning the keyboard were brutal. I could hardly write a word without misfires. Having spent time with it, I now think my typing is more efficient, and my hands do not move, even for symbols and modifier keys. It was a great investment.
+**{https://www.zsa.io/moonlander/, Moonlander Mark I}** - I spend a lot of time typing - and I do so with weird idiosyncratic shortcuts and rebindings. This keyboard is incredible - mainly due to its onboard firmware that remaps keys before any instruction is sent to the OS. This is important for me because I rely on a few key remappings - ESC to CAP, for example. Most incredible is creating vim-like bindings via a modifier key, so that hjkl is natively parsed as the arrow keys with the modifier pressed. Incredible!!! The first two weeks of owning the keyboard were brutal. I could hardly write a word without misfires. Having spent time with it, I now think my typing is more efficient, and my hands do not move, even for symbols and modifier keys. It was a great investment.
 
 ## Communication
 
