@@ -32,12 +32,13 @@ body:
 
 name: Notes
 host: now
-bref: Notes on topics of interest.
-indx: true
+bref: Notes, entries and ephemera
+indx: full
 
 ====
 
 name: Sunday Marathon 2021
+bref: An annual entry in the day-before-marathon-monday marathons.
 host: notes
 date: 2021-04-18
 body:
