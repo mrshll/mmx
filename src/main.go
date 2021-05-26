@@ -189,6 +189,7 @@ func makeNav(e Entry) string {
 
 	// this happens for our root node
 	if e.Parent.Parent.Name == e.Parent.Name {
+		nav += "<ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul>"
 		nav += makeSubNav(*e.Parent.Parent, e)
 	} else {
 		nav += makeSubNav(*e.Parent.Parent, *e.Parent)
