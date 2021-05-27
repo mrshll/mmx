@@ -195,7 +195,6 @@ func makeNav(e Entry) string {
 	stop := false
 
 	for !stop {
-		fmt.Println(count, stop)
 		if count <= MAX_NAV_DEPTH {
 		// prepend as we climb the tree
 		nav = makeSubNav(*navE.Parent, navE) + nav
@@ -210,7 +209,6 @@ func makeNav(e Entry) string {
 		// if it's a host and not root
 		nav += makeSubNav(e, e)
 	}
-	fmt.Println("==================")
 
 	if count <= MAX_NAV_DEPTH {
 		// prepend home
