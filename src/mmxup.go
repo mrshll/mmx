@@ -337,7 +337,7 @@ func createEmphasis(match []string, body string) string {
 
 func createStrike(match []string, body string) string {
 	text := strings.TrimSpace(match[1])
-	html := fmt.Sprintf("<del>%s</del>", text)
+	html := fmt.Sprintf("<s>%s</s>", text)
 	return strings.Replace(body, match[0], html, 1)
 }
 

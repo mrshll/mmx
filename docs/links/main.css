@@ -50,6 +50,11 @@ p {
   margin-bottom: 1.2rem;
 }
 
+s {
+  text-decoration-style: solid;
+  text-decoration-color: #db0505;
+}
+
 ol, ul, dl {
   margin: 1rem 0 1rem 2rem;
   list-style-position: outside;

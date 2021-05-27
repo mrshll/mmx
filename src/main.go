@@ -152,7 +152,7 @@ func makeSubNav(e Entry, target Entry) string {
 		child := *cPtr
 		if i >= max {
 			if i == max {
-				subnav += fmt.Sprintf("<li>and %d more</li>", len(e.Children)-max)
+				subnav += fmt.Sprintf("<li>+ %d more</li>", len(e.Children)-max)
 			}
 
 			continue
@@ -178,8 +178,9 @@ func makeSubNav(e Entry, target Entry) string {
 	return subnav
 }
 
+const MAX_NAV_DEPTH = 4
+
 func makeNav(e Entry) string {
-	nav := "<nav>"
 	if e.Parent == nil {
 		panic(fmt.Sprintf("No parent found with name %s", e.Name))
 	}
@@ -187,23 +188,36 @@ func makeNav(e Entry) string {
 		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Name, e.Name))
 	}
 
-	// this happens for our root node
-	if e.Parent.Parent.Name == e.Parent.Name {
-		nav += "<ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul>"
-		nav += makeSubNav(*e.Parent.Parent, e)
-	} else {
-		nav += makeSubNav(*e.Parent.Parent, *e.Parent)
+
+	nav := ""
+	count := 0
+	navE := e
+	stop := false
+
+	for !stop {
+		fmt.Println(count, stop)
+		if count <= MAX_NAV_DEPTH {
+		// prepend as we climb the tree
+		nav = makeSubNav(*navE.Parent, navE) + nav
+		}
+
+		stop = navE.Parent.Parent.Name == navE.Parent.Name
+		navE = *navE.Parent
+		count += 1;
 	}
 
-	if e.Parent.Parent.Name != e.Parent.Name {
-		nav += makeSubNav(*e.Parent, e)
-	}
-
-	if e.Parent.Name != e.Name {
+	if len(e.Children) > 0 && e.Name != e.Parent.Name {
+		// if it's a host and not root
 		nav += makeSubNav(e, e)
 	}
+	fmt.Println("==================")
 
-	nav += "</nav>"
+	if count <= MAX_NAV_DEPTH {
+		// prepend home
+		nav = "<ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul>" + nav
+	}
+
+	nav = fmt.Sprintf("<nav>%s</nav>", nav)
 	return nav
 }
 
