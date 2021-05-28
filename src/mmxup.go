@@ -36,6 +36,13 @@ func parseDate(s string) time.Time {
 	return d
 }
 
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
 func parseFile(file *os.File) []MmxDoc {
 	var docs []MmxDoc
 
@@ -166,7 +173,7 @@ func applyRules(body string) string {
 		},
 		// unordered list
 		Rule{
-			pattern:   regexp.MustCompile(`(?m)^(-\s.*(\n|$))+`),
+			pattern:   regexp.MustCompile(`(?m)^(\s*-\s.*(\n|$))+`),
 			processor: createUnorderedList,
 		},
 		// ordered list
@@ -345,9 +352,25 @@ func createUnorderedList(match []string, body string) string {
 	text := strings.TrimSpace(match[0])
 	lis := strings.Split(text, "\n")
 	cleanedLis := ""
+	level := 0
 	for _, li := range lis {
-		cleanedLis += fmt.Sprintf("<li>%s</li>", li[2:])
+		newLevel := len(li) - len(strings.TrimLeft(li, " "))
+		for i := 0; i < abs(newLevel - level) / 2; i++ {
+			if newLevel > level {
+				cleanedLis += "<ul>"
+			} else {
+				cleanedLis += "</ul>"
+			}
+		}
+		level = newLevel
+		cleanedLis += fmt.Sprintf("<li>%s</li>", li[level + 2:])
 	}
+
+	if level != 0 {
+		// we ended on an indented level, so close
+		cleanedLis += "</ul>"
+	}
+
 	html := fmt.Sprintf("<ul>%s</ul>", cleanedLis)
 	return strings.Replace(body, match[0], html, 1)
 }
