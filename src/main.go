@@ -283,6 +283,9 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
+		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
+			// skip daily notes on index.html, which will clog up the timeline
+			continue
 		}
 
 		if e.Parent.Slug != indexEntry.Slug {
