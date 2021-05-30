@@ -4,7 +4,7 @@ import "testing"
 
 func checkResult(result string, expectation string, t *testing.T) {
 	if result != expectation {
-		t.Errorf("Unexpected result, got: %s, want: %s.", result, expectation)
+		t.Errorf("Unexpected result:\n%s\n%s", result, expectation)
 	}
 }
 
@@ -49,4 +49,19 @@ func TestApplyRulesEm(t *testing.T) {
 	checkResult(applyRules("_foo_"), "<p><em>foo</em></p>", t)
 	checkResult(applyRules("_foo_ bar"), "<p><em>foo</em> bar</p>", t)
 	checkResult(applyRules("<a href='foo_bar_biff>foo</a>"), "<p><a href='foo_bar_biff>foo</a></p>", t)
+}
+
+func TestApplyRulesList(t *testing.T) {
+	listTest := `
+- A
+  - Aa
+- B
+  + B1
+  + B2
+- C
+  - Ca
+  - Cb
+`
+	listResult := "<ul><li>A</li><li class='sublist-container'><ul><li>Aa</li></ul></li><li>B</li><li class='sublist-container'><ol><li>B1</li><li>B2</li></ol></li><li>C</li><li class='sublist-container'><ul><li>Ca</li><li>Cb</li></ul></li></ul>"
+	checkResult(applyRules(listTest), listResult, t)
 }

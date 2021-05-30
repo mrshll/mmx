@@ -62,3 +62,13 @@ body:
       - Game of life: will the game halt?
 
 ====
+
+name: 2021-05-30
+date: 2021-05-30
+host: Daily
+body:
+
+- Intentions
+  - ~Add mixed list parsing to {mmxup}~
+
+====

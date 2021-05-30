@@ -171,16 +171,16 @@ func applyRules(body string) string {
 			pattern:   regexp.MustCompile(`\~(.*)\~`),
 			processor: createStrike,
 		},
-		// unordered list
+		// make ordered or unordered list
 		Rule{
-			pattern:   regexp.MustCompile(`(?m)^(\s*-\s.*(\n|$))+`),
-			processor: createUnorderedList,
+			pattern:   regexp.MustCompile(`(?m)^(\s*[-+]\s.*(\n|$))+`),
+			processor: createList,
 		},
 		// ordered list
-		Rule{
-			pattern:   regexp.MustCompile(`(?m)^(\+\s.*(\n|$))+`),
-			processor: createOrderedList,
-		},
+		// Rule{
+		// 	pattern:   regexp.MustCompile(`(?m)^(\+\s.*(\n|$))+`),
+		// 	processor: createOrderedList,
+		// },
 		// definition list
 		Rule{
 			pattern:   regexp.MustCompile(`(?m)^(\*\s.*(\n|$))+`),
@@ -348,43 +348,60 @@ func createStrike(match []string, body string) string {
 	return strings.Replace(body, match[0], html, 1)
 }
 
-func createUnorderedList(match []string, body string) string {
+func getListType (c string) string {
+	if (c == "-") {
+		return "ul"
+	} else if (c == "+") {
+		return "ol"
+	}
+	return "";
+}
+
+func createList(match []string, body string) string {
 	text := strings.TrimSpace(match[0])
-	lis := strings.Split(text, "\n")
-	cleanedLis := ""
+	items := strings.Split(text, "\n")
+	html := ""
+	listType := ""
 	level := 0
-	for _, li := range lis {
-		newLevel := len(li) - len(strings.TrimLeft(li, " "))
+
+	for _, item := range items {
+		newLevel := len(item) - len(strings.TrimLeft(item, " "))
+		newListType := getListType(item[newLevel:newLevel + 1])
 		for i := 0; i < abs(newLevel - level) / 2; i++ {
+			// for each two spaces of difference, open or close sublists
 			if newLevel > level {
-				cleanedLis += "<ul>"
+				// open the NEW list type
+				html += fmt.Sprintf("<li class='sublist-container'><%s>", newListType)
 			} else {
-				cleanedLis += "</ul>"
+				// close the PREVIOUS list type
+				html += fmt.Sprintf("</%s></li>", listType)
 			}
 		}
+		listType = newListType
 		level = newLevel
-		cleanedLis += fmt.Sprintf("<li>%s</li>", li[level + 2:])
+
+		html += fmt.Sprintf("<li>%s</li>", item[level + 2:])
 	}
 
 	if level != 0 {
 		// we ended on an indented level, so close
-		cleanedLis += "</ul>"
+		html += fmt.Sprintf("</%s></li>", listType)
 	}
 
-	html := fmt.Sprintf("<ul>%s</ul>", cleanedLis)
+	html = fmt.Sprintf("<ul>%s</ul>", html)
 	return strings.Replace(body, match[0], html, 1)
 }
 
-func createOrderedList(match []string, body string) string {
-	text := strings.TrimSpace(match[0])
-	lis := strings.Split(text, "\n")
-	cleanedLis := ""
-	for _, li := range lis {
-		cleanedLis += fmt.Sprintf("<li>%s</li>", li[2:])
-	}
-	html := fmt.Sprintf("<ol>%s</ol>", cleanedLis)
-	return strings.Replace(body, match[0], html, 1)
-}
+// func createOrderedList(match []string, body string) string {
+// 	text := strings.TrimSpace(match[0])
+// 	lis := strings.Split(text, "\n")
+// 	cleanedLis := ""
+// 	for _, li := range lis {
+// 		cleanedLis += fmt.Sprintf("<li>%s</li>", li[2:])
+// 	}
+// 	html := fmt.Sprintf("<ol>%s</ol>", cleanedLis)
+// 	return strings.Replace(body, match[0], html, 1)
+// }
 
 func createDefinitionList(match []string, body string) string {
 	text := strings.TrimSpace(match[0])
