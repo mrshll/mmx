@@ -72,3 +72,36 @@ body:
   - ~Add mixed list parsing to {mmxup}~
 
 ====
+
+name: 2021-06-01
+date: 2021-06-01
+host: Daily
+body:
+
+- Meetings
+  - ~1-on-1s with Daniel, Kristi, Fiona~
+  - ~HF, Lens G&P and product syncs~
+  - ~Customer meeting~
+
+- Intentions
+  - Start HRRR series processor
+  - ~Create SNODAS SWE visual example~
+
+- HRRR
+  - {https://registry.opendata.aws/noaa-hrrr-pds/, AWS Open Data Listing}
+  - {https://noaa-hrrr-bdp-pds.s3.amazonaws.com/index.html, HRRR grib format bucket browser}
+  - Zarr
+    - {https://hrrrzarr.s3.amazonaws.com/index.html, HRRR zarr format bucket browser}
+    - {https://mesowest.utah.edu/html/hrrr/zarr_documentation/, Zarr documentation}
+    - "This archive contains sets for each model run of analysis and forecast files sectioned into 96 small chunks for every variable. Files within the AWS hrrrzarr S3 bucket are named to emulate a hierarchical data structure."
+    - "Not all HRRR GRIB2 files are expected to be processed into Zarr format. Many users will find the GRIB2 format to be adequate for their needs. The types of use cases relevant for the Zarr archive require surface sensible weather parameters or meteorological parameters at "standard" levels in the vertical."
+    - Variables at standard levels in the "sfc" bucket
+    - "HRRR CONUS analysis (F00) files, whether for sfc or prs files, are stored in 96 'chunks' each containing 150x150 grid points. HRRR CONUS forecast (F01-FXX) files are stored in 96 3-D cubes (XX,150,150) where the forecast duration, FXX, depends on HRRR version and time of day. For example, V4 forecasts are available out to XX=48h at 00, 06, 12, 19 UTC and out to XX=18h at other hours of the day for variables produced in each forecast GRIB2 file."
+    - Zarr files are typically available 3 hours after the initialization time, e.g., 00UTC analysis and forecast files are available by 03UTC
+    - Available in Zarr:
+      - V4 near real time
+      - V4 2020-12-02 to current
+      - V3 2018-07-12 to 2020-12-01
+      - The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.
+
+====

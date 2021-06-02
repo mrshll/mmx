@@ -365,8 +365,13 @@ func createList(match []string, body string) string {
 	level := 0
 
 	for _, item := range items {
+		if item == "" {
+			continue
+		}
+
 		newLevel := len(item) - len(strings.TrimLeft(item, " "))
 		newListType := getListType(item[newLevel:newLevel + 1])
+
 		for i := 0; i < abs(newLevel - level) / 2; i++ {
 			// for each two spaces of difference, open or close sublists
 			if newLevel > level {
@@ -391,17 +396,6 @@ func createList(match []string, body string) string {
 	html = fmt.Sprintf("<ul>%s</ul>", html)
 	return strings.Replace(body, match[0], html, 1)
 }
-
-// func createOrderedList(match []string, body string) string {
-// 	text := strings.TrimSpace(match[0])
-// 	lis := strings.Split(text, "\n")
-// 	cleanedLis := ""
-// 	for _, li := range lis {
-// 		cleanedLis += fmt.Sprintf("<li>%s</li>", li[2:])
-// 	}
-// 	html := fmt.Sprintf("<ol>%s</ol>", cleanedLis)
-// 	return strings.Replace(body, match[0], html, 1)
-// }
 
 func createDefinitionList(match []string, body string) string {
 	text := strings.TrimSpace(match[0])

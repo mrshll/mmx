@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <!DOCTYPE html>
+
+<head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name='author' content='Marshall Moutenot'>
+  <meta name='keywords' content='Marshall Moutenot, mrshll, upstream tech, climate tech' />
+  <meta name='license' content='name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/' />
+  <meta name='description' content='2021-06-01 - ' />
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta property='og:type' content='website' />
+  <meta property='og:title' content='2021-06-01' />
+  <meta property='og:description' content='' />
+  <meta name='twitter:creator' content='@marsh' />
+  <meta name='twitter:title' content='2021-06-01' />
+  <meta name='twitter:description' content='' />
+  
+  
+  
+  <link rel='stylesheet' type='text/css' href='./links/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='./links/skeleton.css'>
+  <link rel='stylesheet' type='text/css' href='./links/main.css'>
+  <title>mrshll.com - 2021-06-01</title>
+</head>
+
+
+    <body>
+        <div class='content'>
+            <header>
+</header>
+
+<nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><mark><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='music.html'>Music</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><mark><a href='daily.html'>Daily/</a><mark></li><li><a href='reading.html'>Reading/</a><mark></li><li><a href='rainwater.html'>Rainwater</a><mark></li><li><a href='mom_q&a.html'>Mom Q&A</a><mark></li><li><a href='sunday_marathon_2021.html'>Sunday Marathon 2021</a><mark></li><li><a href='the_fells.html'>The Fells</a><mark></li><li>+ 6 more</li></ul><ul><li><mark><a href='2021-06-01.html'>2021-06-01</a><mark></li><li><a href='2021-05-30.html'>2021-05-30</a><mark></li><li><a href='2021-05-29.html'>2021-05-29</a><mark></li><li><a href='2021-05-28.html'>2021-05-28</a><mark></li></ul></nav>
+
+
+            
+            <h5>2021-06-01</h5>
+            
+
+            
+            <div style='color:#ccc'>last updated 2021-06-01</div>
+            
+            
+
+            <section id='entry-body'>
+            <ul><li>Meetings</li><li class='sublist-container'><ul><li><s>1-on-1s with Daniel, Kristi, Fiona</s></li><li><s>HF, Lens G&P and product syncs</s></li><li><s>Customer meeting</s></li></ul></li><li>Intentions</li><li class='sublist-container'><ul><li>Start HRRR series processor</li><li><s>Create SNODAS SWE visual example</s></li></ul></li><li>HRRR</li><li class='sublist-container'><ul><li><a href='https://registry.opendata.aws/noaa-hrrr-pds/' target='_blank'>{^AWS Open Data Listing}</a></li><li><a href='https://noaa-hrrr-bdp-pds.s3.amazonaws.com/index.html' target='_blank'>{^HRRR grib format bucket browser}</a></li><li>Zarr</li><li class='sublist-container'><ul><li><a href='https://hrrrzarr.s3.amazonaws.com/index.html' target='_blank'>{^HRRR zarr format bucket browser}</a></li><li><a href='https://mesowest.utah.edu/html/hrrr/zarr_documentation/' target='_blank'>{^Zarr documentation}</a></li><li>"This archive contains sets for each model run of analysis and forecast files sectioned into 96 small chunks for every variable. Files within the AWS hrrrzarr S3 bucket are named to emulate a hierarchical data structure."</li><li>"Not all HRRR GRIB2 files are expected to be processed into Zarr format. Many users will find the GRIB2 format to be adequate for their needs. The types of use cases relevant for the Zarr archive require surface sensible weather parameters or meteorological parameters at "standard" levels in the vertical."</li><li>Variables at standard levels in the "sfc" bucket</li><li>"HRRR CONUS analysis (F00) files, whether for sfc or prs files, are stored in 96 'chunks' each containing 150x150 grid points. HRRR CONUS forecast (F01-FXX) files are stored in 96 3-D cubes (XX,150,150) where the forecast duration, FXX, depends on HRRR version and time of day. For example, V4 forecasts are available out to XX=48h at 00, 06, 12, 19 UTC and out to XX=18h at other hours of the day for variables produced in each forecast GRIB2 file."</li><li>Zarr files are typically available 3 hours after the initialization time, e.g., 00UTC analysis and forecast files are available by 03UTC</li><li>Available in Zarr:</li><li class='sublist-container'><ul><li>V4 near real time</li><li>V4 2020-12-02 to current</li><li>V3 2018-07-12 to 2020-12-01</li><li>The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.</li></ul></li></ul>
+
+            </section>
+
+            
+
+            
+
+        </div>
+    </body>
+
+    <footer>
+  <div class='footer-row'>
+    <a href="https://twitter.com/marsh">
+      <img src="img/twitter.png" style="height: 1.8rem">
+    </a>
+    <a href="https://github.com/mmoutenot">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2021</span>
+  </div>
+</footer>
+
+
+</html>
+<html>
