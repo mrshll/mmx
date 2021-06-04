@@ -144,7 +144,8 @@ Amadou and Alden cook up the world’s tastiest pasta from scratch.</p>
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.getElementById("checkbox").checked = theme == 'dark';
+   document.querySelector('#lightswitch input').checked = theme == 'dark';
+   document.documentElement.setAttribute('data-theme', theme)
   </script>
 
 </footer>

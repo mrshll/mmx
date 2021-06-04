@@ -118,7 +118,8 @@ deciduous conifers in the world, the <a href='https://mountauburn.org/metasequoi
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.getElementById("checkbox").checked = theme == 'dark';
+   document.querySelector('#lightswitch input').checked = theme == 'dark';
+   document.documentElement.setAttribute('data-theme', theme)
   </script>
 
 </footer>
