@@ -38,6 +38,7 @@
 <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='music.html'>Music</a><mark></li><li><mark><a href='about.html'>About/</a><mark></li></ul><ul><li><mark><a href='dax.html'>Dax</a><mark></li><li><a href='inventory.html'>Inventory</a><mark></li></ul></nav>
 
 
+
             
             <h5>My eldest son, Daxter</h5>
             
@@ -162,6 +163,23 @@
     </div>
     <span>Marshall Moutenot © 2021</span>
   </div>
+
+  <div id='lightswitch'>
+      <input type='checkbox' id='lightswitch-input'/>
+      <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+   const toggleSwitch = document.querySelector('#lightswitch input');
+   toggleSwitch.addEventListener('change', e => {
+       const theme = e.target.checked ? 'dark' : 'light';
+       localStorage.setItem('data-theme', theme);
+       document.documentElement.setAttribute('data-theme', theme)
+   });
+   const theme = localStorage.getItem('data-theme') || 'light';
+   document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
 </footer>
 
 

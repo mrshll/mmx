@@ -39,4 +39,21 @@
     </div>
     <span>Marshall Moutenot © 2021</span>
   </div>
+
+  <div id='lightswitch'>
+      <input type='checkbox' id='lightswitch-input'/>
+      <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+   const toggleSwitch = document.querySelector('#lightswitch input');
+   toggleSwitch.addEventListener('change', e => {
+       const theme = e.target.checked ? 'dark' : 'light';
+       localStorage.setItem('data-theme', theme);
+       document.documentElement.setAttribute('data-theme', theme)
+   });
+   const theme = localStorage.getItem('data-theme') || 'light';
+   document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
 </footer>

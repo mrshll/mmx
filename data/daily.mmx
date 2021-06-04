@@ -105,3 +105,18 @@ body:
       - The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.
 
 ====
+
+name: 2021-06-02
+date: 2021-06-02
+host: Daily
+body:
+
+- Meetings
+  - Prospective meeting on forecasting temp and DO
+  - Amadou 1x1
+
+- Intentions
+  - Advisory board planning
+  - HRRR implementation
+
+====
