@@ -116,7 +116,7 @@ There are many a classic I have not yet laid me eyes upon. Moby Dick and (up unt
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.documentElement.setAttribute('data-theme', theme)
+   document.getElementById("checkbox").checked = theme == 'dark';
   </script>
 
 </footer>

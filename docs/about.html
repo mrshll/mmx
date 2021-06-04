@@ -149,7 +149,7 @@ I'm 29 and live in Medford, MA. I grew up in Nashville, TN.</p>
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.documentElement.setAttribute('data-theme', theme)
+   document.getElementById("checkbox").checked = theme == 'dark';
   </script>
 
 </footer>

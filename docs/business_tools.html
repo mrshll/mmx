@@ -118,7 +118,7 @@ Stripe Atlas used to magically create a bank account with a bank, Azlo, - but it
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.documentElement.setAttribute('data-theme', theme)
+   document.getElementById("checkbox").checked = theme == 'dark';
   </script>
 
 </footer>

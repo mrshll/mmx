@@ -137,7 +137,7 @@ We couldn’t be more excited about the coming years. Our goal in starting Upstr
        document.documentElement.setAttribute('data-theme', theme)
    });
    const theme = localStorage.getItem('data-theme') || 'light';
-   document.documentElement.setAttribute('data-theme', theme)
+   document.getElementById("checkbox").checked = theme == 'dark';
   </script>
 
 </footer>
