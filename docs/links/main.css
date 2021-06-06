@@ -53,6 +53,12 @@ mark {
   background-color: var(--highlight-color);
 }
 
+code {
+  background-color: var(--bg-contrast-color);
+  border-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
 nav {
   font-size: 1.2rem;
   display: flex;
