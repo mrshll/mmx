@@ -141,7 +141,7 @@ func applyRules(body string) string {
 		// inline code
 		// matches inline text surrounded by ``
 		Rule{
-			pattern:   regexp.MustCompile(`\x60(.*)\x60`),
+			pattern:   regexp.MustCompile(`\x60(.*?)\x60`),
 			processor: createCode,
 		},
 		// blockquote

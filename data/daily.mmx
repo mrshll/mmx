@@ -174,7 +174,26 @@ body:
 
 
 ## Group Pathfinding, Movement in RTS style games
+
 {https://www.gamasutra.com/blogs/DruErridge/20180522/318413/Group_Pathfinding__Movement_in_RTS_Style_Games.php, Group Pathfinding & Movement in RTS Style Games}
+
+- Stopping a group was an issue, because only the first reached its destination. They tried "message passing" where units within a certain proximity would pass the "I'm there" message.
+- Having a unit move through a crowd of other units was an issue. Solved by having the unit moving through exert a force on the others, which was also propagated through the group using the message passing system. Starcraft has the unit move out of the way and then back to the original position. In the end this had too many edge cases (i.e. you can push a unit that is idle, but not one that is active).
+- Group movement appeared "messy"
+  - they tried:
+    + calculating center point of group
+    + taking difference for each unit
+    + applying the same diff to each unit's destination
+  - this worked well for the common case, but when the destination had obstacles, it broke down.
+  - when units were dispersed when a command was issue, they'd stay dispersed upon destination arrival
+  - Solution ended up being to calc a "smart center" for the group:
+    + calculate avg position of all units
+    + remove any units outside of 1 stdev of the average
+    + recalculate average position from that subset of group
+    + if the dest is within a stdev of center point, can use naive independent movement
+    + if there is no meaningful group, you want them to regroup as much as possible, and if stdev is larger than a max, you have them all move to the same dest.
+    + if there is a cluster but also outliers, collapse them by giving them a destination in the direction of their offset, but only a stdev's length away from the group's central destination. This gives a natural behavior of "collapsing back in" to the group.
+
 
 
 ====
