@@ -49,6 +49,10 @@ func TestApplyRulesEm(t *testing.T) {
 	checkResult(applyRules("_foo_"), "<p><em>foo</em></p>", t)
 	checkResult(applyRules("_foo_ bar"), "<p><em>foo</em> bar</p>", t)
 	checkResult(applyRules("<a href='foo_bar_biff>foo</a>"), "<p><a href='foo_bar_biff>foo</a></p>", t)
+	long := "Unlike some of the most immersive works of fiction I read that reveal to me more about the human condition, this book also educated me to a period of history I have only experienced through works penned or framed by Americans: _The Things They Carried_, _Apocalpyse Now_, _Rescue Dawn_, _Full Metal Jacket_, _Platoon_, and the other cowboys-in-the-east movies."
+	longExpected := "<p>Unlike some of the most immersive works of fiction I read that reveal to me more about the human condition, this book also educated me to a period of history I have only experienced through works penned or framed by Americans: <em>The Things They Carried</em>, <em>Apocalpyse Now</em>, <em>Rescue Dawn</em>, <em>Full Metal Jacket</em>, <em>Platoon</em>, and the other cowboys-in-the-east movies.</p>"
+	checkResult(applyRules(long), longExpected, t)
+
 }
 
 func TestApplyRulesList(t *testing.T) {

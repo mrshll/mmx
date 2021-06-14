@@ -91,28 +91,9 @@ nav ul li {
   margin-bottom: 0.4rem;
 }
 
-ol {
-   list-style: none;
-   counter-reset: item;
- }
-
- ol li {
-   counter-increment: item;
- }
-
-
- ol li:before {
-   content: counter(item) ".";
-   margin-right: .4rem;
-   margin-left: -1.5rem;
-   font-size: 1rem;
-   text-align: center;
-   display: inline-block;
+li.sublist-container::marker {
+  content: "";
 }
-
- li.sublist-container::marker {
-   content: "";
- }
 
 footer {
   border-top: 1.5px dotted;

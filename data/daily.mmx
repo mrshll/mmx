@@ -197,3 +197,112 @@ body:
 
 
 ====
+
+name: 2021-06-07
+date: 2021-06-07
+host: daily
+body:
+
+## Intentions
+- TODO
+  - ~HF sales outreach (all the pipedrive activities)~
+  - ~Wrap HRRR series processor~
+  - ~Map out Lens self-service flows~
+  - Email ketchup
+
+- Meetings
+  - Product & sales kick-off syncs
+  - Customer walkthrough call
+
+
+====
+
+name: 2021-06-08
+date: 2021-06-08
+host: daily
+body:
+
+## Intentions
+- TODO
+  - ~HF sales outreach (all the pipedrive activities)~
+  - ~HF sales contracting~
+  - ~HRRR test failures~
+  - Email ketchup
+  - ~Proofread seasonal blog~
+  - ~Hiring cleanup and outreach~
+  - ~Review 15Fives~
+  - ~Check with Kathryn about end of internship timing~
+
+- Meetings
+  - ~Daniel, Mostafa 1x1~
+  - ~DOE conduit lunch and learn~
+
+
+====
+
+name: 2021-06-09
+date: 2021-06-09
+host: daily
+body:
+
+## Intentions
+- TODO
+  - ~Email ketchup~
+  - Marketing site updates
+  - ~Zapier video walkthrough and docs~
+  - Plan webinar
+  - ~Review regional outlook sketch~
+
+- Meetings
+  - ~Kathryn 1-on-1~
+  - ~Call with full stack candidate~
+
+
+====
+
+name: 2021-06-10
+date: 2021-06-10
+host: daily
+body:
+
+## Intentions
+- TODO
+  - ~Review Phil's HRRR changes~
+  - ~Start scoping veg clearing change detection~
+  - ~Plan webinar~
+
+- Meetings
+  - ~Abby, Lauren, Sam, Jeremiah 1x1s~
+
+## Webinar outline
++ welcome, provide outline
+  - First I'll introduce myself and the team
+  - I'll give a background of HydroForecast and the technology we use.
+  - Then we are going to look at two of HydroForecast's live forecasts.
+    - First the inflows at a dam in Idaho's North Fork Clearwater watershed during freshet.
+    - Then we will look at the Trinity River basin in California, where low flows reflect an emerging drought.
++ intro team and myself
++ intro lens and hydroforecast
++ Run through "What is HydroForecast?" slides
++ Switch to basin deep-dives
+
+====
+
+name: 2021-06-11
+date: 2021-06-11
+host: daily
+body:
+
+## Intentions
+- TODO
+  - Board email update, June
+
+- Meetings
+  - Laura, Camilla 1x1s
+  - HF planning sync
+  - Lens planning sync
+  - HF webinar prep
+  - Climate.AI tech meet
+
+
+====

@@ -53,12 +53,6 @@ mark {
   background-color: var(--highlight-color);
 }
 
-code {
-  background-color: var(--bg-contrast-color);
-  border-color: var(--highlight-color);
-  color: var(--text-color);
-}
-
 nav {
   font-size: 1.2rem;
   display: flex;
@@ -97,28 +91,9 @@ nav ul li {
   margin-bottom: 0.4rem;
 }
 
-ol {
-   list-style: none;
-   counter-reset: item;
- }
-
- ol li {
-   counter-increment: item;
- }
-
-
- ol li:before {
-   content: counter(item) ".";
-   margin-right: .4rem;
-   margin-left: -1.5rem;
-   font-size: 1rem;
-   text-align: center;
-   display: inline-block;
+li.sublist-container::marker {
+  content: "";
 }
-
- li.sublist-container::marker {
-   content: "";
- }
 
 footer {
   border-top: 1.5px dotted;

@@ -163,7 +163,7 @@ func applyRules(body string) string {
 		},
 		// emphasis
 		Rule{
-			pattern:   regexp.MustCompile(`(?m)(?:^| )_(.*)?_(?:$| |\.)`),
+			pattern:   regexp.MustCompile(`(?m)(?:\W|^)_(.*?)_(?:\W|$)`),
 			processor: createEmphasis,
 		},
 		// strike
@@ -176,11 +176,6 @@ func applyRules(body string) string {
 			pattern:   regexp.MustCompile(`(?m)^(\s*[-+]\s.*(\n|$))+`),
 			processor: createList,
 		},
-		// ordered list
-		// Rule{
-		// 	pattern:   regexp.MustCompile(`(?m)^(\+\s.*(\n|$))+`),
-		// 	processor: createOrderedList,
-		// },
 		// definition list
 		Rule{
 			pattern:   regexp.MustCompile(`(?m)^(\*\s.*(\n|$))+`),
@@ -193,7 +188,7 @@ func applyRules(body string) string {
 		},
 		// paragraphs
 		//
-		// NOTE: it is important that this come last, so that it doesn't wrap
+		// is important that this come last, so that it doesn't wrap
 		// text that should be tranformed by one of the preceeding rules
 		Rule{
 			pattern:   regexp.MustCompile(`(?s)((?:[^\n][\n]?)+)`),
@@ -363,6 +358,10 @@ func createList(match []string, body string) string {
 	html := ""
 	listType := ""
 	level := 0
+	outerListType := "ul"
+	if text[0] == '+' {
+		outerListType = "ol"
+	}
 
 	for _, item := range items {
 		if item == "" {
@@ -393,7 +392,7 @@ func createList(match []string, body string) string {
 		html += fmt.Sprintf("</%s></li>", listType)
 	}
 
-	html = fmt.Sprintf("<ul>%s</ul>", html)
+	html = fmt.Sprintf("<%s>%s</%s>", outerListType, html, outerListType)
 	return strings.Replace(body, match[0], html, 1)
 }
 
