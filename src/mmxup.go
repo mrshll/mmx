@@ -289,9 +289,10 @@ func createLink(match []string, body string) string {
 	href := args[0]
 	text := href
 
-	template := "<a href='%s'>{%s}</a>"
+	// we use the character codes for {} so that subsequent find-and-replaces do not collide
+	template := "<a href='%s'>&#123;%s&#125;</a>"
 	if strings.HasPrefix(href, "http") || strings.HasPrefix(href, "#") {
-		template = "<a href='%s' target='_blank'>{^%s}</a>"
+		template = "<a href='%s' target='_blank'>&#123;^%s&#125;</a>"
 	}
 
 	if len(args) > 1 {

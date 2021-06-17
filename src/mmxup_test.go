@@ -17,6 +17,9 @@ func TestApplyRulesLink(t *testing.T) {
 	checkResult(applyRules("{foo, bar}"), "<p><a href='foo'>{bar}</a></p>", t)
 	checkResult(applyRules("{foo, bar} {bop}"), "<p><a href='foo'>{bar}</a> <a href='bop'>{bop}</a></p>", t)
 	checkResult(applyRules("{https://foo, bar}"), "<p><a href='https://foo' target='_blank'>{^bar}</a></p>", t)
+	checkResult(applyRules("# test ({foo})"), "<h5>test (<a href='foo'>{foo}</a>)</h5>", t)
+	// link appears twice
+	checkResult(applyRules("{Upstream Tech} ({Upstream Tech})"), "", t)
 }
 
 func TestApplyRulesCode(t *testing.T) {

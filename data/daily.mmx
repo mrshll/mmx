@@ -126,7 +126,7 @@ date: 2021-06-06
 host: Daily
 body:
 
-# Research on group movement and boids
+# Research on group movement and boids for {gamedev}
 
 ## Boids and Steering
 - {https://www.red3d.com/cwr/boids/, Boids}
@@ -203,7 +203,7 @@ date: 2021-06-07
 host: daily
 body:
 
-## Intentions
+## {Upstream Tech} Intentions
 - TODO
   - ~HF sales outreach (all the pipedrive activities)~
   - ~Wrap HRRR series processor~
@@ -222,7 +222,7 @@ date: 2021-06-08
 host: daily
 body:
 
-## Intentions
+## {Upstream Tech} Intentions
 - TODO
   - ~HF sales outreach (all the pipedrive activities)~
   - ~HF sales contracting~
@@ -245,7 +245,7 @@ date: 2021-06-09
 host: daily
 body:
 
-## Intentions
+## {Upstream Tech} Intentions
 - TODO
   - ~Email ketchup~
   - Marketing site updates
@@ -265,7 +265,7 @@ date: 2021-06-10
 host: daily
 body:
 
-## Intentions
+## {Upstream Tech} Intentions
 - TODO
   - ~Review Phil's HRRR changes~
   - ~Start scoping veg clearing change detection~
@@ -274,7 +274,7 @@ body:
 - Meetings
   - ~Abby, Lauren, Sam, Jeremiah 1x1s~
 
-## Webinar outline
+## Webinar outline ({Upstream Tech})
 + welcome, provide outline
   - First I'll introduce myself and the team
   - I'll give a background of HydroForecast and the technology we use.
@@ -293,16 +293,83 @@ date: 2021-06-11
 host: daily
 body:
 
-## Intentions
+## {Upstream Tech} Intentions
+- Meetings
+  - ~Laura, Camilla 1x1s~
+  - ~HF planning sync~
+  - ~Lens planning sync~
+  - ~HF webinar prep~
+  - Climate.AI tech meet (moved)
+
+
+====
+
+name: 2021-06-15
+date: 2021-06-15
+host: daily
+body:
+
+## {Upstream Tech} Intentions
 - TODO
-  - Board email update, June
+  - Note count on property overview
 
 - Meetings
-  - Laura, Camilla 1x1s
-  - HF planning sync
-  - Lens planning sync
-  - HF webinar prep
-  - Climate.AI tech meet
+  - ~Hiring Natel GM coordination~
+  - ~Change detection brainstorm~
+  - ~HF customer demo~
+  - ~Kristi 1x1~
+  - ~Candidate interview~
+  - ~Conversation with Sweet Sensors~
+
+====
+
+name: 2021-06-16
+date: 2021-06-16
+host: daily
+body:
+
+## {Upstream Tech} Intentions
+- TODO
+  - Investigate imagery availability
+
+- Meetings
+  - Hiring candidate conversation
+  - Ag customer contracting
+  - Webinar!
+
+## Imagery Investigation ({Upstream Tech})
+
+`search_scenes` returns:
+```
+2021-06-09 18:41:53.249000+00:00
+2021-06-08 18:48:31.374000+00:00
+2021-06-03 18:37:25.374000+00:00
+2021-06-02 18:46:08.624000+00:00
+```
+
+`search_scenes_external` returns:
+```
+2021-06-15 18:44:59.374000+00:00
+2021-06-09 18:41:53.249000+00:00
+2021-06-08 18:48:31.374000+00:00
+2021-06-03 18:37:25.374000+00:00
+2021-06-02 18:46:08.624000+00:00
+```
+
+- Vendor catalogs get updated in our system at 10 am ET.
+- We will mosaic commercial scenes:
+  - 3.5 days before and after capture date, we will mosaic.
+  - We may want to shorten this window when our partial-imagery-ordering flow improves.
+- We should make sure the fcs are archived for pre-migration projects
+
+- Webinar outline
+  - Hi, my name is Marshall. I'm one one the cofounders of Upstream Tech. At Upstream Tech, we are building technologies that enable smart decisions on a changing planet.
+  - We are just shy of 25 now, spread all across North America and made up of team members with a range of different backgrounds: from software engineering at big tech companies to backgrounds in forestry to working at federal agencies issuing forecasts. Be bring the intersection of all of the experiences together to build unique and technologically creative systems: Lens and HydroForecast.
+  - Lens is a monitoring product that enables efficient remote and in-person monitoring using satellite and aerial iamgery.
+  - HydroForecast, which is what we will be talking about today, is a powerful and flexible hydrological model. More on that in a bit.
+  - We work with a number of different kinds of organizations, from conservation orgs, to public sector agencies, to renewable energy utilities operating hydropower.
+  - HydroForecast background!
+  - Hand off to Laura.
 
 
 ====

@@ -109,8 +109,9 @@ blockquote {
 
 }
 
-blockquote cite {
+code, blockquote cite {
   background-color: var(--bg-contrast-color);
+  border: none;
 }
 
 footer .footer-row > *{
