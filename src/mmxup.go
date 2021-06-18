@@ -156,6 +156,12 @@ func applyRules(body string) string {
 			pattern:   regexp.MustCompile(`\[(.*\.(?:png|jpg|jpeg|gif)(, .*)?)\]`),
 			processor: createImage,
 		},
+		// video
+		// matches video urls [video.ext, alt]
+		Rule{
+			pattern:   regexp.MustCompile(`\[(.*\.(?:webm|mp4)(, .*)?)\]`),
+			processor: createVideo,
+		},
 		// bold
 		Rule{
 			pattern:   regexp.MustCompile(`\*(.*)\*`),
@@ -323,6 +329,29 @@ func createImage(match []string, body string) string {
 	}
 
 	html := fmt.Sprintf("<img src='%s' alt='%s' style='%s'/>", src, alt, style)
+	return strings.Replace(body, match[0], html, 1)
+}
+
+func createVideo(match []string, body string) string {
+	args := strings.Split(match[1], ",")
+	src := args[0]
+
+	// positional args
+	// 0. src
+	// 1. alt
+	// 3. style
+
+	alt := ""
+	if len(args) > 1 {
+		alt = strings.TrimSpace(args[1])
+	}
+
+	style := ""
+	if len(args) > 2 {
+		style = strings.TrimSpace(args[2])
+	}
+
+	html := fmt.Sprintf("<video src='%s' alt='%s' style='%s' loop autoplay muted/>", src, alt, style)
 	return strings.Replace(body, match[0], html, 1)
 }
 
