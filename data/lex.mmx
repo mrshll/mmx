@@ -425,7 +425,7 @@ I opted for GoLang as a learning opportunity. Compared to my day-to-day work lan
 
 Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "hosted platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.
 
-The compiler is able to pull context from inbound links to pages. This is achieved by building a node tree when compiling the templating language to HTML. The correct `<a href>` is located in the tree, and the node's parent content is pulled in as html.
+The compiler is able to pull context from inbound links to pages. This is achieved by building a node tree when compiling the templating language to HTML. The correct `a` tag is located in the tree, and the node's parent content is pulled in as html.
 
 In a moment of doubt, I played with {https://www.11ty.dev/, 11ty} as well as {https://github.com/mathieudutour/gatsby-digital-garden, gatsby plugins} that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that growing something from seed was the right path.
 
