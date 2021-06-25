@@ -384,18 +384,7 @@ body:
 
 {https://github.com/mrshll/mmx/blob/main/src/mmxup.go, Source code}
 
-{mmxup} entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
-
-```
- ====
- name: mmxup
- host: mmx
- bref: Pages on this site are written in mmxup
- date: 2021-04-22
- body:
- {mmxup} entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
- ====
-```
+mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
 
 The markup resembles markdown with a few key differences inspired by {https://wiki.xxiivv.com/site/indental.html} (for metadata) and {https://thomasorus.com/kaku.html} (for markup syntax), with unique design decisions based on my preferences.
 
@@ -639,14 +628,7 @@ I especially enjoyed the episode with {https://www.myclimatejourney.co/episodes/
 
 I wanted to discuss how we arrived at Upstream Tech, as unlikely contributors to climate change solutions, and how I think everyone can -- and many more people need to -- {an appeal for impact, play a role in implementing creative, urgent solutions}.
 
-<iframe
-  height="200px"
-  width="100%"
-  frameborder="no"
-  scrolling="no"
-  seamless
-  src="https://player.simplecast.com/fb83d8e0-2958-4f50-a0df-4c30154c8a0c?dark=false"
-></iframe>
+{https://www.myclimatejourney.co/episodes/marshall-moutenot, My Climate Journey Episode 26}
 
 ====
 

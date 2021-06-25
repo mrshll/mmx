@@ -138,9 +138,37 @@ hr {
 }
 
 
-dl dd {
+dl dd, details {
   margin-top: .2rem;
   margin-bottom: .4rem;
+}
+
+details {
+  display: inline-block;
+  border: 1px solid var(--bg-contrast-color);
+  border-radius: .4rem;
+  padding: .4rem 1rem 0;
+  margin-right: .4rem;
+}
+
+summary {
+  font-weight: bold;
+  margin: -.4rem -1rem 0;
+  padding: .4rem 1rem;
+}
+
+details[open] {
+  padding: .4rem 1rem;
+  display: block;
+}
+
+.incoming {
+  display: table;
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--bg-contrast-color);
+  margin-bottom: .5em;
 }
 
 .content {
@@ -150,12 +178,6 @@ dl dd {
   position: relative;
 }
 
-.incoming {
-  display: table;
-  margin-top: 2rem;
-  border: 1px solid var(--bg-contrast-color);
-  padding: 0.4rem 0.8rem;
-}
 
 #entry-body {
   margin: 2rem 0;

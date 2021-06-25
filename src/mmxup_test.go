@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func checkResult(result string, expectation string, t *testing.T) {
 	if result != expectation {
@@ -14,12 +17,12 @@ func TestApplyRulesHeaders(t *testing.T) {
 }
 
 func TestApplyRulesLink(t *testing.T) {
-	checkResult(applyRules("{foo, bar}"), "<p><a href='foo'>{bar}</a></p>", t)
-	checkResult(applyRules("{foo, bar} {bop}"), "<p><a href='foo'>{bar}</a> <a href='bop'>{bop}</a></p>", t)
-	checkResult(applyRules("{https://foo, bar}"), "<p><a href='https://foo' target='_blank'>{^bar}</a></p>", t)
-	checkResult(applyRules("# test ({foo})"), "<h5>test (<a href='foo'>{foo}</a>)</h5>", t)
+	checkResult(applyRules("{foo, bar}"), "<p><a href='foo'>&#123;bar&#125;</a></p>", t)
+	checkResult(applyRules("{foo, bar} {bop}"), "<p><a href='foo'>&#123;bar&#125;</a> <a href='bop'>&#123;bop&#125;</a></p>", t)
+	checkResult(applyRules("{https://foo, bar}"), "<p><a href='https://foo' target='_blank'>&#123;^bar&#125;</a></p>", t)
+	checkResult(applyRules("# test ({foo})"), "<h5>test (<a href='foo'>&#123;foo&#125;</a>)</h5>", t)
 	// link appears twice
-	checkResult(applyRules("{Upstream Tech} ({Upstream Tech})"), "", t)
+	checkResult(applyRules("{Upstream Tech} ({Upstream Tech})"), "<p><a href='Upstream Tech'>&#123;Upstream Tech&#125;</a> (<a href='Upstream Tech'>&#123;Upstream Tech&#125;</a>)</p>", t)
 }
 
 func TestApplyRulesCode(t *testing.T) {
@@ -56,6 +59,8 @@ func TestApplyRulesEm(t *testing.T) {
 	longExpected := "<p>Unlike some of the most immersive works of fiction I read that reveal to me more about the human condition, this book also educated me to a period of history I have only experienced through works penned or framed by Americans: <em>The Things They Carried</em>, <em>Apocalpyse Now</em>, <em>Rescue Dawn</em>, <em>Full Metal Jacket</em>, <em>Platoon</em>, and the other cowboys-in-the-east movies.</p>"
 	checkResult(applyRules(long), longExpected, t)
 
+	checkResult(applyRules("*A note about backlog issues*: We use the {#1-3-6, 1-3-6 document} as our way to track work that is longer term (six months in startup land is like 3 years in big company land). We try to keep GitLab issues _very fresh_, meaning issues that fall outside of the “this month” in the 1-3-6 document should likely {https://codeburst.io/life-without-bug-tracking-925668ed6842, not exist} in GitLab."), "<p><strong>A note about backlog issues</strong>: We use the <a href='#1-3-6' target='_blank'>&#123;^1-3-6 document&#125;</a> as our way to track work that is longer term (six months in startup land is like 3 years in big company land). We try to keep GitLab issues <em>very fresh</em>, meaning issues that fall outside of the “this month” in the 1-3-6 document should likely <a href='https://codeburst.io/life-without-bug-tracking-925668ed6842' target='_blank'>&#123;^not exist&#125;</a> in GitLab.</p>", t)
+
 }
 
 func TestApplyRulesList(t *testing.T) {
@@ -69,6 +74,39 @@ func TestApplyRulesList(t *testing.T) {
   - Ca
   - Cb
 `
-	listResult := "<ul><li>A</li><li class='sublist-container'><ul><li>Aa</li></ul></li><li>B</li><li class='sublist-container'><ol><li>B1</li><li>B2</li></ol></li><li>C</li><li class='sublist-container'><ul><li>Ca</li><li>Cb</li></ul></li></ul>"
+	// listResult := "<ul><li>A</li><li class='sublist-container'><ul><li>Aa</li></ul></li><li>B</li><li class='sublist-container'><ol><li>B1</li><li>B2</li></ol></li><li>C</li><li class='sublist-container'><ul><li>Ca</li><li>Cb</li></ul></li></ul>"
+	listResult := "<ul><li>A<ul><li>Aa</li></ul></li><li>B<ol><li>B1</li><li>B2</li></ol></li><li>C<ul><li>Ca</li><li>Cb</li></ul></li></ul>"
 	checkResult(applyRules(listTest), listResult, t)
+
+}
+
+func _treeToString(tree *MmxDocNode) string {
+	val := fmt.Sprintf("%*d - %s", tree.Depth, tree.Depth, tree.Tag)
+	for _, node := range tree.Children {
+		val += "\n"
+		val += _treeToString(node)
+	}
+	return val
+}
+
+func TestCreateBodyTree(t *testing.T) {
+	testBody := "<a><b></b><c></c></a>"
+	tree := createBodyTree(testBody)
+	checkResult(_treeToString(tree), "1 - <a>\n 2 - <b>\n 2 - <c>", t)
+	checkResult(tree.NodeContent, testBody, t)
+
+	testBody = "<a><b/><c></c></a>"
+	tree = createBodyTree(testBody)
+	checkResult(_treeToString(tree), "1 - <a>\n 2 - <b/>\n 2 - <c>", t)
+	checkResult(tree.NodeContent, testBody, t)
+}
+
+func TestFindMmxDocNode(t *testing.T) {
+	testBody := "<a><b></b><c></c></a>"
+	tree := createBodyTree(testBody)
+	checkResult(findMmxDocNode(tree, "<c>").Tag, "<c>", t)
+
+	if findMmxDocNode(tree, "<d>") != nil {
+		panic("searching for a missing node should be nil")
+	}
 }

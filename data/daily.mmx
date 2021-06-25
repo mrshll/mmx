@@ -78,31 +78,30 @@ date: 2021-06-01
 host: Daily
 body:
 
-- Meetings
-  - ~1-on-1s with Daniel, Kristi, Fiona~
-  - ~HF, Lens G&P and product syncs~
-  - ~Customer meeting~
-
-- Intentions
-  - Start HRRR series processor
-  - ~Create SNODAS SWE visual example~
-
-- HRRR
-  - {https://registry.opendata.aws/noaa-hrrr-pds/, AWS Open Data Listing}
-  - {https://noaa-hrrr-bdp-pds.s3.amazonaws.com/index.html, HRRR grib format bucket browser}
-  - Zarr
-    - {https://hrrrzarr.s3.amazonaws.com/index.html, HRRR zarr format bucket browser}
-    - {https://mesowest.utah.edu/html/hrrr/zarr_documentation/, Zarr documentation}
-    - "This archive contains sets for each model run of analysis and forecast files sectioned into 96 small chunks for every variable. Files within the AWS hrrrzarr S3 bucket are named to emulate a hierarchical data structure."
-    - "Not all HRRR GRIB2 files are expected to be processed into Zarr format. Many users will find the GRIB2 format to be adequate for their needs. The types of use cases relevant for the Zarr archive require surface sensible weather parameters or meteorological parameters at "standard" levels in the vertical."
-    - Variables at standard levels in the "sfc" bucket
-    - "HRRR CONUS analysis (F00) files, whether for sfc or prs files, are stored in 96 'chunks' each containing 150x150 grid points. HRRR CONUS forecast (F01-FXX) files are stored in 96 3-D cubes (XX,150,150) where the forecast duration, FXX, depends on HRRR version and time of day. For example, V4 forecasts are available out to XX=48h at 00, 06, 12, 19 UTC and out to XX=18h at other hours of the day for variables produced in each forecast GRIB2 file."
-    - Zarr files are typically available 3 hours after the initialization time, e.g., 00UTC analysis and forecast files are available by 03UTC
-    - Available in Zarr:
-      - V4 near real time
-      - V4 2020-12-02 to current
-      - V3 2018-07-12 to 2020-12-01
-      - The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.
+- {Upstream Tech}
+  - Meetings
+    - ~1-on-1s with Daniel, Kristi, Fiona~
+    - ~HF, Lens G&P and product syncs~
+    - ~Customer meeting~
+  - Intentions
+    - Start HRRR series processor
+    - ~Create SNODAS SWE visual example~
+  - HRRR
+    - {https://registry.opendata.aws/noaa-hrrr-pds/, AWS Open Data Listing}
+    - {https://noaa-hrrr-bdp-pds.s3.amazonaws.com/index.html, HRRR grib format bucket browser}
+    - Zarr
+      - {https://hrrrzarr.s3.amazonaws.com/index.html, HRRR zarr format bucket browser}
+      - {https://mesowest.utah.edu/html/hrrr/zarr_documentation/, Zarr documentation}
+      - "This archive contains sets for each model run of analysis and forecast files sectioned into 96 small chunks for every variable. Files within the AWS hrrrzarr S3 bucket are named to emulate a hierarchical data structure."
+      - "Not all HRRR GRIB2 files are expected to be processed into Zarr format. Many users will find the GRIB2 format to be adequate for their needs. The types of use cases relevant for the Zarr archive require surface sensible weather parameters or meteorological parameters at "standard" levels in the vertical."
+      - Variables at standard levels in the "sfc" bucket
+      - "HRRR CONUS analysis (F00) files, whether for sfc or prs files, are stored in 96 'chunks' each containing 150x150 grid points. HRRR CONUS forecast (F01-FXX) files are stored in 96 3-D cubes (XX,150,150) where the forecast duration, FXX, depends on HRRR version and time of day. For example, V4 forecasts are available out to XX=48h at 00, 06, 12, 19 UTC and out to XX=18h at other hours of the day for variables produced in each forecast GRIB2 file."
+      - Zarr files are typically available 3 hours after the initialization time, e.g., 00UTC analysis and forecast files are available by 03UTC
+      - Available in Zarr:
+        - V4 near real time
+        - V4 2020-12-02 to current
+        - V3 2018-07-12 to 2020-12-01
+        - The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.
 
 ====
 
@@ -111,13 +110,13 @@ date: 2021-06-02
 host: Daily
 body:
 
-- Meetings
-  - Prospective meeting on forecasting temp and DO
-  - Amadou 1x1
-
-- Intentions
-  - Advisory board planning
-  - HRRR implementation
+- {Upstream Tech} Intentions
+  - Meetings
+    - Prospective meeting on forecasting temp and DO
+    - Amadou 1x1
+  - Intentions
+    - Advisory board planning
+    - HRRR implementation
 
 ====
 
@@ -203,16 +202,16 @@ date: 2021-06-07
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - ~HF sales outreach (all the pipedrive activities)~
-  - ~Wrap HRRR series processor~
-  - ~Map out Lens self-service flows~
-  - Email ketchup
+- {Upstream Tech}
+  - TODO
+    - ~HF sales outreach (all the pipedrive activities)~
+    - ~Wrap HRRR series processor~
+    - ~Map out Lens self-service flows~
+    - Email ketchup
 
-- Meetings
-  - Product & sales kick-off syncs
-  - Customer walkthrough call
+  - Meetings
+    - Product & sales kick-off syncs
+    - Customer walkthrough call
 
 
 ====
@@ -222,20 +221,19 @@ date: 2021-06-08
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - ~HF sales outreach (all the pipedrive activities)~
-  - ~HF sales contracting~
-  - ~HRRR test failures~
-  - Email ketchup
-  - ~Proofread seasonal blog~
-  - ~Hiring cleanup and outreach~
-  - ~Review 15Fives~
-  - ~Check with Kathryn about end of internship timing~
-
-- Meetings
-  - ~Daniel, Mostafa 1x1~
-  - ~DOE conduit lunch and learn~
+- {Upstream Tech} Intentions
+  - TODO
+    - ~HF sales outreach (all the pipedrive activities)~
+    - ~HF sales contracting~
+    - ~HRRR test failures~
+    - Email ketchup
+    - ~Proofread seasonal blog~
+    - ~Hiring cleanup and outreach~
+    - ~Review 15Fives~
+    - ~Check with Kathryn about end of internship timing~
+  - Meetings
+    - ~Daniel, Mostafa 1x1~
+    - ~DOE conduit lunch and learn~
 
 
 ====
@@ -245,18 +243,16 @@ date: 2021-06-09
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - ~Email ketchup~
-  - Marketing site updates
-  - ~Zapier video walkthrough and docs~
-  - Plan webinar
-  - ~Review regional outlook sketch~
-
-- Meetings
-  - ~Kathryn 1-on-1~
-  - ~Call with full stack candidate~
-
+- {Upstream Tech} Intentions
+  - TODO
+    - ~Email ketchup~
+    - Marketing site updates
+    - ~Zapier video walkthrough and docs~
+    - Plan webinar
+    - ~Review regional outlook sketch~
+  - Meetings
+    - ~Kathryn 1-on-1~
+    - ~Call with full stack candidate~
 
 ====
 
@@ -265,26 +261,24 @@ date: 2021-06-10
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - ~Review Phil's HRRR changes~
-  - ~Start scoping veg clearing change detection~
-  - ~Plan webinar~
-
-- Meetings
-  - ~Abby, Lauren, Sam, Jeremiah 1x1s~
-
-## Webinar outline ({Upstream Tech})
-+ welcome, provide outline
-  - First I'll introduce myself and the team
-  - I'll give a background of HydroForecast and the technology we use.
-  - Then we are going to look at two of HydroForecast's live forecasts.
-    - First the inflows at a dam in Idaho's North Fork Clearwater watershed during freshet.
-    - Then we will look at the Trinity River basin in California, where low flows reflect an emerging drought.
-+ intro team and myself
-+ intro lens and hydroforecast
-+ Run through "What is HydroForecast?" slides
-+ Switch to basin deep-dives
+- {Upstream Tech} Intentions
+  - TODO
+    - ~Review Phil's HRRR changes~
+    - ~Start scoping veg clearing change detection~
+    - ~Plan webinar~
+  - Meetings
+    - ~Abby, Lauren, Sam, Jeremiah 1x1s~
+  - Webinar outline
+    + welcome, provide outline
+      - First I'll introduce myself and the team
+      - I'll give a background of HydroForecast and the technology we use.
+      - Then we are going to look at two of HydroForecast's live forecasts.
+        - First the inflows at a dam in Idaho's North Fork Clearwater watershed during freshet.
+        - Then we will look at the Trinity River basin in California, where low flows reflect an emerging drought.
+    + intro team and myself
+    + intro lens and hydroforecast
+    + Run through "What is HydroForecast?" slides
+    + Switch to basin deep-dives
 
 ====
 
@@ -293,8 +287,7 @@ date: 2021-06-11
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- Meetings
+- {Upstream Tech} Intentions (all meetings today!)
   - ~Laura, Camilla 1x1s~
   - ~HF planning sync~
   - ~Lens planning sync~
@@ -309,17 +302,16 @@ date: 2021-06-15
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - Note count on property overview
-
-- Meetings
-  - ~Hiring Natel GM coordination~
-  - ~Change detection brainstorm~
-  - ~HF customer demo~
-  - ~Kristi 1x1~
-  - ~Candidate interview~
-  - ~Conversation with Sweet Sensors~
+- {Upstream Tech} Intentions
+  - TODO
+    - Note count on property overview
+  - Meetings
+    - ~Hiring Natel GM coordination~
+    - ~Change detection brainstorm~
+    - ~HF customer demo~
+    - ~Kristi 1x1~
+    - ~Candidate interview~
+    - ~Conversation with Sweet Sensors~
 
 ====
 
@@ -328,16 +320,15 @@ date: 2021-06-16
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - Investigate imagery availability
+- {Upstream Tech} Intentions
+  - TODO
+    - Investigate imagery availability
+  - Meetings
+    - Hiring candidate conversation
+    - Ag customer contracting
+    - Webinar!
 
-- Meetings
-  - Hiring candidate conversation
-  - Ag customer contracting
-  - Webinar!
-
-## Imagery Investigation ({Upstream Tech})
+## Imagery Investigation
 
 `search_scenes` returns:
 ```
@@ -379,17 +370,49 @@ date: 2021-06-17
 host: daily
 body:
 
-## {Upstream Tech} Intentions
-- TODO
-  - ~Wrap up note count in property list~
-
-- Meetings
-  - ~Gia, Lauren, Carolyn, David 1x1s~
-  - ~Interview with Hydro GM candidate for Natel~
-  - ~Customer call~
-  - ~Hiring check-in~
+- {Upstream Tech} Intentions
+  - TODO
+    - ~Wrap up note count in property list~
+  - Meetings
+    - ~Gia, Lauren, Carolyn, David 1x1s~
+    - ~Interview with Hydro GM candidate for Natel~
+    - ~Customer call~
+    - ~Hiring check-in~
 
 ## {https://www.youtube.com/watch?v=BW32yUEymvU, Rekka Bellum and Devine Lu Linvega - XOXO Festival (2019)}
 [img/seabird.webm]
+
+====
+
+name: 2021-06-19
+date: 2021-06-19
+host: daily
+body:
+
+- Ideas for {mmx} improvements
+  - Simplify jrnl images
+  - Optimize {mmxup} rendering
+  - Pull in backref excerpt for context
+  - Change reading to include other consumed media, like movies, videos, significant articles, etc. "Media logbook"
+  - Create running, climbing, exercise log
+- Writing ideas
+  - Resuscitating technology's wonder
+  - Revisit remote collaboration
+  - Page on running
+
+====
+
+name: 2021-06-21
+date: 2021-06-21
+host: daily
+body:
+
+- Intentions ({Upstream Tech})
+  - TODO
+    - Jot down Natel candidate interview notes
+    - Finish note count MR
+  - Meetings
+    - 1x1 Jeremiah, Dana
+    - Team planning meetings
 
 ====

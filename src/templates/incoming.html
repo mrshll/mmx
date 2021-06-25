@@ -1,12 +1,18 @@
 {{ if gt (len .Entry.Inbound) 0}}
+<hr/>
 <div class='incoming'>
-  ⇣ ({{len .Entry.Inbound}})
-  {{range $incoming := .Entry.Inbound}}
-  {{if $incoming.EmbedInParent}}
-  <a href="./{{$incoming.Parent.Slug}}.html#{{$incoming.Slug}}">{{$incoming.Name}}</a>&nbsp;
-  {{else}}
-  <a href="./{{$incoming.Slug}}.html">{{$incoming.Name}}</a>&nbsp;
-  {{end}}
-  {{end}}
+    ⇣ ({{len .Entry.Inbound}})
+    {{range $incoming := .Entry.Inbound}}
+    <details>
+        <summary>
+            {{if $incoming.Entry.EmbedInParent}}
+            <a href="./{{$incoming.Parent.Slug}}.html#{{$incoming.Slug}}">{{$incoming.Entry.Name}}</a>&nbsp;
+            {{else}}
+            <a href="./{{$incoming.Entry.Slug}}.html">{{$incoming.Entry.Name}}</a>&nbsp;
+            {{end}}
+        </summary>
+        {{$incoming.MmxNode.NodeContent | noescape}}
+    </details>
+    {{end}}
 </div>
 {{end}}

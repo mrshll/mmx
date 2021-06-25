@@ -1,24 +1,29 @@
 package main
 
 import (
+	"bufio"
 	"bytes"
 	"fmt"
 	"html/template"
+	"log"
 	"os"
 	"path/filepath"
 	"regexp"
 	"sort"
 	"strings"
 	"time"
-	"bufio"
-	"log"
 )
 
 type JrnlRecord struct {
-	Date string
-	ImgPath string
+	Date        string
+	ImgPath     string
 	Description string
-	Parent *Entry
+	Parent      *Entry
+}
+
+type EntryReference struct {
+	Entry   *Entry
+	MmxNode *MmxDocNode
 }
 
 type Entry struct {
@@ -27,9 +32,9 @@ type Entry struct {
 	EmbedInParent bool
 	Children      []*Entry
 	FirstImageSrc string
-	Inbound       []*Entry
-	Outbound      []*Entry
-	JrnlRecords []*JrnlRecord
+	Inbound       []*EntryReference
+	Outbound      []*EntryReference
+	JrnlRecords   []*JrnlRecord
 }
 
 type TemplateContent struct {
@@ -77,13 +82,13 @@ func findEntry(entries []Entry, name string) *Entry {
 	panic(fmt.Sprintf("No parent found with name %s", name))
 }
 
-func appendEntryIfMissing(entries []*Entry, entryToAppend *Entry) []*Entry {
-	for _, e := range entries {
-		if e == entryToAppend {
-			return entries
+func appendEntryReferenceIfMissing(refs []*EntryReference, refToAppend EntryReference) []*EntryReference {
+	for _, r := range refs {
+		if r.MmxNode.Tag == refToAppend.MmxNode.Tag && r.MmxNode.NodeContent == refToAppend.MmxNode.NodeContent {
+			return refs
 		}
 	}
-	return append(entries, entryToAppend)
+	return append(refs, &refToAppend)
 }
 
 func linkEntries(entries []Entry) {
@@ -98,10 +103,13 @@ func linkEntries(entries []Entry) {
 		matches := aTagPattern.FindAllStringSubmatch(entries[i].Body, -1)
 		for _, match := range matches {
 			aTag := match[0]
+			nodeSearchTag := aTag[:strings.Index(aTag, ">")+1]
+			mmxNode := findMmxDocNode(entries[i].BodyTree, nodeSearchTag)
+
 			outboundHref := match[1]
 
 			if strings.HasPrefix(outboundHref, "http") || strings.HasPrefix(outboundHref, "#") {
-				// external
+				// external or anchor
 				continue
 			} else if outboundHref[0] == '^' {
 				// module; embed handled in mmxup
@@ -114,11 +122,26 @@ func linkEntries(entries []Entry) {
 					panic(fmt.Sprintf("No entry found with name '%s' in body of '%s'", outboundHref, entries[i].Body))
 				}
 
+				var node *MmxDocNode
+				if mmxNode.Parent != nil {
+					node = mmxNode.Parent
+				} else {
+					node = mmxNode
+				}
+
 				newATag := strings.Replace(aTag, outboundHref, getEntryFilename(*outboundEntry), 1)
 				entries[i].Body = strings.Replace(entries[i].Body, aTag, newATag, 1)
+				node.NodeContent = strings.Replace(node.NodeContent, aTag, newATag, 1)
 
-				entries[i].Outbound = append(entries[i].Outbound, outboundEntry)
-				outboundEntry.Inbound = appendEntryIfMissing(outboundEntry.Inbound, &entries[i])
+				entries[i].Outbound = appendEntryReferenceIfMissing(entries[i].Outbound,
+					EntryReference{
+						Entry:   outboundEntry,
+						MmxNode: node,
+					})
+				outboundEntry.Inbound = appendEntryReferenceIfMissing(outboundEntry.Inbound, EntryReference{
+					Entry:   &entries[i],
+					MmxNode: node,
+				})
 			}
 		}
 	}
@@ -188,7 +211,6 @@ func makeNav(e Entry) string {
 		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Name, e.Name))
 	}
 
-
 	nav := ""
 	count := 0
 	navE := e
@@ -196,13 +218,13 @@ func makeNav(e Entry) string {
 
 	for !stop {
 		if count <= MAX_NAV_DEPTH {
-		// prepend as we climb the tree
-		nav = makeSubNav(*navE.Parent, navE) + nav
+			// prepend as we climb the tree
+			nav = makeSubNav(*navE.Parent, navE) + nav
 		}
 
 		stop = navE.Parent.Parent.Name == navE.Parent.Name
 		navE = *navE.Parent
-		count += 1;
+		count += 1
 	}
 
 	if len(e.Children) > 0 && e.Name != e.Parent.Name {
@@ -310,14 +332,14 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 	return body
 }
 
-func _linkJrnl (jrnlRecord *JrnlRecord, entryPtr *Entry) {
+func _linkJrnl(jrnlRecord *JrnlRecord, entryPtr *Entry) {
 	(*entryPtr).JrnlRecords = append((*entryPtr).JrnlRecords, jrnlRecord)
-	if (entryPtr.Slug != "index") {
+	if entryPtr.Slug != "index" {
 		_linkJrnl(jrnlRecord, entryPtr.Parent)
 	}
 }
 
-func linkJrnl (entries []Entry) {
+func linkJrnl(entries []Entry) {
 	file, err := os.Open("../data/mmx.jrnl")
 	check(err)
 
@@ -338,10 +360,10 @@ func linkJrnl (entries []Entry) {
 			entryPtr = findEntry(entries[:], args[2])
 		}
 		record := JrnlRecord{
-			ImgPath: args[0],
-			Date: formatDate(parseDate(args[0][:10])),
+			ImgPath:     args[0],
+			Date:        formatDate(parseDate(args[0][:10])),
 			Description: args[1],
-			Parent: entryPtr,
+			Parent:      entryPtr,
 		}
 		_linkJrnl(&record, entryPtr)
 
