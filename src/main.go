@@ -294,12 +294,12 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 		}
 		if !e.Date.IsZero() && e.Date.Year() < y {
 			y = e.Date.Year()
-			body += fmt.Sprintf("<div style='font-size:12px;font-weight:bold;margin-top:20px'>%v</div>", y)
+			body += fmt.Sprintf("<p><strong>%v</strong></p>", y)
 		}
 
 		icon := elseIcon
 		crumb := ""
-		if e.Parent.Slug == "reading" {
+		if e.Parent.Slug == "media" {
 			icon = readingIcon
 		} else if e.Parent.Slug == "projects" {
 			icon = projectsIcon

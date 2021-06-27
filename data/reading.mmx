@@ -1,15 +1,32 @@
 ====
 
-name: Reading
+name: Media
 host: notes
 indx: compact
-bref: Reading log
+bref: Art, books and media
 body:
+
+Until 2021-06-26, this was solely a reading log. I decided as part of my {5-year gestalt} to begin recording other works of art, film, etc that I'm experiencing that is worth my taking note.
+
+*In progress*
+
+====
+
+name: Ghost Dog: The Way of the Samurai (1999)
+date: 2021-06-26
+host: media
+body:
+
+[img/ghost-dog.png, Ghost dog and his best friend, the francophone]
+
+Throw Jim Jarmusch, RZA, Forest Whitaker into a blender and you get a profound and profoundly odd movie combining the 90's trend of hitman, mafia, and samurai films while paying homage to the incredible 1967 crime-drama, Le Samouraï. Both movies open in the same fashion, with quotes from (possibly fictionalized) books on "the way of the samurai" and feature loner hitmen for whom the latest hit turn the hit back on them. Both heroes have peculiar relationships with birds, who serve as portents of danger.
+
+Anyway the film is fantastic, as is the soundtrack.
 
 ====
 
 name: The Once and Future King
-host: reading
+host: media
 body:
 
 by T. H. White
@@ -19,13 +36,13 @@ In progress
 ====
 
 name: The Sympathizer
-host: reading
+host: media
 date: 2021-06-12
 body:
 
 by Viet Thanh Nguyen
 
-It's a disorienting experience to emerge from a completed book, written as if it were a body of work composed by the fictional protagonist (there must be a special word for this flavor of novel - I've dispatched a question to my most literary friend, Sarah). Even after reading the two interview excerpts with the author, included at the end of the novel, I have trouble separating the persona of the author and the persona of the protagonist.
+It's a disorienting experience to emerge from a completed book, written as if it were a body of work composed by the fictional protagonist (there must be a special word for this flavor of novel - I've dispatched a question to my most literary friend, Sarah). Even after media the two interview excerpts with the author, included at the end of the novel, I have trouble separating the persona of the author and the persona of the protagonist.
 
 The story was enthralling while also educating me to the plight of the Vietnamese people post-war, the complex identities grappled with by Southern refugees, and the painful, dehumanizing depiction of Vietnamese people by "occidental" media. Unlike some of the most immersive works of fiction I read that reveal to me more about the human condition, this book also educated me to a period of history I have only experienced through works penned or framed by Americans: _The Things They Carried_, _Apocalpyse Now_, _Rescue Dawn_, _Full Metal Jacket_, _Platoon_, and the other cowboys-in-the-east movies.
 
@@ -35,7 +52,7 @@ _The Sympathizer_ was brilliant.
 ====
 
 name: East of Eden
-host: reading
+host: media
 body:
 
 by John Steinbeck
@@ -45,7 +62,7 @@ In progress
 ====
 
 name: The Vegetable Gardener's Bible
-host: Reading
+host: Media
 body:
 
 by Edward C. Smith
@@ -55,7 +72,7 @@ In progress
 ====
 
 name: Treasure Island
-host: Reading
+host: Media
 date: 2021-05-11
 body:
 
@@ -74,18 +91,18 @@ Sir, with no intention to take offence, I deny your right to put words into my m
 ====
 
 name: A Visit From The Goon Squad
-host: Reading
+host: Media
 date: 2021-04-25
 body:
 
 by Jennifer Egan
 
-I don't think I've ever been completely dissapointed by Pulitzer Winner. They may have their flaws but they usually have me reading late into the night. (After consulting a list of past award winners, I'm realizing I did not enjoy The Road, for reasons I've since forgotten.) _A Visit From The Goon Squad_ had a pedestrian start, recounting fairly boring chapters in folks lives. It did the all-too-common "far flung characters careening towards an encounter" trope, but the characters ended up crossing paths in ways so tenuous that it made the whole quilt of stories ingenious. There was a Barthelme-esque quality of postmodernist escalation, which I'm a sucker for.
+I don't think I've ever been completely dissapointed by Pulitzer Winner. They may have their flaws but they usually have me media late into the night. (After consulting a list of past award winners, I'm realizing I did not enjoy The Road, for reasons I've since forgotten.) _A Visit From The Goon Squad_ had a pedestrian start, recounting fairly boring chapters in folks lives. It did the all-too-common "far flung characters careening towards an encounter" trope, but the characters ended up crossing paths in ways so tenuous that it made the whole quilt of stories ingenious. There was a Barthelme-esque quality of postmodernist escalation, which I'm a sucker for.
 
 ====
 
 name: Twelve Tomorrows
-host: Reading
+host: Media
 date: 2021-04-02
 body:
 
@@ -97,13 +114,13 @@ An annual anthology of (twelve) science fiction short stories, _Twelve Tomorrows
 
 As with any science fiction written even in the near past, there was an eerie prescience. Stories fortold lockdowns and pandemics, concepts of morality and empathy challenged by new techologies like blockchain, and the concentration of global attention on fewer and fewer individuals.
 
-I look forward to reading the other entries in this series.
+I look forward to media the other entries in this series.
 
 
 ====
 
 name: The Redemption of Time
-host: reading
+host: media
 date: 2021-03-10
 body:
 
@@ -114,7 +131,7 @@ The author's preface captures what I imagine is the pervasive sentiment shared b
 ====
 
 name: Children of Time
-host: reading
+host: media
 date: 2021-02-25
 body:
 
@@ -127,7 +144,7 @@ I've noticed that many of the most gripping novels, especially in this genre, fo
 ====
 
 name: The Making of Prince of Persia
-host: reading
+host: media
 date: 2021-01-01
 body:
 
@@ -142,7 +159,7 @@ For someone's meandering and often angsty journal entries, I was captivated. I c
 ====
 
 name: The Lathe of Heaven
-host: reading
+host: media
 date: 2020-12-28
 body:
 
@@ -173,7 +190,7 @@ On cars:
 ====
 
 name: All the Light We Cannot See
-host: reading
+host: media
 date: 2020-11-01
 body:
 
@@ -184,18 +201,18 @@ by Anthony Doerr
 ====
 
 name: The Good Life Lab
-host: reading
+host: media
 date: 2020-07-23
 body:
 
 by Wendy Jehanara Tremayne
 
-This book caught my eye simply because Sandor Katz (from "The Art of Fermentation," which was revelatory) is listed as a co-author. It was a quick read about a jaunt from NYC bustle to New Mexico homesteading. The self reliance and creativity was interesting, and I enjoyed reading about the projects' specifics. Some of the ethos (soap is _free_ if you make it from \~\~nature\~\~, man) and ego made the book feel like an extremely long Medium dot com post. Agnes Varda wore it better in [Les Glaneurs et La Glaneuse](https://en.wikipedia.org/wiki/The_Gleaners_and_I).
+This book caught my eye simply because Sandor Katz (from "The Art of Fermentation," which was revelatory) is listed as a co-author. It was a quick read about a jaunt from NYC bustle to New Mexico homesteading. The self reliance and creativity was interesting, and I enjoyed media about the projects' specifics. Some of the ethos (soap is _free_ if you make it from \~\~nature\~\~, man) and ego made the book feel like an extremely long Medium dot com post. Agnes Varda wore it better in [Les Glaneurs et La Glaneuse](https://en.wikipedia.org/wiki/The_Gleaners_and_I).
 
 ====
 
 name: Braiding Sweetgrass
-host: reading
+host: media
 date: 2020-09-30
 body:
 
@@ -203,12 +220,12 @@ by Robin Wall Kimmerer
 
 Indigenous wisdom, scientific knowledge, and the teachings of plants - braided like the sweetgrass itself. Dr. Kimmerer brought my own relationship with the natural world into focus. I am realizing my mini-book reports regularly tiptoe into hyperbole, but her focus on gratitude, on observation, on patience and familiarity has shown me a new way to exist in and advocate for a better relationship with the natural world.
 
-Many climate change solutions ignore the respect, admiration, and coexistence with the ash trees, the wetlands, and the reefs. They continued to be inwardly focused. "Humans made the problem, humans alone can fix it." Techno-optimists will bring about some solution that doesn't require us to get our feet muddy. Reading this book felt like joining Kimmerer for a series of lectures, long walks, and conversations at the edge of her spring-fed pond. The most important lessons for me were those of gratitude, personhood of beings, human or not, and the danger of human arrogance.
+Many climate change solutions ignore the respect, admiration, and coexistence with the ash trees, the wetlands, and the reefs. They continued to be inwardly focused. "Humans made the problem, humans alone can fix it." Techno-optimists will bring about some solution that doesn't require us to get our feet muddy. Media this book felt like joining Kimmerer for a series of lectures, long walks, and conversations at the edge of her spring-fed pond. The most important lessons for me were those of gratitude, personhood of beings, human or not, and the danger of human arrogance.
 
 ====
 
 name: The Art of Fermentation
-host: reading
+host: media
 date: 2020-07-09
 body:
 
@@ -227,7 +244,7 @@ I started the book looking for a few hot tips on how to fill my hours at home. I
 ====
 
 name: Born to Run
-host: reading
+host: media
 date: 2020-06-03
 body:
 
@@ -244,7 +261,7 @@ All said, having read this book I find myself running more on my toes, in older 
 ====
 
 name: Where the Crawdads Sing
-host: reading
+host: media
 date: 2020-03-28
 body:
 
@@ -253,7 +270,7 @@ by Delia Owens
 ====
 
 name: Exhalation: Stories
-host: reading
+host: media
 date: 2020-03-23
 body:
 
@@ -262,7 +279,7 @@ by Ted Chiang
 ====
 
 name: The Overstory
-host: reading
+host: media
 date: 2020-01-20
 body:
 
@@ -282,7 +299,7 @@ deciduous conifers in the world, the {https://mountauburn.org/metasequoiaglyptos
 ====
 
 name: The Left Hand of Darkness
-host: reading
+host: media
 date: 2019-12-06
 body:
 
@@ -315,7 +332,7 @@ In all, this was my favorite book of 2019. I closed out the year running an ultr
 ====
 
 name: Born a Crime
-host: reading
+host: media
 date: 2019-12-30
 body:
 
@@ -328,7 +345,7 @@ Noah's story ultimately was of his relationship with his mother. I listened to i
 ====
 
 name: A Wizard of Earthsea
-host: reading
+host: media
 date: 2019-11-16
 body:
 
@@ -351,7 +368,7 @@ On learning:
 ====
 
 name: 1984
-host: reading
+host: media
 date: 2019-11-02
 body:
 
@@ -370,7 +387,7 @@ Okay Google! Define "scrutinized." Hey Alexa! "Turn on the living room lights."
 ====
 
 name: Principles
-host: reading
+host: media
 date: 2019-10-04
 body:
 
@@ -383,7 +400,7 @@ If you must, he delivers the entirety of the book's content in {https://www.yout
 ====
 
 name: Working
-host: reading
+host: media
 date: 2019-09-24
 body:
 
@@ -394,18 +411,18 @@ I first heard about Caro when my partner, Alejandra, slammed down the 1,336 page
 ====
 
 name: Bicycle Diaries
-host: reading
+host: media
 date: 2019-08-07
 body:
 
 by David Byrne
 
-Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hall of Famer. Who knew he was such a bike nut? Well, apparently he is, and a [a big NYC bike advocate to boot](https://www.youtube.com/watch?v=37IDIUOJA6s). And I learned later that my dad met him on the way up to a studio and David was always sweaty and clutching a bike helmet. Badass! He travels with a folding bike wherever he goes. This book was his reflections on the cities he had traveled to, with short snippets of his experience of the city and its design via bike. From there, Byrne riffs (hah) on the history, culture, and personal relationships to the place. I read it at a point where I was returning to my love of bicycling, so I especially appreciated this lens. As a nice cross-over, he mentions city planning via Robert Moses (one of Caro's subjects) and references Caro's work, as well as _The Life and Death of Great American Cities_ which I look forward to reading.
+Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hall of Famer. Who knew he was such a bike nut? Well, apparently he is, and a [a big NYC bike advocate to boot](https://www.youtube.com/watch?v=37IDIUOJA6s). And I learned later that my dad met him on the way up to a studio and David was always sweaty and clutching a bike helmet. Badass! He travels with a folding bike wherever he goes. This book was his reflections on the cities he had traveled to, with short snippets of his experience of the city and its design via bike. From there, Byrne riffs (hah) on the history, culture, and personal relationships to the place. I read it at a point where I was returning to my love of bicycling, so I especially appreciated this lens. As a nice cross-over, he mentions city planning via Robert Moses (one of Caro's subjects) and references Caro's work, as well as _The Life and Death of Great American Cities_ which I look forward to media.
 
 > Then, suddenly, we’re out of town. Herons skim wetlands and wade in brackish water. East Coast second-growth forests appear—skinny little trees, densely packed.
 
 name: My Brilliant Friend
-host: reading
+host: media
 date: 2019-06-30
 body:
 
@@ -416,18 +433,18 @@ Sometimes it's nice to dip into crème de la crème popular culture. This was su
 ====
 
 name: Foundation
-host: reading
+host: media
 date: 2019-05-09
 body:
 
 by Isaac Asimov
 
-A few pages in, I thought to myself "science fiction doesn't typically age well, does it?" It's hard to imagine the experience of reading it in the year of its publication. And in the many ways it is unfathomable in its foresight, it's "anti-woke" with social forecasts and characters. I've seen Asimov fans say "It's not about the characters!!1" and in a small way, maybe they're right? But a dozen pages into _Foundation_, I realized there hadn't been a female character introduced. A couple hundred(!) pages later, and it was still a boyz club in space. Cool ideas indeed, but the story, and the characters, were forgettable at best.
+A few pages in, I thought to myself "science fiction doesn't typically age well, does it?" It's hard to imagine the experience of media it in the year of its publication. And in the many ways it is unfathomable in its foresight, it's "anti-woke" with social forecasts and characters. I've seen Asimov fans say "It's not about the characters!!1" and in a small way, maybe they're right? But a dozen pages into _Foundation_, I realized there hadn't been a female character introduced. A couple hundred(!) pages later, and it was still a boyz club in space. Cool ideas indeed, but the story, and the characters, were forgettable at best.
 
 ====
 
 name: Circe
-host: reading
+host: media
 date: 2019-01-18
 body:
 
@@ -444,7 +461,7 @@ and
 ====
 
 name: Ancillary Justice
-host: reading
+host: media
 date: 2018-12-02
 body:
 
@@ -455,7 +472,7 @@ The premise for this book was enough to catch my science fiction junkie attentio
 ====
 
 name: The Knight & The Wizard
-host: reading
+host: media
 date: 2018-11-22
 body:
 
@@ -466,7 +483,7 @@ This series was recommended to me by one of my best pals, Quinault, so I had to 
 ====
 
 name: Rules of Civility
-host: reading
+host: media
 date: 2018-09-17
 body:
 
@@ -489,7 +506,7 @@ and particularly pleasant to revisit as I write this at the cusp of Autumn:
 ====
 
 name: Ball Lightning
-host: reading
+host: media
 date: 2018-09-03
 body:
 
@@ -504,7 +521,7 @@ At the very end was context-setting that I wish had been at the beginning:
 ====
 
 name: High Rise
-host: reading
+host: media
 date: 2018-08-19
 body:
 
@@ -515,7 +532,7 @@ The book examines an insular high rise community gone awry. Petty complaints dev
 ====
 
 name: Mortal Engines
-host: reading
+host: media
 date: 2018-07-29
 body:
 
@@ -526,7 +543,7 @@ Okay, who saw the Peter Jackson trailer of the giant city-ships consuming smalle
 ====
 
 name: Exit West
-host: reading
+host: media
 date: 2018-05-31
 body:
 
@@ -536,7 +553,7 @@ This was an absolutely beautiful and timely novel. Recommended to me by my mom! 
 
 > Saeed and Nadia knew what the buildup to conflict felt like, and so the feeling that hung over London in those days was not new to them, and they faced it not with bravery, exactly, and not with panic either, not mostly, but instead with a resignation shot through with moments of tension, with tension ebbing and flowing, and when the tension receded there was calm, the calm that is called the calm before the storm, but is in reality the foundation of a human life, waiting there for us between the steps of our march to our mortality, when we are compelled to pause and not act but be.
 
-The novel examines civilian life during war and the subsequent migration that is often needed. It blends magical realism with intense reality and is centered on a tragic romance. I highly recommend reading this book!
+The novel examines civilian life during war and the subsequent migration that is often needed. It blends magical realism with intense reality and is centered on a tragic romance. I highly recommend media this book!
 
 > Saeed’s father felt as he walked back to campus and his son drove back to work that he had made a mistake with his career, that he should have done something else with his life, because then he might have had the money to send Saeed abroad. Perhaps he had been selfish, his notion of helping the youth and the country through teaching and research merely an expression of vanity, and the far more decent path would have been to pursue wealth at all costs.
 
@@ -545,18 +562,18 @@ The novel examines civilian life during war and the subsequent migration that is
 ====
 
 name: Sleeping Giants
-host: reading
+host: media
 date: 2018-04-11
 body:
 
 by Sylvain Neuvel
 
-Recommended to me by my downstairs neighbor, Kate, this book is held up by its premise. Strange ultra-massive bodyparts start to be uncovered across the world of some large humanoid machine. It's structured as a series of military transcripts you're reading after the fact. It's a quick read, and equally fast paced.
+Recommended to me by my downstairs neighbor, Kate, this book is held up by its premise. Strange ultra-massive bodyparts start to be uncovered across the world of some large humanoid machine. It's structured as a series of military transcripts you're media after the fact. It's a quick read, and equally fast paced.
 
 ====
 
 name: Sing, Unburied, Sing
-host: reading
+host: media
 date: 2018-03-17
 body:
 
