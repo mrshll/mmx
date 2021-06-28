@@ -355,7 +355,8 @@ func createEmbed(match []string, body string) string {
 		id := strings.TrimSpace(args[1])
 		embedHtml = fmt.Sprintf("<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/%s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>", id)
 	} else if module == "buildtime" {
-		t := time.Now()
+		loc, _ := time.LoadLocation("America/New York")
+		t := time.Now().In(loc)
 		embedHtml = fmt.Sprintf("<span>%s</span>", t.Format("2006-01-02 3:04PM MST"))
 	} else if module == "twitter" {
 		id := strings.TrimSpace(args[1])
