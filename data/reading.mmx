@@ -1,9 +1,9 @@
 ====
 
-name: Media
+name: Media Logbook
 host: notes
 indx: compact
-bref: Art, books and media
+bref: Logbook of art, books and films
 body:
 
 Until 2021-06-26, this was solely a reading log. I decided as part of my {5-year gestalt} to begin recording other works of art, film, etc that I'm experiencing that is worth my taking note.
@@ -14,7 +14,7 @@ Until 2021-06-26, this was solely a reading log. I decided as part of my {5-year
 
 name: Ghost Dog: The Way of the Samurai (1999)
 date: 2021-06-26
-host: media
+host: media logbook
 body:
 
 [img/ghost-dog.png, Ghost dog and his best friend, the francophone]
@@ -28,7 +28,7 @@ I'd also recommend watching the 2000 mini-making of interview with Jarmusch, the
 ====
 
 name: The Once and Future King
-host: media
+host: media logbook
 body:
 
 by T. H. White
@@ -38,7 +38,7 @@ In progress
 ====
 
 name: The Sympathizer
-host: media
+host: media logbook
 date: 2021-06-12
 body:
 
@@ -54,7 +54,7 @@ _The Sympathizer_ was brilliant.
 ====
 
 name: East of Eden
-host: media
+host: media logbook
 body:
 
 by John Steinbeck
@@ -64,7 +64,7 @@ In progress
 ====
 
 name: The Vegetable Gardener's Bible
-host: Media
+host: media logbook
 body:
 
 by Edward C. Smith
@@ -74,7 +74,7 @@ In progress
 ====
 
 name: Treasure Island
-host: Media
+host: media logbook
 date: 2021-05-11
 body:
 
@@ -93,7 +93,7 @@ Sir, with no intention to take offence, I deny your right to put words into my m
 ====
 
 name: A Visit From The Goon Squad
-host: Media
+host: media logbook
 date: 2021-04-25
 body:
 
@@ -104,7 +104,7 @@ I don't think I've ever been completely dissapointed by Pulitzer Winner. They ma
 ====
 
 name: Twelve Tomorrows
-host: Media
+host: media logbook
 date: 2021-04-02
 body:
 
@@ -122,7 +122,7 @@ I look forward to media the other entries in this series.
 ====
 
 name: The Redemption of Time
-host: media
+host: media logbook
 date: 2021-03-10
 body:
 
@@ -133,7 +133,7 @@ The author's preface captures what I imagine is the pervasive sentiment shared b
 ====
 
 name: Children of Time
-host: media
+host: media logbook
 date: 2021-02-25
 body:
 
@@ -146,7 +146,7 @@ I've noticed that many of the most gripping novels, especially in this genre, fo
 ====
 
 name: The Making of Prince of Persia
-host: media
+host: media logbook
 date: 2021-01-01
 body:
 
@@ -161,7 +161,7 @@ For someone's meandering and often angsty journal entries, I was captivated. I c
 ====
 
 name: The Lathe of Heaven
-host: media
+host: media logbook
 date: 2020-12-28
 body:
 
@@ -192,7 +192,7 @@ On cars:
 ====
 
 name: All the Light We Cannot See
-host: media
+host: media logbook
 date: 2020-11-01
 body:
 
@@ -203,7 +203,7 @@ by Anthony Doerr
 ====
 
 name: The Good Life Lab
-host: media
+host: media logbook
 date: 2020-07-23
 body:
 
@@ -214,7 +214,7 @@ This book caught my eye simply because Sandor Katz (from "The Art of Fermentatio
 ====
 
 name: Braiding Sweetgrass
-host: media
+host: media logbook
 date: 2020-09-30
 body:
 
@@ -227,7 +227,7 @@ Many climate change solutions ignore the respect, admiration, and coexistence wi
 ====
 
 name: The Art of Fermentation
-host: media
+host: media logbook
 date: 2020-07-09
 body:
 
@@ -246,7 +246,7 @@ I started the book looking for a few hot tips on how to fill my hours at home. I
 ====
 
 name: Born to Run
-host: media
+host: media logbook
 date: 2020-06-03
 body:
 
@@ -263,7 +263,7 @@ All said, having read this book I find myself running more on my toes, in older 
 ====
 
 name: Where the Crawdads Sing
-host: media
+host: media logbook
 date: 2020-03-28
 body:
 
@@ -272,7 +272,7 @@ by Delia Owens
 ====
 
 name: Exhalation: Stories
-host: media
+host: media logbook
 date: 2020-03-23
 body:
 
@@ -281,7 +281,7 @@ by Ted Chiang
 ====
 
 name: The Overstory
-host: media
+host: media logbook
 date: 2020-01-20
 body:
 
@@ -301,7 +301,7 @@ deciduous conifers in the world, the {https://mountauburn.org/metasequoiaglyptos
 ====
 
 name: The Left Hand of Darkness
-host: media
+host: media logbook
 date: 2019-12-06
 body:
 
@@ -334,7 +334,7 @@ In all, this was my favorite book of 2019. I closed out the year running an ultr
 ====
 
 name: Born a Crime
-host: media
+host: media logbook
 date: 2019-12-30
 body:
 
@@ -347,7 +347,7 @@ Noah's story ultimately was of his relationship with his mother. I listened to i
 ====
 
 name: A Wizard of Earthsea
-host: media
+host: media logbook
 date: 2019-11-16
 body:
 
@@ -370,7 +370,7 @@ On learning:
 ====
 
 name: 1984
-host: media
+host: media logbook
 date: 2019-11-02
 body:
 
@@ -389,7 +389,7 @@ Okay Google! Define "scrutinized." Hey Alexa! "Turn on the living room lights."
 ====
 
 name: Principles
-host: media
+host: media logbook
 date: 2019-10-04
 body:
 
@@ -402,7 +402,7 @@ If you must, he delivers the entirety of the book's content in {https://www.yout
 ====
 
 name: Working
-host: media
+host: media logbook
 date: 2019-09-24
 body:
 
@@ -413,7 +413,7 @@ I first heard about Caro when my partner, Alejandra, slammed down the 1,336 page
 ====
 
 name: Bicycle Diaries
-host: media
+host: media logbook
 date: 2019-08-07
 body:
 
@@ -424,7 +424,7 @@ Hilariously, I assumed it was a different David Byrne from the Rock and Roll Hal
 > Then, suddenly, we’re out of town. Herons skim wetlands and wade in brackish water. East Coast second-growth forests appear—skinny little trees, densely packed.
 
 name: My Brilliant Friend
-host: media
+host: media logbook
 date: 2019-06-30
 body:
 
@@ -435,7 +435,7 @@ Sometimes it's nice to dip into crème de la crème popular culture. This was su
 ====
 
 name: Foundation
-host: media
+host: media logbook
 date: 2019-05-09
 body:
 
@@ -446,7 +446,7 @@ A few pages in, I thought to myself "science fiction doesn't typically age well,
 ====
 
 name: Circe
-host: media
+host: media logbook
 date: 2019-01-18
 body:
 
@@ -463,7 +463,7 @@ and
 ====
 
 name: Ancillary Justice
-host: media
+host: media logbook
 date: 2018-12-02
 body:
 
@@ -474,7 +474,7 @@ The premise for this book was enough to catch my science fiction junkie attentio
 ====
 
 name: The Knight & The Wizard
-host: media
+host: media logbook
 date: 2018-11-22
 body:
 
@@ -485,7 +485,7 @@ This series was recommended to me by one of my best pals, Quinault, so I had to 
 ====
 
 name: Rules of Civility
-host: media
+host: media logbook
 date: 2018-09-17
 body:
 
@@ -508,7 +508,7 @@ and particularly pleasant to revisit as I write this at the cusp of Autumn:
 ====
 
 name: Ball Lightning
-host: media
+host: media logbook
 date: 2018-09-03
 body:
 
@@ -523,7 +523,7 @@ At the very end was context-setting that I wish had been at the beginning:
 ====
 
 name: High Rise
-host: media
+host: media logbook
 date: 2018-08-19
 body:
 
@@ -534,7 +534,7 @@ The book examines an insular high rise community gone awry. Petty complaints dev
 ====
 
 name: Mortal Engines
-host: media
+host: media logbook
 date: 2018-07-29
 body:
 
@@ -545,7 +545,7 @@ Okay, who saw the Peter Jackson trailer of the giant city-ships consuming smalle
 ====
 
 name: Exit West
-host: media
+host: media logbook
 date: 2018-05-31
 body:
 
@@ -564,7 +564,7 @@ The novel examines civilian life during war and the subsequent migration that is
 ====
 
 name: Sleeping Giants
-host: media
+host: media logbook
 date: 2018-04-11
 body:
 
@@ -575,7 +575,7 @@ Recommended to me by my downstairs neighbor, Kate, this book is held up by its p
 ====
 
 name: Sing, Unburied, Sing
-host: media
+host: media logbook
 date: 2018-03-17
 body:
 

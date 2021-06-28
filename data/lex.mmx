@@ -109,7 +109,7 @@ The past five years, I haven't measured a run or taken note of climbing progress
 This is to say I hope to start tracking:
 - Rough time spent on different {projects}
 - My {Activity Tracker, physical activity} - but lightly, i.e. how long did I run and how did it feel
-- {media, Art and media} I'm consuming beyond reading -- whether films I've watched, albums, or other art, I'd like to start jotting down when works have effects on me, big and small
+- {media logbook, Art and media} I'm consuming beyond reading -- whether films I've watched, albums, or other art, I'd like to start jotting down when works have effects on me, big and small
 
 ## Place
 
@@ -456,7 +456,7 @@ body:
 
 {https://github.com/mrshll/mmx/blob/main/src/mmxup.go, Source code}
 
-mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {media} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
+mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {media logbook} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
 
 The markup resembles markdown with a few key differences inspired by {https://wiki.xxiivv.com/site/indental.html} (for metadata) and {https://thomasorus.com/kaku.html} (for markup syntax), with unique design decisions based on my preferences.
 
