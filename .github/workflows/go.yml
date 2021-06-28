@@ -13,13 +13,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Go
+    - name: Install build dependencies
       uses: actions/setup-go@v2
       with:
         go-version: 1.15
 
+    - name: Test
+      run: bash test.sh
+
     - name: Build
       run: bash build.sh
 
-    - name: Test
-      run: bash test.sh
+    - uses: EndBug/add-and-commit@v7
+      with:
+        add: 'docs'
+        author_name: mrshll
+        author_email: mmoutenot@gmail.com
+        branch: main
+        message: '+'

@@ -11,33 +11,29 @@ date: 2021-05-28
 host: Daily
 body:
 
-## {https://www.youtube.com/watch?v=25fUDjMtkuI, Tom Chi's video on "Mental Debugs"}
-
-I had seen this video years ago, but returned to it after talking to Tom today about my work at {Upstream Tech}. I feel like the clickbait title doesn't do it justice. There are some fantastic ideas in here that have guided how I approach learning.
-
-Notes:
-
-- Reading on different ways to envision a sustainable planet:
-  - Hunter Lovens
-    - {https://natcapsolutions.org/l-hunter-lovins}
-  - Paul Sheldon
-    - {https://www.greenbiz.com/article/fundamentals-sustainable-business-21st-century}
-  - Laszlos
-    - {https://weatherhead.case.edu/media/videos/list/fowler-faculty/play/fowler-laszlo}
-    - {https://www.youtube.com/watch?v=POisjO5GYY0}
-    - {https://www.youtube.com/watch?v=SVz4B_CVzug}
-- "Knowing is the enemy of learning"
-  - Be in a state of unknowning; do not bring the experts in, embrace new possibilities and avoid matching patterns.
-  - By posing "what else is there still to learn about it?" the mind becomes malleable again. Mirrors approaching challenges with addiction and difficuluty with *curiosity*, posed by a guest in an Ezra Kline interview.
-- Pick the practice gap over the knowledge gap
-  - Learning without doing is not bringing closer to the master gap
-  - The practice gap brings you to the start of the mastery gap
-  - The mastery gap is infinite
-- Staying in the medium
-  - We work on things as a massive series of handoffs. Impossible to create masterpieces.
-  - The closer you can stay in the medium of your work, the greater the possibility of creating a masterpiece
-- Metabolizability is more important than truth, "service to person in front of you"
-- "How can I love my medium long enough to create my masterpiece?"
+- {https://www.youtube.com/watch?v=25fUDjMtkuI, Tom Chi's video on "Mental Debugs"}
+  - I had seen this video years ago, but returned to it after talking to Tom today about my work at {Upstream Tech}. I feel like the clickbait title doesn't do it justice. There are some fantastic ideas in here that have guided how I approach learning.
+  - Reading on different ways to envision a sustainable planet:
+    - Hunter Lovens
+      - {https://natcapsolutions.org/l-hunter-lovins}
+    - Paul Sheldon
+      - {https://www.greenbiz.com/article/fundamentals-sustainable-business-21st-century}
+    - Laszlos
+      - {https://weatherhead.case.edu/media/videos/list/fowler-faculty/play/fowler-laszlo}
+      - {https://www.youtube.com/watch?v=POisjO5GYY0}
+      - {https://www.youtube.com/watch?v=SVz4B_CVzug}
+  - "Knowing is the enemy of learning"
+    - Be in a state of unknowning; do not bring the experts in, embrace new possibilities and avoid matching patterns.
+    - By posing "what else is there still to learn about it?" the mind becomes malleable again. Mirrors approaching challenges with addiction and difficuluty with *curiosity*, posed by a guest in an Ezra Kline interview.
+  - Pick the practice gap over the knowledge gap
+    - Learning without doing is not bringing closer to the master gap
+    - The practice gap brings you to the start of the mastery gap
+    - The mastery gap is infinite
+  - Staying in the medium
+    - We work on things as a massive series of handoffs. Impossible to create masterpieces.
+    - The closer you can stay in the medium of your work, the greater the possibility of creating a masterpiece
+  - Metabolizability is more important than truth, "service to person in front of you"
+  - "How can I love my medium long enough to create my masterpiece?"
 
 ====
 
@@ -125,75 +121,66 @@ date: 2021-06-06
 host: Daily
 body:
 
-# Research on group movement and boids for {gamedev}
-
-## Boids and Steering
-- {https://www.red3d.com/cwr/boids/, Boids}
-  - Three behaviors:
-    + Separation: steer to avoid crowding local flockmates
-    + Alignment: steer towards the average heading of local flockmates
-    + Cohesion: steer to move toward the average position of local flockmates
-  - Each boid reacts only to flockmates within a certain field of distance and angle (i.e. in fov)
-- {https://www.red3d.com/cwr/steer/, Steering Behaviors For Autonomous Characters}
-  - Simple behaviors for individuals and pairs:
-    - Seek and Flee
-    - Pursue and Evade
-    - Wander
-    - Arrival
-    - Obstacle Avoidance
-    - Containment
-    - Wall Following
-    - Path Following
-    - Flow Field Following
-  - Combined behaviors and groups:
-    - Crowd Path Following
-    - Leader Following
-    - Unaligned Collision Avoidance
-    - Queuing (at a doorway)
-    - Flocking (combining: separation, alignment, cohesion)
-
-## Videos in a "Unity RTS" devlog series
-- {https://www.youtube.com/watch?v=jBs5jJNLEpQ&list=PLROHqCOfMPkNvsMiLFNol0NqRjl9GzwFW&index=6, Unity RTS - Movement Tutorial}
-  - Use "agent" model to define behaviors; design allows you to have multiple behaviors (i.e. avoid obstacle, but move towards objective) easily
-  - Used a non-MonoBehavior class to store `steering`, i.e. angular rotation and instantaneously velocity
-  - `agent` class takes steering to apply velocity to GameObject.
-  - `agent` has a `SetSteering` method that takes a steering class and a weight, that allows multiple steering behaviors to be applied.
-  - using `update` and `lateUpdate` separately -- `update` to update position and orientation, `lateUpdate` to update velocity and angular velocity (and create a new steering)
-  - Class `AgentBehavior` defines the different steering behaviors for the agent. It has a target, an agent, a destination, and all the necessary definitions for the steering behavior.
-    - For example, a _seek_ behavior would steer towards a target.
-- {https://www.youtube.com/watch?v=H9eKQKo8Wxw, Unity RTS - Boids tutorial}
-  - Use a game object to control game object groups that behave together, i.e. share a target, and give it a `child_prefab` GameObject property, and a list of members.
-  - Use boid separation to keep objects with similar movement patterns and the same target to prevent crowding.
-    - Define `desiredSeparation`, and create a steering behavior. Iterate over all members of flock, and create a repulsion depending on inverse of distance.
-  - Boid cohesion aggregates the center of the herd and adds that to the steering's linear vector.
-  - Separation should have a much greater weight than cohesion.
-  - Boid alignment means that objects should try to point the same way.
-- {https://www.youtube.com/watch?v=4UKMa4JqTTY, Unity RTS - Movement and Pathfinding Groups}
-  - Interesting series of experiments using leader/followers, flow fields and other movement patterns.
-
-
-## Group Pathfinding, Movement in RTS style games
-
-{https://www.gamasutra.com/blogs/DruErridge/20180522/318413/Group_Pathfinding__Movement_in_RTS_Style_Games.php, Group Pathfinding & Movement in RTS Style Games}
-
-- Stopping a group was an issue, because only the first reached its destination. They tried "message passing" where units within a certain proximity would pass the "I'm there" message.
-- Having a unit move through a crowd of other units was an issue. Solved by having the unit moving through exert a force on the others, which was also propagated through the group using the message passing system. Starcraft has the unit move out of the way and then back to the original position. In the end this had too many edge cases (i.e. you can push a unit that is idle, but not one that is active).
-- Group movement appeared "messy"
-  - they tried:
-    + calculating center point of group
-    + taking difference for each unit
-    + applying the same diff to each unit's destination
-  - this worked well for the common case, but when the destination had obstacles, it broke down.
-  - when units were dispersed when a command was issue, they'd stay dispersed upon destination arrival
-  - Solution ended up being to calc a "smart center" for the group:
-    + calculate avg position of all units
-    + remove any units outside of 1 stdev of the average
-    + recalculate average position from that subset of group
-    + if the dest is within a stdev of center point, can use naive independent movement
-    + if there is no meaningful group, you want them to regroup as much as possible, and if stdev is larger than a max, you have them all move to the same dest.
-    + if there is a cluster but also outliers, collapse them by giving them a destination in the direction of their offset, but only a stdev's length away from the group's central destination. This gives a natural behavior of "collapsing back in" to the group.
-
-
+- Research on group movement and boids for {gamedev}
+  - Boids and Steering
+    - {https://www.red3d.com/cwr/boids/, Boids}
+      - Three behaviors:
+        + Separation: steer to avoid crowding local flockmates
+        + Alignment: steer towards the average heading of local flockmates
+        + Cohesion: steer to move toward the average position of local flockmates
+      - Each boid reacts only to flockmates within a certain field of distance and angle (i.e. in fov)
+    - {https://www.red3d.com/cwr/steer/, Steering Behaviors For Autonomous Characters}
+      - Simple behaviors for individuals and pairs:
+        - Seek and Flee
+        - Pursue and Evade
+        - Wander
+        - Arrival
+        - Obstacle Avoidance
+        - Containment
+        - Wall Following
+        - Path Following
+        - Flow Field Following
+      - Combined behaviors and groups:
+        - Crowd Path Following
+        - Leader Following
+        - Unaligned Collision Avoidance
+        - Queuing (at a doorway)
+        - Flocking (combining: separation, alignment, cohesion)
+  - Videos in a "Unity RTS" devlog series
+    - {https://www.youtube.com/watch?v=jBs5jJNLEpQ&list=PLROHqCOfMPkNvsMiLFNol0NqRjl9GzwFW&index=6, Unity RTS - Movement Tutorial}
+      - Use "agent" model to define behaviors; design allows you to have multiple behaviors (i.e. avoid obstacle, but move towards objective) easily
+      - Used a non-MonoBehavior class to store `steering`, i.e. angular rotation and instantaneously velocity
+      - `agent` class takes steering to apply velocity to GameObject.
+      - `agent` has a `SetSteering` method that takes a steering class and a weight, that allows multiple steering behaviors to be applied.
+      - using `update` and `lateUpdate` separately -- `update` to update position and orientation, `lateUpdate` to update velocity and angular velocity (and create a new steering)
+      - Class `AgentBehavior` defines the different steering behaviors for the agent. It has a target, an agent, a destination, and all the necessary definitions for the steering behavior.
+        - For example, a _seek_ behavior would steer towards a target.
+    - {https://www.youtube.com/watch?v=H9eKQKo8Wxw, Unity RTS - Boids tutorial}
+      - Use a game object to control game object groups that behave together, i.e. share a target, and give it a `child_prefab` GameObject property, and a list of members.
+      - Use boid separation to keep objects with similar movement patterns and the same target to prevent crowding.
+        - Define `desiredSeparation`, and create a steering behavior. Iterate over all members of flock, and create a repulsion depending on inverse of distance.
+      - Boid cohesion aggregates the center of the herd and adds that to the steering's linear vector.
+      - Separation should have a much greater weight than cohesion.
+      - Boid alignment means that objects should try to point the same way.
+    - {https://www.youtube.com/watch?v=4UKMa4JqTTY, Unity RTS - Movement and Pathfinding Groups}
+      - Interesting series of experiments using leader/followers, flow fields and other movement patterns.
+  - {https://www.gamasutra.com/blogs/DruErridge/20180522/318413/Group_Pathfinding__Movement_in_RTS_Style_Games.php, Group Pathfinding & Movement in RTS Style Games}
+    - Stopping a group was an issue, because only the first reached its destination. They tried "message passing" where units within a certain proximity would pass the "I'm there" message.
+    - Having a unit move through a crowd of other units was an issue. Solved by having the unit moving through exert a force on the others, which was also propagated through the group using the message passing system. Starcraft has the unit move out of the way and then back to the original position. In the end this had too many edge cases (i.e. you can push a unit that is idle, but not one that is active).
+    - Group movement appeared "messy"
+      - they tried:
+        + calculating center point of group
+        + taking difference for each unit
+        + applying the same diff to each unit's destination
+      - this worked well for the common case, but when the destination had obstacles, it broke down.
+      - when units were dispersed when a command was issue, they'd stay dispersed upon destination arrival
+      - Solution ended up being to calc a "smart center" for the group:
+        + calculate avg position of all units
+        + remove any units outside of 1 stdev of the average
+        + recalculate average position from that subset of group
+        + if the dest is within a stdev of center point, can use naive independent movement
+        + if there is no meaningful group, you want them to regroup as much as possible, and if stdev is larger than a max, you have them all move to the same dest.
+        + if there is a cluster but also outliers, collapse them by giving them a destination in the direction of their offset, but only a stdev's length away from the group's central destination. This gives a natural behavior of "collapsing back in" to the group.
 
 ====
 
