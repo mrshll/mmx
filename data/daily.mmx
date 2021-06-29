@@ -2,6 +2,7 @@
 
 name: Daily
 host: Notes
+bref: Daily Notes
 indx: compact
 
 ====
@@ -415,6 +416,7 @@ Alejandra and I took the day off today from work. Unfortunately it's a scorcher 
 
 - Intentions
   - Write a page on running
+  - Rewrite {mmx} page
   - Add details about solar, EV, house to {Inventory}
   - Add to-read/to-watch on {media logbook}
   - Harvest the sugar peas

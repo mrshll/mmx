@@ -18,7 +18,7 @@ _Last {mmx, compiled} {^buildtime}_
 * : {gamedev, Making a game} about birds and buffalo
 
 * {Daily, Daily Notes}
-* {Activity Tracker}
+* {Activity Logbook}
 
 # Then
 
@@ -108,7 +108,7 @@ The past five years, I haven't measured a run or taken note of climbing progress
 
 This is to say I hope to start tracking:
 - Rough time spent on different {projects}
-- My {Activity Tracker, physical activity} - but lightly, i.e. how long did I run and how did it feel
+- My {Activity Logbook, physical activity} - but lightly, i.e. how long did I run and how did it feel
 - {media logbook, Art and media} I'm consuming beyond reading -- whether films I've watched, albums, or other art, I'd like to start jotting down when works have effects on me, big and small
 
 ## Place
@@ -136,19 +136,6 @@ body:
 
 ====
 
-name: Activity Tracker
-host: Notes
-bref: Tracking running, climbing and other movement
-body:
-
-<table>
-    <tr><th>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
-    <tr><td>2021-06-27</td><td>Bike</td><td>120</td><td>road ride to beach; easy pace</td></tr>
-    <tr><td>2021-06-26</td><td>Run</td><td>50</td><td>road; moderate pace</td></tr>
-</table>
-
-
-====
 
 name: The Fells
 host: Notes
