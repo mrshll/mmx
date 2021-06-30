@@ -1,6 +1,6 @@
 <article>
   <a name="{{.Slug}}" href="{{.Parent.Slug}}.html#{{.Slug}}">
-    <h5>{{if .Bref}}{{.Bref | noescape}}{{else}}{{.Name | noescape}}{{end}}</h5>
+    <h6>{{if .Bref}}{{.Bref | noescape}}{{else}}{{.Name | noescape}}{{end}}</h6>
   </a>
   {{.Body | noescape}}
   {{template "incoming.html" .}}
