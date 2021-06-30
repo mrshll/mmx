@@ -43,7 +43,14 @@
             </div>
             {{end}}
 
-            {{template "incoming.html" .}}
+            {{template "incoming.html" .Entry}}
+
+            {{if eq .Entry.Index "embed"}}
+              <hr/>
+              {{range $child := .Entry.Children}}
+                {{template "embeddedChild.html" $child}}
+              {{end}}
+            {{end}}
         </div>
     </body>
 

@@ -181,12 +181,11 @@ details[open] summary {
   position: relative;
 }
 
-
 #entry-body {
   margin: 2rem 0;
 }
 
-#entry-body img, #jrnl-recent img {
+.content img, #jrnl-recent img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;

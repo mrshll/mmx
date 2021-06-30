@@ -1,10 +1,10 @@
-{{ if gt (len .Entry.Inbound) 0}}
+{{ if gt (len .Inbound) 0}}
 <div class='incoming'>
-    ⇣ ({{len .Entry.Inbound}})
-    {{range $incoming := .Entry.Inbound}}
+    ⇣ ({{len .Inbound}})
+    {{range $incoming := .Inbound}}
     <details>
         <summary>
-            {{if $incoming.Entry.EmbedInParent}}
+            {{if eq $incoming.Entry.Parent.Index "embed"}}
             <a href="./{{$incoming.Parent.Slug}}.html#{{$incoming.Slug}}">{{$incoming.Entry.Name}}</a>&nbsp;
             {{else}}
             <a href="./{{$incoming.Entry.Slug}}.html">{{$incoming.Entry.Name}}</a>&nbsp;

@@ -1,7 +1,7 @@
 <article>
-  <a name="{{.Entry.Slug}}" href="{{.Entry.Parent.Slug}}.html#{{.Entry.Slug}}">
-    <h5><em>{{.Entry.Name}}</em>{{if .Entry.Bref}} - {{.Entry.Bref}}{{end}}</h5>
+  <a name="{{.Slug}}" href="{{.Parent.Slug}}.html#{{.Slug}}">
+    <h5>{{if .Bref}}{{.Bref | noescape}}{{else}}{{.Name | noescape}}{{end}}</h5>
   </a>
-  {{.Entry.Body | noescape}}
+  {{.Body | noescape}}
   {{template "incoming.html" .}}
 </article>

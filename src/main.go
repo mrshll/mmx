@@ -29,7 +29,6 @@ type EntryReference struct {
 type Entry struct {
 	MmxDoc
 	Parent        *Entry
-	EmbedInParent bool
 	Children      []*Entry
 	FirstImageSrc string
 	Inbound       []*EntryReference
@@ -50,7 +49,7 @@ type MakeIndexOptions struct {
 
 func getEntryFilename(e Entry) string {
 	var filename string
-	if e.Parent != nil && e.EmbedInParent {
+	if e.Parent != nil && e.Parent.Index == "embed" {
 		filename = fmt.Sprintf("%s.html#%s", e.Parent.Slug, e.Slug)
 	} else {
 		filename = fmt.Sprintf("%s.html", e.Slug)
@@ -247,26 +246,14 @@ func renderEntryHTML(e Entry) string {
 		"formatDate": formatDate,
 	}
 	tmpl := template.Must(template.New("entry.html").Funcs(templateFuncs).ParseGlob("./templates/*.html"))
-	embededChildTmpl := template.Must(template.New("embeddedChild.html").Funcs(templateFuncs).ParseFiles("./templates/embeddedChild.html", "./templates/incoming.html"))
 
 	var children []Entry
-	var embeddedHTMLStr string
 	for _, cPtr := range e.Children {
 		children = append(children, *cPtr)
-		if cPtr.EmbedInParent {
-			var tpl bytes.Buffer
-			tmplContent := TemplateContent{Entry: *cPtr}
-			err := embededChildTmpl.Execute(&tpl, tmplContent)
-			check(err)
-
-			embeddedHTMLStr += tpl.String()
-		}
 	}
 
-	e.Body += embeddedHTMLStr
-
 	var tpl bytes.Buffer
-	tmplContent := TemplateContent{Entry: e, Children: children, NavHTMLString: makeNav(e)}
+	tmplContent := TemplateContent{Entry: e, NavHTMLString: makeNav(e)}
 	err := tmpl.Execute(&tpl, tmplContent)
 	check(err)
 
