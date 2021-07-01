@@ -265,8 +265,7 @@ func renderEntryHTML(e Entry) string {
 func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) string {
 	sortedEntries := sortEntries(entries)
 
-	readingIcon := "<span style='margin-right:10px'>📖</span>"
-	projectsIcon := "<span style='margin-right:10px'>🖌</span>"
+	projectsIcon := "<span style='margin-right:10px'>🧭</span>"
 	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
 
@@ -286,15 +285,15 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 
 		icon := elseIcon
 		crumb := ""
-		if e.Parent.Slug == "media" {
-			icon = readingIcon
+		if indexEntry.Slug != "media_logbook" && e.Parent.Slug == "media_logbook" {
+			continue
+		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
+			// skip daily notes on index.html, which will clog up the timeline
+			continue
 		} else if e.Parent.Slug == "projects" {
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
-		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
-			// skip daily notes on index.html, which will clog up the timeline
-			continue
 		}
 
 		if e.Parent.Slug != indexEntry.Slug {
