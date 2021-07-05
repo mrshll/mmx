@@ -800,3 +800,40 @@ _Longs_ were the importers of this new age, outfitting cargo ships for long and 
 Chief among these low-techs, especially due to its crucial role in extreme long-range communication, was radio. In order to boost decaying signal strengths, longs deployed _buoys_ - radio transmitter and repeater satellites, which over time wove a net of coverage that stretched across the solar system. Time delays were still a major factor, but given the long, dark journeys longs pursued, the radio network was sometimes the only way to kill time as well as the only lifeline. In some cases, the buoys became _lighthouses_, stations crafted from multiple long ships or a combination of salvaged wreckage, assumed by outsiders to be the result of ill fortune, but treated by the lighthouse keepers as home, and by longs across the system as beacons of humanity - providing "local" news, music, the ramblings of solitary keepers, and updates on the latest max attempts.
 
 ====
+
+name: Doom Emacs
+date: 2021-07-03
+host: notes
+body:
+
+## Project-wide find and replace
+
++ Do a project-wide search with `SPC-/`
++ Change the search buffer into an editable one with `C-c C-e`
++ This buffer can be edited like a normal one, so you can do a find and replace like `%s/find/replace/g`
++ To reflect the edits back to all of the files, press `Z Z`
+
+====
+
+name: Running
+date: 2021-07-03
+host: about
+body:
+
+"Running is a celebration of life" Zaf Ahmed, my middle and highschool coach told us. Those words echo 18 years later on my long runs. And Zaf was right (I should tell him) - there is a purity in the physical act and mental state that together make running. I can't think of a better description than Zaf's: a celebration. I'm sure fellow runners will understand. There is quiet ecstacy that lies in weight to join somewhere along the run - maybe gravity has decided to ease up and for a mile or two you're soaring, or maybe the sun angle illuminates the reservior to give it an otherworldly shimmer.
+
+I joined the cross country in fifth grade because of a crush (so I owe it all to Taylor - thank you!). I remember showing up at coach Zaf's office. He looked me up and down and told me I'd need some proper running shoes instead of my broken down converse. I never was particularly good - the 5k race is a beast. But I've stuck with it ever since that day with only a few pauses. And most recently, I've found new facets of running that have renewed my enthusiasm and enjoyment.
+
+## How I run
+
+I stopped measuring my runs a few years ago. It's easy to become fixated on distance, time, and pace, especially with all the gizmos and apps that will tell you to hurry up! While some aspects of measurement were fun, it's great to know you're improving for example, I realized that too much data, especially realtime information, was negative in two ways: first, I'd usually predetermine the distance and route I wanted to run beforehand, and second if my pace wasn't great it would feel like a "bad run."
+
+Now I run without a phone, no GPS watch, nothing that will tell me my precise pace or distance. I generally pick a time window (i.e. "I'm going to run 1-2 hours, brb") and a direction and head off. From there, I listen to my legs and my breathing and adjust the route to go futher or shorter, the pace to be faster or more modest. Because of this, my overall mileage has increased, my pace on average is slower, and I have a blast on almost all of my runs.
+
+## Where I run
+
+2 years ago, Alejandra and I moved to Medford near the {The Fells}. When we did, I started mostly running on trails. Trail running is unique in that you're often going over some complex terrain, which forces you to adjust your pace and work a wider range of muscles and stabilizers than road running. I realized pain I'd get at higher mileages wasn't happening - even though it felt like I was jumping over rocks and sprinting down twisty paths. I attribute that to this frequent modulation of pace and stride.
+
+Trail running also introduced my to the world of ultramarathoning, which has exploded in popularity over the last decade. I found this filmmaker, Jamil Cury, filming his 50 mile runs and checking in at mile 20, the air thin at high elevation, with an ear-to-ear smile describing how it had just started hailing and that it was so awesome, what a blast. This unbeatable attitude towards these daunting phyiscal challenges was infectious. It inspired me to turn runs, when possible, into backyard adventures - runs up the coastline to nearby towns, solo marathons through new neighborhoods, or exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.
+
+====
