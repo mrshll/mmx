@@ -18,9 +18,8 @@ _Last {mmx, compiled} {^buildtime}_
 * : Spending time in the {garden}
 * : {gamedev, Making a game} about birds and buffalo
 
-- {Daily, Daily Notes}
-- {Media Logbook}
-- {Activity Logbook}
+* {Daily, Daily Notes}
+* {Logbooks}
 
 # Then
 
@@ -42,7 +41,7 @@ indx: full
 
 name: Sunday Marathon 2021
 bref: An annual entry in the day-before-marathon-monday marathons.
-host: notes
+host: exercise logbook
 date: 2021-04-18
 body:
 
@@ -110,8 +109,8 @@ The past five years, I haven't measured a run or taken note of climbing progress
 
 This is to say I hope to start tracking:
 - Rough time spent on different {projects}
-- My {Activity Logbook, physical activity} - but lightly, i.e. how long did I run and how did it feel
-- {media logbook, Art and media} I'm consuming beyond reading -- whether it's a film I've watched, an album, or some other artform, I'd like to start jotting down notes when a work is worth remembering
+- My {Exercise Logbook, physical activity} - but lightly, i.e. how long did I run and how did it feel
+- {reading logbook, Art and media} I'm consuming beyond reading -- whether it's a film I've watched, an album, or some other artform, I'd like to start jotting down notes when a work is worth remembering
 
 ## Place
 
@@ -254,9 +253,15 @@ body:
 ====
 
 name: Music
+<<<<<<< Updated upstream
 host: now
 bref: Short songs released under the name "mrshll"
 date: 2021-07-04
+=======
+host: projects
+bref: Very short songs released under the name "mrshll"
+date: 2021-04-17
+>>>>>>> Stashed changes
 body:
 
 _supermoons_ was created in 2021, entirely on the OP-Z performed live for recording.
@@ -452,7 +457,7 @@ body:
 
 {https://github.com/mrshll/mmx/blob/main/src/mmxup.go, Source code}
 
-mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {media logbook} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
+mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index (examples: {reading logbook} and {now}). The reference graph enables inbound and outbound relationships to be rendered.
 
 The markup resembles markdown with a few key differences inspired by {https://wiki.xxiivv.com/site/indental.html} (for metadata) and {https://thomasorus.com/kaku.html} (for markup syntax), with unique design decisions based on my preferences.
 
@@ -820,20 +825,31 @@ date: 2021-07-03
 host: about
 body:
 
-"Running is a celebration of life" Zaf Ahmed, my middle and highschool coach told us. Those words echo 18 years later on my long runs. And Zaf was right (I should tell him) - there is a purity in the physical act and mental state that together make running. I can't think of a better description than Zaf's: a celebration. I'm sure fellow runners will understand. There is quiet ecstacy that lies in weight to join somewhere along the run - maybe gravity has decided to ease up and for a mile or two you're soaring, or maybe the sun angle illuminates the reservior to give it an otherworldly shimmer.
+"Running is a celebration of life" Zaf Ahmed, my middle and highschool coach told us. Those words echo 18 years later on my long runs. And Zaf was right (I should tell him) - there is a purity in the physical act and mental state that together make running. I can't think of a better description than Zaf's: a celebration. I'm sure fellow runners will understand. There is quiet ecstasy lying in wait, and when it does you forget your legs, the strain, the heat and you can go forever.
 
-I joined the cross country in fifth grade because of a crush (so I owe it all to Taylor - thank you!). I remember showing up at coach Zaf's office. He looked me up and down and told me I'd need some proper running shoes instead of my broken down converse. I never was particularly good - the 5k race is a beast. But I've stuck with it ever since that day with only a few pauses. And most recently, I've found new facets of running that have renewed my enthusiasm and enjoyment.
+I joined the cross country in fifth grade because of a crush (so perhaps I owe it all to Taylor - thank you!). I remember showing up at coach Zaf's office. He peered over the small glasses sitting low on his nose looking me up and down before telling me I'd need some proper running shoes instead of my broken down converse. I never was particularly good - the canonical 5k XC race is a beast. But I've stuck with it ever since that day with only a few pauses. And most recently, I've found new facets of running that have renewed my enthusiasm and enjoyment.
 
 ## How I run
 
-I stopped measuring my runs a few years ago. It's easy to become fixated on distance, time, and pace, especially with all the gizmos and apps that will tell you to hurry up! While some aspects of measurement were fun, it's great to know you're improving for example, I realized that too much data, especially realtime information, was negative in two ways: first, I'd usually predetermine the distance and route I wanted to run beforehand, and second if my pace wasn't great it would feel like a "bad run."
+I stopped measuring my runs a few years ago. It's easy to become fixated on distance, time, and pace, especially with all the gizmos and apps that will tell you to hurry up! While some aspects of measurement were fun, it's great to know you're improving for example, I realized that too much data, especially realtime information, negatively impacted my enjoyment of running. First, I'd predetermine the distance and route I wanted to run beforehand, and second if my pace wasn't great it would feel like a "bad run."
 
 Now I run without a phone, no GPS watch, nothing that will tell me my precise pace or distance. I generally pick a time window (i.e. "I'm going to run 1-2 hours, brb") and a direction and head off. From there, I listen to my legs and my breathing and adjust the route to go futher or shorter, the pace to be faster or more modest. Because of this, my overall mileage has increased, my pace on average is slower, and I have a blast on almost all of my runs.
 
 ## Where I run
 
-2 years ago, Alejandra and I moved to Medford near the {The Fells}. When we did, I started mostly running on trails. Trail running is unique in that you're often going over some complex terrain, which forces you to adjust your pace and work a wider range of muscles and stabilizers than road running. I realized pain I'd get at higher mileages wasn't happening - even though it felt like I was jumping over rocks and sprinting down twisty paths. I attribute that to this frequent modulation of pace and stride.
+2 years ago, Alejandra and I moved to Medford near the {The Fells}. When we did, I started mostly running on trails. Trail running is unique in that you're often going over complex or difficult terrain, which forces adjustments of pace and form and work a wider range of muscles and stabilizers than road running. I realized pain I'd get at higher mileages wasn't happening - even though it felt like I was jumping over rocks and sprinting down twisty paths. I attribute that to this frequent modulation of pace and stride.
 
-Trail running also introduced my to the world of ultramarathoning, which has exploded in popularity over the last decade. I found this filmmaker, Jamil Cury, filming his 50 mile runs and checking in at mile 20, the air thin at high elevation, with an ear-to-ear smile describing how it had just started hailing and that it was so awesome, what a blast. This unbeatable attitude towards these daunting phyiscal challenges was infectious. It inspired me to turn runs, when possible, into backyard adventures - runs up the coastline to nearby towns, solo marathons through new neighborhoods, or exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.
+Trail running also introduced my to the world of ultramarathoning, which has exploded in popularity over the last decade. I found filmmaker Jamil Coury chronicling immense runs and checking in dozens of miles in, the air thin at high elevation, {https://youtu.be/Kvjd9sEVv-k?t=1027, with an ear-to-ear smile describing how it had just started hailing and that it was so awesome man, what a blast}. This relentlessly positive attitude towards daunting physical challenges was infectious. It inspired me to turn runs into backyard adventures - runs up the coastline to nearby towns, {sunday marathon 2021, solo marathons through new neighborhoods}, and exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.
+
+See {exercise logbook, my running and exercise logbook} for recent runs.
+
+====
+
+name: Run to Salem
+date: 2021-06-18
+host: exercise logbook
+body:
+
+A run from Medford to Salem up the East Cost Greenway.
 
 ====

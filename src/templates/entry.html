@@ -19,7 +19,7 @@
             {{if gt (len .Entry.JrnlRecords) 0}}
             <div id='jrnl-recent'>
                 {{$record := (index .Entry.JrnlRecords 0)}}
-                <img src="img/jrnl/{{$record.ImgPath}}"/>
+                {{template "jrnl.html" $record}}
                 <em>
                     <a href="{{$record.Parent.Slug}}.html">{{$record.Description}}; <wbr>{{$record.Date}}</a>
                 </em>
@@ -35,7 +35,7 @@
                 {{range $record := (slice .Entry.JrnlRecords 1)}}
                 {{if or (eq $.Entry.Slug "jrnl") (eq $record.Parent.Slug $.Entry.Slug)}}
                 <div class="jrnl-record">
-                    <img src="img/jrnl/{{$record.ImgPath}}"/>
+                    {{template "jrnl.html" $record}}
                     <em>{{$record.Description}}; <wbr>{{$record.Date}}</em>
                 </div>
                 {{end}}

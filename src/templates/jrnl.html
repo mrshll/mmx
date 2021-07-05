@@ -1,0 +1,5 @@
+{{if eq $.MediaType "img"}}
+    <img src="img/jrnl/{{$.MediaPath}}"/>
+{{else}}
+    <video src="img/jrnl/{{$.MediaPath}}" muted loop autoplay></video>
+{{end}}

@@ -16,7 +16,8 @@ import (
 
 type JrnlRecord struct {
 	Date        string
-	ImgPath     string
+	MediaPath   string
+	MediaType   string
 	Description string
 	Parent      *Entry
 }
@@ -265,6 +266,8 @@ func renderEntryHTML(e Entry) string {
 func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) string {
 	sortedEntries := sortEntries(entries)
 
+	readingIcon := "<span style='margin-right:10px'>📖</span>"
+	filmIcon := "<span style='margin-right:10px'>📽️</span>"
 	projectsIcon := "<span style='margin-right:10px'>🧭</span>"
 	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
@@ -285,15 +288,17 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 
 		icon := elseIcon
 		crumb := ""
-		if indexEntry.Slug != "media_logbook" && e.Parent.Slug == "media_logbook" {
-			continue
-		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
-			// skip daily notes on index.html, which will clog up the timeline
-			continue
+		if e.Parent.Slug == "reading_logbook" {
+			icon = readingIcon
+		} else if e.Parent.Slug == "film_logbook" {
+			icon = filmIcon
 		} else if e.Parent.Slug == "projects" {
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
+		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
+			// skip daily notes on index.html, which will clog up the timeline
+			continue
 		}
 
 		if e.Parent.Slug != indexEntry.Slug {
@@ -345,8 +350,15 @@ func linkJrnl(entries []Entry) {
 		if len(args) == 3 {
 			entryPtr = findEntry(entries[:], args[2])
 		}
+
+		mediaType := "img"
+		if strings.HasSuffix(args[0], "webm") {
+			mediaType = "video"
+		}
+
 		record := JrnlRecord{
-			ImgPath:     args[0],
+			MediaPath:   args[0],
+			MediaType:   mediaType,
 			Date:        formatDate(parseDate(args[0][:10])),
 			Description: args[1],
 			Parent:      entryPtr,
@@ -389,7 +401,7 @@ func main() {
 		}
 
 		if len(entries[i].JrnlRecords) > 0 {
-			entries[i].FirstImageSrc = fmt.Sprintf("img/jrnl/%s", entries[i].JrnlRecords[0].ImgPath)
+			entries[i].FirstImageSrc = fmt.Sprintf("img/jrnl/%s", entries[i].JrnlRecords[0].MediaPath)
 		} else {
 			imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
 			imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)
