@@ -13,6 +13,7 @@ body:
 
 <table>
     <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
+    <tr><td>2021-07-06</td><td>Climb</td><td>90</td><td>bouldering with Alex G. at CRG Cambridge; fun time, but kept it light; knee bothering me still so going to take a few days off of running/climbing</td></tr>
     <tr><td>2021-07-04</td><td>Run</td><td>90</td><td>road; moderate pace around Melrose, left knee hurts :( maybe from tennis or prev shoes?</td></tr>
     <tr><td>2021-07-03</td><td>Climb</td><td>60</td><td>bouldering; another v6</td></tr>
     <tr><td>2021-07-01</td><td>Climb</td><td>90</td><td>bouldering; fifth time in 18 months and got a v6 -- not bad</td></tr>
@@ -39,10 +40,7 @@ bref: Reading
 indx: embed
 body:
 
-Until 2021-06-26, this was solely a reading log. I decided as part of my {5-year gestalt} to begin recording other works of art, film, etc that I'm experiencing that is worth my taking note.
-
-<details>
-<summary>To read</summary>
+To read:
 - _Tools for Conviviality_ by Ivan Illich
 - _Abandon the Old in Tokyo_ by Yoshihiro Tatsumi
 - _Neuromancer_ by William Gibson
@@ -62,7 +60,6 @@ Until 2021-06-26, this was solely a reading log. I decided as part of my {5-year
 - _Pachinko_ by Min Jin Lee
 - _Gödel, Escher, Bach: an Eternal Golden Braid_ by Douglas R. Hofstadter
 - _Design With Nature_ by Ian L. McHarg
-</details>
 
 ====
 
@@ -79,8 +76,6 @@ name: The Vegetable Gardener's Bible
 bref: <em>The Vegetable Gardener's Bible</em> by Edward C. Smith
 host: reading logbook
 body:
-
-In progress
 
 ====
 name: Dunkirk
