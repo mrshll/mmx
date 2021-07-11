@@ -166,14 +166,13 @@ func sortEntries(entries []*Entry) []*Entry {
 	return sorted
 }
 
-func makeSubNav(e Entry, target Entry) string {
+func makeSubNav(e Entry, target Entry, max int) string {
 	subnav := "<ul>"
-	max := 6
 
 	sortedChildren := sortEntries(e.Children)
 	for i, cPtr := range sortedChildren {
 		child := *cPtr
-		if i >= max {
+		if i >= max && max != -1 {
 			if i == max {
 				subnav += fmt.Sprintf("<li>+ %d more</li>", len(e.Children)-max)
 			}
@@ -211,6 +210,11 @@ func makeNav(e Entry) string {
 		panic(fmt.Sprintf("No parent found with name %s (%s)", e.Parent.Name, e.Name))
 	}
 
+	if e.Parent.Index == "embed" {
+		// embeds are put into their parent
+		e = *e.Parent
+	}
+
 	nav := ""
 	count := 0
 	navE := e
@@ -219,7 +223,7 @@ func makeNav(e Entry) string {
 	for !stop {
 		if count <= MAX_NAV_DEPTH {
 			// prepend as we climb the tree
-			nav = makeSubNav(*navE.Parent, navE) + nav
+			nav = makeSubNav(*navE.Parent, navE, 6) + nav
 		}
 
 		stop = navE.Parent.Parent.Name == navE.Parent.Name
@@ -227,9 +231,10 @@ func makeNav(e Entry) string {
 		count += 1
 	}
 
-	if len(e.Children) > 0 && e.Name != e.Parent.Name {
-		// if it's a host and not root
-		nav += makeSubNav(e, e)
+	if len(e.Children) > 0 && e.Name != e.Parent.Name && e.Index != "embed" {
+		// if it's a host and not root, and if it's not embedding it's children
+		// (in which case, skip child nav in lieu of a table of contents)
+		nav += makeSubNav(e, e, 6)
 	}
 
 	if count <= MAX_NAV_DEPTH {
@@ -254,6 +259,12 @@ func renderEntryHTML(e Entry) string {
 	}
 
 	var tpl bytes.Buffer
+	if e.Index == "embed" {
+		// add nav to body as a table of contents
+		e.Body = fmt.Sprintf("<details><summary>Table of Contents</summary>%s</details>", makeSubNav(e, e, -1)) + e.Body
+		fmt.Println(e.Body)
+	}
+
 	tmplContent := TemplateContent{Entry: e, NavHTMLString: makeNav(e)}
 	err := tmpl.Execute(&tpl, tmplContent)
 	check(err)
