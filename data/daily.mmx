@@ -465,3 +465,29 @@ body:
 Started the day off with an hour-long walk with Dax. Have a few errands to do, and otherwise will try to get some solid reading & exercise in. If I have time I'll get ahead on this week's work so I can take Tuesday off and be back on the Cape with Alejandra and her dad.
 
 ====
+
+name: 2021-07-18
+date: 2021-07-18
+host: daily
+body:
+
+In the liminal space between two visitors. Lots of errands today, but also feeling an unsatisfied productive energy.
+
+I've been brainstorming on existing projects I want to continue investing in, those I want to sideline, and others more I'd like to start.
+
+- Existing project gardening
+  - ~fix {@carbonfreegrid}; there seems to be something wrong with the scheduled lambda function that sends the tweet~
+  - ~mark projects as "Active", "Dormant" or "Retired"~
+  - write an {mmx} architecture overview and usage guide
+- Potential micro business ideas
+  - suite of small tools for team health, with eye towards remote or hybrid work, paired with best practice guidelines and smart defaults that guide orgs that are freaking out about remote work to treat their team well and create good process i.e. _An opinionated suite of tools for healthy, growing remote teams_
+    - daily intentions board; can edit self and view full team
+    - teammate profile; working hours, timezone, pto (?), contact info -- maybe this becomes org-chart
+    - feedback cycle; have peer and manager review framework
+    - continuous feedback/end of week check-in a la 15five; could integrate JEDI dropbox and other anon solicitation
+    - 1-on-1 journal
+    - Autoload meeting recordings into a searchable database and/or "feed"?
+  - Basic collaborative accounting software (yes!) backed by {https://www.ledger-cli.org/docs.html, Ledger} and/or {https://git.sensorstation.co/slimvoice/about/, SlimVoice} with a handful of micro-integrations
+  - Less business idea, more fun - create very low-tech collaborative photo feed. Create a wall, it gives back a phone number and an email address. Email or text that number an image and the image gets added to the wall. Share number/email with friends and you have a collaborative wall with a unique address. This could be a low-tech successor to werm.world.
+
+====

@@ -262,7 +262,6 @@ func renderEntryHTML(e Entry) string {
 	if e.Index == "embed" {
 		// add nav to body as a table of contents
 		e.Body = fmt.Sprintf("<details><summary>Table of Contents</summary>%s</details>", makeSubNav(e, e, -1)) + e.Body
-		fmt.Println(e.Body)
 	}
 
 	tmplContent := TemplateContent{Entry: e, NavHTMLString: makeNav(e)}

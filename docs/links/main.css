@@ -59,7 +59,19 @@ nav {
   overflow-x: auto;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
+}
+
+nav, hr {
+  border: none;
   border-bottom: 1.5px dotted;
+}
+
+hr {
+    overflow: visible;
+    text-align: right;
+    height: 5px;
+    width: 10rem;
+    margin-left: 0;
 }
 
 article {
@@ -130,16 +142,6 @@ footer .footer-row > *{
   filter: invert(100%);
 }
 
-hr {
-    border: none;
-    border-top: 1px dashed var(--bg-contrast-color);
-    color: var(--bg-contrast-color);
-    overflow: visible;
-    text-align: right;
-    height: 5px;
-    width: 10rem;
-    margin-left: 0;
-}
 
 
 dl dd, details {

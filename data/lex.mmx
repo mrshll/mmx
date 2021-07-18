@@ -253,15 +253,9 @@ body:
 ====
 
 name: Music
-<<<<<<< Updated upstream
-host: now
-bref: Short songs released under the name "mrshll"
+host: Projects
+bref: Active: Short songs released under the name "mrshll"
 date: 2021-07-04
-=======
-host: projects
-bref: Very short songs released under the name "mrshll"
-date: 2021-04-17
->>>>>>> Stashed changes
 body:
 
 _supermoons_ was created in 2021, entirely on the OP-Z performed live for recording.
@@ -337,7 +331,7 @@ The game starts with the player awaking from a hibernation pod. There are no oth
 
 name: gamedev
 host: projects
-bref: Experiments in game design and development
+bref: Dormant: Experiments in game design and development
 date: 2021-03-28
 body:
 
@@ -355,21 +349,21 @@ indx: full
 name: Future.Phone
 host: projects
 date: 2014-03-01
-bref: Leave yourself a voicemail to be redelivered far in the future
+bref: Retired: Leave yourself a voicemail to be redelivered far in the future
 
 ====
 
 name: Plotter
 host: projects
 date: 2020-06-01
-bref: Various experiments in generative art and creating code, actualized by a pen plotter
+bref: Dormant: Various experiments in generative art and creating code, actualized by a pen plotter
 
 ====
 
 name: Latitune
 host: projects
 date: 2012-11-01
-bref: Drop songs in places for others to pick up
+bref: Retired: Drop songs in places for others to pick up
 body:
 
 Latitune was a app created at the end of college with {https://www.benweitzman.com/, Ben Weitzman} (who is a brilliant software developer). The app allowed users to "drop" songs at locations, and to see and listen to songs that were within a certain radius. We created a prototype, but with school wrapping up it never fully came to fruition. We had planned a feature where as you walked, the app would accumulate songs passed by into a playlist.
@@ -380,7 +374,7 @@ Latitune was a app created at the end of college with {https://www.benweitzman.c
 
 name: paste.date
 host: projects
-bref: An act of mundanity? A cry for help? A scheduling program
+bref: Dormant: An act of mundanity? A cry for help? A scheduling program
 date: 2021-01-23
 body:
 
@@ -390,11 +384,13 @@ In what is certainly my most mundane project to date, I've created an applicatio
 
 I was prompted to build this by the existing solutions' reliance on flashy formatted pastes into an email and the ever-presumptive "calendar link." I wanted a simple program that give me plaintext times that I could quickly copy and paste. I might add a link option at a later date, but I'd keep it simple. It currently lives on localhost, but I hope to wrap up signup and iron out the last few bugs this month.
 
+I've paused this project. I've I revisit it, I'd like to make it primarily cli-based.
+
 ====
 
 name: @carbonfreegrid
 host: projects
-bref: A Twitter bot that tweets daily statistics about the previous day's U.S. energy production
+bref: Active: A Twitter bot that tweets daily statistics about the previous day's U.S. energy production
 date: 2021-04-11
 body:
 
@@ -418,7 +414,7 @@ A daily twitter bot highlighting our progress towards a carbon free grid.
 
 name: Upstream Tech
 host: projects
-bref: A public benefit corporation founded in 2016
+bref: Active: A public benefit corporation founded in 2016
 date: 2021-02-11
 body:
 
@@ -465,7 +461,7 @@ The markup resembles markdown with a few key differences inspired by {https://wi
 
 name: mmx
 host: projects
-bref: This site is called mmx
+bref: Active: This site is called mmx
 date: 2021-06-24
 body:
 
@@ -538,7 +534,7 @@ seen the bird.
 
 name: Snappi
 host: projects
-bref: Share screenshots and files
+bref: Retired: Share screenshots and files
 date: 2011-08-12
 body:
 
@@ -565,7 +561,7 @@ It was a great way to learn Objective-C, not to mention the end-to-end process o
 
 name: Into the Static
 host: projects
-bref: Internet videos on a real time, thematic shuffle
+bref: Retired: Internet videos on a real time, thematic shuffle
 date: 2014-02-12
 body:
 
@@ -601,7 +597,7 @@ Et ainsi regarder en direct leur émission composée de ces vidéos de 15 second
 name: MAMAS Needs & Offers
 host: projects
 date: 2020-04-01
-bref: A website that listed "needs" and "offers" for mutual aid in Somerville and Medford
+bref: Retired: A website that listed "needs" and "offers" for mutual aid in Somerville and Medford
 body:
 
 It pulled from a spreadsheet as the backing database for easy management and updating by the community.
@@ -613,7 +609,7 @@ It pulled from a spreadsheet as the backing database for easy management and upd
 name: werm.world
 host: projects
 date: 2020-10-12
-bref: A (briefly) successful attempt to create a micro social network for a few dozen friends
+bref: Dormant: An attempt to create a micro social network for a few dozen friends
 body:
 
 <img src='img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
