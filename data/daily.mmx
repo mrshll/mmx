@@ -488,6 +488,6 @@ I've been brainstorming on existing projects I want to continue investing in, th
     - 1-on-1 journal
     - Autoload meeting recordings into a searchable database and/or "feed"?
   - Basic collaborative accounting software (yes!) backed by {https://www.ledger-cli.org/docs.html, Ledger} and/or {https://git.sensorstation.co/slimvoice/about/, SlimVoice} with a handful of micro-integrations
-  - Less business idea, more fun - create very low-tech collaborative photo feed. Create a wall, it gives back a phone number and an email address. Email or text that number an image and the image gets added to the wall. Share number/email with friends and you have a collaborative wall with a unique address. This could be a low-tech successor to werm.world.
+  - Less business idea, more fun - create very low-tech collaborative photo feed. Create a wall, it gives back a phone number and an email address. Email or text that number an image and the image gets added to the wall. Share number/email with friends and you have a collaborative wall with a unique address. This could be a low-tech successor to {werm.world}.
 
 ====
