@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"os"
 	"regexp"
@@ -361,6 +362,11 @@ func createEmbed(match []string, body string) string {
 	} else if module == "twitter" {
 		id := strings.TrimSpace(args[1])
 		embedHtml = fmt.Sprintf("<blockquote class='twitter-tweet'><a href='https://twitter.com/x/status/%s'></a></blockquote> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>", id)
+	} else if module == "readfile" {
+		path := fmt.Sprintf("../data/%s", strings.TrimSpace(args[1]))
+		content, err := ioutil.ReadFile(path)
+		check(err)
+		embedHtml = string(content)
 	} else {
 		panic(fmt.Sprintf("Unsupported module '%s' in embed", module))
 	}

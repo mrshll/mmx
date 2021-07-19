@@ -479,6 +479,7 @@ I've been brainstorming on existing projects I want to continue investing in, th
   - ~fix {@carbonfreegrid}; there seems to be something wrong with the scheduled lambda function that sends the tweet~
   - ~mark projects as "Active", "Dormant" or "Retired"~
   - write an {mmx} architecture overview and usage guide
+  - pull weather and solar generation data into mmx
 - Potential micro business ideas
   - suite of small tools for team health, with eye towards remote or hybrid work, paired with best practice guidelines and smart defaults that guide orgs that are freaking out about remote work to treat their team well and create good process i.e. _An opinionated suite of tools for healthy, growing remote teams_
     - daily intentions board; can edit self and view full team

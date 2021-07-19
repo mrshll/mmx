@@ -21,6 +21,8 @@ _Last {mmx, compiled} {^buildtime}_
 * {Daily, Daily Notes}
 * {Logbooks}
 
+{^readfile, ./energy.html}
+
 # Then
 
 ====

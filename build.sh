@@ -1,4 +1,9 @@
-#!bin/sh
+#!bin/bash
+#
+for f in src/plugins/*.sh; do
+  bash "$f" || break  # execute successfully or break
+done
+
 rm -r docs/*
 mkdir -p docs
 mkdir -p docs/links
