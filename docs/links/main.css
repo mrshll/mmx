@@ -49,6 +49,11 @@ h6 {
   margin-bottom: 1rem;
 }
 
+h1 {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 mark {
   background-color: var(--highlight-color);
 }
@@ -59,19 +64,19 @@ nav {
   overflow-x: auto;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
-}
-
-nav, hr {
-  border: none;
   border-bottom: 1.5px dotted;
 }
 
+
 hr {
-    overflow: visible;
-    text-align: right;
-    height: 5px;
-    width: 10rem;
-    margin-left: 0;
+  border: none;
+  height: .4rem;
+  width: 10rem;
+  background-color: var(--text-color);
+  overflow: visible;
+  text-align: right;
+  height: 5px;
+  margin-left: 0;
 }
 
 article {

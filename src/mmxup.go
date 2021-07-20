@@ -37,7 +37,7 @@ type Rule struct {
 
 const DOC_DELIM = "===="
 const HEAD_LEN = 6
-const H_ADJUSTMENT = 4
+const H_ADJUSTMENT = 0
 
 var RULES = []Rule{
 	// headers

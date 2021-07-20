@@ -8,9 +8,9 @@
             {{template "header.html" .}}
 
             {{if not .Entry.Bref}}
-            <h5>{{.Entry.Name | noescape}}</h5>
+            <h1>{{.Entry.Name | noescape}}</h1>
             {{else}}
-            <h5>{{.Entry.Bref | noescape}}</h5>
+            <h1>{{.Entry.Bref | noescape}}</h1>
             {{end}}
 
             {{if not .Entry.Date.IsZero}}
