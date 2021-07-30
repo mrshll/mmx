@@ -18,9 +18,9 @@
   <meta name='twitter:description' content='Active: This site is called mmx' />
   
   
-  <meta name='thumbnail' content='https://mrshll.com/img/redturtle020.jpg' />
-  <meta name='twitter:image' content='https://mrshll.com/img/redturtle020.jpg' />
-  <meta property='og:image' content='https://mrshll.com/img/redturtle020.jpg' />
+  <meta name='thumbnail' content='https://mrshll.com/img/redturtle020-900.jpg' />
+  <meta name='twitter:image' content='https://mrshll.com/img/redturtle020-900.jpg' />
+  <meta property='og:image' content='https://mrshll.com/img/redturtle020-900.jpg' />
   
   
   <link rel='stylesheet' type='text/css' href='./links/normalize.css'>
@@ -50,23 +50,23 @@
 
             <section id='entry-body'>
             
-<p><img src='img/redturtle020.jpg' alt='A person building something with bamboo' style='from The Red Turtle'/></p>
-<p>mmx was built at the start of 2021. Largely inspired by others on <a href='https://webring.xxiivv.com/' target='_blank'>&#123;^webring&#125;</a>, especially <a href='https://wiki.xxiivv.com/site/home.html' target='_blank'>&#123;^Devine&#125;</a>, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.</p>
-<p>The site's compiler is written in <a href='https://golang.org' target='_blank'>&#123;^Go&#125;</a>. It generates the static site you are reading by building a graph of entries from a bespoke markup language <a href='mmxup.html'>&#123;mmxup&#125;</a>.</p>
-<p>Go's <a href='https://golang.org/pkg/text/template/' target='_blank'>&#123;^templating engine&#125;</a> is lightly used, but it's often more straightforward to concat the html directly into a string.</p>
-<p>If you want to learn more, see the <a href='https://github.com/mrshll/mmx' target='_blank'>&#123;^source code&#125;</a>.</p>
+<p><a href='img/redturtle020.jpg'><img src='img/redturtle020-900.jpg' alt='A person building something with bamboo' style='from The Red Turtle'/></a></p>
+<p>mmx was built at the start of 2021. Largely inspired by others on <a class='mmxlink' href='https://webring.xxiivv.com/' target='_blank'>&#123;^webring&#125;</a>, especially <a class='mmxlink' href='https://wiki.xxiivv.com/site/home.html' target='_blank'>&#123;^Devine&#125;</a>, the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.</p>
+<p>The site's compiler is written in <a class='mmxlink' href='https://golang.org' target='_blank'>&#123;^Go&#125;</a>. It generates the static site you are reading by building a graph of entries from a bespoke markup language <a class='mmxlink' href=mmxup.html>&#123;mmxup&#125;</a>.</p>
+<p>Go's <a class='mmxlink' href='https://golang.org/pkg/text/template/' target='_blank'>&#123;^templating engine&#125;</a> is lightly used, but it's often more straightforward to concat the html directly into a string.</p>
+<p>If you want to learn more, see the <a class='mmxlink' href='https://github.com/mrshll/mmx' target='_blank'>&#123;^source code&#125;</a>.</p>
 <h2>Building mmx</h2>
 
 <p>I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant configuration or plugin.</p>
-<p>In the spirit of <a href='low_tech.html'>&#123;low tech&#125;</a>, and heavily inspired by others on the <a href='https://webring.xxiivv.com/' target='_blank'>&#123;^webring&#125;</a>, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.</p>
+<p>In the spirit of <a class='mmxlink' href=low_tech.html>&#123;low tech&#125;</a>, and heavily inspired by others on the <a class='mmxlink' href='https://webring.xxiivv.com/' target='_blank'>&#123;^webring&#125;</a>, I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.</p>
 <p>To start, I mapped out my hoped-for characteristics of the end result. I landed on:
 <ol><li>low friction, so as to promote more writing;</li><li>low-level - no automagic frameworks or dependencies</li><li>long-term, with limited dependencies and render to straight html; and</li><li>extendable (I want this to be something that evolves with me over the next 5, 10, 15 years)</li></ol>
-<a href='https://github.com/XXIIVV/oscean/' target='_blank'>&#123;^Devine Lu Linvega's Oscean&#125;</a> served as the primary inspiration. I spent a weekend pouring over their wiki, the underlying C-code, and the ecosystem of file formats and tools they created. The act of reading through their code and reverse engineering the site compilation was one of the most fun weekends I've had in a while. I gained an understanding of their technical approach to linking and render disparate databases, while simultaneously exploring the content of those databases themselves.</p>
+<a class='mmxlink' href='https://github.com/XXIIVV/oscean/' target='_blank'>&#123;^Devine Lu Linvega's Oscean&#125;</a> served as the primary inspiration. I spent a weekend pouring over their wiki, the underlying C-code, and the ecosystem of file formats and tools they created. The act of reading through their code and reverse engineering the site compilation was one of the most fun weekends I've had in a while. I gained an understanding of their technical approach to linking and render disparate databases, while simultaneously exploring the content of those databases themselves.</p>
 <p>I opted for GoLang as a learning opportunity. Compared to my day-to-day work languages of Javascript and Python, GoLang is miles closer to C. The last time I thought about pointers was my senior year of college, if that. I never imagined saying this, but I missed pointers! My impression of GoLang so far is fine. I hardly tapped into the features it is known for, such as concurrency. But this project served as a gentle introduction.</p>
 <p>Another reason I wanted to create the compiler myself was so that I could add features over time that are typically only available on "hosted platforms," such as bidirectional linking and other memex-style data graph functions. I noticed that Oscean as well as others on the webring were able to do this. How cool.</p>
 <p>The compiler is able to pull context from inbound links to pages. This is achieved by building a node tree when compiling the templating language to HTML. The correct <code>a</code> tag is located in the tree, and the node's parent content is pulled in as html.</p>
-<p>In a moment of doubt, I played with <a href='https://www.11ty.dev/' target='_blank'>&#123;^11ty&#125;</a> as well as <a href='https://github.com/mathieudutour/gatsby-digital-garden' target='_blank'>&#123;^gatsby plugins&#125;</a> that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that growing something from seed was the right path.</p>
-<p>I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, <a href='mmxup.html'>&#123;mmxup&#125;</a>.</p>
+<p>In a moment of doubt, I played with <a class='mmxlink' href='https://www.11ty.dev/' target='_blank'>&#123;^11ty&#125;</a> as well as <a class='mmxlink' href='https://github.com/mathieudutour/gatsby-digital-garden' target='_blank'>&#123;^gatsby plugins&#125;</a> that promised functionality I sought. But after speedbumps with each, always grappling with the obfuscation that make them "magic," I felt confident that growing something from seed was the right path.</p>
+<p>I've updated mmx to no longer rely on external dependencies (like markdown) outside of Golang's standard library. In order to do that while maintaining a nice writing experience (as much as I love html...), I created my own markdown language, <a class='mmxlink' href=mmxup.html>&#123;mmxup&#125;</a>.</p>
 <p>Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" is achieved with the following bash:</p>
 <pre><code>#!/bin/sh
 bash build.sh
@@ -94,7 +94,7 @@ done</code></pre>
             <a href="./2021-06-19.html">2021-06-19</a>&nbsp;
             
         </summary>
-        <li>Ideas for <a href='mmx.html'>&#123;mmx&#125;</a> improvements<ul><li>Simplify jrnl images</li><li>Optimize <a href='mmxup'>&#123;mmxup&#125;</a> rendering</li><li><s>Pull in backref excerpt for context</s></li><li><s>Change reading to include other consumed media, like movies, videos, significant articles, etc. "reading logbook"</s></li><li><s>Create running, climbing, exercise log</s></li></ul></li>
+        <li>Ideas for <a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a> improvements<ul><li>Simplify jrnl images</li><li>Optimize <a class='mmxlink' href='mmxup'>&#123;mmxup&#125;</a> rendering</li><li><s>Pull in backref excerpt for context</s></li><li><s>Change reading to include other consumed media, like movies, videos, significant articles, etc. "reading logbook"</s></li><li><s>Create running, climbing, exercise log</s></li></ul></li>
     </details>
     
     <details>
@@ -103,7 +103,7 @@ done</code></pre>
             <a href="./2021-06-28.html">2021-06-28</a>&nbsp;
             
         </summary>
-        <li>Rewrite <a href='mmx.html'>&#123;mmx&#125;</a> page</li>
+        <li>Rewrite <a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a> page</li>
     </details>
     
     <details>
@@ -112,7 +112,7 @@ done</code></pre>
             <a href="./2021-07-18.html">2021-07-18</a>&nbsp;
             
         </summary>
-        <li>write an <a href='mmx.html'>&#123;mmx&#125;</a> architecture overview and usage guide</li>
+        <li>write an <a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a> architecture overview and usage guide</li>
     </details>
     
     <details>
@@ -121,7 +121,7 @@ done</code></pre>
             <a href="./index.html">Now</a>&nbsp;
             
         </summary>
-        <em>Last <a href='mmx.html'>&#123;compiled&#125;</a> <span>2021-07-29 9:11PM EDT</span></em>
+        <em>Last <a class='mmxlink' href=mmx.html>&#123;compiled&#125;</a> <span>2021-07-29 10:58PM EDT</span></em>
     </details>
     
     <details>
@@ -130,7 +130,7 @@ done</code></pre>
             <a href="./about.html">About</a>&nbsp;
             
         </summary>
-        <p>This site is called <a href='mmx.html'>&#123;mmx&#125;</a>. It is my place to write, research, share ideas and keep notes.</p>
+        <p>This site is called <a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a>. It is my place to write, research, share ideas and keep notes.</p>
     </details>
     
 </div>

@@ -15,11 +15,12 @@ import (
 )
 
 type JrnlRecord struct {
-	Date        string
-	MediaPath   string
-	MediaType   string
-	Description string
-	Parent      *Entry
+	Date            string
+	MediaSrcFullRes string
+	MediaSrc        string
+	MediaType       string
+	Description     string
+	Parent          *Entry
 }
 
 type EntryReference struct {
@@ -99,7 +100,7 @@ func linkEntries(entries []Entry) {
 		(*parentPtr).Children = append((*parentPtr).Children, &(entries[i]))
 
 		// find incoming
-		aTagPattern := regexp.MustCompile(`<a.*?href='([\S ]+?)'>.*?<\/a>`)
+		aTagPattern := regexp.MustCompile(`<a.*?class='mmxlink'.*?href='([\S ]+?)'>.*?<\/a>`)
 		matches := aTagPattern.FindAllStringSubmatch(entries[i].Body, -1)
 		for _, match := range matches {
 			aTag := match[0]
@@ -129,7 +130,9 @@ func linkEntries(entries []Entry) {
 					node = mmxNode
 				}
 
-				newATag := strings.Replace(aTag, outboundHref, getEntryFilename(*outboundEntry), 1)
+				match := fmt.Sprintf("href='%s'", outboundHref)
+				replacement := fmt.Sprintf("href=%s", getEntryFilename(*outboundEntry))
+				newATag := strings.Replace(aTag, match, replacement, 1)
 				entries[i].Body = strings.Replace(entries[i].Body, aTag, newATag, 1)
 				node.NodeContent = strings.Replace(node.NodeContent, aTag, newATag, 1)
 
@@ -361,17 +364,24 @@ func linkJrnl(entries []Entry) {
 			entryPtr = findEntry(entries[:], args[2])
 		}
 
+		mediaSrc := args[0]
 		mediaType := "img"
 		if strings.HasSuffix(args[0], "webm") {
 			mediaType = "video"
+		} else {
+			filenameAndExt := strings.Split(mediaSrc, ".")
+			filename := filenameAndExt[0]
+			ext := filenameAndExt[1]
+			mediaSrc = fmt.Sprintf("%s-680.%s", filename, ext)
 		}
 
 		record := JrnlRecord{
-			MediaPath:   args[0],
-			MediaType:   mediaType,
-			Date:        formatDate(parseDate(args[0][:10])),
-			Description: args[1],
-			Parent:      entryPtr,
+			MediaSrcFullRes: args[0],
+			MediaSrc:        mediaSrc,
+			MediaType:       mediaType,
+			Date:            formatDate(parseDate(args[0][:10])),
+			Description:     args[1],
+			Parent:          entryPtr,
 		}
 		_linkJrnl(&record, entryPtr)
 
@@ -411,7 +421,7 @@ func main() {
 		}
 
 		if len(entries[i].JrnlRecords) > 0 {
-			entries[i].FirstImageSrc = fmt.Sprintf("img/jrnl/%s", entries[i].JrnlRecords[0].MediaPath)
+			entries[i].FirstImageSrc = fmt.Sprintf("img/jrnl/%s", entries[i].JrnlRecords[0].MediaSrc)
 		} else {
 			imgRegex := regexp.MustCompile(`<img\s.*?src=(?:'|")(?P<src>[^'">]+)(?:'|")`)
 			imgMatches := imgRegex.FindAllStringSubmatch(entries[i].Body, 1)

@@ -379,9 +379,9 @@ func createLink(match []string, body string) string {
 	text := href
 
 	// we use the character codes for {} so that subsequent find-and-replaces do not collide
-	template := "<a href='%s'>&#123;%s&#125;</a>"
+	template := "<a class='mmxlink' href='%s'>&#123;%s&#125;</a>"
 	if strings.HasPrefix(href, "http") || strings.HasPrefix(href, "#") {
-		template = "<a href='%s' target='_blank'>&#123;^%s&#125;</a>"
+		template = "<a class='mmxlink' href='%s' target='_blank'>&#123;^%s&#125;</a>"
 	}
 
 	if len(args) > 1 {
@@ -395,6 +395,9 @@ func createLink(match []string, body string) string {
 func createImage(match []string, body string) string {
 	args := strings.Split(match[1], ",")
 	src := args[0]
+	filename_and_ext := strings.Split(src, ".")
+	filename := filename_and_ext[0]
+	ext := filename_and_ext[1]
 
 	// positional args
 	// 0. src
@@ -411,7 +414,7 @@ func createImage(match []string, body string) string {
 		style = strings.TrimSpace(args[2])
 	}
 
-	html := fmt.Sprintf("<img src='%s' alt='%s' style='%s'/>", src, alt, style)
+	html := fmt.Sprintf("<a href='%s.%s'><img src='%s-900.%s' alt='%s' style='%s'/></a>", filename, ext, filename, ext, alt, style)
 	return strings.Replace(body, match[0], html, 1)
 }
 

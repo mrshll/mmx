@@ -205,7 +205,7 @@ details[open] summary {
   margin-bottom: 1.6rem;
 }
 
-#entry-body img + em, #jrnl-recent img + em, #entry-body video + em, #jrnl-recent video + em {
+.jrnl-record em, #jrnl-recent em, #entry-body video + em {
   display: block;
   background-color: var(--bg-contrast-color);
   padding: .4rem .6rem;
