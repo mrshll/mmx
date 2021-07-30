@@ -23,7 +23,7 @@ _Last {mmx, compiled} {^buildtime}_
 
 {^readfile, ./energy.html}
 
-# Then
+<h1>Then</h1>
 
 ====
 
@@ -193,7 +193,7 @@ body:
 
 One possibility is that both of my parents were self-employed. My dad is a music producer and my mom was a photographer and then a real estate agent. Observing their ability to set their terms of work, and pursuing their work in ways that made it rewarding to them probably stuck with me.
 
-In middle and high school, I'd sell gaming computers - order the components of Newegg and slap them together for friends at school. I also made websites and did neighborhood tech support. I think the ability to use technology as a means towards self-sufficiency was embedded at a very young age. Towards the end of high school, I ran a summer camp for computer, video editing, Flash -yes flash- animation, and other fun things. That was the first time I developed a spreadsheet to model revenue, expenses like paying my co-teachers, and the snacks we'd get from our costco runs. That was super fun and since we were winging it, it didn't carry the baggage of a full-fledged "startup."
+In middle and high school, I'd sell gaming computers - order the components of Newegg and slap them together for friends at school. I also made websites and did neighborhood tech support. I think the ability to use technology as a means towards self-sufficiency was embedded at a young age. Towards the end of high school, I ran a summer camp for computer, video editing, Flash -yes flash- animation, and other fun things. That was the first time I developed a spreadsheet to model revenue, expenses like paying my co-teachers, and the snacks we'd get from our costco runs. That was super fun and since we were winging it, it didn't carry the baggage of a full-fledged "startup."
 
 From that point on, I think there was a lot of pressure to start something. Observing all of the other students in my CS classes was exciting, but also daunting. It was exciting because I knew these folks would be my colleagues throughout my career. It was daunting because everyone else was so darn smart! I probably had a few dozen false start apps and ideas, usually getting sucked in to learning a new framework and forgetting to follow through on the concept or MVP.
 
@@ -207,7 +207,7 @@ Big picture learning: Success is in the people and the execution, not the idea. 
 
 Any time something positive happens I am surprised. Shouldn't we be out of money? Is this large customer sure that they want to work with the new team versus the old school engineering firm that's been around for a geological age?
 
-One thing that was very unexpected was an invitation to the United Nations to testify about remote sensing and machine learning's potential to build resiliency in the face of climate change. Amadou and I dressed up and went to one the big chambers in the UN NYC headquarters that to me exist only in pictures. I received a lesson on how to properly thank the delegates for their questions and was shoved on stage to give a presentation and do Q&A. That was pretty surreal.
+One thing that was unexpected was an invitation to the United Nations to testify about remote sensing and machine learning's potential to build resiliency in the face of climate change. Amadou and I dressed up and went to one the big chambers in the UN NYC headquarters that to me exist only in pictures. I received a lesson on how to properly thank the delegates for their questions and was shoved on stage to give a presentation and do Q&A. That was pretty surreal.
 
 ## If you had to do it all over again, what would you have done differently?
 
@@ -254,9 +254,15 @@ body:
 
 ====
 
+name: Dormant projects
+host: Projects
+indx: full
+
+====
+
 name: Music
 host: Projects
-bref: Active: Short songs released under the name "mrshll"
+bref: Short songs released under the name "mrshll"
 date: 2021-07-04
 body:
 
@@ -332,8 +338,8 @@ The game starts with the player awaking from a hibernation pod. There are no oth
 ====
 
 name: gamedev
-host: projects
-bref: Dormant: Experiments in game design and development
+host: dormant projects
+bref: Experiments in game design and development
 date: 2021-03-28
 body:
 
@@ -349,21 +355,21 @@ indx: full
 ====
 
 name: Future.Phone
-host: projects
+host: dormant projects
 date: 2014-03-01
-bref: Retired: Leave yourself a voicemail to be redelivered far in the future
+bref: Leave yourself a voicemail to be redelivered far in the future
 
 ====
 
 name: Plotter
-host: projects
+host: dormant projects
 date: 2020-06-01
 bref: Dormant: Various experiments in generative art and creating code, actualized by a pen plotter
 
 ====
 
 name: Latitune
-host: projects
+host: dormant projects
 date: 2012-11-01
 bref: Retired: Drop songs in places for others to pick up
 body:
@@ -438,7 +444,7 @@ We met with The Nature Conservancy's {https://www.scienceforconservation.org/sci
 [img/birdreturns-1.jpg, The team visited a project location in the Sacramento area]
 _The team visited a project location in the Sacramento area_
 
-In parallel, we met Gia Schneider from Natel Energy via a meandering series of introductions. Natel Energy developes a hydropower turbine that uniquely allows for 100% safe fish passage. After breakfast together in Boston, we realized we were working on the same underlying problems from very different angles: Natel Energy via hardware and project development; Upstream Tech via software solutions - both with the aim at improving the health of watersheds and building climate resilience. After a few months of discussion and brainstorming, we decided to {upstream joins natel energy, join forces}. Learning about hydropower via Gia and the Natel team, we realized there was an opportunity to apply our machine learning and satellite technology to watershed management and planning, and more specifically starting with hydropower operations. This was the birth of our second product, HydroForecast.
+In parallel, we met Gia Schneider from Natel Energy via a meandering series of introductions. Natel Energy developes a hydropower turbine that uniquely allows for 100% safe fish passage. After breakfast together in Boston, we realized we were working on the same underlying problems from different angles: Natel Energy via hardware and project development; Upstream Tech via software solutions - both with the aim at improving the health of watersheds and building climate resilience. After a few months of discussion and brainstorming, we decided to {upstream joins natel energy, join forces}. Learning about hydropower via Gia and the Natel team, we realized there was an opportunity to apply our machine learning and satellite technology to watershed management and planning, and more specifically starting with hydropower operations. This was the birth of our second product, HydroForecast.
 
 [img/natel-hanger.png, Natel's hanger in Alameda, CA]
 _Natel's hanger in Alameda, CA_
@@ -877,7 +883,7 @@ The nodes of the ring are as important as the ring itself. The websites are ofte
 This webring is for homepages of people who are interested in low tech, small game tools, and other forms of Web 1.0 inspired creativity.
 >>> https://emreed.net/LowTech_Directory.html
 
-What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic {https://melonking.net/melon.html?z=/thoughts/tech-needs-art.html, response essay} to one of my posts from years ago. It creates a very light weight network without the handholding of a intermediary. It's cool!
+What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic {https://melonking.net/melon.html?z=/thoughts/tech-needs-art.html, response essay} to one of my posts from years ago. It creates a lightweight network without the handholding of a intermediary. It's cool!
 
 And two questions from Eli's editor:
 
