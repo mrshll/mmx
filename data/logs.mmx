@@ -13,7 +13,8 @@ body:
 
 <table>
     <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
-    <tr><td>2021-07-28</td><td>Run</td><td>90</td><td>trail; reverse cross fells from hemlock pool path to victory park</td></tr>
+    <tr><td>2021-08-01</td><td>Run</td><td>90</td><td>road; fast pace through medford to the mystic and back along the northern strand from everett back to medford</td></tr>
+    <tr><td>2021-07-28</td><td>Run</td><td>90</td><td>trail; moderate pace reverse cross fells from hemlock pool path to victory park</td></tr>
     <tr><td>2021-07-26</td><td>Bodyweight</td><td>20</td><td>plate circuit</td></tr>
     <tr><td>2021-07-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
     <tr><td>2021-07-19</td><td>Climb</td><td>70</td><td>bouldering</td></tr>
@@ -77,6 +78,15 @@ To read:
 - _Pachinko_ by Min Jin Lee
 - _Gödel, Escher, Bach: an Eternal Golden Braid_ by Douglas R. Hofstadter
 - _Design With Nature_ by Ian L. McHarg
+
+====
+
+name: A Short History of Nearly Everything
+bref: <em>A Short History of Nearly Everything</em> by Bill Bryson
+host: reading logbook
+body:
+
+In progress
 
 ====
 
