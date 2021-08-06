@@ -16,7 +16,7 @@ DST="docs/img"
 SIZES=( 240 680 900 )
 MAXWIDTH=1200
 #dithering
-COLORS=8
+COLORS=16
 
 function resize () {
     
