@@ -192,7 +192,7 @@ details[open] summary {
   margin: 2rem 0;
 }
 
-.content img, #jrnl-recent img, .content video {
+.content img, .content video {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -205,30 +205,26 @@ details[open] summary {
   margin-bottom: 1.6rem;
 }
 
-.jrnl-record em, #jrnl-recent em, #entry-body video + em {
-  display: block;
-  background-color: var(--bg-contrast-color);
-  padding: .4rem .6rem;
-  margin-top: -1.6rem;
-  margin-bottom: 1.6rem;
-}
+/* .jrnl-record em, #entry-body video + em { */
+/*   display: block; */
+/*   background-color: var(--bg-contrast-color); */
+/*   padding: .4rem .6rem; */
+/*   margin-top: -1.6rem; */
+/*   margin-bottom: 1.6rem; */
+/* } */
 
-#jrnl-recent {
-  right: -40rem;
-  position: absolute;
-  width: 40rem;
-}
-
-#jrnl-gallery .jrnl-record {
+.jrnl-record {
   position: relative;
 }
 
-#jrnl-gallery .jrnl-record img {
-  width: 100%;
+.jrnl-record img, .jrnl-record video {
+  max-width: 100%;
+  max-height: 48rem;
   height: auto;
+  object-position: left top;
 }
 
-#jrnl-gallery .jrnl-record img + em, #jrnl-gallery .jrnl-record video + em {
+.jrnl-record em {
   position: absolute;
   bottom: 1rem;
   left: .4rem;
@@ -280,16 +276,6 @@ details[open] summary {
 
 #lightswitch input:checked + label:after {
   content: '🕯️'
-}
-
-@media screen and (max-width: 1240px) {
-  #jrnl-recent {
-    position: relative;
-    max-width: 100%;
-    padding: 0;
-    right: auto;
-  }
-
 }
 
 @media screen and (max-width: 1000px) {

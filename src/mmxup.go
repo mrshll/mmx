@@ -414,7 +414,7 @@ func createImage(match []string, body string) string {
 		style = strings.TrimSpace(args[2])
 	}
 
-	html := fmt.Sprintf("<a href='%s.%s'><img src='%s-900.%s' alt='%s' style='%s'/></a>", filename, ext, filename, ext, alt, style)
+	html := fmt.Sprintf("<a href='%s.%s'><img src='%s-720.%s' alt='%s' style='%s'/></a>", filename, ext, filename, ext, alt, style)
 	return strings.Replace(body, match[0], html, 1)
 }
 

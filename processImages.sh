@@ -13,8 +13,8 @@ SRC="data/img"
 # path where the images will be stored
 DST="docs/img"
 # sizes to convert to
-SIZES=( 240 680 900 )
-MAXWIDTH=1200
+SIZES=( 360 720 )
+MAXWIDTH=2400
 #dithering
 COLORS=16
 

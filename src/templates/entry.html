@@ -14,19 +14,19 @@
             {{end}}
 
             {{if not .Entry.Date.IsZero}}
-            <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
+                <div style='color:#ccc'>last updated {{.Entry.Date | formatDate}}</div>
             {{end}}
+
+            <section id='entry-body'>
             {{if gt (len .Entry.JrnlRecords) 0}}
-            <div id='jrnl-recent'>
+                <div class="jrnl-record">
                 {{$record := (index .Entry.JrnlRecords 0)}}
                 {{template "jrnl.html" $record}}
                 <em>
                     <a href="{{$record.Parent.Slug}}.html">{{$record.Description}}; <wbr>{{$record.Date}}</a>
                 </em>
-            </div>
+                </div>
             {{end}}
-
-            <section id='entry-body'>
             {{.Entry.Body | noescape}}
             </section>
 

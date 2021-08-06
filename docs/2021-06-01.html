@@ -40,11 +40,11 @@
             
 
             
-            <div style='color:#ccc'>last updated 2021-06-01</div>
-            
+                <div style='color:#ccc'>last updated 2021-06-01</div>
             
 
             <section id='entry-body'>
+            
             <ul><li><a class='mmxlink' href=upstream_tech.html>&#123;Upstream Tech&#125;</a><ul><li>Meetings<ul><li><s>1-on-1s with Daniel, Kristi, Fiona</s></li><li><s>HF, Lens G&P and product syncs</s></li><li><s>Customer meeting</s></li></ul></li><li>Intentions<ul><li>Start HRRR series processor</li><li><s>Create SNODAS SWE visual example</s></li></ul></li><li>HRRR<ul><li><a class='mmxlink' href='https://registry.opendata.aws/noaa-hrrr-pds/' target='_blank'>&#123;^AWS Open Data Listing&#125;</a></li><li><a class='mmxlink' href='https://noaa-hrrr-bdp-pds.s3.amazonaws.com/index.html' target='_blank'>&#123;^HRRR grib format bucket browser&#125;</a></li><li>Zarr<ul><li><a class='mmxlink' href='https://hrrrzarr.s3.amazonaws.com/index.html' target='_blank'>&#123;^HRRR zarr format bucket browser&#125;</a></li><li><a class='mmxlink' href='https://mesowest.utah.edu/html/hrrr/zarr_documentation/' target='_blank'>&#123;^Zarr documentation&#125;</a></li><li>"This archive contains sets for each model run of analysis and forecast files sectioned into 96 small chunks for every variable. Files within the AWS hrrrzarr S3 bucket are named to emulate a hierarchical data structure."</li><li>"Not all HRRR GRIB2 files are expected to be processed into Zarr format. Many users will find the GRIB2 format to be adequate for their needs. The types of use cases relevant for the Zarr archive require surface sensible weather parameters or meteorological parameters at "standard" levels in the vertical."</li><li>Variables at standard levels in the "sfc" bucket</li><li>"HRRR CONUS analysis (F00) files, whether for sfc or prs files, are stored in 96 'chunks' each containing 150x150 grid points. HRRR CONUS forecast (F01-FXX) files are stored in 96 3-D cubes (XX,150,150) where the forecast duration, FXX, depends on HRRR version and time of day. For example, V4 forecasts are available out to XX=48h at 00, 06, 12, 19 UTC and out to XX=18h at other hours of the day for variables produced in each forecast GRIB2 file."</li><li>Zarr files are typically available 3 hours after the initialization time, e.g., 00UTC analysis and forecast files are available by 03UTC</li><li>Available in Zarr:<ul><li>V4 near real time</li><li>V4 2020-12-02 to current</li><li>V3 2018-07-12 to 2020-12-01</li><li>The dataset otherwise goes back to 2014-09-30, but would presumably need to be loaded via the grib datasets.</li></ul></li></ul></li></ul></li></ul></li></ul>
 
             </section>

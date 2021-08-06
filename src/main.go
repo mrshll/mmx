@@ -372,7 +372,7 @@ func linkJrnl(entries []Entry) {
 			filenameAndExt := strings.Split(mediaSrc, ".")
 			filename := filenameAndExt[0]
 			ext := filenameAndExt[1]
-			mediaSrc = fmt.Sprintf("%s-680.%s", filename, ext)
+			mediaSrc = fmt.Sprintf("%s-720.%s", filename, ext)
 		}
 
 		record := JrnlRecord{
