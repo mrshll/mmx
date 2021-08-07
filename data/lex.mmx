@@ -382,8 +382,8 @@ Latitune was a app created at the end of college with {https://www.benweitzman.c
 ====
 
 name: paste.date
-host: projects
-bref: Dormant: An act of mundanity? A cry for help? A scheduling program
+host: dormant projects
+bref: An act of mundanity? A cry for help? A scheduling program
 date: 2021-01-23
 body:
 
@@ -399,7 +399,7 @@ I've paused this project. I've I revisit it, I'd like to make it primarily cli-b
 
 name: @carbonfreegrid
 host: projects
-bref: Active: A Twitter bot that tweets daily statistics about the previous day's U.S. energy production
+bref: A Twitter bot that tweets daily statistics about the previous day's U.S. energy production
 date: 2021-04-11
 body:
 
@@ -423,7 +423,7 @@ A daily twitter bot highlighting our progress towards a carbon free grid.
 
 name: Upstream Tech
 host: projects
-bref: Active: A public benefit corporation founded in 2016
+bref: A public benefit corporation founded in 2016
 date: 2021-02-11
 body:
 
@@ -470,7 +470,7 @@ The markup resembles markdown with a few key differences inspired by {https://wi
 
 name: mmx
 host: projects
-bref: Active: This site is called mmx
+bref: This site is called mmx
 date: 2021-06-24
 body:
 
@@ -542,8 +542,8 @@ seen the bird.
 ====
 
 name: Snappi
-host: projects
-bref: Retired: Share screenshots and files
+host: dormant projects
+bref: Share screenshots and files
 date: 2011-08-12
 body:
 
@@ -569,8 +569,8 @@ It was a great way to learn Objective-C, not to mention the end-to-end process o
 ====
 
 name: Into the Static
-host: projects
-bref: Retired: Internet videos on a real time, thematic shuffle
+host: dormant projects
+bref: Internet videos on a real time, thematic shuffle
 date: 2014-02-12
 body:
 
@@ -604,9 +604,9 @@ Et ainsi regarder en direct leur émission composée de ces vidéos de 15 second
 
 ====
 name: MAMAS Needs & Offers
-host: projects
+host: dormant projects
 date: 2020-04-01
-bref: Retired: A website that listed "needs" and "offers" for mutual aid in Somerville and Medford
+bref: A website that listed "needs" and "offers" for mutual aid in Somerville and Medford
 body:
 
 It pulled from a spreadsheet as the backing database for easy management and updating by the community.
@@ -618,7 +618,7 @@ It pulled from a spreadsheet as the backing database for easy management and upd
 name: werm.world
 host: projects
 date: 2020-10-12
-bref: Dormant: An attempt to create a micro social network for a few dozen friends
+bref: An attempt to create a micro social network for a few dozen friends
 body:
 
 <img src='img/werm-world-1.png' style='float:left; border: 1px solid grey; margin-right: .8rem; width: 18rem;'/>
@@ -893,5 +893,24 @@ The webrings and the sites that comprise them will show up on search engines unl
 
 *What evidence supports that it’s a recent ‘trend,’ or having a resurgence? Do you think that it is, and if so, why?*
 I know that people are becoming more conscious of their online prescences being wholly owned subsidiaries of corporate interest. For those who are interested in subverting that, I think it will become more and more popular. However, the corporate entities are formidible opponents when it comes to a mere trend. I think their hooks are sharp and deep enough to prevent a wholesale migration back to web 1.0, the cozy web, the low tech internet.
+
+====
+
+name: TODO
+host: projects
+body:
+
+- flesh out {karp} concept
+- write usage guide for {mmx}
+- photograph and update {garden}
+- simplify {werm.world}
+- fix embedded docs creating their own page {mmx}
+
+====
+
+name: karp
+host: projects
+date: 2021-08-07
+body:
 
 ====
