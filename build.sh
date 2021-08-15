@@ -1,5 +1,5 @@
-#!bin/bash
-#
+#!/bin/bash
+
 for f in src/plugins/*.sh; do
   bash "$f" || break  # execute successfully or break
 done
