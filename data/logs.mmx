@@ -47,6 +47,7 @@ name: Film Logbook
 host: Logbooks
 bref: Recent movies of note
 indx: embed
+body:
 
 To watch:
 - _Belladonna of Sadness_, 1973
