@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./loadSecrets.sh
+. ./load_secrets.sh
 
 OUT=./data/energy.html
 DATE_FMT="+%Y-%m-%d %H:%M:%S"
