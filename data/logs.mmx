@@ -13,6 +13,11 @@ body:
 
 <table>
     <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
+    <tr><td>2021-08-23</td><td>Run</td><td>30</td><td>road; slow</td></tr>
+    <tr><td>2021-08-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
+    <tr><td>2021-08-22</td><td>Run</td><td>40</td><td>road; slow</td></tr>
+    <tr><td>2021-08-20</td><td>Kayak</td><td>240</td><td>sea kayak along the maine coast, easy paddling</td></tr>
+    <tr><td>2021-08-17</td><td>Run</td><td>30</td><td>road; moderate in Phippsberg; hunted by mosquitos</td></tr>
     <tr><td>2021-08-14</td><td>Run</td><td>30</td><td>road; fast though Portland ME around the west side</td></tr>
     <tr><td>2021-08-13</td><td>Bodyweight</td><td></td><td>10 sets of 10 pushups, 10 squats</td></tr>
     <tr><td>2021-08-10</td><td>Run</td><td>40</td><td>road; with Jay, Dax, and Mochi along the Alewife Brook boardwalk and around the upper mystic river</td></tr>
@@ -98,7 +103,6 @@ Books to read:
 - _What Is the What_ by Dave Eggers
 - _If on a Winter's Night a Traveler_ by Italo Calvino
 - _Reading the Forested Landscape: A Natural History of New England_ by Tom Wessels
-- _The Name of the Wind_ by Patrick Rothfuss
 - _Dear Ijeawele, or a Feminist Manifesto in Fifteen Suggestions_ by Chimamanda Ngozi Adichie
 - _Lonesome Dove_ by Larry McMurty
 - _Homegoing_ by Yaa Gyasi
@@ -119,6 +123,23 @@ Books to read:
 Other reading/articles:
 - {https://compudanzas.net/uxn_tutorial.html, uxn tutorial}
 - {https://pioneerworks.org/broadcast/i-know-a-place-pipkin, I Know a Place by Everest Pipkin}
+
+====
+
+name: Name of the Wind
+bref: <em>Name of the Wind</em> by Patrick Rothfuss
+host: reading logbook
+date: 2021-08-24
+body:
+
+In spite of its clever plot devices and cliff hangers to keep the pages turning, it was quickly clear that the author is at best lazy and at worst sexist. Most women characters were purely objects of desire. The author made blatant decisions, not bound by any sort of historical accuracy or _real world_ (it's fantasty, do whatever), to put women into a tired trope and dominate the story with a boys club.
+
+After finishing, I looked up to see if others found the same and I found some thoughtful write-ups:
+- {https://dailygeekette.wordpress.com/2017/02/09/feminist-literary-analysis-the-kingkiller-chronicle-by-patrick-rothfuss/, Feminist Literary Analysis of The Kingkiller Chronicle}
+- {https://www.swantower.com/2015/02/04/the-absence-of-women/, The Absence of Women} a fantastic writeup with even some simple suggestions to make it better
+- {https://github.com/soniakandah/notw-revisited, Name of the Wind Revisited}, a gender-swapped and improved version of the story.
+
+All in all, the fantasty and world building is top notch. I wonder why Rothfuss chooses to write women this way. I'm curious if it improves in later entires, but it reminds me of the age of Foundation and leaves me wanting to read LeGuinn.
 
 ====
 
