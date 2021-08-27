@@ -276,11 +276,20 @@ func renderEntryHTML(e Entry) string {
 	return htmlStr
 }
 
+func isDescendentOfSlug(e Entry, slug string) bool {
+	for e.Parent.Slug != slug {
+		fmt.Printf("%s %s\n", e.Slug, e.Parent.Slug)
+		if e.Parent.Slug == e.Slug {
+			return false
+		}
+		e = *e.Parent
+	}
+	return true
+}
+
 func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) string {
 	sortedEntries := sortEntries(entries)
 
-	readingIcon := "<span style='margin-right:10px'>📖</span>"
-	filmIcon := "<span style='margin-right:10px'>📽️</span>"
 	projectsIcon := "<span style='margin-right:10px'>🧭</span>"
 	musicIcon := "<span style='margin-right:10px'>📻</span>"
 	elseIcon := "<span style='margin-right:10px'>🗒️</span>"
@@ -301,15 +310,11 @@ func makeIndex(indexEntry Entry, entries []*Entry, options MakeIndexOptions) str
 
 		icon := elseIcon
 		crumb := ""
-		if e.Parent.Slug == "reading_logbook" {
-			icon = readingIcon
-		} else if e.Parent.Slug == "film_logbook" {
-			icon = filmIcon
-		} else if e.Parent.Slug == "projects" {
+		if e.Parent.Slug == "projects" {
 			icon = projectsIcon
 		} else if e.Slug == "music" || e.Parent.Slug == "music" {
 			icon = musicIcon
-		} else if indexEntry.Slug == "index" && e.Parent.Slug == "daily" {
+		} else if indexEntry.Slug == "index" && (isDescendentOfSlug(*e, "daily") || isDescendentOfSlug(*e, "logbooks")) {
 			// skip daily notes on index.html, which will clog up the timeline
 			continue
 		}

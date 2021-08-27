@@ -13,6 +13,7 @@ body:
 
 <table>
     <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
+    <tr><td>2021-08-25</td><td>Bodyweight</td><td>45</td><td></td></tr>
     <tr><td>2021-08-23</td><td>Run</td><td>30</td><td>road; slow</td></tr>
     <tr><td>2021-08-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
     <tr><td>2021-08-22</td><td>Run</td><td>40</td><td>road; slow</td></tr>
@@ -45,8 +46,8 @@ body:
     <tr><td>2021-06-26</td><td>Run</td><td>50</td><td>road; moderate pace</td></tr>
 </table>
 
-
 ====
+
 
 name: Film Logbook
 host: Logbooks
@@ -123,6 +124,17 @@ Books to read:
 Other reading/articles:
 - {https://compudanzas.net/uxn_tutorial.html, uxn tutorial}
 - {https://pioneerworks.org/broadcast/i-know-a-place-pipkin, I Know a Place by Everest Pipkin}
+- {https://kurti.sh/pubs/unplanned_limits17.pdf, Unplanned Obsolescence: Hardware and Software After Collapse}
+
+====
+
+name: That Thing You Do
+bref: That Thing You Do (1996)
+date: 2021-08-26
+host: film logbook
+body:
+
+[img/thatthingyoudo.png]
 
 ====
 
@@ -145,6 +157,7 @@ All in all, the fantasty and world building is top notch. I wonder why Rothfuss 
 
 name: Merlin
 bref: Merlin (1998)
+date: 2021-08-08
 host: film logbook
 body:
 
@@ -387,6 +400,17 @@ date: 2021-04-25
 body:
 
 I don't think I've ever been completely dissapointed by Pulitzer Winner. They may have their flaws but they usually have me media late into the night. (After consulting a list of past award winners, I'm realizing I did not enjoy The Road, for reasons I've since forgotten.) _A Visit From The Goon Squad_ had a pedestrian start, recounting fairly boring chapters in folks lives. It did the all-too-common "far flung characters careening towards an encounter" trope, but the characters ended up crossing paths in ways so tenuous that it made the whole quilt of stories ingenious. There was a Barthelme-esque quality of postmodernist escalation, which I'm a sucker for.
+
+====
+
+name: Sunday Marathon 2021
+bref: An annual entry in the day-before-marathon-monday marathons.
+host: exercise logbook
+date: 2021-04-18
+body:
+
+A pseudo-tradition marathon the sunday before the real marathon. In 2021 it was run on Sunday 4/18 starting at my house in Medford and traveling South through Everett until Boston's Belle Isle Marsh Reservation and continuing to Revere Beach, where I turned North until the neck of Nahant. From there, I found the Northern Strand bike path and took it westward home through Lynn, Saugus, Malden and Medford.
+
 
 ====
 

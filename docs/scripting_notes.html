@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+    <!DOCTYPE html>
+
+<head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name='author' content='Marshall Moutenot'>
+  <meta name='keywords' content='Marshall Moutenot, mrshll, upstream tech, climate tech' />
+  <meta name='license' content='name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/' />
+  <meta name='description' content='Scripting Notes - ' />
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta property='og:type' content='website' />
+  <meta property='og:title' content='Scripting Notes' />
+  <meta property='og:description' content='' />
+  <meta name='twitter:creator' content='@marsh' />
+  <meta name='twitter:title' content='Scripting Notes' />
+  <meta name='twitter:description' content='' />
+  
+  
+  
+  <link rel='stylesheet' type='text/css' href='./links/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='./links/skeleton.css'>
+  <link rel='stylesheet' type='text/css' href='./links/main.css'>
+  <title>mrshll.com - Scripting Notes</title>
+</head>
+
+
+    <body>
+        <div class='content'>
+            <header>
+</header>
+
+<nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><mark><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='daily.html'>Daily/</a><mark></li><li><a href='first_paddle.html'>First Paddle</a><mark></li><li><mark><a href='scripting_notes.html'>Scripting Notes</a><mark></li><li><a href='webrings.html'>Webrings</a><mark></li><li><a href='doom_emacs.html'>Doom Emacs</a><mark></li><li><a href='long_shot.html'>Long shot</a><mark></li><li>+ 8 more</li></ul></nav>
+
+
+
+            
+            <h1>Scripting Notes</h1>
+            
+
+            
+
+            <section id='entry-body'>
+            
+            
+<h3>Rename file extension</h3>
+
+<pre><code>!#/bin/bash
+for f in *.JPG;
+  do mv -- "$f" "$&#123;f%.JPG&#125;.jpg";
+done</code></pre>
+
+<h3>Get paste-able filename list (used for <a class='mmxlink' href=jrnl.html>&#123;jrnl&#125;</a> entries)</h3>
+<code>ls -1 2021-08-*</code>
+
+<h3>Reverse terminal output</h3>
+<ul><li>Line-wise<ul><li><code>tac</code></li></ul></li><li>Character-wise<ul><li><code>rev</code></li></ul></li></ul>
+
+
+            </section>
+
+            
+
+            
+
+
+            
+        </div>
+    </body>
+
+    <footer>
+  <div class='footer-row'>
+    <a href="https://twitter.com/marsh">
+      <img src="img/twitter.png" style="height: 1.8rem">
+    </a>
+    <a href="https://github.com/mmoutenot">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2021</span>
+  </div>
+
+  <div id='lightswitch'>
+      <input type='checkbox' id='lightswitch-input'/>
+      <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+   const toggleSwitch = document.querySelector('#lightswitch input');
+   toggleSwitch.addEventListener('change', e => {
+       const theme = e.target.checked ? 'dark' : 'light';
+       localStorage.setItem('data-theme', theme);
+       document.documentElement.setAttribute('data-theme', theme)
+   });
+   const theme = localStorage.getItem('data-theme') || 'light';
+   document.querySelector('#lightswitch input').checked = theme == 'dark';
+   document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+
+
+</html>
+<html>

@@ -38,6 +38,8 @@ type Rule struct {
 const DOC_DELIM = "===="
 const HEAD_LEN = 6
 const H_ADJUSTMENT = 1
+const CURLY_BRACE_L = "&#123;"
+const CURLY_BRACE_R = "&#125;"
 
 var RULES = []Rule{
 	// headers
@@ -311,13 +313,17 @@ func createTitle(match []string, body string) string {
 
 func createCodeBlock(match []string, body string) string {
 	code := match[0][4 : len(match[0])-4]
+	code = strings.Replace(code, "{", CURLY_BRACE_L, -1)
+	code = strings.Replace(code, "}", CURLY_BRACE_R, -1)
 	html := fmt.Sprintf("<pre><code>%s</code></pre>", code)
 	return strings.Replace(body, match[0], html, 1)
 }
 
 func createCode(match []string, body string) string {
-	text := strings.TrimSpace(match[1])
-	html := fmt.Sprintf("<code>%s</code>", text)
+	code := strings.TrimSpace(match[1])
+	code = strings.Replace(code, "{", CURLY_BRACE_L, -1)
+	code = strings.Replace(code, "}", CURLY_BRACE_R, -1)
+	html := fmt.Sprintf("<code>%s</code>", code)
 	return strings.Replace(body, match[0], html, 1)
 }
 
@@ -379,16 +385,16 @@ func createLink(match []string, body string) string {
 	text := href
 
 	// we use the character codes for {} so that subsequent find-and-replaces do not collide
-	template := "<a class='mmxlink' href='%s'>&#123;%s&#125;</a>"
+	template := "<a class='mmxlink' href='%s'>%s%s%s</a>"
 	if strings.HasPrefix(href, "http") || strings.HasPrefix(href, "#") {
-		template = "<a class='mmxlink' href='%s' target='_blank'>&#123;^%s&#125;</a>"
+		template = "<a class='mmxlink' href='%s' target='_blank'>%s^%s%s</a>"
 	}
 
 	if len(args) > 1 {
 		text = strings.TrimSpace(args[1])
 	}
 
-	html := fmt.Sprintf(template, href, text)
+	html := fmt.Sprintf(template, href, CURLY_BRACE_L, text, CURLY_BRACE_R)
 	return strings.Replace(body, match[0], html, 1)
 }
 
