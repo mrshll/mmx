@@ -13,6 +13,7 @@ body:
 
 <table>
     <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
+    <td><td>2021-09-13</td><td>Climb</td><td>90</td><td>Power endurance-ish gym session, did most V1-4s with little rest</td></tr>
     <tr><td>2021-09-11</td><td>Run</td><td>145</td><td>Road run, the Tri-city Community pathway to mystic lake loop; about 15 miles I'd guess</td></tr>
     <tr><td>2021-09-09</td><td>Run</td><td>90</td><td>Trail run with Tom Wang, nice and easy conversational pace up and around rock circuit in the east fells</td></tr>
     <tr><td>2021-09-06</td><td>Run</td><td>45</td><td>Road run; felt pretty slow and sore from the previous day, but kept a good pace through Medford</td></tr>
@@ -28,7 +29,7 @@ body:
     <tr><td>2021-08-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
     <tr><td>2021-08-22</td><td>Run</td><td>40</td><td>road; slow</td></tr>
     <tr><td>2021-08-20</td><td>Kayak</td><td>240</td><td>sea kayak along the maine coast, easy paddling</td></tr>
-    <tr><td>2021-08-17</td><td>Run</td><td>30</td><td>road; moderate in Phippsberg; hunted by mosquitos</td></tr>
+    <tr><td>2021-08-17</td><td>Run</td><td>30</td><td>road; moderate in Phippsberg; hunted by mosquitoes</td></tr>
     <tr><td>2021-08-14</td><td>Run</td><td>30</td><td>road; fast though Portland ME around the west side</td></tr>
     <tr><td>2021-08-13</td><td>Bodyweight</td><td></td><td>10 sets of 10 pushups, 10 squats</td></tr>
     <tr><td>2021-08-10</td><td>Run</td><td>40</td><td>road; with Jay, Dax, and Mochi along the Alewife Brook boardwalk and around the upper mystic river</td></tr>
