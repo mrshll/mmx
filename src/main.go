@@ -278,7 +278,6 @@ func renderEntryHTML(e Entry) string {
 
 func isDescendentOfSlug(e Entry, slug string) bool {
 	for e.Parent.Slug != slug {
-		fmt.Printf("%s %s\n", e.Slug, e.Parent.Slug)
 		if e.Parent.Slug == e.Slug {
 			return false
 		}
