@@ -6,64 +6,6 @@ indx: full
 
 ====
 
-name: Exercise Logbook
-host: Logbooks
-bref: Tracking running, climbing and other movement
-body:
-
-<table>
-    <tr><th width=100>Date</th><th>Activity</th><th>Duration (min)</th><th>Notes</th></tr>
-    <td><td>2021-09-23</td><td>Run</td><td>120</td><td>Road; Run to Jessie/Joma and back - powered by the Harvest Moon</td></tr>
-    <td><td>2021-09-22</td><td>Run</td><td>90</td><td>Road; Run through Everett and back through Medford - coffee with Fiona halfway</td></tr>
-    <td><td>2021-09-20</td><td>Run</td><td>90</td><td></td></tr>
-    <td><td>2021-09-19</td><td>Run</td><td>90</td><td></td></tr>
-    <td><td>2021-09-17</td><td>Bike</td><td>90</td><td>To Cambridge and back, tres sweaty</td></tr>
-    <td><td>2021-09-14</td><td>Run</td><td>45</td><td></td></tr>
-    <td><td>2021-09-13</td><td>Climb</td><td>90</td><td>Power endurance-ish gym session, did most V1-4s with little rest</td></tr>
-    <tr><td>2021-09-11</td><td>Run</td><td>145</td><td>Road run, the Tri-city Community pathway to mystic lake loop; about 15 miles I'd guess</td></tr>
-    <tr><td>2021-09-09</td><td>Run</td><td>90</td><td>Trail run with Tom Wang, nice and easy conversational pace up and around rock circuit in the east fells</td></tr>
-    <tr><td>2021-09-06</td><td>Run</td><td>45</td><td>Road run; felt pretty slow and sore from the previous day, but kept a good pace through Medford</td></tr>
-    <tr><td>2021-09-05</td><td>Run</td><td>90</td><td>Road + trail; rock circuit from start to flynn rink</td></tr>
-    <tr><td>2021-09-04</td><td>Tennis</td><td>90</td><td>Versus Russ!</td></tr>
-    <tr><td>2021-09-02</td><td>Climb</td><td>45</td><td>Quick one</td></tr>
-    <tr><td>2021-08-31</td><td>Run</td><td>60</td><td>Trail; fast pace on the East Fells rock circuit back-half loop; felt awesome</td></tr>
-    <tr><td>2021-08-29</td><td>Climb</td><td>45</td><td>Haven't been in a while so kept it super easy. Just did all the V1s and V2s, up and downclimb without rest</td></tr>
-    <tr><td>2021-08-29</td><td>Run</td><td>45</td><td>Run to rock gym; slow pace, felt tired from yesterday</td></tr>
-    <tr><td>2021-08-28</td><td>Run</td><td>100</td><td>Met up with Dan - 3.5 miles to him, 6 miles together, 3.5 miles home; comfortable pace along the Minuteman and Mystic</td></tr>
-    <tr><td>2021-08-25</td><td>Bodyweight</td><td>45</td><td></td></tr>
-    <tr><td>2021-08-23</td><td>Run</td><td>30</td><td>road; slow</td></tr>
-    <tr><td>2021-08-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
-    <tr><td>2021-08-22</td><td>Run</td><td>40</td><td>road; slow</td></tr>
-    <tr><td>2021-08-20</td><td>Kayak</td><td>240</td><td>sea kayak along the maine coast, easy paddling</td></tr>
-    <tr><td>2021-08-17</td><td>Run</td><td>30</td><td>road; moderate in Phippsberg; hunted by mosquitoes</td></tr>
-    <tr><td>2021-08-14</td><td>Run</td><td>30</td><td>road; fast though Portland ME around the west side</td></tr>
-    <tr><td>2021-08-13</td><td>Bodyweight</td><td></td><td>10 sets of 10 pushups, 10 squats</td></tr>
-    <tr><td>2021-08-10</td><td>Run</td><td>40</td><td>road; with Jay, Dax, and Mochi along the Alewife Brook boardwalk and around the upper mystic river</td></tr>
-    <tr><td>2021-08-08</td><td>Run</td><td>120</td><td>road; to Stoneham and back through Winchester on the Tri-City path, hot and humid yow; some parts super quick, others more struggle</td></tr>
-    <tr><td>2021-08-05</td><td>Run</td><td>45</td><td>trail;</td></tr>
-    <tr><td>2021-08-03</td><td>Run</td><td>45</td><td>trail;</td></tr>
-    <tr><td>2021-08-01</td><td>Run</td><td>90</td><td>road;</td></tr>
-    <tr><td>2021-07-28</td><td>Run</td><td>90</td><td>trail; moderate pace reverse cross fells from hemlock pool path to victory park</td></tr>
-    <tr><td>2021-07-26</td><td>Bodyweight</td><td>20</td><td>plate circuit</td></tr>
-    <tr><td>2021-07-21</td><td>Run</td><td>60</td><td>trail; moderate</td></tr>
-    <tr><td>2021-07-19</td><td>Climb</td><td>70</td><td>bouldering</td></tr>
-    <tr><td>2021-07-19</td><td>Run</td><td>21</td><td>road; Easy with Alej and Dax</td></tr>
-    <tr><td>2021-07-17</td><td>Run</td><td>70</td><td>trail; Blue start > Flynn; felt great</td></tr>
-    <tr><td>2021-07-13</td><td>Run</td><td>45</td><td>road; fast, Ran Falmouth to Woodshole and back on the bike path.</td></tr>
-    <tr><td>2021-07-11</td><td>Run</td><td>70</td><td>trail; Flynn Rink > Cross Fells > Skyline > Bellevue Pond at a pretty good pace; knee feeling better</td></tr>
-    <tr><td>2021-07-06</td><td>Climb</td><td>90</td><td>bouldering with Alex G. at CRG Cambridge; fun time, but kept it light; knee bothering me still so going to take a few days off of running/climbing</td></tr>
-    <tr><td>2021-07-04</td><td>Run</td><td>90</td><td>road; moderate pace around Melrose, left knee hurts :( maybe from tennis or prev shoes?</td></tr>
-    <tr><td>2021-07-03</td><td>Climb</td><td>60</td><td>bouldering; another v6</td></tr>
-    <tr><td>2021-07-01</td><td>Climb</td><td>90</td><td>bouldering; fifth time in 18 months and got a v6 -- not bad</td></tr>
-    <tr><td>2021-07-01</td><td>Run</td><td>25</td><td>trail; easy pace, with Alej and Dax</td></tr>
-    <tr><td>2021-06-29</td><td>Run</td><td>35</td><td>road; easy pace, in a new pair of Hokas that need to be broken in</td></tr>
-    <tr><td>2021-06-28</td><td>Tennis</td><td>120</td><td>Avec Russ; hot hot hot day</td></tr>
-    <tr><td>2021-06-27</td><td>Bike</td><td>120</td><td>road ride to beach; easy pace</td></tr>
-    <tr><td>2021-06-26</td><td>Run</td><td>50</td><td>road; moderate pace</td></tr>
-</table>
-
-====
-
 
 name: Film Logbook
 host: Logbooks
@@ -113,6 +55,9 @@ indx: embed
 body:
 
 Books to read:
+- _Day of the Oprichhlk_ by Vladamir Soroki
+- _Oblomov_ by Ivan Goncharov
+- _Demons_ by Fyodor Dostoevsky
 - _Tools for Conviviality_ by Ivan Illich
 - _Abandon the Old in Tokyo_ by Yoshihiro Tatsumi
 - _Neuromancer_ by William Gibson
@@ -140,12 +85,118 @@ Books to read:
 - _The Song of Achilles_ by Madeline Miller
 
 Other reading/articles:
-- {https://compudanzas.net/uxn_tutorial.html, uxn tutorial}
 - {https://pioneerworks.org/broadcast/i-know-a-place-pipkin, I Know a Place by Everest Pipkin}
 - {https://kurti.sh/pubs/unplanned_limits17.pdf, Unplanned Obsolescence: Hardware and Software After Collapse}
 - {https://www.are.na/blog/on-forest-knowledge-and-living-growing-thoughts, On Forest Knowledge and Living, Growing Thoughts}
 - {https://www.are.na/blog/the-internet's-back-to-the-land-movement, The Internet's Back-to-the-Land Movement}
 - {https://reallifemag.com/reconnected/, Reconnected: Decentralizing the internet alone wont lift it above politics or save it from corporate co-operation}
+
+====
+
+name: Roman Holiday
+bref: Roman Holiday, 1953
+date: 2021-11-29
+host: film logbook
+body:
+
+[img/roman-holiday.jpg]
+
+====
+
+name: Sabrina
+bref: Sabrina, 1954
+date: 2021-11-26
+host: film logbook
+body:
+
+[img/sabrina.png]
+
+====
+
+name: Something Wicked This Way Comes
+bref: <em>Something Wicked This Way Comes</em> by Ray Bradbury
+host: reading logbook
+body:
+
+Rationing be damned (see Dandelion Wine) - In progress
+
+====
+
+name: Dandelion Wine
+bref: <em>Dandelion Wine</em> by Ray Bradbury
+date: 2021-11-09
+host: reading logbook
+body:
+
+Bradbury is an author I've tried to ration - to hoard his stories and novels so
+that I can read new ones year after year. Since reading The Martian Chronicles a
+long time ago, I've been attracted to the odd humanity he injects into his
+otherwise otherworldly novels. What I loved most about _Dandelion Wine_ was that
+it exchanged the new worlds and phantom beings for a small town, all too
+familiar, and phantoms of a more terrestrial, pedestrian sort. It's a classic
+coming-of-age story, but one injected with so much humanity and insight.
+
+>>>
+A walk on a spring morning is better than an eighty-mile ride in a hopped-up
+car, you know why? Because it’s full of flavors, full of a lot of things
+growing.
+>>>
+
+>>>
+Lilacs on a bush are better than orchids. And dandelions and devil grass are
+better! Why? Because they bend you over and turn you away from all the people
+and the town for a little while and sweat you and get you down where you
+remember you got a nose again. And when you’re all to yourself that way, you’re
+really yourself for a little while; you get to thinking things through, alone.
+Gardening is the handiest excuse for being a philosopher. Nobody guesses, nobody
+accuses, nobody knows, but there you are, Plato in the peonies, Socrates
+force-growing his own hem-lock. A man toting a sack of blood manure across his
+lawn is kin to Atlas letting the world spin easy on his shoulder.
+>>>
+
+>>>
+The earth shook: rat-a-tat rat-a-tat, boom! Rumble. That’s a rare word: rumble.
+Oh, how that mighty storm rumbled along down, up, and over the rises, and all
+you could see was the cloud and nothing inside.
+>>>
+
+>>>
+Tom,” said Douglas, “just promise me one thing, okay?” “It’s a promise. What?”
+“You may be my brother and maybe I hate you sometimes, but stick around, all
+right?” “You mean you’ll let me follow you and the older guys when you go on
+hikes?” “Well … sure … even that. What I mean is, don’t go away, huh? Don’t let
+any cars run over you or fall off a cliff.” “I should say not! Whatta you think
+I am, anyway?” “’Cause if worst comes to worst, and both of us are real old—say
+forty or forty-five some day—we can own a gold mine out West and sit there
+smoking corn silk and growing beards.” “Growing beards! Boy!” “Like I say, you
+stick around and don’t let nothing happen.” “You can depend on me,” said Tom.
+“It’s not you I worry about,” said Douglas, “It’s the way God runs the world.”
+Tom thought about this for a moment. “He’s all right, Doug,” said Tom. “He
+tries.”
+>>>
+
+>>>
+"After I cry hard it’s like it’s morning again and I’m starting the day over.”
+>>>
+
+>>>
+RELISH! What a special name for the minced pickle sweetly crushed in its
+white-capped jar. The man who had named it, what a man he must have been.
+Roaring, stamping around, he must have tromped the joys of the world and jammed
+them in this jar and writ in a big hand, shouting, RELISH! For its very sound
+meant rolling in sweet fields with roistering chestnut mares, mouths bearded
+with grass, plunging your head fathoms deep in trough water so the sea poured
+cavernously through your head. RELISH!
+>>>
+
+====
+
+name: The Backyard Adventurer
+bref: <em>The Backyard Adventurer</em> by Beau Miles
+host: reading logbook
+body:
+
+In progress
 
 ====
 
@@ -436,7 +487,7 @@ I don't think I've ever been completely dissapointed by Pulitzer Winner. They ma
 
 name: Sunday Marathon 2021
 bref: An annual entry in the day-before-marathon-monday marathons.
-host: exercise logbook
+host: running
 date: 2021-04-18
 body:
 

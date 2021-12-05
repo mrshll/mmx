@@ -8,23 +8,33 @@ body:
 
 _Last {mmx, compiled} {^buildtime}_
 
+* Latest
+* : {December 2022}
+
 * Reading
-* : {Labyrinths}
-* : {A Short History of Nearly Everything}
+* : {Something Wicked This Way Comes}
 
 * Projects
 * : Continuing to explore and evolve this site, {mmx}
-* : Growing the {Upstream Tech} team this Spring and Summer
+* : Growing the {Upstream Tech} team in 2022
 * : Starting The Mountain Goat in Western MA with my brother
-* : Spending time in the {garden}
-* : {gamedev, Making a game} about birds and buffalo
-
-* {Daily, Daily Notes}
-* {Logbooks}
 
 {^readfile, ./energy.html}
 
 <h1>Then</h1>
+
+====
+
+name: December 2022
+date: 2021-12-01
+host: thoughts
+body:
+
+# Upstream Tech
+
+December is an interesting month, especially when it comes to business. For the past few years, it's always felt like all the projects, sales and partnerships go from a simmer to a boil in the first few days of the month. The second week is peddling for dear life to keep up. Suddenly, the third week comes around and WHAM, if you didn't ink the collboration, close the deal or ship the project _it's too late; let's circle back in the New Year_.
+
+
 
 ====
 
@@ -42,13 +52,10 @@ indx: full
 
 ====
 
-name: First Paddle
-host: notes
-bref: Notes and ephemera for an October kayak trip in Maine
-body:
-
-- Portland Paddle offers {https://www.portlandpaddle.net/selfguided, self-guided trip support}, although we may have to take a course on kayak rescue.
-- {https://en.wikipedia.org/wiki/Jewell_Island_(Maine), Jewell Island} could be a destination -- it looks like others have camped
+name: Thoughts
+host: now
+bref: Thoughts & Writing 
+indx: full
 
 ====
 
@@ -133,15 +140,6 @@ In terms of my work, I'd love to find ways to incorporate tools and systems that
 
 ## Experiments
 
-### Tracking
-
-The past five years, I haven't measured a run or taken note of climbing progress. I mostly just try hard and make sure it feels good. There have been brief stings of daily journaling, and Quinault and I got pretty into planning out climbing workouts around 2016/2017 when we were living together. But those have taken more the form of to do lists (a la intentions) rather than progress tracking. I've also done a poor job tracking the kinds of work and output I have on a given day, so I don't have much data to look back on to analyze. In retrospect, be it for exercise, creative pursuits, or work that kind of information would have been invaluable for a 5-year gestalt exercise.
-
-This is to say I hope to start tracking:
-- Rough time spent on different {projects}
-- My {Exercise Logbook, physical activity} - but lightly, i.e. how long did I run and how did it feel
-- {reading logbook, Art and media} I'm consuming beyond reading -- whether it's a film I've watched, an album, or some other artform, I'd like to start jotting down notes when a work is worth remembering
-
 ## Place
 
 I've found myself focusing a bit too much on future potential places to live over the past few years, which have prevented me from ::living in the moment, man::. When I lived in the city, I was obsessed with being closer to natural space and having room to grow food. Living in the liminal space between city and forest (aka _the suburbs_), I now want both a city and to live in the middle of nowhere. Helpful.
@@ -213,7 +211,7 @@ This list captures the tools and miscellanea that I would be hamstrung without.
 ====
 
 name: Tufts Talk 2020-02-23
-host: Notes
+host: thoughts
 bref: Notes ahead of my talk to the Tufts CS and Entrepreneurship Communities
 date: 2021-02-23
 body:
@@ -257,10 +255,7 @@ body:
 
 ## Banking
 Stripe Atlas used to magically create a bank account with a bank, Azlo, - but it was closed down by its parent company.
-
-* {https://mercury.com, Mercury} : TODO
-
-* {https://banknovo.com/, Novo} : TODO
+* {https://mercury.com, Mercury} : Simple bank geared towards companies
 
 ====
 
@@ -277,6 +272,7 @@ body:
 - {https://www.are.na/blog/the-internet's-back-to-the-land-movement}
 - {https://indieweb.org}
 - {https://solar.lowtechmagazine.com/, Low Tech Magazine's solar powered website}
+- {How to design a sailing ship for the 21st century?}
 
 # Tools and protocols
 - {https://cabal.chat/}
@@ -349,20 +345,6 @@ Meanwhile, the squash, the late bloomer of the family, is steadily extending her
 
 Native people speak of this gardening style as the Three Sisters.
 >>> _{Braiding Sweetgrass}_ by Robin Wall Kimmerer
-
-====
-
-name: Space myst
-host: Notes
-date: 2021-01-18
-bref: A mystery point-and-click concept set in space
-body:
-
-My attempts to make games thus far have been thwarted by shiny tools and a tendency to over-complicate the building process. I've played with both Godot and Unity, and while initial experiments have clearly illustrated their power as game engines, this game concept strips away my typical rabbit holes (complex game/physics/graphics) to focus on narrative and game mechanics.
-
-The game is a Myst-like, set on a spacecraft. The player navigates between rooms and views within the rooms, such as a close-up of a control panel or viewport. Various elements within each view are interactive. Puzzles related to this narrative will present themselves over time to enable access to new areas of the ships, or modify previous views that have already been visited.
-
-The game starts with the player awaking from a hibernation pod. There are no other evident signs of other crew members, and the player cannot remember why they are on the spacecraft.
 
 ====
 
@@ -665,7 +647,7 @@ Usage died off for a variety of reasons. I hope to revive this project, potentia
 name: An appeal for impact
 date: 2016-11-10
 bref: An Appeal For Impact
-host: Notes
+host: thoughts
 body:
 
 As technologists, we have the privilege to exist in an era hungry for tweets, likes, cars that drive themselves, apps for exercise, sites to share other sites — and that gives us the opportunity to choose what we work on.
@@ -800,13 +782,10 @@ And obligatorily: if the way we work sounds fun and our mission resonates, our t
 name: Web nostalgia
 bref: What happened to the web's sparkle?
 date: 2020-12-06
-host: Notes
+host: thoughts
 body:
 
 There is something precious about a webpage. It's what excited me so much when I first encountered the internet as a kid. A blank canvas, yes, but also a nook to spark into existence. A manifestation of self. I'm talking about Web 1.0. Before it got fancy. A good site name, some content written as much for the creator as for the visitor. Sprinkled with a few of the early gifs and counter snippets. I miss that.
-
-[img/gokupowerup.gif, An example of a gif from my youth: Goku from Dragon Ball Z powering up]
-_A classico gif you'd likely find on 8 year old Marsh's website_
 
 There were some companies in the mix - Geocities and the like - but they were entirely optional. The web was more like, well, a web: meandering connections between distant nodes. Linking to others sites, a process of discovery between diligent research and bespoke digital collections. There was always a personality behind it. What we have isn't a mesh. It's a series of superhighways with clusters of content at the offramps. The only way someone might discover this (if at all) would be through the link in my bio on Twitter. Perhaps it's because the old scenic byways of the internet are forgotten and the only way we can travel is at 70 mph.
 
@@ -815,7 +794,7 @@ There were some companies in the mix - Geocities and the like - but they were en
 
 name: Rainwater
 date: 2021-05-29
-host: Notes
+host: thoughts
 body:
 
 The droplets fell from the unfixable gutter with a tabla's rhythm. Two attempts prior, once by The Gutter Giants and once by handyman Jim (or John, I forget), had not been enough to quell its guttural(!) rebellion. The glowing readout from my backyard weather station informed me that this rain event was surpassing 1 full inch of rain. My two interconnected rainbarrels ~were likely on the verge of overflowing~ overflowed.
@@ -823,19 +802,6 @@ The droplets fell from the unfixable gutter with a tabla's rhythm. Two attempts 
 If you close your eyes in a rain storm like this one, a downpour but not quite a tempest, you can coerce your auditory faculties to transform the sparse white noise of the raindrops into the creaks and groans of an 18th century brigantine. In fact, if you lean into this brain trickery, you can almost start to feel the house around you ever so slightly sway.
 
 I'd be ecstatic for the rain if it were not accompanied by a drop into the 40s. Instead I'm merely glad that my barrels will be filled. My vegetable garden, especially the corn and bean bushes, will guzzle up the water, but I'm not sure how the pumpkins and peppers will manage the brief chill.
-
-====
-
-name: Long shot
-date: 2021-06-03
-host: Notes
-body:
-
-Humans successfully expanded planetary presence, first building a base on the moon, then building a base on Mars, and finally expanding outwards to the belt and beyond. Planetary expansion began first as a persuit of science, driven by curiosity and human ingenuity. It then became a persuit of resources, as expansion beget expansion. The world economy was thrown into paradoxical turmoil as it struggled to account for both scarcities of materials to pursue this new gold rush as well as the intermittent abundance that it produced.
-
-_Longs_ were the importers of this new age, outfitting cargo ships for long and lucrative journeys to mine and trade resources. Every year, a long broke the record ("max", they called it) for furthest from Earth travelled, with some longs organizing hauls at destinations that traded economics for prestige of a new max. Longs originally relied on sophisticated technology, artificial intelligences, complex computer hardware, and massive sensor arrays. But as longs pushed new max, a counter culture of low tech became the norm. Longs at that distance had no one to rely on when components malfunctioned or operated outside of system parameters. Longs needed to be self-sufficient (as much as one could be in a rocket ship), and fix things that went wrong. In the gold rush, longs perished, especially those with an overreliance of technology. As decades passed, this became a dogma of successful longs.
-
-Chief among these {low tech, low-techs}, especially due to its crucial role in extreme long-range communication, was radio. In order to boost decaying signal strengths, longs deployed _buoys_ - radio transmitter and repeater satellites, which over time wove a net of coverage that stretched across the solar system. Time delays were still a major factor, but given the long, dark journeys longs pursued, the radio network was sometimes the only way to kill time as well as the only lifeline. In some cases, the buoys became _lighthouses_, stations crafted from multiple long ships or a combination of salvaged wreckage, assumed by outsiders to be the result of ill fortune, but treated by the lighthouse keepers as home, and by longs across the system as beacons of humanity - providing "local" news, music, the ramblings of solitary keepers, and updates on the latest max attempts.
 
 ====
 
@@ -855,7 +821,7 @@ body:
 
 name: Running
 date: 2021-07-03
-host: about
+host: thoughts
 body:
 
 "Running is a celebration of life" Zaf Ahmed, my middle and highschool coach told us. Those words echo 18 years later on my long runs. And Zaf was right (I should tell him) - there is a purity in the physical act and mental state that together make running. I can't think of a better description than Zaf's: a celebration. I'm sure fellow runners will understand. There is quiet ecstasy lying in wait, and when it does you forget your legs, the strain, the heat and you can go forever.
@@ -874,22 +840,20 @@ Now I run without a phone, no GPS watch, nothing that will tell me my precise pa
 
 Trail running also introduced me to the world of ultramarathoning, which has exploded in popularity over the last decade. I found filmmaker Jamil Coury chronicling immense runs and checking in dozens of miles in, the air thin at high elevation, {https://youtu.be/Kvjd9sEVv-k?t=1027, with an ear-to-ear smile describing how it had just started hailing and that it was so awesome man, what a blast}. This relentlessly positive attitude towards daunting physical challenges was infectious. It inspired me to turn runs into backyard adventures - runs {run to Salem, up the coastline to nearby towns}, {sunday marathon 2021, solo marathons through new neighborhoods}, and exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.
 
-See {exercise logbook, my running and exercise logbook} for recent runs.
-
 ====
 
 name: Run to Salem
 date: 2021-06-18
-host: exercise logbook
+host: running
 body:
 
 A run from Medford to Salem up the East Cost Greenway.
 
 ====
 
-name: Webrings
+name: On Webrings
 date: 2021-07-10
-host: notes
+host: thoughts
 body:
 
 The webrings I've encountered have been an immense source of inspiration, social connection. At the start of 2021, I stumbled upon {https://webring.xxiivv.com, webring.xxiivv.com} and was immediately drawn in to the thematic cohesion and shared persuit of creating decommodified digital spaces, better tools, and experimental processes for creative projects. As someone who first became interested in code via trying to set up a website, it also carried an air of nostalgia that is especially poignant on the sites that replicate the geocities vibe.
@@ -924,28 +888,8 @@ I know that people are becoming more conscious of their online prescences being 
 
 ====
 
-name: TODO
-host: projects
-body:
-
-- flesh out {karp} concept
-- write usage guide for {mmx}
-- finish {5-year gestalt}
-- photograph and update {garden}
-- simplify {werm.world}
-- fix embedded docs creating their own page {mmx}
-
-====
-
-name: karp
-host: projects
-date: 2021-08-07
-body:
-
-====
-
 name: Work in Progress
-host: notes
+host: thoughts
 indx: full
 body:
 

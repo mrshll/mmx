@@ -226,7 +226,7 @@ func makeNav(e Entry) string {
 	for !stop {
 		if count <= MAX_NAV_DEPTH {
 			// prepend as we climb the tree
-			nav = makeSubNav(*navE.Parent, navE, 6) + nav
+			nav = makeSubNav(*navE.Parent, navE, 7) + nav
 		}
 
 		stop = navE.Parent.Parent.Name == navE.Parent.Name
