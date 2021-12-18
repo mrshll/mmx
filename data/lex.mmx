@@ -8,9 +8,6 @@ body:
 
 _Last {mmx, compiled} {^buildtime}_
 
-* Latest
-* : {December 2022}
-
 * Reading
 * : {Something Wicked This Way Comes}
 
@@ -22,19 +19,6 @@ _Last {mmx, compiled} {^buildtime}_
 {^readfile, ./energy.html}
 
 <h1>Then</h1>
-
-====
-
-name: December 2022
-date: 2021-12-01
-host: thoughts
-body:
-
-# Upstream Tech
-
-December is an interesting month, especially when it comes to business. For the past few years, it's always felt like all the projects, sales and partnerships go from a simmer to a boil in the first few days of the month. The second week is peddling for dear life to keep up. Suddenly, the third week comes around and WHAM, if you didn't ink the collboration, close the deal or ship the project _it's too late; let's circle back in the New Year_.
-
-
 
 ====
 
