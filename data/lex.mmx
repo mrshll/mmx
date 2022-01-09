@@ -127,7 +127,7 @@ Early in my career my measure for whether I was doing the right kind of work was
 
 This will be the pivotal question for me to answer this year.
 
-{Upstream's, Upstream Tech} subject matter is one of personal resonance, but the technologies we build are difficult for me to find excuses to use myself. I find that when I am building something that I can use, I am more creative, have a inexhaustible energy, and derive more day-to-day satisfaction.
+{upstream tech, Upstream's} subject matter is one of personal resonance, but the technologies we build are difficult for me to find excuses to use myself. I find that when I am building something that I can use, I am more creative, have a inexhaustible energy, and derive more day-to-day satisfaction.
 
 Outside of work, I'd like to learn crafts that use my hands and reduce my dependency on external systems and systems that produce waste. Sewing, gardening, carpentry and "handiness", and fermentation to name a few. I've dabbled in some of these, and would like to deepen my knowledge.
 
@@ -187,7 +187,7 @@ body:
 
 I am opinionated about my tools, but I oscillate wildly between upcycled stand-ins and high quality last-forevers. In general the goal is to have fewer "items," to avoid the  but new hobbies and projects often come with their accoutrements. And I am a person who has a lot of {projects}.
 
-This list captures the tools and miscellanea that I would be hamstrung without.
+This list captures the tools and miscellany that I would be hamstrung without.
 
 ## Computing
 
@@ -340,6 +340,19 @@ Meanwhile, the squash, the late bloomer of the family, is steadily extending her
 
 Native people speak of this gardening style as the Three Sisters.
 >>> _{Braiding Sweetgrass}_ by Robin Wall Kimmerer
+
+====
+
+name: Ideas
+host: Projects
+body:
+
+## Radio hub (working title "yourelisteningto.com")
+
+## Online Battleline (card game, working title "Formations")
+
+## {mmx} internal
+Aside from paper notebooks, I haven't found digital notetaking or brainstorming venues that have _stuck_. I sometimes want a version of mmx that is either a native or web-based client with editor capabilities to parse {mmxup} at runtime and create structure - sort of like {https://obsidian.md/, Obsidian}.
 
 ====
 
@@ -856,14 +869,14 @@ The webrings I've encountered have been an immense source of inspiration, social
 A friend from Nashville, Eli, was thinking about writing something about webrings and asked the following, paraphrased:
 
 *Are webrings a recreation of a more user-controlled internet where information, creation, art, etc can be shared without mediation by corporate entities?*
-This seems to me a big component of it. I can't speak to the precise genesis of the various webrings I've encountered, but there are prevalent attitudes rejecting corporate ownership over internet presence in favor of {low tech}, right to repair, and longtermism. Through sites on the webring, I've discovered many other efforts to replace popular but corporate internet services with open source, federated, and/or peer-to-peer systems and technologies.
+This seems to me a big component of it. I can't speak to the precise genesis of the various webrings I've encountered, but there are prevalent attitudes rejecting corporate ownership over internet presence in favor of {low tech}, right to repair, and longterm-ism. Through sites on the webring, I've discovered many other efforts to replace popular but corporate internet services with open source, federated, and/or peer-to-peer systems and technologies.
 
 *Do webrings represent something more philosophical or nostalgic for you, or anyone you know?*
 I think there are two components to this:
 + The role of the webring
 + The philosophy of the kinds of websites you'll find on webrings
 
-What webrings represent will differ participant-to-participant or visitor-to-visitor depending on past experience -- for example, how many hours they spent making a sick geocities site in the 90s. For me, my earliest memories of interacting with the internet were ones of sheer discovery and excitement. There was a universe to be traversed. Sites were both about topics (_welcome to my website all about vintage medium format cameras!_) and personal. Either way, the site was a unique representation of the creator. "Surfing" felt like walking the stacks of a library rather than a doomscroll of homogenic content. Stumbling upon a resonant site was exhilerating, and a whole browser extension, Stumble Upon, was built to try to structure the act of discovery across the vast chasms of the internet. Webrings create niche spaces that enable this kind of discovery and connection.
+What webrings represent will differ participant-to-participant or visitor-to-visitor depending on past experience -- for example, how many hours they spent making a sick geocities site in the 90s. For me, my earliest memories of interacting with the internet were ones of sheer discovery and excitement. There was a universe to be traversed. Sites were both about topics (_welcome to my website all about vintage medium format cameras!_) and personal. Either way, the site was a unique representation of the creator. "Surfing" felt like walking the stacks of a library rather than a doomscroll of homogenic content. Stumbling upon a resonant site was exhilarating, and a whole browser extension, Stumble Upon, was built to try to structure the act of discovery across the vast chasms of the internet. Webrings create niche spaces that enable this kind of discovery and connection.
 
 The nodes of the ring are as important as the ring itself. The websites are often thematically or philosophically aligned. One notes:
 
@@ -879,7 +892,7 @@ And two questions from Eli's editor:
 The webrings and the sites that comprise them will show up on search engines unless they explicitly exclude themselves using methods that any website could. But in the common case, yes, they will appear on search engines. Even cooler though is that some webrings have search engines that just search the member websites of the webring. This is an incredible way to find others reading the same books and adding notes to their personal site, or to find someone working with a similar technology.
 
 *What evidence supports that it’s a recent ‘trend,’ or having a resurgence? Do you think that it is, and if so, why?*
-I know that people are becoming more conscious of their online prescences being wholly owned subsidiaries of corporate interest. For those who are interested in subverting that, I think it will become more and more popular. However, the corporate entities are formidible opponents when it comes to a mere trend. I think their hooks are sharp and deep enough to prevent a wholesale migration back to web 1.0, the cozy web, the low tech internet.
+I know that people are becoming more conscious of their online presences being wholly owned subsidiaries of corporate interest. For those who are interested in subverting that, I think it will become more and more popular. However, the corporate entities are formidable opponents when it comes to a mere trend. I think their hooks are sharp and deep enough to prevent a wholesale migration back to web 1.0, the cozy web, the low tech internet.
 
 ====
 
