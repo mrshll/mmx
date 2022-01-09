@@ -45,12 +45,18 @@
             
             
 <h3>Radio hub (working title "yourelisteningto.com")</h3>
+The pandemic brought to the fore methods of communication over distance. Reading <a class='mmxlink' href=all_the_light_we_cannot_see.html>&#123;All the Light We Cannot See&#125;</a>, setting up a microradio station (dormant) and sharing a lot of playlists with family and friends has kept the technology of "radio" simmering in the back of my mind as something I'd like to explore more. In setting up my microradio station, it became clear that while technologies like <a class='mmxlink' href='https://icecast.org/' target='_blank'>&#123;^Icecast&#125;</a> are mature and powerful, they are by no means easy. My pulse > <a class='mmxlink' href='https://www.musicpd.org/' target='_blank'>&#123;^mpd&#125;</a> > Icecast > website flow was a Rube Goldberg machine. I'd love for a small program that allowed anyone to easily set up an online station, with a page that served as hub of stations around the world.
 
+<p>That hub could be the best place to start - indexing stations that stream on Twitch and via their own streaming stacks. If I wanted to take it further and provide some mechanism to do the streaming itself, I could:
+<ol><li>build a native application that allows a user to mix audio-out and an audio-in (microphone) and combine them into a stream. (<a class='mmxlink' href='http://code.google.com/p/portaudio-go/' target='_blank'>&#123;^portaudio-go&#125;</a>, <a class='mmxlink' href='https://github.com/moriyoshi/pulsego/' target='_blank'>&#123;^pulsego&#125;</a>)</li><li>build a web application that uses the browser's "share tab with audio" functionality to stream audio</li></ol>
+There may already be some protocols or open source building blocks to do this sort of streaming (I recall some sort of library being compatible with things like Twitch too). Both would expose the stream in the hub at some reserved address, i.e. <strong>yourelisteningto.com/mrshll</strong></p>
 <h3>Online Battleline (card game, working title "Formations")</h3>
+From what I can tell, there does not exist an online version of <a class='mmxlink' href='https://www.gmtgames.com/p-939-battle-line-11th-printing.aspx' target='_blank'>&#123;^Battleline&#125;</a>. It would be fun to make one, possibly using <a class='mmxlink' href='https://boardgame.io/' target='_blank'>&#123;^boardgame.io&#125;</a> as the backing engine.
 
 <h3><a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a> internal</h3>
 Aside from paper notebooks, I haven't found digital notetaking or brainstorming venues that have <em>stuck</em>. I sometimes want a version of mmx that is either a native or web-based client with editor capabilities to parse <a class='mmxlink' href=mmxup.html>&#123;mmxup&#125;</a> at runtime and create structure - sort of like <a class='mmxlink' href='https://obsidian.md/' target='_blank'>&#123;^Obsidian&#125;</a>.
 
+<p>Web stuff is easy, but it would be a learning experience to build and deploy a native app across platforms. Since mmx was originally written in Golang, something like <a class='mmxlink' href='https://developer.fyne.io/' target='_blank'>&#123;^Fyne&#125;</a> could be interesting to play with.</p>
 
             </section>
 
