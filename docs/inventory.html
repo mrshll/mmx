@@ -33,10 +33,81 @@
     <body>
         <div class='content'>
             <header>
+
+    <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><mark><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='5-year_gestalt.html'>5-year gestalt</a><mark></li><li><a href='mom_q&a.html'>Mom Q&A</a><mark></li><li><a href='dax.html'>Dax</a><mark></li><li><mark><a href='inventory.html'>Inventory</a><mark></li></ul></nav>
+
+
+    
+    <div id='fm'>
+        <div id='fm-on' style='display: none;'>
+            <span>micro-radio station</span><br/>
+            <blink>
+                <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
+            </blink>
+            <span>on the air</span>
+            <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
+        </div>
+
+        <div id='fm-off' style='display: none;'>
+            <span>micro-radio station</span><br/>
+            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
+            <span>off air</span>
+        </div>
+    </div>
+
+
 </header>
 
-<nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><mark><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='5-year_gestalt.html'>5-year gestalt</a><mark></li><li><a href='mom_q&a.html'>Mom Q&A</a><mark></li><li><a href='dax.html'>Dax</a><mark></li><li><mark><a href='inventory.html'>Inventory</a><mark></li></ul></nav>
+<script>
+ const onAir = document.getElementById('fm-on')
+ const offAir = document.getElementById('fm-off')
 
+ const togglePlayButton = document.getElementById('fm-togglePlayButton')
+ togglePlayButton.onclick = togglePlay;
+
+ let audioStream, isPlaying = false;
+
+ function togglePlay () {
+     if (!audioStream) {
+         audioStream = new Audio('http://fm.mrshll.com:2016/stream')
+     }
+
+     if (isPlaying) {
+         audioStream.pause();
+         isPlaying = false;
+         togglePlayButton.innerHTML = '[Play]';
+     } else {
+         audioStream.play();
+         isPlaying = true;
+         togglePlayButton.innerHTML = '[Pause]';
+     }
+ }
+
+ function setOnAir () {
+     onAir.style='display: block;'
+     offAir.style='display: none;'
+ }
+
+ function setOffAir () {
+     onAir.style='display: none;'
+     offAir.style='display: block;'
+ }
+
+ async function fetchLiveStatus() {
+     try {
+         const liveStatusResponse = await (await fetch(
+             'https://fm.mrshll.com:2016/status-json.xsl'
+             
+         )).json();
+         setOnAir()
+     } catch {
+         setOffAir()
+     }
+ }
+
+ fetchLiveStatus();
+ setInterval(fetchLiveStatus, 30000);
+</script>
 
 
             

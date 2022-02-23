@@ -58,13 +58,20 @@ mark {
   background-color: var(--highlight-color);
 }
 
+header {
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  border-bottom: 1.5px dotted;
+}
+
 nav {
   font-size: 1.2rem;
   display: flex;
   overflow-x: auto;
-  padding-bottom: 2rem;
-  margin-bottom: 4rem;
-  border-bottom: 1.5px dotted;
+}
+
+#fm {
+  text-align: right;
 }
 
 
@@ -290,4 +297,11 @@ details[open] summary {
   footer {
     padding: 2rem 2.2rem 0;
   }
+}
+
+blink { animation: blink 1s linear infinite alternate; }
+
+@keyframes blink {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
