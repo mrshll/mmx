@@ -62,7 +62,7 @@
  async function fetchLiveStatus() {
      try {
          const liveStatusResponse = await (await fetch(
-             'https://fm.mrshll.com:2016/status-json.xsl'
+             'https://fm.mrshll.com/status-json.xsl'
              // 'http://localhost:8000/status-json.xsl'
          )).json();
          setOnAir()
