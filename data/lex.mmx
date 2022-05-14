@@ -20,8 +20,6 @@ _Last {mmx, compiled} {^buildtime}_
 * : Growing the {Upstream Tech} team in 2022
 * : Starting The Mountain Goat in Western MA with my brother
 
-{^readfile, ./energy.html}
-
 <h1>Then</h1>
 
 ====
