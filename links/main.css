@@ -59,9 +59,16 @@ mark {
 }
 
 header {
+  position: relative;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
   border-bottom: 1.5px dotted;
+}
+
+#fm {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 nav {
@@ -69,11 +76,6 @@ nav {
   display: flex;
   overflow-x: auto;
 }
-
-#fm {
-  text-align: right;
-}
-
 
 hr {
   border: none;
@@ -296,6 +298,11 @@ details[open] summary {
 
   footer {
     padding: 2rem 2.2rem 0;
+  }
+
+  #fm {
+    position: relative;
+    text-align: right;
   }
 }
 

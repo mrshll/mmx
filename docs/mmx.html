@@ -33,30 +33,24 @@
     <body>
         <div class='content'>
             <header>
-
     <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><a href='notes.html'>Notes/</a><mark></li><li><mark><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='dormant_projects.html'>Dormant projects/</a><mark></li><li><a href='ideas.html'>Ideas</a><mark></li><li><a href='music.html'>Music</a><mark></li><li><mark><a href='mmx.html'>mmx/</a><mark></li><li><a href='@carbonfreegrid.html'>@carbonfreegrid</a><mark></li><li><a href='garden.html'>Garden/</a><mark></li><li><a href='upstream_tech.html'>Upstream Tech/</a><mark></li><li>+ 1 more</li></ul><ul><li><a href='mmxup.html'>mmxup</a><mark></li></ul></nav>
-
-
     
-    <div id='fm'>
-        <div id='fm-on' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <blink>
-                <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
-            </blink>
-            <span>on the air</span>
-            <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
-        </div>
-
-        <div id='fm-off' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
-            <span>off air</span>
-        </div>
+<div id='fm'>
+    <div id='fm-on' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <blink>
+            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
+        </blink>
+        <span>on the air</span>
+        <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
     </div>
 
-
-</header>
+    <div id='fm-off' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
+        <span>off air</span>
+    </div>
+</div>
 
 <script>
  const onAir = document.getElementById('fm-on')
@@ -68,15 +62,13 @@
  let audioStream, isPlaying = false;
 
  function togglePlay () {
-     if (!audioStream) {
-         audioStream = new Audio('https://fm.mrshll.com/stream')
-     }
-
      if (isPlaying) {
          audioStream.pause();
          isPlaying = false;
          togglePlayButton.innerHTML = '[Play]';
      } else {
+         
+         audioStream = new Audio('https://fm.mrshll.com/stream')
          audioStream.play();
          isPlaying = true;
          togglePlayButton.innerHTML = '[Pause]';
@@ -108,6 +100,8 @@
  fetchLiveStatus();
  setInterval(fetchLiveStatus, 30000);
 </script>
+
+</header>
 
 
             
@@ -157,7 +151,7 @@ done</code></pre>
 
             
 <div class='incoming'>
-    ⇣ (6)
+    ⇣ (7)
     
     <details>
         <summary>
@@ -192,7 +186,16 @@ done</code></pre>
             <a href="./index.html">Now</a>&nbsp;
             
         </summary>
-        <em>Last <a class='mmxlink' href=mmx.html>&#123;compiled&#125;</a> <span>2022-05-14 9:11AM EDT</span></em>
+        <em>Last <a class='mmxlink' href=mmx.html>&#123;compiled&#125;</a> <span>2022-07-19 9:00AM EDT</span></em>
+    </details>
+    
+    <details>
+        <summary>
+            
+            <a href="./now.html">Now</a>&nbsp;
+            
+        </summary>
+        <p>This is the first entry in what I hope will be recurring format. It's an experiment in a different organizational structure on <a class='mmxlink' href=mmx.html>&#123;mmx&#125;</a> to move from topic-based organization on the site to regular writing that spans different projects and interests. I've updated pages less often than I thought I would, mainly because of how distributed the content is across the site. I think this sort of diary-tag-entity relationship is how all those hot tools like Roam and others do it (is it the zettel-whatever pattern?). Topics can have their own content but will also be supplemented with extractions from other page's references to those content. This already happens, but it's hidden at the bottom of a page in a <code>details</code> tag. I'm also interested to see if topic pages can be created without being explicitly defined. This change will need some small technical changes in mmx, but minor in the scheme of things. I am glad at how general-purpose mmx is, and pulling out some of the last technical idiosyncrasies will be a welcome refactor.</p>
     </details>
     
     <details>

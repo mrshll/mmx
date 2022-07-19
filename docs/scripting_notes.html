@@ -29,30 +29,24 @@
     <body>
         <div class='content'>
             <header>
-
-    <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><mark><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='daily.html'>Daily/</a><mark></li><li><a href='hiring.html'>Hiring</a><mark></li><li><a href='merveilles_forum_verification.html'>Merveilles Forum Verification</a><mark></li><li><mark><a href='scripting_notes.html'>Scripting Notes</a><mark></li><li><a href='doom_emacs.html'>Doom Emacs</a><mark></li><li><a href='the_fells.html'>The Fells</a><mark></li><li><a href='low_tech.html'>Low Tech</a><mark></li><li>+ 1 more</li></ul></nav>
-
-
+    <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><mark><a href='notes.html'>Notes/</a><mark></li><li><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='daily.html'>Daily/</a><mark></li><li><a href='hiring.html'>Hiring</a><mark></li><li><a href='merveilles_forum_verification.html'>Merveilles Forum Verification</a><mark></li><li><mark><a href='scripting_notes.html'>Scripting Notes</a><mark></li><li><a href='now.html'>Now</a><mark></li><li><a href='doom_emacs.html'>Doom Emacs</a><mark></li><li><a href='the_fells.html'>The Fells</a><mark></li><li>+ 2 more</li></ul></nav>
     
-    <div id='fm'>
-        <div id='fm-on' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <blink>
-                <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
-            </blink>
-            <span>on the air</span>
-            <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
-        </div>
-
-        <div id='fm-off' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
-            <span>off air</span>
-        </div>
+<div id='fm'>
+    <div id='fm-on' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <blink>
+            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
+        </blink>
+        <span>on the air</span>
+        <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
     </div>
 
-
-</header>
+    <div id='fm-off' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
+        <span>off air</span>
+    </div>
+</div>
 
 <script>
  const onAir = document.getElementById('fm-on')
@@ -64,15 +58,13 @@
  let audioStream, isPlaying = false;
 
  function togglePlay () {
-     if (!audioStream) {
-         audioStream = new Audio('https://fm.mrshll.com/stream')
-     }
-
      if (isPlaying) {
          audioStream.pause();
          isPlaying = false;
          togglePlayButton.innerHTML = '[Play]';
      } else {
+         
+         audioStream = new Audio('https://fm.mrshll.com/stream')
          audioStream.play();
          isPlaying = true;
          togglePlayButton.innerHTML = '[Pause]';
@@ -104,6 +96,8 @@
  fetchLiveStatus();
  setInterval(fetchLiveStatus, 30000);
 </script>
+
+</header>
 
 
             

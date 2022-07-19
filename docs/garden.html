@@ -33,30 +33,24 @@
     <body>
         <div class='content'>
             <header>
-
     <nav><ul><li><mark><a href='index.html'>mrshll.com/</a></mark></li></ul><ul><li><a href='jrnl.html'>Jrnl</a><mark></li><li><a href='logbooks.html'>Logbooks/</a><mark></li><li><a href='notes.html'>Notes/</a><mark></li><li><mark><a href='projects.html'>Projects/</a><mark></li><li><a href='thoughts.html'>Thoughts/</a><mark></li><li><a href='about.html'>About/</a><mark></li></ul><ul><li><a href='dormant_projects.html'>Dormant projects/</a><mark></li><li><a href='ideas.html'>Ideas</a><mark></li><li><a href='music.html'>Music</a><mark></li><li><a href='mmx.html'>mmx/</a><mark></li><li><a href='@carbonfreegrid.html'>@carbonfreegrid</a><mark></li><li><mark><a href='garden.html'>Garden/</a><mark></li><li><a href='upstream_tech.html'>Upstream Tech/</a><mark></li><li>+ 1 more</li></ul><ul><li><a href='garden_research.html'>Garden Research</a><mark></li><li><a href='the_three_sisters.html'>The Three Sisters</a><mark></li><li><a href='setting_up_the_raised_beds.html'>Setting up the raised beds</a><mark></li></ul></nav>
-
-
     
-    <div id='fm'>
-        <div id='fm-on' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <blink>
-                <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
-            </blink>
-            <span>on the air</span>
-            <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
-        </div>
-
-        <div id='fm-off' style='display: none;'>
-            <span>micro-radio station</span><br/>
-            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
-            <span>off air</span>
-        </div>
+<div id='fm'>
+    <div id='fm-on' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <blink>
+            <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: red;'></span>
+        </blink>
+        <span>on the air</span>
+        <a id='fm-togglePlayButton' role='button' style='cursor: pointer;'>[Listen]</a>
     </div>
 
-
-</header>
+    <div id='fm-off' style='display: none;'>
+        <span>micro-radio station</span><br/>
+        <span style='display: inline-block; height: 10px; width: 10px; border-radius: 5px; background-color: grey;'></span>
+        <span>off air</span>
+    </div>
+</div>
 
 <script>
  const onAir = document.getElementById('fm-on')
@@ -68,15 +62,13 @@
  let audioStream, isPlaying = false;
 
  function togglePlay () {
-     if (!audioStream) {
-         audioStream = new Audio('https://fm.mrshll.com/stream')
-     }
-
      if (isPlaying) {
          audioStream.pause();
          isPlaying = false;
          togglePlayButton.innerHTML = '[Play]';
      } else {
+         
+         audioStream = new Audio('https://fm.mrshll.com/stream')
          audioStream.play();
          isPlaying = true;
          togglePlayButton.innerHTML = '[Pause]';
@@ -108,6 +100,8 @@
  fetchLiveStatus();
  setInterval(fetchLiveStatus, 30000);
 </script>
+
+</header>
 
 
             
@@ -382,7 +376,16 @@
 
             
 <div class='incoming'>
-    ⇣ (1)
+    ⇣ (2)
+    
+    <details>
+        <summary>
+            
+            <a href="./now.html">Now</a>&nbsp;
+            
+        </summary>
+        <p>The <a class='mmxlink' href=garden.html>&#123;garden&#125;</a> is thriving. Most of my indoor starts are in the ground, and I've been sowing directly hot-weather veg (cucumbers, pumpkins, etc) and succession plantings when there's time. Some things I experimented with this year: companion planting (i.e. using pungent herbs and onions with pest-prone arugula), keeping the agricultural fabric up, even in warm weather as shade and pest control. I'm getting regular raddish harvests, and hopefully spinach and peas soon. <a href='img/PXL_20220511_180948362.jpg'><img src='img/PXL_20220511_180948362-720.jpg' alt='A tomato starter held in hand' style=''/></a></p>
+    </details>
     
     <details>
         <summary>
