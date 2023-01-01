@@ -1,0 +1,110 @@
+<html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Now" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Now</title>
+</head>
+<body><div class="content"><nav><ul><li><mark><a href="../docs/index.html">Now</a></mark></li></ul><ul><li><a href="../docs/Log.html">Log</a></li><li><a href="../docs/Projects.html">Projects</a></li><li><a href="../docs/Wiki.html">Wiki</a></li><li><a href="../docs/Writing.html">Writing</a></li></ul></nav><h1>Now</h1>
+<p><img src="img/redturtle012.jpg" alt="Person on a bamboo raft from Studio Ghibli Red Turtle"/></p>
+
+<p>Welcome to <a href="../docs/mmx.html">{mmx}</a>. This started as a blank canvas for my digital identity, and has evolved into a place to log ephemera, share my projects, conduct fun experiments, and write.</p>
+
+<p>I started and run a climate and conservation company, <a href="../docs/Upstream Tech.html">{Upstream Tech}</a>. I also make <a href="../docs/Music.html">{music}</a>, <a href="../docs/Garden.html">{grow living things}</a>, and have a number of technical and non-technical <a href="../docs/Projects.html">{Projects}</a>, hobbies and interests.</p>
+
+<p>This site is my place to <a href="../docs/Writing.html">{write}</a>, keep <a href="../docs/Wiki.html">{notes}</a>, share <a href="../docs/Log.html">{ephemera}</a>, and write about my <a href="../docs/Projects.html">{projects}</a>.</p>
+
+<p>I live in Medford, MA with Alejandra, our newborn Meadow, and dog Dax in our home Valetop.</p>
+
+<hr/>
+
+<h2>Recently</h2>
+
+<ul>
+    <li><a href="../docs/Self-hosted Mastodon.html">{Self-hosted Mastodon}</a></li>
+    <li><a href="../docs/Running a basement server.html">{Running a basement server}</a></li>
+</ul>
+
+<h2>Active projects</h2>
+
+<ul>
+    <li>Continuing to explore and evolve this site, <a href="../docs/mmx.html">{mmx}</a></li>
+    <li>Growing <a href="../docs/Upstream Tech.html">{Upstream Tech}</a></li>
+</ul>
+
+<h2>Contact</h2>
+
+<ul>
+    <li>Email : <a href="mailto:m@mrshll.com">m@mrshll.com</a></li>
+    <li>Fediverse : <a href="https://werm.world/@mrshll">@mrshll@werm.world</a></li>
+    <li>Twitter : <a href="https://twitter.com/marsh">@marsh</a></li>
+</ul>
+
+
+<p style="color:#ccc"><em>Compiled 2023-1-1</em></p><footer>
+  <div class='footer-row'>
+    <a href="https://twitter.com/marsh">
+      <img src="img/twitter.png" style="height: 1.8rem">
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

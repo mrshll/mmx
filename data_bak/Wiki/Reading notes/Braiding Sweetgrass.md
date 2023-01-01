@@ -1,0 +1,5 @@
+by Robin Wall Kimmerer
+
+Indigenous wisdom, scientific knowledge, and the teachings of plants - braided like the sweetgrass itself. Dr. Kimmerer brought my own relationship with the natural world into focus. I am realizing my mini-book reports regularly tiptoe into hyperbole, but her focus on gratitude, on observation, on patience and familiarity has shown me a new way to exist in and advocate for a better relationship with the natural world.
+
+Many climate change solutions ignore the respect, admiration, and coexistence with the ash trees, the wetlands, and the reefs. They continued to be inwardly focused. "Humans made the problem, humans alone can fix it." Techno-optimists will bring about some solution that doesn't require us to get our feet muddy. Media this book felt like joining Kimmerer for a series of lectures, long walks, and conversations at the edge of her spring-fed pond. The most important lessons for me were those of gratitude, personhood of beings, human or not, and the danger of human arrogance.

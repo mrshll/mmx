@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "7165ce256ade940d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f738e7b8cc5bcbb7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21cc696988c93906",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Writing/Running a basement server.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ce748a9a7719480c",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0cf9ec04a31efe57",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "028ff357d714998a",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "700c249dc64325d9",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "95b6a1e23369f82e",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "827963d8cdd1172b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "fd264f6baf052d00",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Writing/Running a basement server.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "e1c67b578f2bc861",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Writing/Running a basement server.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "b6287ac5cc2c4d55",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Writing/Running a basement server.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "21cc696988c93906",
+  "lastOpenFiles": []
+}

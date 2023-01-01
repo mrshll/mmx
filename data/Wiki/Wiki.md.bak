@@ -1,0 +1,1 @@
+![A screen capture from Red Turtle by Studio Ghibli](img/redturtle024.jpg)
