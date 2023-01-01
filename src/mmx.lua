@@ -84,12 +84,14 @@ local function render_nav(entry, entries)
   return "<nav>" .. render_nav_section(entry, { entry }) .. acc .. "</nav>"
 end
 
-local function render_body(entry, entries)
-  return sub_entry_fields(
-    "<h1>{{EntryName}}</h1>" ..
-    (entry.date ~= nil and "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or "") ..
-    "{{EntryBodyHtml}}"
-    , entry):gsub("%[%[([^%]]+)%]%]", function(match)
+local function process_images(string)
+  string:gsub("<img src=\"img/([^>]+)", function(match)
+
+  end)
+end
+
+local function process_internal_links(string, entries)
+  return string:gsub("%[%[([^%]]+)%]%]", function(match)
     local parts = utils.split(match, "|")
     local linked_name = parts[1]
     local display_name = parts[2] or linked_name
@@ -101,6 +103,14 @@ local function render_body(entry, entries)
 
     return "<a href=\"" .. e.dest_path .. "\">{" .. display_name .. "}</a>"
   end)
+end
+
+local function render_body(entry, entries)
+  return process_internal_links(sub_entry_fields(
+    "<h1>{{EntryName}}</h1>" ..
+    (entry.date ~= nil and "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or "") ..
+    "{{EntryBodyHtml}}"
+    , entry), entries)
 end
 
 local function render_entry(entry, entries)
@@ -123,7 +133,7 @@ for _, file_path in pairs(file_paths) do
   local parent_name = parts[#parts - 1] or INDEX_NAME
   -- remove the file extension
   local name = parts[#parts]:sub(0, -1 * #DATA_EXT - 1)
-  local dest_path = '../docs/' .. name .. '.html'
+  local dest_path = name .. '.html'
 
   if name == parent_name then
     if name == INDEX_NAME then
@@ -154,19 +164,6 @@ for _, file_path in pairs(file_paths) do
     body_html = html,
     date = date
   }
-
-  -- local entry_acc = {}
-  -- for line in lines(fileContent) do
-  --   if starts_with(line, "name:") then
-  --     entry_acc["name"] = line:sub(6)
-  --   elseif starts_with(line, "host:") then
-  --     entry_acc["host"] = line:sub(6)
-  --   end
-  --   if has_keys(entry_acc, { "name", "host" }) then
-  --     table.insert(entries, entry_acc)
-  --     entry_acc = {}
-  --   end
-  -- end
 end
 
 local i = 0
