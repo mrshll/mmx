@@ -41,7 +41,7 @@ local function render_nav_section(entry, siblings)
     acc = acc .. "<li>"
 
     if is_selected then acc = acc .. "<mark>" end
-    acc = acc .. "<a href=\"" .. e.dest_path .. "\">" .. e.name .. "</a>"
+    acc = acc .. "<a href=\"" .. e.name .. ".html\">" .. e.name .. "</a>"
     if is_selected then acc = acc .. "</mark>" end
     acc = acc .. "</li>"
     if i == 6 then
@@ -85,12 +85,13 @@ local function render_nav(entry, entries)
 end
 
 local function process_images(string)
-  string:gsub("<img src=\"img/([^>]+)", function(match)
-
+  return string:gsub("<img src=\"img/([^\"]+)", function(match)
+    local parts = utils.split(match, ".")
+    return "<img src=\"img/" .. parts[1] .. "-720." .. parts[2]
   end)
 end
 
-local function process_internal_links(string, entries)
+local function process_internal_links(string, entry, entries)
   return string:gsub("%[%[([^%]]+)%]%]", function(match)
     local parts = utils.split(match, "|")
     local linked_name = parts[1]
@@ -106,11 +107,11 @@ local function process_internal_links(string, entries)
 end
 
 local function render_body(entry, entries)
-  return process_internal_links(sub_entry_fields(
+  return process_images(process_internal_links(sub_entry_fields(
     "<h1>{{EntryName}}</h1>" ..
     (entry.date ~= nil and "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or "") ..
     "{{EntryBodyHtml}}"
-    , entry), entries)
+    , entry), entry, entries))
 end
 
 local function render_entry(entry, entries)
@@ -121,7 +122,8 @@ local function render_entry(entry, entries)
 end
 
 local DATA_DIR = "../data"
-local DATA_EXT = '.md'
+local DOC_DIR = "../docs"
+local DATA_EXT = ".md"
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
 for _, file_path in pairs(file_paths) do
@@ -133,12 +135,12 @@ for _, file_path in pairs(file_paths) do
   local parent_name = parts[#parts - 1] or INDEX_NAME
   -- remove the file extension
   local name = parts[#parts]:sub(0, -1 * #DATA_EXT - 1)
-  local dest_path = name .. '.html'
+  local dest_path = DOC_DIR .. "/" .. name .. ".html"
 
   if name == parent_name then
     if name == INDEX_NAME then
       -- special case for the root node
-      dest_path = '../docs/index.html'
+      dest_path = DOC_DIR .. "/" .. "index.html"
     else
       -- special case for folder indeces
       parent_name = parts[#parts - 2] or INDEX_NAME
@@ -147,7 +149,7 @@ for _, file_path in pairs(file_paths) do
 
   local body = utils.read_file(file_path);
   local date
-  local date_start, date_end = body:find('%d%d%d%d%-%d%d%-%d%d')
+  local date_start, date_end = body:find("%d%d%d%d%-%d%d%-%d%d")
   if date_start == 1 then
     date = body:sub(date_start, date_end)
     body = body:sub(date_end + 1)
