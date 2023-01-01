@@ -1,2 +1,0 @@
-This book caught my eye simply because Sandor Katz (from "The Art of Fermentation," which was revelatory) is listed as a co-author. It was a quick read about a jaunt from NYC bustle to New Mexico homesteading. The self reliance and creativity was interesting, and I enjoyed media about the projects' specifics. Some of the ethos (soap is _free_ if you make it from \\nature\\, man) and ego made the book feel like an extremely long Medium dot com post. Agnes Varda wore it better in [Les Glaneurs et La Glaneuse](https://en.wikipedia.org/wiki/The_Gleaners_and_I).
-

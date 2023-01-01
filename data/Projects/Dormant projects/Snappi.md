@@ -1,11 +1,11 @@
 2011-08-12
 ![Snappi logo](img/snappi-1.png)
 
-{https://github.com/mrshll/Snappi, Source Code}
+[Source Code](https://github.com/mrshll/Snappi)
 
 Snappi was developed while living in San Francisco and working at Mozilla in the Summer of 2012. At Mozilla I was on the infosec team, and my project was to containerize Firefox's process. The project to sandbox Firefox was incredibly difficult, and progress to understand the build process was slow. To mix it up, I spent spare time developing a native OSX application that allowed quick sharing of files and screenshots. It integrated with services like Evernote and Dropbox.
 
-{^youtube, rt7zivSrJeE}
+<iframe width="680" height="420" src="https://www.youtube.com/embed/rt7zivSrJeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Thankfully, I've gotten better at making these videos.
 

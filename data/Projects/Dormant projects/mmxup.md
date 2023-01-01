@@ -1,5 +1,5 @@
 2021-04-22
-{https://github.com/mrshll/mmx/blob/main/src/mmxup.go, Source code}
+[Source code](https://github.com/mrshll/mmx/blob/main/src/mmxup.go)
 
 mmxup entries have names, hosts, titles, and bodies. They optionally have dates. An entry can optionally  be an index
 (examples: {wiki} and {now}). The reference graph enables inbound and outbound relationships to be rendered.

@@ -1,8 +1,8 @@
 2021-02-11
-{https://upstream.tech, Upstream Tech} is a public benefit corporation founded in 2016 by Marshall and Alden. It currently provides two services:
+[Upstream Tech](https://upstream.tech) is a public benefit corporation founded in 2016 by Marshall and Alden. It currently provides two services:
 
-+ {https://upstream.tech/lens, Lens}, monitoring software for environmental organizations.
-+ {https://upstream.tech/hydroforecast, HydroForecast}, a hydrologic forecasting service used by renewable energy utilities and conservation organizations.
++ [Lens](https://upstream.tech/lens), monitoring software for environmental organizations.
++ [HydroForecast](https://upstream.tech/hydroforecast), a hydrologic forecasting service used by renewable energy utilities and conservation organizations.
 
 In its early days, we did a number of consulting projects, including two citizen science applications: the New York State's Herp Shark Count for the Galapagos Islands. After attending a lecture by Dr. Grey Nearing, who later became an advisor and briefly our Director of Research, we honed in on satellites and machine learning as tools we could leverage given our previous experience and technical strengths.
 
@@ -12,7 +12,7 @@ The first non-consulting project was a remote compliance tool for water transfer
 
 From there, we became fascinated with anachronous design and complexity of water rights. We built a system that digitized a number of states' water rights, and used the same classifier as before to predict year-over-year water use. An aim was to build a database of water rights that on paper appeared low-value, but reliably applied water to their fields. Another was to identify farm fields that had not used water for a certain number of consecutive years, which would invalidate the claim - a radical and contentious application of technology which would have been dangerous to release without a fuller understanding of the politics and local contexts. Even with some of these databases built, we learned that water rights require handshakes and hat tips and we were trying to apply a scale-able solution to a problem that wasn't ready to "scale." So we switched gears back to our compliance monitoring.
 
-We met with The Nature Conservancy's {https://www.scienceforconservation.org/science-in-action/birdreturns, Bird Returns} program via an introduction from our advisor Brian Richter, the then Director of International Water at The Nature Conservancy. The program applies management guidelines to rice fields in the Pacific Flyway, providing vital habitat for migratory birds in the Spring and Fall. After discussion with the team's leads, Katie Andrews and Ethan Inlander, we determined that our previous compliance monitoring software could be used to monitor projects in the BirdReturns portfolio. We launched this program, and over time it evolved into what is now Lens.
+We met with The Nature Conservancy's [Bird Returns](https://www.scienceforconservation.org/science-in-action/birdreturns) program via an introduction from our advisor Brian Richter, the then Director of International Water at The Nature Conservancy. The program applies management guidelines to rice fields in the Pacific Flyway, providing vital habitat for migratory birds in the Spring and Fall. After discussion with the team's leads, Katie Andrews and Ethan Inlander, we determined that our previous compliance monitoring software could be used to monitor projects in the BirdReturns portfolio. We launched this program, and over time it evolved into what is now Lens.
 
 ![The team visited a project location in the Sacramento area](img/birdreturns-1.jpg)
 _The team visited a project location in the Sacramento area_
@@ -22,5 +22,5 @@ In parallel, we met Gia Schneider from Natel Energy via a meandering series of i
 ![Natel's hanger in Alameda, CA](img/natel-hanger.png)
 _Natel's hanger in Alameda, CA_
 
-During this time period, we were fortunate to be joined by many friends, past colleagues, and people we met along the way. The team is now over {https://upstream.tech/team, 20 people}.
+During this time period, we were fortunate to be joined by many friends, past colleagues, and people we met along the way. The team is now over [20 people](https://upstream.tech/team).
 

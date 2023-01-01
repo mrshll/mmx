@@ -39,6 +39,10 @@ local function render_nav_section(entry, siblings)
   local acc = "<ul>"
   local i = 0
   for _, e in make_sorted_entry_iterator(siblings) do
+    if i == 6 then
+      acc = acc .. "<details><summary></summary>"
+    end
+
     i = i + 1
     local is_selected = entry ~= nil and e.name == entry.name
     acc = acc .. "<li>"
@@ -47,9 +51,6 @@ local function render_nav_section(entry, siblings)
     acc = acc .. "<a href=\"" .. e.dest_file_name .. "\">" .. e.name .. "</a>"
     if is_selected then acc = acc .. "</mark>" end
     acc = acc .. "</li>"
-    if i == 6 then
-      acc = acc .. "<details><summary></summary>"
-    end
   end
   if i >= 6 then
     acc = acc .. "</details>"
@@ -118,7 +119,7 @@ local function render_body(entry, entries)
 end
 
 local function render_entry(entry, entries)
-  local html = string.format("<html>%s<body><div class=\"content\">%s<article id=\"entry-body\">%s</article><p style=\"color:#ccc\"><em>Compiled %s</em></p>%s</body></html>"
+  local html = string.format("<html>%s<body><div class=\"content\"><header>%s</header><article id=\"entry-body\">%s</article><p style=\"color:#ccc\"><em>Compiled %s</em></p>%s</body></html>"
     ,
     render_head(entry), render_nav(entry, entries), render_body(entry, entries), utils.today(), render_footer())
   utils.write_file(DOC_DIR .. "/" .. entry.dest_file_name, html)

@@ -1,27 +1,21 @@
 2021-07-04
-# Short songs released under the name "mrshll"
+## Short songs released under the name "mrshll"
 
 _supermoons_ was created in 2021, entirely on the OP-Z performed live for recording.
 
-<div>
-{^bandcamp, 2009061103}
-</div>
+<iframe style="border: 0; width: 400px; height: 340px;" src="https://bandcamp.com/EmbeddedPlayer/album=2009061103/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="https://mrshll.bandcamp.com/album/supermoons">supermoons by mrshll</a></iframe>
 
 ---
 
 _During_ was an album created during 2020, primarily created on the OP-Z, which my coworker Kevin sent me after showing me its magic.
 
-<div>
-{^bandcamp, 2884089779}
-</div>
+<iframe style="border: 0; width: 400px; height: 406px;" src="https://bandcamp.com/EmbeddedPlayer/album=2884089779/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="https://mrshll.bandcamp.com/album/during">during by mrshll</a></iframe>
 
 ---
 
 _Pre_ was created between the years 2013 and 2019 entirely in iPad with the app Korg Gadget along with bluetooth midi peripherals.
 
-<div>
-{^bandcamp, 1442648585}
-</div>
+<iframe style="border: 0; width: 400px; height: 373px;" src="https://bandcamp.com/EmbeddedPlayer/album=1442648585/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="https://mrshll.bandcamp.com/album/pre">pre by mrshll</a></iframe>
 
 ---
 

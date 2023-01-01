@@ -1,6 +1,6 @@
 2021-01-23
 
-In what is certainly my most mundane project to date, I've created an application that loads calendar events from Google Calendar via a {https://twitter.com/marsh/status/1353404000469659648, prayer to the OAuth gods}, and uses lots of date and timezone math to find availablities based on the specified meeting parameters. I haven't had the opportunity to solve an algorithmically interesting problem recently -- so much of my technical work lately is technical piping and static sites. So it was fun to sit down and design an approach to solve a backpack-type problem.
+In what is certainly my most mundane project to date, I've created an application that loads calendar events from Google Calendar via a [prayer to the OAuth gods](https://twitter.com/marsh/status/1353404000469659648), and uses lots of date and timezone math to find availablities based on the specified meeting parameters. I haven't had the opportunity to solve an algorithmically interesting problem recently -- so much of my technical work lately is technical piping and static sites. So it was fun to sit down and design an approach to solve a backpack-type problem.
 
 ![Screenshot of paste.date](img/pastedate-1.png)
 

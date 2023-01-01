@@ -461,7 +461,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/Low Tech.md",
+                "file": "Wiki/Low tech.md",
                 "mode": "source",
                 "source": false
               }
@@ -625,26 +625,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/Organization philosophy.md",
+                "file": "Projects/Dormant projects/Snappi.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "063101f3e2da92b4",
+            "id": "2c18dedaf2f910d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/Software philosophy.md",
+                "file": "Wiki/Gardening.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 70
+        "currentTab": 69
       }
     ],
     "direction": "vertical"
@@ -710,7 +710,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Wiki/Software philosophy.md",
+                "file": "Projects/Dormant projects/Snappi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -727,7 +727,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wiki/Software philosophy.md",
+                "file": "Projects/Dormant projects/Snappi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -750,7 +750,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Wiki/Software philosophy.md"
+                "file": "Projects/Dormant projects/Snappi.md"
               }
             }
           }
@@ -771,17 +771,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "063101f3e2da92b4",
+  "active": "37634d6ae7cb2e17",
   "lastOpenFiles": [
-    "Wiki/Organization philosophy.md",
-    "Wiki/Reading log/Reading log.md",
-    "Wiki/Inventory.md",
-    "Writing/Work in Progress.md",
-    "Wiki/Low Tech.md",
-    "i3.md",
-    "Projects/Projects.md",
-    "Log.md",
-    "Writing/Self-hosted Mastodon.md",
-    "Now.md"
+    "Projects/Dormant projects/Plotter.md",
+    "Projects/Dormant projects/paste.date.md",
+    "Projects/Dormant projects/Mutual aid needs & offers.md",
+    "Projects/Dormant projects/mmxup.md",
+    "Projects/Dormant projects/Latitune.md",
+    "Projects/Dormant projects/Future.Phone.md",
+    "Projects/Dormant projects/Into the Static.md",
+    "Projects/Dormant projects/werm.world.md",
+    "Projects/Dormant projects/@carbonfreegrid.md",
+    "Projects/Dormant projects/Dormant projects.md"
   ]
 }
