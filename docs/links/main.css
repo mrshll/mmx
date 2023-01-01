@@ -77,6 +77,22 @@ nav {
   overflow-x: auto;
 }
 
+nav details summary {
+  margin-left: -1.2rem;
+  cursor: pointer;
+}
+
+nav details summary::before {
+  content: "Show all..."
+}
+nav details[open] summary::before {
+  content: "Hide all..."
+}
+
+nav details summary::marker {
+  display: none;
+}
+
 hr {
   border: none;
   height: .4rem;
@@ -163,31 +179,8 @@ dl dd, details {
   margin-bottom: .4rem;
 }
 
-details {
-  display: inline-block;
-  border: 1px solid var(--bg-contrast-color);
-  border-radius: .4rem;
-  padding: .4rem 1rem 0;
-  margin-right: .4rem;
-}
-
-summary {
-  margin: -.4rem -1rem 0;
-  padding: .4rem 1rem;
-}
-
-details[open] {
-  padding: .4rem 1rem;
-  display: block;
-}
-
 .incoming {
   display: table;
-}
-
-details[open] summary {
-  border-bottom: 1px solid var(--bg-contrast-color);
-  margin-bottom: .5em;
 }
 
 .content {
@@ -201,6 +194,30 @@ details[open] summary {
   margin: 2rem 0;
 }
 
+#entry-body details {
+  display: inline-block;
+  border: 1px solid var(--bg-contrast-color);
+  border-radius: .4rem;
+  padding: .4rem 1rem 0;
+  margin-right: .4rem;
+}
+
+#entry-body summary {
+  margin: -.4rem -1rem 0;
+  padding: .4rem 1rem;
+}
+
+#entry-body details[open] {
+  padding: .4rem 1rem;
+  display: block;
+}
+
+#entry-body details[open] summary {
+  border-bottom: 1px solid var(--bg-contrast-color);
+  margin-bottom: .5em;
+}
+
+
 .content img, .content video {
   max-width: 100%;
   margin-left: 0;
@@ -212,34 +229,6 @@ details[open] summary {
   padding-top: 0;
   display: block;
   margin-bottom: 1.6rem;
-}
-
-/* .jrnl-record em, #entry-body video + em { */
-/*   display: block; */
-/*   background-color: var(--bg-contrast-color); */
-/*   padding: .4rem .6rem; */
-/*   margin-top: -1.6rem; */
-/*   margin-bottom: 1.6rem; */
-/* } */
-
-.jrnl-record {
-  position: relative;
-}
-
-.jrnl-record img, .jrnl-record video {
-  max-width: 100%;
-  max-height: 48rem;
-  height: auto;
-  object-position: left top;
-}
-
-.jrnl-record em {
-  position: absolute;
-  bottom: 1rem;
-  left: .4rem;
-  font-size: 1.4rem;
-  background-color: var(--bg-contrast-color);
-  padding: 0 .4rem;
 }
 
 #low-tech-webring:hover table {
@@ -299,16 +288,4 @@ details[open] summary {
   footer {
     padding: 2rem 2.2rem 0;
   }
-
-  #fm {
-    position: relative;
-    text-align: right;
-  }
-}
-
-blink { animation: blink 1s linear infinite alternate; }
-
-@keyframes blink {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
 }

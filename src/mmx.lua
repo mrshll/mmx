@@ -3,6 +3,9 @@ local utils = require "utils"
 
 local INDEX_NAME = "Now"
 local MIN_DATE = "0000-00-00"
+local DATA_DIR = "../data"
+local DOC_DIR = "../docs"
+local DATA_EXT = ".md"
 
 local function sub_entry_fields(str, entry)
   return str:gsub("{{(%w+)}}", {
@@ -41,11 +44,11 @@ local function render_nav_section(entry, siblings)
     acc = acc .. "<li>"
 
     if is_selected then acc = acc .. "<mark>" end
-    acc = acc .. "<a href=\"" .. e.name .. ".html\">" .. e.name .. "</a>"
+    acc = acc .. "<a href=\"" .. e.dest_file_name .. "\">" .. e.name .. "</a>"
     if is_selected then acc = acc .. "</mark>" end
     acc = acc .. "</li>"
     if i == 6 then
-      acc = acc .. "<details><summary>See all</summary>"
+      acc = acc .. "<details><summary></summary>"
     end
   end
   if i >= 6 then
@@ -102,7 +105,7 @@ local function process_internal_links(string, entry, entries)
       return "{" .. display_name .. "}"
     end
 
-    return "<a href=\"" .. e.dest_path .. "\">{" .. display_name .. "}</a>"
+    return "<a href=\"" .. e.dest_file_name .. "\">{" .. display_name .. "}</a>"
   end)
 end
 
@@ -115,15 +118,12 @@ local function render_body(entry, entries)
 end
 
 local function render_entry(entry, entries)
-  local html = string.format("<html>%s<body><div class=\"content\">%s%s<p style=\"color:#ccc\"><em>Compiled %s</em></p>%s</body></html>"
+  local html = string.format("<html>%s<body><div class=\"content\">%s<article id=\"entry-body\">%s</article><p style=\"color:#ccc\"><em>Compiled %s</em></p>%s</body></html>"
     ,
     render_head(entry), render_nav(entry, entries), render_body(entry, entries), utils.today(), render_footer())
-  utils.write_file(entry.dest_path, html)
+  utils.write_file(DOC_DIR .. "/" .. entry.dest_file_name, html)
 end
 
-local DATA_DIR = "../data"
-local DOC_DIR = "../docs"
-local DATA_EXT = ".md"
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
 for _, file_path in pairs(file_paths) do
@@ -135,12 +135,12 @@ for _, file_path in pairs(file_paths) do
   local parent_name = parts[#parts - 1] or INDEX_NAME
   -- remove the file extension
   local name = parts[#parts]:sub(0, -1 * #DATA_EXT - 1)
-  local dest_path = DOC_DIR .. "/" .. name .. ".html"
+  local dest_file_name = name .. ".html"
 
   if name == parent_name then
     if name == INDEX_NAME then
       -- special case for the root node
-      dest_path = DOC_DIR .. "/" .. "index.html"
+      dest_file_name = "index.html"
     else
       -- special case for folder indeces
       parent_name = parts[#parts - 2] or INDEX_NAME
@@ -160,7 +160,7 @@ for _, file_path in pairs(file_paths) do
   entries[name] = {
     name = name,
     src_path = file_path,
-    dest_path = dest_path,
+    dest_file_name = dest_file_name,
     parent_name = parent_name,
     body_raw = body,
     body_html = html,
