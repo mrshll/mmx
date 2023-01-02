@@ -7,6 +7,7 @@
 
 ## Read
 
+- [Using Neural Networks to Predict Micro-Spatial Economic Growth](https://www.nber.org/papers/w29569)
 - _This Is How You Lose the Time War_ by Amal El-Mohtar and Max Gladstone
 - _Pachinko_ by Min Jin Lee
 - _Piranesi_ by Susanna Clarke
