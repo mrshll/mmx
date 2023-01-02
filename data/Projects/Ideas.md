@@ -10,7 +10,7 @@ There may already be some protocols or open source building blocks to do this so
 ## Online Battleline (card game, working title "Formations")
 From what I can tell, there does not exist an online version of [Battleline](https://www.gmtgames.com/p-939-battle-line-11th-printing.aspx). It would be fun to make one, possibly using [boardgame.io](https://boardgame.io/) as the backing engine.
 
-## {mmx} internal
+## [[mmx]] internal
 Aside from paper notebooks, I haven't found digital notetaking or brainstorming venues that have _stuck_. I sometimes want a version of mmx that is either a native or web-based client with editor capabilities to parse {mmxup} at runtime and create structure - sort of like [Obsidian](https://obsidian.md/).
 
 Web stuff is easy, but it would be a learning experience to build and deploy a native app across platforms. Since mmx was originally written in Golang, something like [Fyne](https://developer.fyne.io/) could be interesting to play with.

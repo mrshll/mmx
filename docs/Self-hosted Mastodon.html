@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./links/main.css">
   <title>mrshll.com - Self-hosted Mastodon</title>
 </head>
-<body><div class="content"><header><nav><ul><li><mark><a href="index.html">Now</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><mark><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></mark></li><li><a href="Running a basement server.html">Running a basement server</a></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Sail to Little Calf Island.html">Sail to Little Calf Island</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><details><summary></summary><li><a href="On Webrings.html">On Webrings</a></li><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Self-hosted Mastodon</h1><div style='color:#ccc'>last updated 2022-12-19</div>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">Now</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><mark><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></mark></li><li><a href="Running a basement server.html">Running a basement server</a></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><li><a href="On Webrings.html">On Webrings</a></li><details><summary></summary><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Self-hosted Mastodon</h1><div style='color:#ccc'>last updated 2022-12-19</div>
 
 
 <h2>Hosting Mastodon from your basement</h2>
@@ -83,7 +83,7 @@
 
 <p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
 
-<p><img src="img/mastodon-running-720.png" alt="screenshot of my instance displaying my migrated profile"/></p>
+<p><img src="img/mastodon-running.png" alt="screenshot of my instance displaying my migrated profile"/></p>
 
 <h1>3. Instance configuration</h1>
 
@@ -140,7 +140,7 @@ fi
 <pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
 </code></pre>
 
-<p><img src="img/mastodon-healthcheck-720.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
+<p><img src="img/mastodon-healthcheck.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
 
 <p>As of now, I think that's just about everything I've done for the server. If you have any questions, feel free to reach out :)</p>
 

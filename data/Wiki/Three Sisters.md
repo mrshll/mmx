@@ -1,4 +1,4 @@
-Research for my {garden}.
+Research for my [[garden]].
 
 ---
 

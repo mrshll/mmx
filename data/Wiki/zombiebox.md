@@ -1,1 +1,1 @@
-!!![]()()(img/zombiebox.jpg)
+![](img/zombiebox.jpg)

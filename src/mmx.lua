@@ -89,7 +89,8 @@ local function render_nav(entry, entries)
 end
 
 local function process_images(string)
-  return string:gsub("<img src=\"img/([^\"]+)", function(match)
+  return string:gsub("<img src=\"img/([^\"]+%.(png|jpg))", function(match)
+    print(match)
     local parts = utils.split(match, ".")
     return "<img src=\"img/" .. parts[1] .. "-720." .. parts[2]
   end)

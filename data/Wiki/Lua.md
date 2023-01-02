@@ -26,7 +26,7 @@ Create an iterator
 	  end
 	end
 
-Example usage (from ![]([mmx])):
+Example usage (from [[mmx]]):
 
 	local function make_sorted_entry_iterator(entries)
 	  return utils.spairs(entries, function(es, name_a, name_b)

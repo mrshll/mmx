@@ -20,7 +20,7 @@ _This is where we are, as of 2020. With the majority in the Northeast._
 - A broad talent pool, which when combined with other hiring practices and team culture can result in a more diverse team. This is the most exciting element of remote work for me. When you're not tied to a single city (or a subset of neighborhoods in a single city) you can tap into a wealth of perspectives, backgrounds, and identities that are wonderfully representative of what "tech" _could_ be, if it were not so centralized in a few expensive cities.
 - Flexibility to accommodate a variety of lifestyles and workstyles. Some folks prefer a midday break or exercise, others need to drop off/pick up children from daycare. And while this has always been feasible in the office - it's much easier to walk away from a computer monitor than it is to slink out of a bustling office.
 - No commute; a lot of time is added to your day by this simple fact. You get to do with this newfound time what you please! What would be my commute is now a morning run through the Middlesex Fells.
-- Fewer distractions and increased productivity. A Stanford study showed a "massive, massive improvement in performance — a 13% improvement in performance from people working at home." !![](https://tedx.stanford.edu/lineup/nicholas-bloom})({https://tedx.stanford.edu/lineup/nicholas-bloom)
+- Fewer distractions and increased productivity. [A Stanford study showed a "massive, massive improvement in performance — a 13% improvement in performance from people working at home."](https://tedx.stanford.edu/lineup/nicholas-bloom)
 - Transparency by default. Because collaboration and communication flows through *_written_* processes, it's possible to design systems that are transparent first. This eliminates hallway decisions and information silos, builds trust, and creates a more cohesive team.
 - Retention of employees. We've had a quarter of our team encounter life events that have led them to move - and not just down the road, but to new states and cities. This massive change is usually job-ending, but for us it was barely noticeable aside from a changing video background and the potential changed timezone.
 - Less expensive! The cost of commercial space is wild, especially in major metropolitan areas that have the talent pools necessary for collocated team growth.
@@ -109,7 +109,7 @@ We use Google Meet (part of GSuite) to do meetings, both internal and external. 
 
 ### *Slack*
 
-Love it or hate it, it's good for discussing tactical stuff (_#upstream-!![]()(product)_), sharing resources like articles (_#upstream-articles_), notifying the team to feature releases (_#upstream-release-notes_), and generally sharing life stuff (_#upstream-watercooler_).
+Love it or hate it, it's good for discussing tactical stuff (_#upstream-product_), sharing resources like articles (_#upstream-articles_), notifying the team to feature releases (_#upstream-release-notes_), and generally sharing life stuff (_#upstream-watercooler_).
 
 _#upstream-watercooler_ has been an awesome place to share stuff that doesn't fit elsewhere: book recommendations, questions about plants for our resident botany expert Abby, photos from a vacation, progress of knitting projects... you get the idea.
 
@@ -127,9 +127,7 @@ It’s a very simple, low friction to-do list that drive self-accountability for
 
 As described on [GitLab](https://en.wikipedia.org/wiki/GitLab):
 
->>>
-*GitLab* is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline!![]()(7) features, using an open-source license, developed by GitLab Inc.
->>>
+> *GitLab* is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features, using an open-source license, developed by GitLab Inc.
 
 Woah, that's quite a bit of functionality. When remote teams say "ah yes, we use GitLab" the thing I wonder is "how do you use it?" What are the processes in place to keep things moving?
 

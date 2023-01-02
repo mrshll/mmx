@@ -20,7 +20,7 @@ I mentioned this above with #upstream-intentions. Part of how we kick off our da
 +  What’s the plan for today?
 +  Do you need anyone’s help?
 
-!![](#upstream-intentions)(img/how-we-work-2.png)
+![#upstream-intentions](img/how-we-work-2.png)
 _#upstream-intentions_
 
 It’s a pretty basic framework that keeps morning meetings concise and thoughtful. There have been plenty of occasions where someone may be wrapping a big effort up and isn’t sure what the next best thing is to work on. In those cases we look at current and prospective partners and hash out what might be the highest value next work.
@@ -42,7 +42,7 @@ We all do 1-on-1s with one another on a regular basis. We try not to reschedule 
 
 I’ve worked at companies where there is a set “Show and Tell” slot on the calendar. It works great for large teams. Since we are small (and remote), we try to have a constant show and tell: do something neat over the weekend? Put it in slack! New screenshots of the prettier graphs you’re developing? ⌘V! Want to do a video walkthrough of a surprisingly accurate ML model? Drop a hangout link and show us. Constant sharing and celebration of work has made it just as exciting as running over to someone’s desk, and is far more inclusive.
 
-!![]()(img/how-we-work-9.png)
+![](img/how-we-work-9.png)
 
 It’s been an awesome few years, and I’m excited for many more to come. I’m sure most of how we work is par for the startup course these days, but I hope for some, it’s an interesting look into our daily routine.
 

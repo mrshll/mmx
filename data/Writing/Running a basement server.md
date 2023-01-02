@@ -11,7 +11,7 @@ With any home server, especially one exposed to the internet, there are a few ch
 
 *Disclaimer*: most ISPs do not allow running "servers" from a residential subscription. Their terms are vague, but proceed at your own risk.
 
-# 1. Dynamic DNS
+## 1. Dynamic DNS
 
 To solve the first issue, where your home's _external_ IP addresses periodically changes, you have to continually update your DNS records to reflect the current IP. For example, when setting up a Mastodon instance on werm.world, I needed the root A record to point to the IP address of my home. There used to be a number of daemons and somewhat questionable services that I would use for this - but this time around I found that Google Domains (my registrar for werm.world) had a (new?) hidden _Advanced Setting_. You should see if your registrar supports something like this natively - at its core, all you need is a programmatic way to update a DNS record so look for an API to do so. Hopefully, you can adapt some of the following for your purposes.
 
@@ -101,7 +101,7 @@ To test without a browser you can run the following, noting the *ANSWER SECTION*
     ;; WHEN: Sat Dec 17 12:51:48 EST 2022
     ;; MSG SIZE  rcvd: 55
 
-# 2 + 3: Getting requests from the internet to the basement
+## 2 + 3: Getting requests from the internet to the basement
 
 Configuration depends on he server's operating system and the router used for the network. The crux of what is needed is threefold: 
 - the server must be setup to always request the same local IP address from the router,
