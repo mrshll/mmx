@@ -85,7 +85,7 @@ nav details summary::before {
   content: "Show all..."
 }
 nav details[open] summary::before {
-  content: "Hide all..."
+  content: "Hide..."
 }
 
 nav details summary::marker {
