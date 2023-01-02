@@ -11,12 +11,12 @@
   <link rel="stylesheet" type="text/css" href="./links/main.css">
   <title>mrshll.com - Running a basement server</title>
 </head>
-<body><div class="content"><header><nav><ul><li><mark><a href="index.html">Now</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></li><li><mark><a href="Running a basement server.html">Running a basement server</a></mark></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><li><a href="On Webrings.html">On Webrings</a></li><details><summary></summary><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Running a basement server</h1><div style='color:#ccc'>last updated 2022-12-16</div>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></li><li><mark><a href="Running a basement server.html">Running a basement server</a></mark></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><li><a href="On Webrings.html">On Webrings</a></li><details><summary></summary><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Running a basement server</h1><div style='color:#ccc'>last updated 2022-12-16</div>
 
 
 <p>A few years ago, a laptop of mine experienced inexplicable battery failure. Each time the laptop violently ceased operation when A/C power was removed, it communicated with me. "I am a homebody," it said, "and I wish to remain in the proximal comfort of the outlet." And a makeshift basement server, {zombiebox}, was born.</p>
 
-<p><img src="img/zombiebox.jpg" alt="Zombiebox the home server running my the basement"/></p>
+<p><figure><img src="img/zombiebox-720.jpg" alt="Zombiebox the home server running my the basement"/><figcaption>Zombiebox the home server running my the basement</figcaption></figure></p>
 
 <p>With any home server, especially one exposed to the internet, there are a few challenges one must overcome:
 1. Your home's <em>external</em> IP address will periodically change (unless you pay for a static IP, which I do not)
@@ -29,7 +29,7 @@
 
 <p>To solve the first issue, where your home's <em>external</em> IP addresses periodically changes, you have to continually update your DNS records to reflect the current IP. For example, when setting up a Mastodon instance on werm.world, I needed the root A record to point to the IP address of my home. There used to be a number of daemons and somewhat questionable services that I would use for this - but this time around I found that Google Domains (my registrar for werm.world) had a (new?) hidden <em>Advanced Setting</em>. You should see if your registrar supports something like this natively - at its core, all you need is a programmatic way to update a DNS record so look for an API to do so. Hopefully, you can adapt some of the following for your purposes.</p>
 
-<p><img src="img/google-dyn-dns.png" alt="Screenshot of the advanced settings for Google Domains DNS"/></p>
+<p><figure><img src="img/google-dyn-dns-720.png" alt="Screenshot of the advanced settings for Google Domains DNS"/><figcaption>Screenshot of the advanced settings for Google Domains DNS</figcaption></figure></p>
 
 <p>By creating a Dynamic DNS record, Google Domains provides credentials that can then be used with their API to update the IP. So, on {zombiebox}, I patched together the following script:</p>
 
@@ -92,7 +92,7 @@ fi
 
 <p>That script will let Google Domains know what your IP is.</p>
 
-<p><img src="img/google-dyn-dns-setup.png" alt=""/></p>
+<p><figure><img src="img/google-dyn-dns-setup-720.png" alt=""/><figcaption></figcaption></figure></p>
 
 <p>To test without a browser you can run the following, noting the <em>ANSWER SECTION</em>:</p>
 
@@ -139,7 +139,7 @@ default            192.168.1.1        UGScg             en0
 
 <p>Proper security of a home network server is beyond the scope of this humble post, but in short forward the smallest set of ports possible for your server to function on the internet, and follow any application-specific guides closely on best practices for securely running the server.</p>
 
-</article><p style="color:#ccc"><em>Compiled 2023-1-1</em></p><footer>
+</article><p style="color:#ccc"><em>Compiled 2023-1-2</em></p><footer>
   <div class='footer-row'>
     <a href="https://twitter.com/marsh">
       <img src="img/twitter.png" style="height: 1.8rem">

@@ -151,7 +151,18 @@ blockquote {
   border-left: 4px solid var(--bg-contrast-color);
   padding-left: 2rem;
   margin-left: 2rem;
+}
 
+figure {
+  display: flex;
+  flex-flow: column;
+  margin: 0 0 1.6rem;
+}
+
+figcaption {
+  background-color: var(--bg-contrast-color);
+  padding: .2rem;
+  text-align: center;
 }
 
 code, blockquote cite {
@@ -227,6 +238,9 @@ dl dd, details {
   padding-right: 0;
   padding-top: 0;
   display: block;
+}
+
+.content video {
   margin-bottom: 1.6rem;
 }
 

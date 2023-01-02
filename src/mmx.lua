@@ -1,7 +1,7 @@
 local markdown = require "markdown"
 local utils = require "utils"
 
-local INDEX_NAME = "Now"
+local INDEX_NAME = "mrshll.com"
 local MIN_DATE = "0000-00-00"
 local DATA_DIR = "../data"
 local DOC_DIR = "../docs"
@@ -80,7 +80,7 @@ local function render_nav(entry, entries)
       end
     end
     acc = render_nav_section(entry, siblings) .. acc
-    if parent == nil then error(entry.name .. " has no parent") end
+    if parent == nil then error(entry.name .. "(" .. entry.src_path .. ") has no parent") end
 
     entry = parent
   end
@@ -88,11 +88,23 @@ local function render_nav(entry, entries)
   return "<nav>" .. render_nav_section(entry, { entry }) .. acc .. "</nav>"
 end
 
-local function process_images(string)
-  return string:gsub("<img src=\"img/([^\"]+%.(png|jpg))", function(match)
-    print(match)
-    local parts = utils.split(match, ".")
-    return "<img src=\"img/" .. parts[1] .. "-720." .. parts[2]
+local function process_images(str)
+  -- for img_tag in str:gmatch("<img [^>]+>") do
+
+  -- end
+  -- return str
+  -- return string:gsub("<img src=\"img/([^\"]+)\" alt=\"([^\"]*)\"", function(src, alt)
+  return str:gsub("<img [^>]+>", function(img_tag)
+    local alt = img_tag:match("alt=\"([^\"]*)\"")
+    if alt == "" then
+      print("Warning, img without alt: " .. img_tag)
+    end
+
+    local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
+      local parts = utils.split(src, ".")
+      return "src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
+    end)
+    return "<figure>" .. processed_img_tag .. "<figcaption>" .. alt .. "</figcaption></figure>"
   end)
 end
 

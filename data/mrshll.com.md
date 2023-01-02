@@ -1,4 +1,4 @@
-![Person on a bamboo raft from Studio Ghibli Red Turtle](img/redturtle012.jpg)
+![A person on a hand-built raft, from Studio Ghibli's Red Turtle](img/redturtle012.jpg)
 
 Welcome to [[mmx]]. This started as a blank canvas for my digital identity, and has evolved into a place to log ephemera, share my projects, conduct fun experiments, and write.
 

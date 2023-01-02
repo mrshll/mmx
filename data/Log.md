@@ -1,3 +1,14 @@
+![](FlQ7ms8WIAYTSDG.png)
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/e6QUKsEezGw" title="Sarah Davachi - Alas, Departing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+![Sabrina](img/sabrina.png)
+
+![](img/roman-holiday.jpg)
+
+![Tree built into a fence](img/fencefortrees.jpg)
+
+![That Thing You Do](img/thatthingyoudo.png)
 [[aesthetic]] ![Excellent dumpster logo design](img/log/2022-08-12_215529331.jpg)
 [[Alejandra]] ![Alejandra in Hopkinton](img/log/2022-07-31_211153902.jpg)
 ![Hidden in the MFA](img/log/2022-07-23_161236242.jpg)

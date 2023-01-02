@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./links/main.css">
   <title>mrshll.com - Self-hosted Mastodon</title>
 </head>
-<body><div class="content"><header><nav><ul><li><mark><a href="index.html">Now</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><mark><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></mark></li><li><a href="Running a basement server.html">Running a basement server</a></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><li><a href="On Webrings.html">On Webrings</a></li><details><summary></summary><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Self-hosted Mastodon</h1><div style='color:#ccc'>last updated 2022-12-19</div>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><mark><a href="Writing.html">Writing</a></mark></li></ul><ul><li><mark><a href="Self-hosted Mastodon.html">Self-hosted Mastodon</a></mark></li><li><a href="Running a basement server.html">Running a basement server</a></li><li><a href="Ricoh Simplex TLS Repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5-year gestalt.html">5-year gestalt</a></li><li><a href="Work in Progress.html">Work in Progress</a></li><li><a href="On Webrings.html">On Webrings</a></li><details><summary></summary><li><a href="On running.html">On running</a></li><li><a href="Rainwater.html">Rainwater</a></li><li><a href="Mom Q&A.html">Mom Q&A</a></li><li><a href="Tufts Talk 2020-02-23.html">Tufts Talk 2020-02-23</a></li><li><a href="How We Work Remotely in 2020.html">How We Work Remotely in 2020</a></li><li><a href="Learning to grow (plants).html">Learning to grow (plants)</a></li><li><a href="Two Years In - How We Work at Upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="Upstream joins Natel Energy.html">Upstream joins Natel Energy</a></li><li><a href="An appeal for impact.html">An appeal for impact</a></li><li><a href="My Climate Journey podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Self-hosted Mastodon</h1><div style='color:#ccc'>last updated 2022-12-19</div>
 
 
 <h2>Hosting Mastodon from your basement</h2>
@@ -26,7 +26,7 @@
     <li>Ongoing maintenance and backups</li>
 </ol>
 
-<h1>1. Setup a home server</h1>
+<h2>1. Setup a home server</h2>
 
 <p>You could, of course, rent a server on !the cloud!. In my case, I intended to only house a couple of folks on my instance, and so wanted to keep ongoing costs low. Plus it's an opportunity to make use of old or unused computers. Earlier this week, I wrote about {running a basement server}. </p>
 
@@ -41,11 +41,11 @@
     <li><a href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/mastodon">nixpkgs nixos repo - mastodon server</a></li>
 </ul>
 
-<h1>2. Setup Mastodon</h1>
+<h2>2. Setup Mastodon</h2>
 
 <p>To setup Mastodon, follow the <a href="https://docs.joinmastodon.org/admin/prerequisites">official setup documentation</a>. Hah, gotcha! But wait, why is there so much <em>text</em> here? I will interject a few notes where either the documentation assumes experience that one might not have, or where I modified the steps.</p>
 
-<h2>Preparing your machine</h2>
+<h3>Preparing your machine</h3>
 
 <p><em>Do not allow password-based SSH login</em></p>
 
@@ -62,7 +62,7 @@
 
 <p>I skipped these... since they are enforced by the firewall on my router. I've made sure that ssh is only possible via the local network -- meaning my router <em>only</em> forwards ports 443 and 80 to {zombiebox}. If you were running a server that was directly internet facing with it's own <em>external</em> IP (i.e. not fronted by a router/firewall), these steps would be a smart idea. If I've made a grave error, please be gentle and let me know!</p>
 
-<h2>Installing from source</h2>
+<h3>Installing from source</h3>
 
 <p>This section is mostly complete, and I followed exactly. There are just a few deviations/corrections of note.</p>
 
@@ -83,9 +83,9 @@
 
 <p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
 
-<p><img src="img/mastodon-running.png" alt="screenshot of my instance displaying my migrated profile"/></p>
+<p><figure><img src="img/mastodon-running-720.png" alt="screenshot of my instance displaying my migrated profile"/><figcaption>screenshot of my instance displaying my migrated profile</figcaption></figure></p>
 
-<h1>3. Instance configuration</h1>
+<h2>3. Instance configuration</h2>
 
 <p>Everything was running! I created my admin user, migrated an existing account to the server, to live at <a href="https://werm.world/@mrshll">@mrshll@werm.world</a> - but the timeline was empty! This was an important detail to federation that I didn't understand before setting up the server. </p>
 
@@ -95,7 +95,7 @@
 
 <p>At first this seemed show-stopping. I love to see conversations "in the replies," as it's often a great way to find new viewpoints or folks to follow. I tried to solve this by setting up what are called "relays" which seem like mastodon firehoses to "pseudo-federate" your instance and receive a lot of extra content. This, however, wasn't worth the extra bandwidth, media storage, and server load so I've since disabled them all. Instead, I found that you can simply click the date of a post to view it on the author's server. There you can see the entire set of replies. Not so bad! But worth being aware of.</p>
 
-<h1>4. Ongoing maintenance and backups</h1>
+<h2>4. Ongoing maintenance and backups</h2>
 
 <p>Backups are important. That's a maxim made more pressing by my use of dilapidated hardware as the webserver. Usually, my method of "backup" is to use <code>scp</code> to copy important files and database dumps from my webserver across the local network to my desktop. If you want to rely on <em>the cloud</em> you could use a storage provider for extra off-site redundancy. But in the spirit of incurring no costs, keeping it all under by solar-powered roof, and using existing hardware, I'm going to keep it simple.</p>
 
@@ -140,11 +140,11 @@ fi
 <pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
 </code></pre>
 
-<p><img src="img/mastodon-healthcheck.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
+<p><figure><img src="img/mastodon-healthcheck-720.png" alt="Screenshot of healthcheck.io showing my cronjob"/><figcaption>Screenshot of healthcheck.io showing my cronjob</figcaption></figure></p>
 
 <p>As of now, I think that's just about everything I've done for the server. If you have any questions, feel free to reach out :)</p>
 
-</article><p style="color:#ccc"><em>Compiled 2023-1-1</em></p><footer>
+</article><p style="color:#ccc"><em>Compiled 2023-1-2</em></p><footer>
   <div class='footer-row'>
     <a href="https://twitter.com/marsh">
       <img src="img/twitter.png" style="height: 1.8rem">

@@ -10,7 +10,7 @@ Outline:
 3. Instance configuration
 4. Ongoing maintenance and backups
 
-# 1. Setup a home server
+## 1. Setup a home server
 
 You could, of course, rent a server on !the cloud!. In my case, I intended to only house a couple of folks on my instance, and so wanted to keep ongoing costs low. Plus it's an opportunity to make use of old or unused computers. Earlier this week, I wrote about {running a basement server}. 
 
@@ -23,11 +23,11 @@ For posterity, the resources I found are:
 - [From Ubuntu to nixos, history of a Mastodon migration](https://gianarb.it/blog/from-ubuntu-to-nixos-history-of-a-mastodon-migration)
 - [nixpkgs nixos repo - mastodon server](https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/mastodon)
 
-# 2. Setup Mastodon
+## 2. Setup Mastodon
 
 To setup Mastodon, follow the [official setup documentation](https://docs.joinmastodon.org/admin/prerequisites). Hah, gotcha! But wait, why is there so much _text_ here? I will interject a few notes where either the documentation assumes experience that one might not have, or where I modified the steps.
 
-## Preparing your machine
+### Preparing your machine
 
 *Do not allow password-based SSH login*
 
@@ -43,7 +43,7 @@ where `marsh` and `zombiebox.local` are replaced with the server user and hostna
 
 I skipped these... since they are enforced by the firewall on my router. I've made sure that ssh is only possible via the local network -- meaning my router _only_ forwards ports 443 and 80 to {zombiebox}. If you were running a server that was directly internet facing with it's own _external_ IP (i.e. not fronted by a router/firewall), these steps would be a smart idea. If I've made a grave error, please be gentle and let me know!
 
-## Installing from source
+### Installing from source
 
 This section is mostly complete, and I followed exactly. There are just a few deviations/corrections of note.
 
@@ -64,7 +64,7 @@ Finishing the guide, everything worked except css and js assets were not being s
 
 ![screenshot of my instance displaying my migrated profile](img/mastodon-running.png)
 
-# 3. Instance configuration
+## 3. Instance configuration
 
 Everything was running! I created my admin user, migrated an existing account to the server, to live at [@mrshll@werm.world](https://werm.world/@mrshll) - but the timeline was empty! This was an important detail to federation that I didn't understand before setting up the server. 
 
@@ -74,7 +74,7 @@ Running and instance of uno (or a small cohort) has two main drawbacks that I've
 
 At first this seemed show-stopping. I love to see conversations "in the replies," as it's often a great way to find new viewpoints or folks to follow. I tried to solve this by setting up what are called "relays" which seem like mastodon firehoses to "pseudo-federate" your instance and receive a lot of extra content. This, however, wasn't worth the extra bandwidth, media storage, and server load so I've since disabled them all. Instead, I found that you can simply click the date of a post to view it on the author's server. There you can see the entire set of replies. Not so bad! But worth being aware of.
 
-# 4. Ongoing maintenance and backups
+## 4. Ongoing maintenance and backups
 
 Backups are important. That's a maxim made more pressing by my use of dilapidated hardware as the webserver. Usually, my method of "backup" is to use `scp` to copy important files and database dumps from my webserver across the local network to my desktop. If you want to rely on _the cloud_ you could use a storage provider for extra off-site redundancy. But in the spirit of incurring no costs, keeping it all under by solar-powered roof, and using existing hardware, I'm going to keep it simple.
 

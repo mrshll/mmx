@@ -63,6 +63,10 @@ function utils.capitalize(str)
   return (str:gsub("^%l", string.upper))
 end
 
+function utils.title_case(str)
+  return utils.capitalize(str:gsub(" %l", string.upper))
+end
+
 -- tables
 
 function utils.has_keys(table, keys)
@@ -76,7 +80,8 @@ function utils.has_keys(table, keys)
 end
 
 function utils.get_key_case_insensitive(table, key)
-  return table[key] or table[utils.capitalize(key)] or table[key:lower()] or table[key:upper()]
+  return table[key] or table[utils.capitalize(key)] or table[key:lower()] or table[key:upper()] or
+      table[utils.title_case(key)]
 end
 
 function utils.spairs(t, order)
