@@ -1,0 +1,207 @@
+<html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Self-hosted Mastodon" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Self-hosted Mastodon</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><a href="wiki.html">Wiki</a></li><li><mark><a href="writing.html">Writing</a></mark></li></ul><ul><li><mark><a href="self_hosted_mastodon.html">Self-hosted Mastodon</a></mark></li><li><a href="running_a_basement_server.html">Running a basement server</a></li><li><a href="ricoh_simplex_tls_repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5_year_gestalt.html">5-year gestalt</a></li><li><a href="work_in_progress.html">Work in Progress</a></li><li><a href="on_webrings.html">On Webrings</a></li><details><summary></summary><li><a href="on_running.html">On running</a></li><li><a href="rainwater.html">Rainwater</a></li><li><a href="mom_q_a.html">Mom Q&A</a></li><li><a href="tufts_talk_2020_02_23.html">Tufts Talk 2020-02-23</a></li><li><a href="how_we_work_remotely_in_2020.html">How We Work Remotely in 2020</a></li><li><a href="learning_to_grow__plants_.html">Learning to grow (plants)</a></li><li><a href="two_years_in___how_we_work_at_upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="upstream_joins_natel_energy.html">Upstream joins Natel Energy</a></li><li><a href="an_appeal_for_impact.html">An appeal for impact</a></li><li><a href="my_climate_journey_podcast.html">My Climate Journey podcast</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Self-hosted Mastodon</h1><div style='color:#ccc'>last updated 2022-12-19</div>
+
+
+<h2>Hosting Mastodon from your basement</h2>
+<p>There are plenty of great resources to help folks with a moderate technical background setup a Mastodon instance, including <a href="https://docs.joinmastodon.org/admin/prerequisites/">the official documentation</a>. However, I thought I would write down the steps I took in one place to set up <a href="https://werm.world">werm.world</a>, the Mastodon instance running on {zombiebox} in my basement.</p>
+
+<p>Outline:</p>
+
+<ol>
+    <li>Setup a home server</li>
+    <li>Setup Mastodon</li>
+    <li>Instance configuration</li>
+    <li>Ongoing maintenance and backups</li>
+</ol>
+
+<h2>1. Setup a home server</h2>
+
+<p>You could, of course, rent a server on !the cloud!. In my case, I intended to only house a couple of folks on my instance, and so wanted to keep ongoing costs low. Plus it's an opportunity to make use of old or unused computers. Earlier this week, I wrote about {running a basement server}. </p>
+
+<p>On my server, I am running a minimal version of Ubuntu. However, if I were to do it again (and I may perhaps migrate in the future) I would dig deeper into <a href="https://nixos.org/">NixOS</a>. One of the most tedious aspects of server experimentation is remembering setup steps, minute edits to configurations hidden in the depths, and terminal commands with side-effects. What makes NixOS so exciting to me is that it solves for just this, and more. NixOS is declarative, meaning a configuration can be used for reproducable outcomes. Had I used NixOS, I could simply share the portion of the configuration for the Mastodon server, and you could merge this into your configuration and replicate exactly what I was running. However, since I just welcomed a new child to my family, I figured I would limit the number of variables, stick to what I knew, and save NixOS for a later adventure.</p>
+
+<p>For posterity, the resources I found are:</p>
+
+<ul>
+    <li><a href="https://page.romeov.me/posts/setting-up-mastodon-with-nixos/">Setting up Mastodon with mixos</a></li>
+    <li><a href="https://krisztianfekete.org/self-hosting-mastodon-on-nixos-a-proof-of-concept/">Self hosting Mastodon on nixos, a proof of concept</a></li>
+    <li><a href="https://gianarb.it/blog/from-ubuntu-to-nixos-history-of-a-mastodon-migration">From Ubuntu to nixos, history of a Mastodon migration</a></li>
+    <li><a href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/mastodon">nixpkgs nixos repo - mastodon server</a></li>
+</ul>
+
+<h2>2. Setup Mastodon</h2>
+
+<p>To setup Mastodon, follow the <a href="https://docs.joinmastodon.org/admin/prerequisites">official setup documentation</a>. Hah, gotcha! But wait, why is there so much <em>text</em> here? I will interject a few notes where either the documentation assumes experience that one might not have, or where I modified the steps.</p>
+
+<h3>Preparing your machine</h3>
+
+<p><em>Do not allow password-based SSH login</em></p>
+
+<p>If you are setting things up on your server directly (i.e. you are typing commands into the device directly) you will likely want to enable remote access on your local network via <code>ssh</code>. If you aren't able to <code>ssh</code> into your machine, you may need to install <code>openssh-server</code> or the equivalent service for your operating system. On linux, you may need to also run <code>sudo ufw allow ssh</code> depending on your prior firewall configuration to enable ssh access to the server.</p>
+
+<p>By default, when you ssh into your home server, it will prompt you to enter the password. What the setup guide suggests here is to disable this and restrict ssh access to an allowlist of authorized keys. On each of the computers you will use to manage the server over ssh, run the following to copy your ssh public key:</p>
+
+<pre><code>~&gt; ssh-copy-id marsh@zombiebox.local
+</code></pre>
+
+<p>where <code>marsh</code> and <code>zombiebox.local</code> are replaced with the server user and hostname or ip respectively.</p>
+
+<p><em>Install fail2ban so it blocks repeated login attempts</em> and <em>Install a firewall and only allow SSH, HTTP and HTTPS ports</em></p>
+
+<p>I skipped these... since they are enforced by the firewall on my router. I've made sure that ssh is only possible via the local network -- meaning my router <em>only</em> forwards ports 443 and 80 to {zombiebox}. If you were running a server that was directly internet facing with it's own <em>external</em> IP (i.e. not fronted by a router/firewall), these steps would be a smart idea. If I've made a grave error, please be gentle and let me know!</p>
+
+<h3>Installing from source</h3>
+
+<p>This section is mostly complete, and I followed exactly. There are just a few deviations/corrections of note.</p>
+
+<p><em>Acquiring a SSL certificate</em></p>
+
+<p>I had to approach this step a bit differently from the guide. First, in order for <a href="https://letsencrypt.org/">letsencrypt</a> (one the best things to happen to the internet) issue your certificate, your server needs to be reachable via the internet. Make sure you've completed the port forwarding steps in {running a basement server}. If you haven't you may get an error to this effect.</p>
+
+<p>Additionally, the mastodon nginx configuration that they provide to copy into your server's <code>/etc/nginx/sites-available/mastodon</code> was invalid without the cert, and their recommended method, <code>certbot</code> wouldn't run because of the invalid nginx, a Catch-22 of sorts. Instead, I ran the following to create my SSL certificate:</p>
+
+<pre><code>letsencrypt certonly --standalone -d werm.world
+</code></pre>
+
+<p>Under the root user, I added the following cronjobs (using <code>crontab -e</code>) to make sure the cert stayed up-to-date:</p>
+
+<pre><code>0 1 * * 1 /usr/bin/letsencrypt renew &gt;&gt; /home/mastodon/letsencrypt.log
+5 1 * * 1 /bin/systemctl reload nginx
+</code></pre>
+
+<p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
+
+<p><figure><img src="img/mastodon-running-720.png" alt="screenshot of my instance displaying my migrated profile"/><figcaption>screenshot of my instance displaying my migrated profile</figcaption></figure></p>
+
+<h2>3. Instance configuration</h2>
+
+<p>Everything was running! I created my admin user, migrated an existing account to the server, to live at <a href="https://werm.world/@mrshll">@mrshll@werm.world</a> - but the timeline was empty! This was an important detail to federation that I didn't understand before setting up the server. </p>
+
+<p>Running and instance of uno (or a small cohort) has two main drawbacks that I've found so far:
++ a mastodon server is only aware of instances it is federated with, and only has passive information about posts that occur during its time running
++ posts by authors you follow may appear to have empty replies, whereas folks from servers you are not federated with may have replied</p>
+
+<p>At first this seemed show-stopping. I love to see conversations "in the replies," as it's often a great way to find new viewpoints or folks to follow. I tried to solve this by setting up what are called "relays" which seem like mastodon firehoses to "pseudo-federate" your instance and receive a lot of extra content. This, however, wasn't worth the extra bandwidth, media storage, and server load so I've since disabled them all. Instead, I found that you can simply click the date of a post to view it on the author's server. There you can see the entire set of replies. Not so bad! But worth being aware of.</p>
+
+<h2>4. Ongoing maintenance and backups</h2>
+
+<p>Backups are important. That's a maxim made more pressing by my use of dilapidated hardware as the webserver. Usually, my method of "backup" is to use <code>scp</code> to copy important files and database dumps from my webserver across the local network to my desktop. If you want to rely on <em>the cloud</em> you could use a storage provider for extra off-site redundancy. But in the spirit of incurring no costs, keeping it all under by solar-powered roof, and using existing hardware, I'm going to keep it simple.</p>
+
+<p>I created the following <code>backup.sh</code> script to periodically back up the important bits, including postgres, redis, and media/static files.</p>
+
+<pre><code>#!/bin/bash
+
+NOW=$(date --iso-8601=seconds)
+HOST=marshbox.local
+HOST_USER=marsh
+DEST_DIR=/data/zombiebox-backup/mastodon/$NOW/
+
+if ping -c 1 -W 1 "$HOST"; then
+  echo "$HOST online, backing up"
+
+  runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; mkdir backup'
+
+  # postgres
+  runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; pg_dump -Fc mastodon_production -f /home/mastodon/backup/postgres.dump'
+
+  # redis
+  cp /var/lib/redis/dump.rdb /home/mastodon/backup/dump.rdb
+
+  tar_cmds="tar -czf backup/accounts.tar.gz live/public/system/accounts/ &amp;&amp; \
+  tar -czf backup/media_attachments.tar.gz live/public/system/media_attachments/ &amp;&amp; \
+  tar -czf backup/site_uploads.tar.gz live/public/system/site_uploads/"
+
+  # uploads
+  runuser -l mastodon -c "cd /home/mastodon &amp;&amp; $tar_cmds"
+
+  # ensure the destination directory and send 'er over
+  ssh $HOST_USER@$HOST "mkdir -p $DEST_DIR"
+  scp /home/mastodon/backup/* $HOST_USER@$HOST:$DEST_DIR
+
+else
+  echo "$HOST not online, skipping backup"
+fi
+</code></pre>
+
+<p>For this file in particular, I wanted to make sure it ran, so I tried <a href="https://healthchecks.io/">healthchecks.io</a> for the first time and added the following cronjob for the root user:</p>
+
+<pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
+</code></pre>
+
+<p><figure><img src="img/mastodon-healthcheck-720.png" alt="Screenshot of healthcheck.io showing my cronjob"/><figcaption>Screenshot of healthcheck.io showing my cronjob</figcaption></figure></p>
+
+<p>As of now, I think that's just about everything I've done for the server. If you have any questions, feel free to reach out :)</p>
+
+</article><p style="color:#ccc"><em>Compiled 2023-1-2</em></p><footer>
+  <div class='footer-row'>
+    <a href="https://twitter.com/marsh">
+      <img src="img/twitter.png" style="height: 1.8rem">
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

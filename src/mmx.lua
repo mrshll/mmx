@@ -149,7 +149,7 @@ for _, file_path in pairs(file_paths) do
   local parent_name = parts[#parts - 1] or INDEX_NAME
   -- remove the file extension
   local name = parts[#parts]:sub(0, -1 * #DATA_EXT - 1)
-  local dest_file_name = name .. ".html"
+  local dest_file_name = utils.slugify(name) .. ".html"
 
   if name == parent_name then
     if name == INDEX_NAME then

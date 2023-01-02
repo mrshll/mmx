@@ -67,6 +67,10 @@ function utils.title_case(str)
   return utils.capitalize(str:gsub(" %l", string.upper))
 end
 
+function utils.slugify(str)
+  return (str:gsub("[%s%p]", "_")):lower()
+end
+
 -- tables
 
 function utils.has_keys(table, keys)
