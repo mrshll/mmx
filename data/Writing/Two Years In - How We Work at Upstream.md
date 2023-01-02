@@ -46,4 +46,4 @@ I’ve worked at companies where there is a set “Show and Tell” slot on the 
 
 It’s been an awesome few years, and I’m excited for many more to come. I’m sure most of how we work is par for the startup course these days, but I hope for some, it’s an interesting look into our daily routine.
 
-And obligatorily: if the way we work sounds fun and our mission resonates, our team is {https://upstream.tech/about, hiring})! Send me a message at marshall@upstream.tech 🙋‍
+And obligatorily: if the way we work sounds fun and our mission resonates, our team is [hiring](https://upstream.tech/about))! Send me a message at marshall@upstream.tech 🙋‍

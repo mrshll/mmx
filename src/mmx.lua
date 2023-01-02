@@ -148,7 +148,8 @@ for _, file_path in pairs(file_paths) do
     end
   end
 
-  local body = utils.read_file(file_path);
+  local body = utils.read_file(file_path)
+
   local date
   local date_start, date_end = body:find("%d%d%d%d%-%d%d%-%d%d")
   if date_start == 1 then

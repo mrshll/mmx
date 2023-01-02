@@ -343,7 +343,7 @@ All worth it!!
 
 xox
 
->There's such an ease to your reminiscence. I can see you doing everything, especially putzing around. I feel like that time must have felt really valuable to you--do you think that it did in the moment, or was it stressful to be working part time? It feels like if someone with a college degree were to make that decision, they'd be making a sacrifice, or squandering an opportunity... Makes me think of this {https://open.spotify.com/episode/0sCNzc0bRiisT7ZXS2PjBW?si=2VORBvCYR3GG_y9pc1_llA, podcast}
+>There's such an ease to your reminiscence. I can see you doing everything, especially putzing around. I feel like that time must have felt really valuable to you--do you think that it did in the moment, or was it stressful to be working part time? It feels like if someone with a college degree were to make that decision, they'd be making a sacrifice, or squandering an opportunity... Makes me think of this [podcast](https://open.spotify.com/episode/0sCNzc0bRiisT7ZXS2PjBW?si=2VORBvCYR3GG_y9pc1_llA)
 >- Malcolm
 
 By the time I started working at the restaurant, I had already worked for a year and a half at the Mayor's office in NOLA. I realized I wasn't happy working 9a-5 and working at the restaurants got me out of that and I was able to travel..which I did for about a year. That helped me re-boot and go on to what was next. Plus, I was making more waiting on tables than I did working full time!

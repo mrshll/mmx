@@ -6,7 +6,7 @@ Tonight I fixed Alejandra's favorite camera - her Dad's Ricoh Singlex TLS from t
 
 I started by removing the battery but it seemed newish (these things used to run on mercury batteries and have since been replaced with equivalent voltages). From the manual the electronics were only for a light meter and optional flash, so I ruled out anything battery-related.
 
-I wasn't sure where to start so I did some research and found {https://simonhawketts.co.uk/2016/04/26/singlex-tls-strip-down-and-repair-part-1/, this three-part teardown and repair}. After a comprehensive deconstruction and refurbishment, they weren't able to find the culprit, which disheartened me slightly.
+I wasn't sure where to start so I did some research and found [this three-part teardown and repair](https://simonhawketts.co.uk/2016/04/26/singlex-tls-strip-down-and-repair-part-1/). After a comprehensive deconstruction and refurbishment, they weren't able to find the culprit, which disheartened me slightly.
 
 I removed the bottom plate to get at the shutter gear assembly and other internals. I noticed an arm that looked in a middle position, which seemed odd.
 

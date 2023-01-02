@@ -1,7 +1,7 @@
 2021-07-10
 _An interview on webrings and shrinking the web_
 
-The webrings I've encountered have been an immense source of inspiration, social connection. At the start of 2021, I stumbled upon {https://webring.xxiivv.com, webring.xxiivv.com} and was immediately drawn in to the thematic cohesion and shared pursuit of creating decommodified digital spaces, better tools, and experimental processes for creative projects. As someone who first became interested in code via trying to set up a website, it also carried an air of nostalgia that is especially poignant on the sites that replicate the geocities vibe.
+The webrings I've encountered have been an immense source of inspiration, social connection. At the start of 2021, I stumbled upon [webring.xxiivv.com](https://webring.xxiivv.com) and was immediately drawn in to the thematic cohesion and shared pursuit of creating decommodified digital spaces, better tools, and experimental processes for creative projects. As someone who first became interested in code via trying to set up a website, it also carried an air of nostalgia that is especially poignant on the sites that replicate the geocities vibe.
 
 A friend from Nashville, Eli, was thinking about writing something about webrings and asked the following, paraphrased:
 
@@ -20,7 +20,7 @@ The nodes of the ring are as important as the ring itself. The websites are ofte
 > This webring is for homepages of people who are interested in low tech, small game tools, and other forms of Web 1.0 inspired creativity. 
 https://emreed.net/LowTech_Directory.html
 
-What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic {https://melonking.net/melon.html?z=/thoughts/tech-needs-art.html, response essay} to one of my posts from years ago. It creates a lightweight network without the hand-holding of a intermediary. It's cool!
+What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic [response essay](https://melonking.net/melon.html?z=/thoughts/tech-needs-art.html) to one of my posts from years ago. It creates a lightweight network without the hand-holding of a intermediary. It's cool!
 
 And two questions from Eli's editor:
 

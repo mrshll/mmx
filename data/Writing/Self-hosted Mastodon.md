@@ -1,7 +1,7 @@
 2022-12-19
 
 ## Hosting Mastodon from your basement
-There are plenty of great resources to help folks with a moderate technical background setup a Mastodon instance, including {https://docs.joinmastodon.org/admin/prerequisites/, the official documentation}. However, I thought I would write down the steps I took in one place to set up {https://werm.world, werm.world}, the Mastodon instance running on {zombiebox} in my basement.
+There are plenty of great resources to help folks with a moderate technical background setup a Mastodon instance, including [the official documentation](https://docs.joinmastodon.org/admin/prerequisites/). However, I thought I would write down the steps I took in one place to set up [werm.world](https://werm.world), the Mastodon instance running on {zombiebox} in my basement.
 
 Outline:
 
@@ -14,18 +14,18 @@ Outline:
 
 You could, of course, rent a server on !the cloud!. In my case, I intended to only house a couple of folks on my instance, and so wanted to keep ongoing costs low. Plus it's an opportunity to make use of old or unused computers. Earlier this week, I wrote about {running a basement server}. 
 
-On my server, I am running a minimal version of Ubuntu. However, if I were to do it again (and I may perhaps migrate in the future) I would dig deeper into {https://nixos.org/, NixOS}. One of the most tedious aspects of server experimentation is remembering setup steps, minute edits to configurations hidden in the depths, and terminal commands with side-effects. What makes NixOS so exciting to me is that it solves for just this, and more. NixOS is declarative, meaning a configuration can be used for reproducable outcomes. Had I used NixOS, I could simply share the portion of the configuration for the Mastodon server, and you could merge this into your configuration and replicate exactly what I was running. However, since I just welcomed a new child to my family, I figured I would limit the number of variables, stick to what I knew, and save NixOS for a later adventure.
+On my server, I am running a minimal version of Ubuntu. However, if I were to do it again (and I may perhaps migrate in the future) I would dig deeper into [NixOS](https://nixos.org/). One of the most tedious aspects of server experimentation is remembering setup steps, minute edits to configurations hidden in the depths, and terminal commands with side-effects. What makes NixOS so exciting to me is that it solves for just this, and more. NixOS is declarative, meaning a configuration can be used for reproducable outcomes. Had I used NixOS, I could simply share the portion of the configuration for the Mastodon server, and you could merge this into your configuration and replicate exactly what I was running. However, since I just welcomed a new child to my family, I figured I would limit the number of variables, stick to what I knew, and save NixOS for a later adventure.
 
 For posterity, the resources I found are:
 
-- {https://page.romeov.me/posts/setting-up-mastodon-with-nixos/}
-- {https://krisztianfekete.org/self-hosting-mastodon-on-nixos-a-proof-of-concept/}
-- {https://gianarb.it/blog/from-ubuntu-to-nixos-history-of-a-mastodon-migration}
-- {https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/mastodon}
+- [Setting up Mastodon with mixos](https://page.romeov.me/posts/setting-up-mastodon-with-nixos/)
+- [Self hosting Mastodon on nixos, a proof of concept](https://krisztianfekete.org/self-hosting-mastodon-on-nixos-a-proof-of-concept/)
+- [From Ubuntu to nixos, history of a Mastodon migration](https://gianarb.it/blog/from-ubuntu-to-nixos-history-of-a-mastodon-migration)
+- [nixpkgs nixos repo - mastodon server](https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/mastodon)
 
 # 2. Setup Mastodon
 
-To setup Mastodon, follow the {https://docs.joinmastodon.org/admin/prerequisites, official setup documentation}. Hah, gotcha! But wait, why is there so much _text_ here? I will interject a few notes where either the documentation assumes experience that one might not have, or where I modified the steps.
+To setup Mastodon, follow the [official setup documentation](https://docs.joinmastodon.org/admin/prerequisites). Hah, gotcha! But wait, why is there so much _text_ here? I will interject a few notes where either the documentation assumes experience that one might not have, or where I modified the steps.
 
 ## Preparing your machine
 
@@ -49,7 +49,7 @@ This section is mostly complete, and I followed exactly. There are just a few de
 
 *Acquiring a SSL certificate*
 
-I had to approach this step a bit differently from the guide. First, in order for {https://letsencrypt.org/, letsencrypt} (one the best things to happen to the internet) issue your certificate, your server needs to be reachable via the internet. Make sure you've completed the port forwarding steps in {running a basement server}. If you haven't you may get an error to this effect.
+I had to approach this step a bit differently from the guide. First, in order for [letsencrypt](https://letsencrypt.org/) (one the best things to happen to the internet) issue your certificate, your server needs to be reachable via the internet. Make sure you've completed the port forwarding steps in {running a basement server}. If you haven't you may get an error to this effect.
 
 Additionally, the mastodon nginx configuration that they provide to copy into your server's `/etc/nginx/sites-available/mastodon` was invalid without the cert, and their recommended method, `certbot` wouldn't run because of the invalid nginx, a Catch-22 of sorts. Instead, I ran the following to create my SSL certificate:
 
@@ -60,13 +60,13 @@ Under the root user, I added the following cronjobs (using `crontab -e`) to make
   	0 1 * * 1 /usr/bin/letsencrypt renew >> /home/mastodon/letsencrypt.log
   	5 1 * * 1 /bin/systemctl reload nginx
 
-Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found {https://github.com/mastodon/mastodon/issues/3584, this issue} and changed the permissions of the `mastodon` user's home directory per the issue.
+Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found [this issue](https://github.com/mastodon/mastodon/issues/3584) and changed the permissions of the `mastodon` user's home directory per the issue.
 
 ![screenshot of my instance displaying my migrated profile](img/mastodon-running.png)
 
 # 3. Instance configuration
 
-Everything was running! I created my admin user, migrated an existing account to the server, to live at {https://werm.world/@mrshll, @mrshll@werm.world} - but the timeline was empty! This was an important detail to federation that I didn't understand before setting up the server. 
+Everything was running! I created my admin user, migrated an existing account to the server, to live at [@mrshll@werm.world](https://werm.world/@mrshll) - but the timeline was empty! This was an important detail to federation that I didn't understand before setting up the server. 
 
 Running and instance of uno (or a small cohort) has two main drawbacks that I've found so far:
 + a mastodon server is only aware of instances it is federated with, and only has passive information about posts that occur during its time running
@@ -113,7 +113,7 @@ I created the following `backup.sh` script to periodically back up the important
       echo "$HOST not online, skipping backup"
     fi
 
-For this file in particular, I wanted to make sure it ran, so I tried {https://healthchecks.io/, healthchecks.io} for the first time and added the following cronjob for the root user:
+For this file in particular, I wanted to make sure it ran, so I tried [healthchecks.io](https://healthchecks.io/) for the first time and added the following cronjob for the root user:
 
     0 3 * * * /home/mastodon/backup.sh && curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
 

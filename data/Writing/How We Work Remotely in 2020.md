@@ -2,7 +2,7 @@
 ## A reflection of how we work and grow as a fully remote team
 ![The team on a Zoom meeting](img/team-zoom.png)
 
-There are plenty of lists of tools for remote teams, and some fantastic examples of documented processes (ex {https://about.gitlab.com/company/culture/all-remote/, Gitlab}). I'm spending some time this weekend writing about how we work at Upstream Tech. The tools, yes, but also the fabric, connections and culture of our remote work.
+There are plenty of lists of tools for remote teams, and some fantastic examples of documented processes (ex [Gitlab](https://about.gitlab.com/company/culture/all-remote/)). I'm spending some time this weekend writing about how we work at Upstream Tech. The tools, yes, but also the fabric, connections and culture of our remote work.
 
 A lot has changed since the write-up I did 2 years ago. We've gone from 3 employees to almost 20! With team growth like that, it's probably obvious that we had to adjust and refine our processes to enable collaboration, productivity, and well-being.
 
@@ -29,7 +29,7 @@ _This is where we are, as of 2020. With the majority in the Northeast._
 
 - One thing I've found especially challenging, through my own experiences and observing other companies, is organizing hybrid remote/in-person teams. When some team members are co-located and others are remote, it is very difficult to maintain transparency through communication and create inclusive decision-making processes. This can be avoided with rigorous design of meetings/decisions/processes and a condemnation for hallway brainstorming and decisions. But it can be tough, especially for those remote employees.
 - Digital work begets digital collaboration. Many types of work do not jive with computer-centric collaboration. Certain hardware design, for instance. Physical design. These things require hands-on work from the whole team in a shared space.
-- Fast growth. And not our 0 to 20 in 4 years growth (which admittedly felt VERY FAST), but I'm talking 0 to 100 in a year growth. Some companies like GitLab and InVision _have_ managed this, so {https://www.invisionapp.com/inside-design/studio-remote-design-team/, it isn't impossible} but it takes a lot of conscious design and a rigorous and thoughtful interviewing process.
+- Fast growth. And not our 0 to 20 in 4 years growth (which admittedly felt VERY FAST), but I'm talking 0 to 100 in a year growth. Some companies like GitLab and InVision _have_ managed this, so [it isn't impossible](https://www.invisionapp.com/inside-design/studio-remote-design-team/) but it takes a lot of conscious design and a rigorous and thoughtful interviewing process.
 
 There are surely more benefits, and some trade-offs as well. Below, I'll highlight the details on how we organize and collaborate to achieve these benefits while minimizing the negative impact of the downsides (and I'd be foolish to claim there were none).
 
@@ -125,7 +125,7 @@ It’s a very simple, low friction to-do list that drive self-accountability for
 
 ### GitLab
 
-As described on {https://en.wikipedia.org/wiki/GitLab, GitLab}:
+As described on [GitLab](https://en.wikipedia.org/wiki/GitLab):
 
 >>>
 *GitLab* is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline!![]()(7) features, using an open-source license, developed by GitLab Inc.
@@ -142,7 +142,7 @@ Below is a combination of terminology and processes we use around GitLab's issue
 - Each product team should have their own *product label*. A label is a tag that can be added to issues. It’s very helpful to have one per-product so that product teammates can quickly filter down to the necessary issues relevant to their work on a given week.
 - GitLab *issues* are tracked in several *columns*.
 
-*A note about backlog issues*: We use the {#1-3-6, 1-3-6 document} as our way to track work that is longer term (six months in startup land is like 3 years in big company land). We try to keep GitLab issues _very fresh_, meaning issues that fall outside of the “this month” in the 1-3-6 document should likely {https://codeburst.io/life-without-bug-tracking-925668ed6842, not exist} in GitLab.
+*A note about backlog issues*: We use the [1-3-6 document](#1-3-6) as our way to track work that is longer term (six months in startup land is like 3 years in big company land). We try to keep GitLab issues _very fresh_, meaning issues that fall outside of the “this month” in the 1-3-6 document should likely [not exist](https://codeburst.io/life-without-bug-tracking-925668ed6842) in GitLab.
 
 ### 15Five
 
@@ -164,7 +164,7 @@ We use intercom to interact with the customers on our website. We don't yet do a
 
 ### Streak
 
-{https://streak.com, Stream} is a lightweight CRM that lives inside of Gmail to track pipelines and processes related to sales activities. It's fantastic because it doesn't require cumbersome BCC-ing to share emails related to the CRM entities - emails can be shared by default, and are properly associated with the CRM entities automatically based on domain name or email address. We use a Task feature for follow-ups (since they'd otherwise clog up our Kanban board in GitLab). We make sure all of these tasks have a deadline, because we all know how easy it is to kick a "follow up" can down the road. # Everyone's Responsibilities
+[Stream](https://streak.com) is a lightweight CRM that lives inside of Gmail to track pipelines and processes related to sales activities. It's fantastic because it doesn't require cumbersome BCC-ing to share emails related to the CRM entities - emails can be shared by default, and are properly associated with the CRM entities automatically based on domain name or email address. We use a Task feature for follow-ups (since they'd otherwise clog up our Kanban board in GitLab). We make sure all of these tasks have a deadline, because we all know how easy it is to kick a "follow up" can down the road. # Everyone's Responsibilities
 
 We have three responsibilities we ask everyone on the team to adhere to
 
@@ -179,7 +179,7 @@ Each team has two *Directly Responsible Individuals*, one for Product and one fo
 Shared responsibilities include:
 
 - Turning customer feedback into product decisions. This is the most shared responsibility, since the GP DRI is on the front-line of correspondence with the customer (and Product team members are often included in those communications/emails to bring technical perspective). One area we as a team haven't quite figured out is a great process for how customer feedback is stored and translated into product and feature decisions. We have a few processes we are experimenting with, but if anyone reading this has suggestions, send them our way!
-- Maintaining the {#1-3-6, 1/3/6}.
+- Maintaining the [1/3/6](#1-3-6).
 - Fielding and managing business partnerships related to the business, with the Product DRI being responsible for any additional technical or product work due to the partnership, and the GP DRI responsible for all other aspects of the partnership.
 - Facilitating feature releases for the product. We have a "feature development checklist" with recommended steps to follow when creating new releases of a product. This is important with machine learning models, especially with our forecasting products, as roll-out has to be managed in close communication with our customers.
 
@@ -213,6 +213,6 @@ Product teams have a meeting each week to plan their work for the coming week. T
 
 There is a lot to consider when embarking to create and grow a remote team. It won't work for everyone. Some people find energy in physical nearness to their coworkers. Others may not have the autonomy necessary to thrive in a more independent work style. But for those teams that desire flexibility, and are inherently autonomous and asynchronous, I hope this document gives a window into the how and why of remote teams. Why remote work can be a powerful design for a team, especially a software or digital one, and some of the strategic and tactical steps we've taken to implement it successfully. At Upstream Tech, we are still learning a lot - and we will always make time at our in-person gatherings to discuss and adjust our processes and tools. But so far, we've been able use these concepts to scale our team's growth, build technologies for the environment, and counter climate change.
 
-If you have a remote team and want to chat, or if you're looking to create a remote team within your organization, send me a message at {https://twitter.com/marsh, @marsh}. I'd love to hear about what works well for your team or challenges you've encountered.
+If you have a remote team and want to chat, or if you're looking to create a remote team within your organization, send me a message at [@marsh](https://twitter.com/marsh). I'd love to hear about what works well for your team or challenges you've encountered.
 
 Remote work is a big part of what is to come for great teams!

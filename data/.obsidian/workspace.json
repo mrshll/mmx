@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Log.md",
+                "file": "Writing/An appeal for impact.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Log.md",
+                "file": "Writing/An appeal for impact.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Log.md",
+                "file": "Writing/An appeal for impact.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Log.md"
+                "file": "Writing/An appeal for impact.md"
               }
             }
           }
@@ -148,15 +148,15 @@
   },
   "active": "2850f839c7972903",
   "lastOpenFiles": [
-    "Wiki/Scripting.md",
-    "img/log/2020-08-05_porco.png",
-    "Log.md",
-    "Now.md",
-    "About.md",
-    "Wiki/Software philosophy.md",
-    "Projects/Dormant projects/Snappi.md",
-    "Projects/Dormant projects/Plotter.md",
-    "Projects/Dormant projects/paste.date.md",
-    "Projects/Dormant projects/Mutual aid needs & offers.md"
+    "Writing/How We Work Remotely in 2020.md",
+    "Writing/Learning to grow (plants).md",
+    "Writing/Mom Q&A.md",
+    "Writing/My Climate Journey podcast.md",
+    "Writing/On running.md",
+    "Writing/On Webrings.md",
+    "Writing/Ricoh Simplex TLS Repair.md",
+    "Writing/Running a basement server.md",
+    "Writing/Self-hosted Mastodon.md",
+    "Log.md"
   ]
 }
