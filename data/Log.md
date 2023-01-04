@@ -1,3 +1,5 @@
+![My dæmon Dax, with snout nestled in both fore and hind paws](img/log/2023-01-02_133423662.jpeg)
+![Dax on the Rock Circuit Trail with the Boston Skyline in the background](img/log/2022-12-27_212415768.jpeg)
 ![](FlQ7ms8WIAYTSDG.png)
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/e6QUKsEezGw" title="Sarah Davachi - Alas, Departing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

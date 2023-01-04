@@ -12,6 +12,7 @@ local function sub_entry_fields(str, entry)
     ["EntryBodyHtml"] = entry.body_html,
     ["EntryName"] = entry.name,
     ["EntryDate"] = entry.date,
+    ["EntryDestFileName"] = entry.dest_file_name,
   })
 end
 
@@ -138,6 +139,19 @@ local function render_entry(entry, entries)
   utils.write_file(DOC_DIR .. "/" .. entry.dest_file_name, html)
 end
 
+local function render_rss(rss_entries)
+  local rss_template = utils.read_file("templates/feed.tpl.rss")
+  local item_template = utils.read_file("templates/item.tpl.rss")
+  local items_str = ""
+  for _, e in make_sorted_entry_iterator(rss_entries) do
+    local rss_date = utils.rss_date(e.date)
+    items_str = items_str .. sub_entry_fields(item_template, e)
+        :gsub("{{RSSDate}}", rss_date)
+        :gsub("%%", "%%%%") -- this escapes %, which is lua's escape char, otherwise the final gsub fails
+  end
+  utils.write_file(DOC_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))
+end
+
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
 for _, file_path in pairs(file_paths) do
@@ -188,5 +202,13 @@ for _, entry in pairs(entries) do
   render_entry(entry, entries)
   i = i + 1
 end
+
+local rss_entries = {}
+for _, e in pairs(entries) do
+  if e.parent_name == "Writing" and e.date ~= nil then
+    table.insert(rss_entries, e)
+  end
+end
+render_rss(rss_entries)
 
 print("Rendered " .. i .. " entries.")

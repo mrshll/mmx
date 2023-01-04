@@ -1,0 +1,7 @@
+<item>
+  <title><![CDATA[ {{EntryName}} ]]></title>
+  <link>https://mrshll.com/{{EntryDestFileName}}</link>
+  <guid>https://mrshll.com/{{EntryDestFileName}}</guid>
+  <pubDate>{{RSSDate}}</pubDate>
+  <description><![CDATA[ {{EntryBodyHtml}} ]]></description>
+</item>
