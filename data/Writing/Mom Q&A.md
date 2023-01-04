@@ -47,12 +47,12 @@ That year, I was going out with Matt Kuluz, of Pascagoula, Miss., who went to Lo
 
 Everybody was friends that day..we'd bounce around from house to house in the French Quarter..eating red beans and rice, it was tradition.
 
-![](img/mom-21-1.jpg)
+![A photograph of my Mom during Mardi Gras with her boyfriend](img/mom-21-1.jpg)
 
 The other photo is me with a mask on the back of my head and dressed both front and back...what was I thinking! With Lawler, my roommate. And a photo of Jay and Miggy, they owned the 'ghost tour' mansion we visited one time when we were all in NOLA, remember? Final photo is just my friends hanging out on the Quad...such hippies.
 
-![](img/mom-21-2.jpg)
-![](img/mom-21-3.jpg)
+![Top: Photograph of my mom wearing a Mardi Gras costume where she wore a mask on the back of her head, Bottom: The parade!](img/mom-21-2.jpg)
+![My mom among her hippie friends having a picnic](img/mom-21-3.jpg)
 
 # 4. What are some of your favorite sounds?
 - Certain sounds make me stop and listen;
@@ -187,7 +187,7 @@ The person I remember most vividly was Vinnie..and I cannot remember his last na
 
 But he was certainly a character, not easily forgettable. As you know, I spent the summers at the beach and Vinnie lived there year round. He was older than I was, had a pony tail, super Italian. I have no idea why my parents let me go out with him..but he was charming. We spent a lot of time at the beach, swimming, goofing off...listened to a lot of music and hung out with his friends.
 
-![](img/mom-vinnie.jpg)
+![Vinnie at the beach](img/mom-vinnie.jpg)
 
 I wonder what happened to him, photo attached :)
 
@@ -201,7 +201,7 @@ Remember, this was 1976 and there were not many, if any, Volvos around and it to
 But we had a great time without car...many sunburns and frolicking on the beach.
 See photo of my friend from MA and other friend from the Jersey shore.
 
-![](img/mom-trip-1.jpg)
+!["My friend from MA and other friend from the Jersey shore"](img/mom-trip-1.jpg)
 
 Another trip was while I was in college and travelled with my friend Bridgett to France.
 She was french and we stayed with her friends at first and I really learned to speak french well because they did not speak english.
@@ -214,7 +214,7 @@ We was a pretty great trip..I was gone a long while. So fun staying with friends
 
 Attached is a photo of Bridgett and me when dad and went to NOLA on vacation years later
 
-![](img/mom-trip-2.jpg)
+!["A photo of Bridgett and me when dad and went to NOLA on vacation years later"](img/mom-trip-2.jpg)
 
 # 17. Is there an article of clothing that has stayed with you for most of your life?
 One piece that I rarely wear, but have trouble getting rid of is my agnes B sweater that I bought in Paris around 1980. It was my first time there and I went with my friend, Brigitte, who is French.
@@ -518,7 +518,7 @@ We were just swept up into the march which was on 5th Ave, the most iconic stree
 It was exhilarating and very purposeful. 20 million Americans marched that day
 This march led to the creation of the EPA.
 
-![](img/mom-earthday.jpg)
+![My mom sitting in the trunk of a car with two of her fellow newspaper editors during Earthday parade in NYC](img/mom-earthday.jpg)
 
 Perhaps this was partly why I became an editor for my high school newspaper, interned for my Congresswoman, Millicent Fenwick..etc etc..
 

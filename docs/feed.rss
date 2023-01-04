@@ -86,7 +86,7 @@
 
 <p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
 
-<p><img src="img/mastodon-running.png" alt="screenshot of my instance displaying my migrated profile"/></p>
+<p><img src="https://mrshll.com/img/mastodon-running.png" alt="screenshot of my instance displaying my migrated profile"/></p>
 
 <h2>3. Instance configuration</h2>
 
@@ -143,7 +143,7 @@ fi
 <pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
 </code></pre>
 
-<p><img src="img/mastodon-healthcheck.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
+<p><img src="https://mrshll.com/img/mastodon-healthcheck.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
 
 <p>As of now, I think that's just about everything I've done for the server. If you have any questions, feel free to reach out :)</p>
 
@@ -160,7 +160,7 @@ fi
 
 <p>A few years ago, a laptop of mine experienced inexplicable battery failure. Each time the laptop violently ceased operation when A/C power was removed, it communicated with me. "I am a homebody," it said, "and I wish to remain in the proximal comfort of the outlet." And a makeshift basement server, {zombiebox}, was born.</p>
 
-<p><img src="img/zombiebox.jpg" alt="Zombiebox the home server running my the basement"/></p>
+<p><img src="https://mrshll.com/img/zombiebox.jpg" alt="Zombiebox the home server running my the basement"/></p>
 
 <p>With any home server, especially one exposed to the internet, there are a few challenges one must overcome:
 1. Your home's <em>external</em> IP address will periodically change (unless you pay for a static IP, which I do not)
@@ -173,7 +173,7 @@ fi
 
 <p>To solve the first issue, where your home's <em>external</em> IP addresses periodically changes, you have to continually update your DNS records to reflect the current IP. For example, when setting up a Mastodon instance on werm.world, I needed the root A record to point to the IP address of my home. There used to be a number of daemons and somewhat questionable services that I would use for this - but this time around I found that Google Domains (my registrar for werm.world) had a (new?) hidden <em>Advanced Setting</em>. You should see if your registrar supports something like this natively - at its core, all you need is a programmatic way to update a DNS record so look for an API to do so. Hopefully, you can adapt some of the following for your purposes.</p>
 
-<p><img src="img/google-dyn-dns.png" alt="Screenshot of the advanced settings for Google Domains DNS"/></p>
+<p><img src="https://mrshll.com/img/google-dyn-dns.png" alt="Screenshot of the advanced settings for Google Domains DNS"/></p>
 
 <p>By creating a Dynamic DNS record, Google Domains provides credentials that can then be used with their API to update the IP. So, on {zombiebox}, I patched together the following script:</p>
 
@@ -236,7 +236,7 @@ fi
 
 <p>That script will let Google Domains know what your IP is.</p>
 
-<p><img src="img/google-dyn-dns-setup.png" alt=""/></p>
+<p><img src="https://mrshll.com/img/google-dyn-dns-setup.png" alt="Screenshot of Google Domains Dynamic DNS successfully configured and running"/></p>
 
 <p>To test without a browser you can run the following, noting the <em>ANSWER SECTION</em>:</p>
 
@@ -296,7 +296,7 @@ default            192.168.1.1        UGScg             en0
 
 <p>Tonight I fixed Alejandra's favorite camera - her Dad's Ricoh Singlex TLS from the 70s. It had no shutter action and the view finder mirror was frozen in an upward position - meaning the viewfinder was blocked.</p>
 
-<p><img src="img/ricoh_repair_1.jpg" alt="Ricoh Singlex TLS camera with its lens removed"/></p>
+<p><img src="https://mrshll.com/img/ricoh_repair_1.jpg" alt="Ricoh Singlex TLS camera with its lens removed"/></p>
 
 <p>I started by removing the battery but it seemed newish (these things used to run on mercury batteries and have since been replaced with equivalent voltages). From the manual the electronics were only for a light meter and optional flash, so I ruled out anything battery-related.</p>
 
@@ -304,15 +304,15 @@ default            192.168.1.1        UGScg             en0
 
 <p>I removed the bottom plate to get at the shutter gear assembly and other internals. I noticed an arm that looked in a middle position, which seemed odd.</p>
 
-<p><img src="img/ricoh_repair_2.jpg" alt="Ricoh Singlex TLS with bottom removed."/></p>
+<p><img src="https://mrshll.com/img/ricoh_repair_2.jpg" alt="Ricoh Singlex TLS with bottom removed."/></p>
 
 <p>The self-timer was half-engaged.</p>
 
-<p><img src="img/ricoh_repair_3.jpg" alt="close up on the camera's shutter gears and other internals from the bottom"/></p>
+<p><img src="https://mrshll.com/img/ricoh_repair_3.jpg" alt="close up on the camera's shutter gears and other internals from the bottom"/></p>
 
 <p>Pulling it along manually with my screwdriver andvanced the shutter gearbox until...</p>
 
-<p><img src="img/ricoh_repair_4.mp4" alt="Ricoh camera shutter action working after repair, height: 400px"/></p>
+<p><img src="https://mrshll.com/img/ricoh_repair_4.mp4" alt="Ricoh camera shutter action working after repair, height: 400px"/></p>
 
 <p>Click!</p>
 
@@ -554,12 +554,12 @@ It was Mardi Gras, which always fell close to my birthday. The whole city shut d
 
 <p>Everybody was friends that day..we'd bounce around from house to house in the French Quarter..eating red beans and rice, it was tradition.</p>
 
-<p><img src="img/mom-21-1.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-21-1.jpg" alt="A photograph of my Mom during Mardi Gras with her boyfriend"/></p>
 
 <p>The other photo is me with a mask on the back of my head and dressed both front and back...what was I thinking! With Lawler, my roommate. And a photo of Jay and Miggy, they owned the 'ghost tour' mansion we visited one time when we were all in NOLA, remember? Final photo is just my friends hanging out on the Quad...such hippies.</p>
 
-<p><img src="img/mom-21-2.jpg" alt=""/>
-<img src="img/mom-21-3.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-21-2.jpg" alt="Top: Photograph of my mom wearing a Mardi Gras costume where she wore a mask on the back of her head, Bottom: The parade!"/>
+<img src="https://mrshll.com/img/mom-21-3.jpg" alt="My mom among her hippie friends having a picnic"/></p>
 
 <h1>4. What are some of your favorite sounds?</h1>
 <p>- Certain sounds make me stop and listen;
@@ -696,7 +696,7 @@ She said, "she wanted to kill me"</p>
 
 <p>But he was certainly a character, not easily forgettable. As you know, I spent the summers at the beach and Vinnie lived there year round. He was older than I was, had a pony tail, super Italian. I have no idea why my parents let me go out with him..but he was charming. We spent a lot of time at the beach, swimming, goofing off...listened to a lot of music and hung out with his friends.</p>
 
-<p><img src="img/mom-vinnie.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-vinnie.jpg" alt="Vinnie at the beach"/></p>
 
 <p>I wonder what happened to him, photo attached :)</p>
 
@@ -710,7 +710,7 @@ Remember, this was 1976 and there were not many, if any, Volvos around and it to
 But we had a great time without car...many sunburns and frolicking on the beach.
 See photo of my friend from MA and other friend from the Jersey shore.</p>
 
-<p><img src="img/mom-trip-1.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-trip-1.jpg" alt="&quot;My friend from MA and other friend from the Jersey shore&quot;"/></p>
 
 <p>Another trip was while I was in college and travelled with my friend Bridgett to France.
 She was french and we stayed with her friends at first and I really learned to speak french well because they did not speak english.
@@ -723,7 +723,7 @@ We was a pretty great trip..I was gone a long while. So fun staying with friends
 
 <p>Attached is a photo of Bridgett and me when dad and went to NOLA on vacation years later</p>
 
-<p><img src="img/mom-trip-2.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-trip-2.jpg" alt="&quot;A photo of Bridgett and me when dad and went to NOLA on vacation years later&quot;"/></p>
 
 <h1>17. Is there an article of clothing that has stayed with you for most of your life?</h1>
 <p>One piece that I rarely wear, but have trouble getting rid of is my agnes B sweater that I bought in Paris around 1980. It was my first time there and I went with my friend, Brigitte, who is French.</p>
@@ -1031,7 +1031,7 @@ We were just swept up into the march which was on 5th Ave, the most iconic stree
 It was exhilarating and very purposeful. 20 million Americans marched that day
 This march led to the creation of the EPA.</p>
 
-<p><img src="img/mom-earthday.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-earthday.jpg" alt="My mom sitting in the trunk of a car with two of her fellow newspaper editors during Earthday parade in NYC"/></p>
 
 <p>Perhaps this was partly why I became an editor for my high school newspaper, interned for my Congresswoman, Millicent Fenwick..etc etc..</p>
 
@@ -1069,11 +1069,11 @@ through the house down the hall and out the back window and came within inches o
 <h1>48. What's the first thing that comes to mind when you think of comfort food?</h1>
 <p>I know we've spoken about our house in Chadwick before..here are a couple of photos of our infamous deck! And as a bonus, the first one is of my best friend, Margie who had the boat we always went out on...she was a fearless captain...Maureen's first husband Terry is with us.</p>
 
-<p><img src="img/mom-chadwick.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-chadwick.jpg" alt=""/></p>
 
 <p>And then my parents sitting on the deck eating lunch, so cute. We always had a wonderful time there.</p>
 
-<p><img src="img/mom-parents.jpg" alt=""/></p>
+<p><img src="https://mrshll.com/img/mom-parents.jpg" alt=""/></p>
 
 <p>Thank you for this week's question...very easy to answer.
 Comfort food for me could be an italian meal, like my mother made..lasagna, chicken cacciatore, macaroni pie, spaghetti. And it could be a roast chicken with veggies. A homemade soup is a comfort food. Also eating tacos esp at Mas Tacos is so comforting to me.</p>
@@ -1191,7 +1191,7 @@ Love you both so much. xoxox</p>
   <description><![CDATA[ 
 
 <h2>A reflection of how we work and grow as a fully remote team</h2>
-<p><img src="img/team-zoom.png" alt="The team on a Zoom meeting"/></p>
+<p><img src="https://mrshll.com/img/team-zoom.png" alt="The team on a Zoom meeting"/></p>
 
 <p>There are plenty of lists of tools for remote teams, and some fantastic examples of documented processes (ex <a href="https://about.gitlab.com/company/culture/all-remote/">Gitlab</a>). I'm spending some time this weekend writing about how we work at Upstream Tech. The tools, yes, but also the fabric, connections and culture of our remote work.</p>
 
@@ -1203,7 +1203,7 @@ Love you both so much. xoxox</p>
 
 <p>A raised eyebrow is the most common response I get when I tell someone our team is “remote, yes entirely. There is no office. Spread across the whole country, 4 time zones.” The amplitude of the raised eyebrow is typically related to the industry that person inhabits. “How do you get anything done?” they usually ask.</p>
 
-<p><img src="img/team-map.png" alt="Where we are located across NA"/> 
+<p><img src="https://mrshll.com/img/team-map.png" alt="Where we are located across NA"/> 
 <em>This is where we are, as of 2020. With the majority in the Northeast.</em></p>
 
 <p><em>But first, before we dive into the "what," allow me to outline the "why" of remote work. For us, the most important reasons are:</em></p>
@@ -1250,12 +1250,12 @@ Love you both so much. xoxox</p>
 
 <h2>Getting Together</h2>
 
-<p><img src="img/team-retreat-tree.png" alt="Team retreat, learing about trees"/> 
+<p><img src="https://mrshll.com/img/team-retreat-tree.png" alt="Team retreat, learing about trees"/> 
 <em>Abby is our resident tree expert; in no small part because she graduated from the Yale School of Forestry. She teaches us about trees and our plants, both when we are together and when we are remote.</em></p>
 
 <p>The most obvious trade-off that's pointed to by team in-person is that "sometimes you just have to get in a room and hash stuff out." We agree! And it isn't mutually exclusive with working remotely most of the time.</p>
 
-<p><img src="img/team-retreat-2018-02.png" alt="Team retreat, Feb 2018"/>
+<p><img src="https://mrshll.com/img/team-retreat-2018-02.png" alt="Team retreat, Feb 2018"/>
 <em>When we were a wee company, hiking in the Berkshires. February 2018.</em></p>
 
 <p>Twice a year we gather as a team. Two folks lead the organization of the gathering: wrangling a date, picking a location, and soliciting topics for an agenda (although it is left partially unstructured so that we can hang out). Most of the time is spent cooking, outdoors, discussing goals, and brainstorming.</p>
@@ -1268,7 +1268,7 @@ Love you both so much. xoxox</p>
     <li>Is nearby natural areas for solid outdoor time</li>
 </ul>
 
-<p><img src="img/team-retreat-2018-07.png" alt="Team retreat, Jul 2018"/> 
+<p><img src="https://mrshll.com/img/team-retreat-2018-07.png" alt="Team retreat, Jul 2018"/> 
 <em>A bit bigger, with three of our favorite interns, in Somerville! July 2018.</em></p>
 
 <p>We typically convene for 3-4 weekdays, which has been enough time to have downtime while still being possible for folks who have obligations back at home to join. And to be sensitive to such things, we don't require that folks come to every gathering; only that they do when it works well with their personal life schedule.</p>
@@ -1283,13 +1283,13 @@ Love you both so much. xoxox</p>
     <li>Reflections on our processes and communication (meta!)</li>
 </ul>
 
-<p><img src="img/team-retreat-2018-10.png" alt="Team retreat, Oct 2018"/> 
+<p><img src="https://mrshll.com/img/team-retreat-2018-10.png" alt="Team retreat, Oct 2018"/> 
 <em>Bigger still! This time in Alameda, CA. October 2018.</em></p>
 
-<p><img src="img/team-retreat-2019-04.png" alt="Team retreat, Apr 2019"/> 
+<p><img src="https://mrshll.com/img/team-retreat-2019-04.png" alt="Team retreat, Apr 2019"/> 
 <em>Kevin's Mole is a primary fixture of our gatherings. This time in Pawling, NY. April 2019.</em></p>
 
-<p><img src="img/team-retreat-2019-09.gif" alt="Team retreat, Sep 2019"/> 
+<p><img src="https://mrshll.com/img/team-retreat-2019-09.gif" alt="Team retreat, Sep 2019"/> 
 <em>The latest gathering. September 2019.</em></p>
 
 <h2>1-on-1s</h2>
@@ -1320,7 +1320,7 @@ Love you both so much. xoxox</p>
 
 <p>We have one room worth noting called <em>#upstream-intentions</em>. Every morning, folks post “intentions” for the day. As the day goes on, we edit our intentions to show that something is done.</p>
 
-<p><img src="img/team-slack.png" alt="Our #upstream-intentions room"/></p>
+<p><img src="https://mrshll.com/img/team-slack.png" alt="Our #upstream-intentions room"/></p>
 
 <p>It’s a very simple, low friction to-do list that drive self-accountability for the day, makes progress transparent, and helps call out cross-team dependencies first thing in the morning.</p>
 
@@ -1334,7 +1334,7 @@ Love you both so much. xoxox</p>
 
 <p>Woah, that's quite a bit of functionality. When remote teams say "ah yes, we use GitLab" the thing I wonder is "how do you use it?" What are the processes in place to keep things moving?</p>
 
-<p><img src="img/team-gitlab.png" alt="Our GitLab board"/></p>
+<p><img src="https://mrshll.com/img/team-gitlab.png" alt="Our GitLab board"/></p>
 
 <p>Below is a combination of terminology and processes we use around GitLab's issue tracking system, which we use as the primary location of our current, imminent, and near future tasks across teams:</p>
 
@@ -1396,7 +1396,7 @@ Love you both so much. xoxox</p>
 
 <p>One aspect of office life is that after the commute, you inhabit the same space as your coworkers. You chat while coffee trickles into the already-emptied carafe. Remote work doesn't afford the same sense of "showing up" and "seeing everyone arrive at their desks." We add a daily touchpoint of our own in the form of a daily, brief meeting at 11:30 am ET. We all hop into Zoom (we use zoom here because it allows the "gallery view," where you get to see everyone's face at once) and run through</p>
 
-<p><img src="img/team-daily-sync.gif" alt="Daily sync from early 2019"/>
+<p><img src="https://mrshll.com/img/team-daily-sync.gif" alt="Daily sync from early 2019"/>
 <em>A rare gif of a morning sync from late 2018</em></p>
 
 <ul>
@@ -1445,16 +1445,16 @@ Love you both so much. xoxox</p>
 
 <p>The downstairs neighbor, Ladawn, (it was a three-story, with one tenant on each floor) had two longer plots, maybe 3x12 in total. Brick stood at the perimeter to give it a few inches of rise. Every year, Ladawn's plants grew thick as small trees. Her cherry tomato plants would hang heavy, and her pole beans up their trellis would block the sun. She was also the weekly DJ at River Gods, one of the best bars in Cambridge. Her plants probably considered her a river god as well. She told me her secret once: to absolutely douse the plants every other day. To flood irrigate them. One day, about a year after Alden and Anna moved, she packed up an antique VW camper van and drove to Portland. River Gods coincidentally closed doors around the same time. So I inherited her garden too.</p>
 
-<p><img src="img/garden_prescott.jpg" alt="Our garden at 20 Prescott in Somerville"/></p>
+<p><img src="https://mrshll.com/img/garden_prescott.jpg" alt="Our garden at 20 Prescott in Somerville"/></p>
 
 <p>I had two stellar seasons in these plots. In the first, I picked up where Ladawn left off, harvesting copious pole beans, tomatos, eggplants, herbs. The next, we planted a wider assortment, with the prized and celebrated crop being the Pumpkins.</p>
 
-<p><img src="img/pumpkins.jpg" alt="3 pumpkins we grew, with an assortment of other veggies."/>
+<p><img src="https://mrshll.com/img/pumpkins.jpg" alt="3 pumpkins we grew, with an assortment of other veggies."/>
 <em>Looking back at these pictures, I am astounded we grew these</em></p>
 
 <p>I think the success of our first dance with this garden was in part due to the haphazard scattering of wildflower seeds by Alejandra. That and a rash of wild mint that flowered early. We'd regularly have dozens of bees busily pollinating the garden. Difficulty I've had with pumpkins in the past is in the polination, the flowers being as fragile and ephemeral as they are. But with an army of bees and other garden pals, it worked out.</p>
 
-<p><img src="img/flowers.jpg" alt="Various flowers in our garden"/></p>
+<p><img src="https://mrshll.com/img/flowers.jpg" alt="Various flowers in our garden"/></p>
 
 <p>This garden is sadly no more. When we moved out, the landlord weedwacked the whole area down to the bare soil - a nuissance, things growing like that. But I've since moved to a house in Medford. And while the yards are partly shaded by a beautiful, big American Walnut in the back and a Black Oak in the front, there are two slices of the yards that get tons of sunlight.</p>
 
@@ -1466,26 +1466,26 @@ Love you both so much. xoxox</p>
 
 <p>I found that raw linseed oil was one of the best and most readily available non-toxic treatments for the wood. Every week, I'd trot down to the tiny hardware store and buy all of the raw linseed oil on their shelves. They now know me as the linseed oil guy. Linseed oil also comes in a boiled version, which causes it to dry much faster, but these days has a number of chemical additives. So stick to raw, even if it takes many days or weeks to dry (depending on temp). I meticulously painted each board a few times before construction. The smell is fantastic - a woody, toasted sweetness. The closest thing I can think of is toasted seasame oil. I got it all over my clothes as I worked (and didn't care). The construction was simple, held together by 3-inch galvanized screws.</p>
 
-<p><img src="img/beds_construction.png" alt="Two raised beds, partially constructed."/>
+<p><img src="https://mrshll.com/img/beds_construction.png" alt="Two raised beds, partially constructed."/>
 <em>I also raised the rain barrel so that it's just high enough to feed the beds</em></p>
 
 <p>We use a compost company for weekly pickup - and they do bulk 50-50 compost/soil deliveries. So I did some math and ordered 7 cubic feet, knowing I'd do my best to fill the very bottom with fallen limbs, leaves and other woody debris. I laid down a tarp and the next day I stepped outside and the dirt was already there. I never saw the delivery occur, so as far as I know the delivery occurs by a visit from the licensed dirt wizard, who summons the requested cubic feet into place.</p>
 
-<p><img src="img/dirt.jpg" alt="Roughly 7 cubic yards of dirt"/></p>
+<p><img src="https://mrshll.com/img/dirt.jpg" alt="Roughly 7 cubic yards of dirt"/></p>
 
 <p>Can't go to the gym because of COVID? Shovel dirt! I spent the next few weeks, hours per day, shoveling dirt. I got my climbing callouses back. My back and arms were sore! How could it possibly take so long, you ask? Well.</p>
 
-<p><img src="img/where_the_dirt_has_to_go.jpg" alt="Steps up to the back yard"/> <em>Notice the pumpkins on the stairs. These were not grown by us, but next year they will be.</em></p>
+<p><img src="https://mrshll.com/img/where_the_dirt_has_to_go.jpg" alt="Steps up to the back yard"/> <em>Notice the pumpkins on the stairs. These were not grown by us, but next year they will be.</em></p>
 
 <p>The dirt's trip to the back yard was no walk in the park, unless your park involves multiple steps and a incline you realize, suddenly, is <em>steep</em>. Multiple tactics were employed, including a wheelbarrow up haphazard wooden boards placed over stairs (hard), dual-wielded 5-gallon buckets (exhausting).</p>
 
 <p>As I mentioned, I had heard about Hügelkultur, the german horticultural technique of mounding over decaying wood debris, from a colleague Abby. There had been recent windstorms in the area, so I collected as many fallen limbs as I could — scaring some of my neighbors by asking for their yard waste bags. Load followed load, and before I knew it the beds were filled. It was immensly satisfying to pour the last few shovelfuls into the beds.</p>
 
-<p><img src="img/filling.jpg" alt="Two raised beds in the back yard, one filled, one partially filled with woody debris"/></p>
+<p><img src="https://mrshll.com/img/filling.jpg" alt="Two raised beds in the back yard, one filled, one partially filled with woody debris"/></p>
 
 <p>The two front beds were on the aforementioned slope, so I opted to do a combination of digging into the hill to level the beds and to terrace them. I think they turned out great, although I'm a bit worried about accelerated rot because of how they are situated.</p>
 
-<p><img src="img/front_beds.jpg" alt="Two raised beds in the front yard"/></p>
+<p><img src="https://mrshll.com/img/front_beds.jpg" alt="Two raised beds in the front yard"/></p>
 
 <p>With the beds completed, I now spend the winter planning what to grow, ordering seeds, and trying to start seedlings in my basement. My plan, loosely, is to grow the [[Three Sisters]] combo of corn, beans and squash in mounds in the back raised beds, interspersed with herbs, peppers and tomatoes, with a mixture of raddishes, peas, flowers, cabbage and oakra in the front. 98 days until Spring. 140 days until the last frost.</p>
 
@@ -1499,7 +1499,7 @@ Love you both so much. xoxox</p>
 </pubDate>
   <description><![CDATA[ 
 
-<p><img src="img/how-we-work-1.png" alt="Obviously my desktop background…"/>
+<p><img src="https://mrshll.com/img/how-we-work-1.png" alt="Obviously my desktop background…"/>
 <em>Obviously my desktop background…</em></p>
 
 <p>Ah yes, the unflappable entrepreneur: knowing from Day 1 that their business will last decades — nay a century! Not I.</p>
@@ -1522,7 +1522,7 @@ Love you both so much. xoxox</p>
     <li>Do you need anyone’s help?</li>
 </ul>
 
-<p><img src="img/how-we-work-2.png" alt="#upstream-intentions"/>
+<p><img src="https://mrshll.com/img/how-we-work-2.png" alt="#upstream-intentions"/>
 <em>#upstream-intentions</em></p>
 
 <p>It’s a pretty basic framework that keeps morning meetings concise and thoughtful. There have been plenty of occasions where someone may be wrapping a big effort up and isn’t sure what the next best thing is to work on. In those cases we look at current and prospective partners and hash out what might be the highest value next work.</p>
@@ -1531,7 +1531,7 @@ Love you both so much. xoxox</p>
 
 <p>I’m a strong believer in the power and potential of remote work for the right team. However, there are always some things that are better done in person. Take cooking together, for example.</p>
 
-<p><img src="img/how-we-work-8.jpeg" alt="Amadou and Alden cook up the world’s tastiest pasta from scratch."/>
+<p><img src="https://mrshll.com/img/how-we-work-8.jpeg" alt="Amadou and Alden cook up the world’s tastiest pasta from scratch."/>
 Amadou and Alden cook up the world’s tastiest pasta from scratch.</p>
 
 <p>Team bonding and long term planning are two such items for our team. Once a quarter, we pick a location and meet up in person. Sometimes it’s San Francisco at Natel Energy’s office. I’ve hosted in Somerville. Most recently, we rented an Airbnb in the Berkshires for a contemplative, hiking and cooking-filled week together. Business plans we had talked about for ages clicked in new ways. Technical scopes coalesced in turn. We left the week with a renewed energy (renewable energy?!), a stronger bond and a clear path forward with our work.</p>
@@ -1544,7 +1544,7 @@ Amadou and Alden cook up the world’s tastiest pasta from scratch.</p>
 
 <p>I’ve worked at companies where there is a set “Show and Tell” slot on the calendar. It works great for large teams. Since we are small (and remote), we try to have a constant show and tell: do something neat over the weekend? Put it in slack! New screenshots of the prettier graphs you’re developing? ⌘V! Want to do a video walkthrough of a surprisingly accurate ML model? Drop a hangout link and show us. Constant sharing and celebration of work has made it just as exciting as running over to someone’s desk, and is far more inclusive.</p>
 
-<p><img src="img/how-we-work-9.png" alt=""/></p>
+<p><img src="https://mrshll.com/img/how-we-work-9.png" alt="A screenshot of Alden's first predictions of flow in an ungauged basin"/></p>
 
 <p>It’s been an awesome few years, and I’m excited for many more to come. I’m sure most of how we work is par for the startup course these days, but I hope for some, it’s an interesting look into our daily routine.</p>
 
@@ -1567,7 +1567,7 @@ Amadou and Alden cook up the world’s tastiest pasta from scratch.</p>
 
 <p>To those of you who know us well, this may come as a surprise. Heck — we weren’t even planning on raising money! But when we first met Gia and Abe Schneider in Boston earlier this year, it became immediately clear that we had the same mission “to create economic forces that drive environmental good.” To add to that, Natel’s board is an incredible group motivated by environmental conservation.</p>
 
-<p><img src="img/natel-hanger.png" alt="Natel’s massive hangar in Alameda"/>
+<p><img src="https://mrshll.com/img/natel-hanger.png" alt="Natel’s massive hangar in Alameda"/>
 <em>Natel’s massive hangar in Alameda</em></p>
 
 <p>So what does this mean for our work?</p>

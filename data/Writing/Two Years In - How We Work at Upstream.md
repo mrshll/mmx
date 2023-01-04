@@ -42,7 +42,7 @@ We all do 1-on-1s with one another on a regular basis. We try not to reschedule 
 
 I’ve worked at companies where there is a set “Show and Tell” slot on the calendar. It works great for large teams. Since we are small (and remote), we try to have a constant show and tell: do something neat over the weekend? Put it in slack! New screenshots of the prettier graphs you’re developing? ⌘V! Want to do a video walkthrough of a surprisingly accurate ML model? Drop a hangout link and show us. Constant sharing and celebration of work has made it just as exciting as running over to someone’s desk, and is far more inclusive.
 
-![](img/how-we-work-9.png)
+![A screenshot of Alden's first predictions of flow in an ungauged basin](img/how-we-work-9.png)
 
 It’s been an awesome few years, and I’m excited for many more to come. I’m sure most of how we work is par for the startup course these days, but I hope for some, it’s an interesting look into our daily routine.
 

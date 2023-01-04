@@ -97,9 +97,6 @@ local function process_images(str)
   -- return string:gsub("<img src=\"img/([^\"]+)\" alt=\"([^\"]*)\"", function(src, alt)
   return str:gsub("<img [^>]+>", function(img_tag)
     local alt = img_tag:match("alt=\"([^\"]*)\"")
-    if alt == "" then
-      print("Warning, img without alt: " .. img_tag)
-    end
 
     local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
       local parts = utils.split(src, ".")
@@ -147,6 +144,7 @@ local function render_rss(rss_entries)
     local rss_date = utils.rss_date(e.date)
     items_str = items_str .. sub_entry_fields(item_template, e)
         :gsub("{{RSSDate}}", rss_date)
+        :gsub("src=\"img", "src=\"https://mrshll.com/img")
         :gsub("%%", "%%%%") -- this escapes %, which is lua's escape char, otherwise the final gsub fails
   end
   utils.write_file(DOC_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))

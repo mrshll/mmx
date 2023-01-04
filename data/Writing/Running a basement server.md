@@ -76,7 +76,7 @@ And I added a cronjob to run it regularly with `crontab -e`:
 
 That script will let Google Domains know what your IP is.
 
-![](img/google-dyn-dns-setup.png)
+![Screenshot of Google Domains Dynamic DNS successfully configured and running](img/google-dyn-dns-setup.png)
 
 To test without a browser you can run the following, noting the *ANSWER SECTION*:
 

@@ -3,7 +3,7 @@ I am opinionated about my tools, but I oscillate wildly between upcycled stand-i
 This list captures the tools and miscellany that I would be hamstrung without.
 
 ## Computing
-![](img/i3.png)
+![Screenshot of i3 window manager](img/i3.png)
 **[i3wm](https://i3wm.org/)** - i3 is a tiling window manager built for X11. It organizes windows across screens in non-overlapping frames. This may sound familiar; many other operating systems have keyboard shortcut-driven approximations wherein you can snap windows around. i3 supports a powerful combination of shortcuts (built for someone with VI bindings etched into their brain) that manipulate the tree of tiled windows. It's easily customized and there are entire OS distributions built around it like [Regolith Linux](https://github.com/regolith-linux).
 
 **[Regolith](https://regolith-linux.org/)** - a linux distribution built on Ubuntu, GNOME, and i3. It has fantastic package defaults and a design methodology that works out of the box while still allowing for needed customization.

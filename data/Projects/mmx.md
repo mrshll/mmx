@@ -1,9 +1,11 @@
-2021-06-24
+2023-01-03
 # This site is called mmx
 
 ![A person building something with bamboo, from The Red Turtle](img/redturtle020.jpg)
 
-mmx was built at the start of 2021. Largely inspired by others on [webring](https://webring.xxiivv.com/), especially [Devine](https://wiki.xxiivv.com/site/home.html), the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
+mmx was started early 2021. Largely inspired by others on [webring](https://webring.xxiivv.com/), especially [Devine](https://wiki.xxiivv.com/site/home.html), the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
+
+
 
 The site's compiler is written in [Go](https://golang.org). It generates the static site you are reading by building a graph of entries from a bespoke markup language [[mmxup]].
 
