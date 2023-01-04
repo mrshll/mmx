@@ -10,7 +10,7 @@
 ![View from our tent, with Russ waking up, and Henry in his hammock](img/log/2022-07-03_113137739.jpg)
 ![Our tent nestled in the trees in the morning light](img/log/2022-07-03_0045.jpg)
 ![Henry's motorcycle stuck in deep, thick mud after an ambitious run](img/log/2022-07-02_215333867.jpg)
-![Yorda (previously my motorcycle, now belonging to Russ, and my rental on a class four trail](img/log/2022-07-02_0039.jpg)
+![Yorda (previously my motorcycle, now belonging to Russ) and my rental on a class four trail](img/log/2022-07-02_0039.jpg)
 ![Henry's motorcycle laying on its side as we contemplate how to right it](img/log/2022-07-02_0036.jpg)
 ![Russ & Henry as we enter North Adams MA](img/log/2022-07-01_0034.jpg)
 ![A surprise birthday for me](img/log/2022-06-29_223932579.jpg)
