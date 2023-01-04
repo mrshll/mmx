@@ -2,7 +2,7 @@
 
 For information about mmx, see it in action at https://mrshll.com/mmx.html
 
-Previous version with different feature set, written in go now lives [here](https://github.com/mrshll/mmx-go) for archival purposes.
+Previous version with different feature set, written in Go now lives [here](https://github.com/mrshll/mmx-go) for archival purposes.
 
 ## Dependencies
 
