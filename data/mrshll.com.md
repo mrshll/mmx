@@ -6,7 +6,7 @@ I started and run a climate and conservation company, [[Upstream Tech]]. I also 
 
 This site is my place to [[writing|write]], keep [[Wiki|notes]], share [[log|ephemera]], and write about my [[projects]].
 
-I live in Medford, MA with Alejandra, our newborn Meadow, and dog Dax in our home Valetop.
+I live in Medford, MA with Alejandra, our newborn Meadow, and dog Dax in our home.
 
 ---
 
