@@ -134,7 +134,7 @@ function utils.today()
 end
 
 function utils.rss_date(date_str)
-  local handle = io.popen("gdate -R -d " .. date_str)
+  local handle = io.popen("date -R -d " .. date_str)
   if not handle then
     error("unable to run command in rss_date")
   end

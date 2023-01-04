@@ -1,7 +1,7 @@
 Off-grid computing, permacomputing low tech, and peer-to-peer web
 
-![button 1](img/button.gif)
-![button 2](img/mmx_button.gif)
+![](img/button.gif)
+![](img/mmx_button.gif)
 
 ## Bookmarks
 

@@ -5,7 +5,7 @@
 
 **mmx** was started early 2021. Largely inspired by others on [webring](https://webring.xxiivv.com/), especially [Devine](https://wiki.xxiivv.com/site/home.html), the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
 
-Originally, the site's compiler is written in [Go](https://golang.org). At the start of 2023, it was simplified and rewritten in [[Lua]]. It generates the static site you are reading by building a graph of entries. During this rewrite, entries were moved from a bespoke markup language [[mmxup]] to markdown so that it was more interoperable with other tools and maintainable going forward. mmx depends only on Lua, [GNU date binary](https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html), and `find`.
+Originally, the site's compiler is written in [Go](https://golang.org). An [archival repository](https://github.com/mrshll/mmx-go) exists for my own reference. At the start of 2023, it was simplified and rewritten in [[Lua]]. It generates the static site you are reading by building a graph of entries. During this rewrite, entries were moved from a bespoke markup language [[mmxup]] to markdown so that it was more interoperable with other tools and maintainable going forward. mmx depends only on Lua, [GNU date binary](https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html), and `find`.
 
 If you want to learn more, see the [source code](https://github.com/mrshll/mmx).
 

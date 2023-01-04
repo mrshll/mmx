@@ -99,6 +99,11 @@ local function process_images(str)
     local alt = img_tag:match("alt=\"([^\"]*)\"")
 
     local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
+      -- we don't compress/process other image formats
+      if not utils.ends_with(src, "jpg") or not utils.ends_with(src, "jpeg") or not utils.ends_with(src, "png") then
+        return src
+      end
+
       local parts = utils.split(src, ".")
       return "src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
     end)
