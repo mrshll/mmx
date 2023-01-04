@@ -1,6 +1,6 @@
 ![My dæmon Dax, with snout nestled in both fore and hind paws](img/log/2023-01-02_133423662.jpeg)
 ![Dax on the Rock Circuit Trail with the Boston Skyline in the background](img/log/2022-12-27_212415768.jpeg)
-![Digital terrain model](FlQ7ms8WIAYTSDG.png)
+![Digital terrain model](img/FlQ7ms8WIAYTSDG.png)
 ![Excellent dumpster logo design](img/log/2022-08-12_215529331.jpg)
 ![Alejandra in Hopkinton](img/log/2022-07-31_211153902.jpg)
 ![Hidden in the MFA](img/log/2022-07-23_161236242.jpg)
@@ -17,13 +17,9 @@
 ![double rainbow over Revere](img/log/2022-06-28_001452882.jpg)
 ![disc dogs: Henry, Dax, and Mochi after a round of disc golf](img/log/2022-06-08_173209673.jpg)
 <iframe width="640" height="480" src="https://www.youtube.com/embed/e6QUKsEezGw" title="Sarah Davachi - Alas, Departing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ![Sabrina](img/sabrina.png)
-
 ![Roman Holiday](img/roman-holiday.jpg)
-
 ![Tree built into a fence](img/fencefortrees.jpg)
-
 ![That Thing You Do](img/thatthingyoudo.png)
 ![Pops and Dax in Williamstown](img/log/2022-05-29_144505382.jpg)
 ![One of my new favorite ways to make a "nitro" americano - with lots of ice and the milk frother](img/log/2022-05-06_155236538.jpg)
