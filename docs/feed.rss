@@ -3,11 +3,12 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"
   version="2.0">
   <channel>
-    <title><![CDATA[ Oatmeal]]></title>
-    <link>https://eli.li</link>
-    <atom:link href="https://eli.li/feed.rss" rel="self"
+    <title><![CDATA[ mrshll.com ]]></title>
+    <link>https://mrshll.com</link>
+    <atom:link href="https://mrshll.com/feed.rss"
+      rel="self"
       type="application/rss+xml" />
-    <description><![CDATA[ The feed of updates for Oatmeal ]]></description> <item>
+    <description><![CDATA[ The feed of updates for mrshll.com ]]></description> <item>
   <title><![CDATA[ Self-hosted Mastodon ]]></title>
   <link>https://mrshll.com/self_hosted_mastodon.html</link>
   <guid>https://mrshll.com/self_hosted_mastodon.html</guid>
