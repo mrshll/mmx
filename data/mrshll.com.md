@@ -24,5 +24,3 @@ I live in Medford, MA with Alejandra, our newborn Meadow, and dog Dax in our hom
 
 - Email : [m@mrshll.com](mailto:m@mrshll.com)
 - Fediverse : [@mrshll@werm.world](https://werm.world/@mrshll)
-- Twitter : [@marsh](https://twitter.com/marsh)
-
