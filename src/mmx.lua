@@ -100,8 +100,8 @@ local function process_images(str)
 
     local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
       -- we don't compress/process other image formats
-      if not utils.ends_with(src, "jpg") or not utils.ends_with(src, "jpeg") or not utils.ends_with(src, "png") then
-        return src
+      if not (utils.ends_with(src, "jpg") or utils.ends_with(src, "jpeg") or utils.ends_with(src, "png")) then
+        return "src=\""..src.."\""
       end
 
       local parts = utils.split(src, ".")
