@@ -1,3 +1,5 @@
+## Battery
+
 Framework laptops with Ubuntu don't have that great of battery performance out of the box, but there are a few ways you can improve it:
 
 1. [Install TLP](https://linrunner.de/tlp/installation/ubuntu.html). TLP will set good defaults on some kernel settings that effect battery life, without you having to tweak them yourself. After you install, make sure to double check that it's not getting stomped on by the [power-profiles-daemon](https://linrunner.de/tlp/faq/installation.html#faq-ppd-conflict).
