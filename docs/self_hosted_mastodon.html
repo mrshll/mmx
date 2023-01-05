@@ -83,7 +83,7 @@
 
 <p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
 
-<p><figure><img src="img/mastodon-running-720.png" alt="screenshot of my instance displaying my migrated profile"/><figcaption>screenshot of my instance displaying my migrated profile</figcaption></figure></p>
+<p><figure><img loading="lazy" src="img/mastodon-running-720.png" alt="screenshot of my instance displaying my migrated profile"/><figcaption>screenshot of my instance displaying my migrated profile</figcaption></figure></p>
 
 <h2>3. Instance configuration</h2>
 
@@ -140,11 +140,11 @@ fi
 <pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
 </code></pre>
 
-<p><figure><img src="img/mastodon-healthcheck-720.png" alt="Screenshot of healthcheck.io showing my cronjob"/><figcaption>Screenshot of healthcheck.io showing my cronjob</figcaption></figure></p>
+<p><figure><img loading="lazy" src="img/mastodon-healthcheck-720.png" alt="Screenshot of healthcheck.io showing my cronjob"/><figcaption>Screenshot of healthcheck.io showing my cronjob</figcaption></figure></p>
 
 <p>As of now, I think that's just about everything I've done for the server. If you have any questions, feel free to reach out :)</p>
 
-</article><p style="color:#ccc"><em>Compiled 2023-1-4</em></p></div><footer>
+</article><p style="color:#ccc"><em>Compiled 2023-1-5</em></p></div><footer>
   <div class='footer-row'>
     <a href="feed.rss">
       RSS

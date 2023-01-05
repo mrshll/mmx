@@ -1,0 +1,3 @@
+Happy 2023! The fresh start. The clean slate. Especially for Alejandra and I, everything feels new. That's because we welcomed Meadow into our lives at the end of last year. We've both been on parental leave, and time is simultaneously whipping by and standing still.
+
+I've had a longstanding goal to _write more_. And for a few years now, I've channeled that into writing for my work at [[Upstream Tech]]. I admire folks who have the deep archive of their public-facing writing, and some formats, like [Tom MacWright](https://macwright.com/)'s "Recently" have a cadence built in that I love. I'm going to try it - thanks Tom for the inspiration!

@@ -105,7 +105,7 @@ local function process_images(str)
       end
 
       local parts = utils.split(src, ".")
-      return "src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
+      return "loading=\"lazy\" src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
     end)
     return "<figure>" .. processed_img_tag .. "<figcaption>" .. alt .. "</figcaption></figure>"
   end)
