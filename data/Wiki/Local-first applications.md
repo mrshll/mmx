@@ -1,0 +1,8 @@
+I first came across this topic from [Peter van Hardenberg - Why Can’t We Make Simple Software?](https://vimeo.com/780013486) talk at Handmade Seattle 2022. Peter started by outlining some of the common pathways software follow that lead to complexity: error checking, scale, etc. But where they landed was especially interesting. What if there was a paradigm shift away from cloud-based servers to local applications. Almost a laughable revelation given this is how all applications used to work (and many still do) - but the crux of why it's different is the first-class focus on collaboration. Applications that runs on your computer, *and* enable collaboration with others in the same way our favorite (or least favorite) cloud services do.
+
+- One approach: build in the browser, store everything locally (i.e. IndexDB)
+- Collaboration is too important to move away from.
+- [Ink and Switch](https://www.inkandswitch.com/) has a number of examples of local application research
+- [Automerge](https://github.com/automerge/automerge) is a library of data structures for building collaborative applications in JavaScript.
+- [Hypermerge](https://github.com/automerge/hypermerge) is a very cool looking library of Automerge on a peer to peer protocol, but the project looks unfortunately unmaintained and in a bit of a proof-of-concept state
+- [Earthstar] is a specification and JavaScript library for building connected applications owned and run by their users. This looks like a well-thought through and implemented library. I asked a few questions of the author [here](https://werm.world/web/@gwil@post.lurk.org/109636942063057203).

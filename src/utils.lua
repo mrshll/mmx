@@ -18,6 +18,23 @@ function utils.write_file(path, content)
   file:close()
 end
 
+function utils.list_folders(directory)
+  local pfile = io.popen('cd ' .. directory .. ' && find ' .. directory .. ' -type d')
+  if not pfile then
+    error("unable to list folders in directory " .. directory)
+  end
+
+  local folder_names = {}
+  for folder_name in pfile:lines() do
+    table.insert(folder_names, folder_name)
+  end
+
+  print(folder_names)
+
+  pfile:close()
+  return folder_names
+end
+
 function utils.list_files(directory, extension)
   local pfile = io.popen('find ' .. directory .. ' -type f -name "*' .. extension .. '"')
   if not pfile then
@@ -134,7 +151,7 @@ function utils.today()
 end
 
 function utils.rss_date(date_str)
-  local handle = io.popen("date -R -d " .. date_str)
+  local handle = io.popen("gdate -R -d " .. date_str)
   if not handle then
     error("unable to run command in rss_date")
   end

@@ -90,18 +90,13 @@ local function render_nav(entry, entries)
 end
 
 local function process_images(str)
-  -- for img_tag in str:gmatch("<img [^>]+>") do
-
-  -- end
-  -- return str
-  -- return string:gsub("<img src=\"img/([^\"]+)\" alt=\"([^\"]*)\"", function(src, alt)
   return str:gsub("<img [^>]+>", function(img_tag)
     local alt = img_tag:match("alt=\"([^\"]*)\"")
 
     local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
       -- we don't compress/process other image formats
       if not (utils.ends_with(src, "jpg") or utils.ends_with(src, "jpeg") or utils.ends_with(src, "png")) then
-        return "src=\""..src.."\""
+        return "src=\"" .. src .. "\""
       end
 
       local parts = utils.split(src, ".")
