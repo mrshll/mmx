@@ -1,26 +1,5 @@
 Research for [[Work in Progress]]
 
-# Effective Remote Teams
-
-+ Why remote
-  - It's the future of work
-  - Obvious things:
-    - No rent!
-    - Huge talent pool for hiring
-  - Can change relationship with work in major ways. If you're thoughtful in the boundaries, guidelines and processes set up - the change can be a huge positive for autonomous, self-accountable people. If run like an in-person team, it can be always-on, anxiety-inducing.
-    - Changing schedules (like Best Buy work experiment)
-+ Remote challenges
-  - Requires dedicated focus to build empathy across team
-  - Work as social outlet doesn't come as naturally for remote teams
-  - Need to iterate on process, especially at growth milestones
-  - Communication, if treated like an in-person company, can be all-consuming and painful.
-+ A shift in communication
-  - Discussions in public, summary
-  - Thoughtful organization of conversations
-  - Discipline
-
-# Rethinking Governance
-
 Private organizations, whether corporate or non-profit, are at their core systems of governance.
 
 [Namasté Solar](https://www.namastesolar.com/) has five levels of democratic decision-making: individual co-owner (i.e. individuals can make their own decisions based on proven competencies), peer review, committees or teams, the entire company, and board of directors. The board of directors only gets involved on the rare occasion that an issue can’t be resolved in the first four levels. In a bold attempt at fairness, Namasté also makes sure that no employee earns more than twice what any other employee earns.

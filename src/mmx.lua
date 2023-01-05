@@ -150,12 +150,13 @@ local function render_rss(rss_entries)
   utils.write_file(DOC_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))
 end
 
+
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
 for _, file_path in pairs(file_paths) do
 
-  -- remove the DATA_DIR and split on slash to get path fragments
-  local parts = utils.split(file_path:sub(#DATA_DIR + 1), "/")
+  -- split on slash to get path fragments
+  local parts = utils.split(file_path, "/")
 
   -- directory scheme is /entry-name or [/parent's parent]/parent/entry-name (recursive)
   local parent_name = parts[#parts - 1] or INDEX_NAME
@@ -173,7 +174,7 @@ for _, file_path in pairs(file_paths) do
     end
   end
 
-  local body = utils.read_file(file_path)
+  local body = utils.read_file(DATA_DIR .. file_path)
 
   local date
   local date_start, date_end = body:find("%d%d%d%d%-%d%d%-%d%d")

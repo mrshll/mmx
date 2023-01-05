@@ -5,57 +5,40 @@
   <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lua" />
+  <meta property="og:title" content="Remote teams" />
   <link rel="stylesheet" type="text/css" href="./links/normalize.css">
   <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
   <link rel="stylesheet" type="text/css" href="./links/main.css">
-  <title>mrshll.com - Lua</title>
+  <title>mrshll.com - Remote teams</title>
 </head>
-<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><mark><a href="wiki.html">Wiki</a></mark></li><li><a href="writing.html">Writing</a></li></ul><ul><li><a href="film_log.html">Film log</a></li><li><a href="framework_computers.html">Framework computers</a></li><li><a href="gardening.html">Gardening</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="local_first_applications.html">Local-first applications</a></li><li><a href="low_tech.html">Low tech</a></li><details><summary></summary><li><mark><a href="lua.html">Lua</a></mark></li><li><a href="organizations_and_collaboration.html">Organizations and collaboration</a></li><li><a href="reading_log.html">Reading log</a></li><li><a href="scripting.html">Scripting</a></li><li><a href="the_middlesex_fells.html">The Middlesex Fells</a></li><li><a href="things_to_learn_about.html">Things to learn about</a></li><li><a href="three_sisters.html">Three Sisters</a></li><li><a href="zombiebox.html">zombiebox</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Lua</h1>
-<h2>Tables</h2>
-<h3>Sorting</h3>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><mark><a href="wiki.html">Wiki</a></mark></li><li><a href="writing.html">Writing</a></li></ul><ul><li><a href="film_log.html">Film log</a></li><li><a href="framework_computers.html">Framework computers</a></li><li><a href="gardening.html">Gardening</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="local_first_applications.html">Local-first applications</a></li><li><a href="low_tech.html">Low tech</a></li><details><summary></summary><li><a href="lua.html">Lua</a></li><li><mark><a href="organizations_and_collaboration.html">Organizations and collaboration</a></mark></li><li><a href="reading_log.html">Reading log</a></li><li><a href="scripting.html">Scripting</a></li><li><a href="the_middlesex_fells.html">The Middlesex Fells</a></li><li><a href="things_to_learn_about.html">Things to learn about</a></li><li><a href="three_sisters.html">Three Sisters</a></li><li><a href="zombiebox.html">zombiebox</a></li></details></ul><ul><li><a href="governance.html">Governance</a></li><li><mark><a href="remote_teams.html">Remote teams</a></mark></li></ul><ul></ul></nav></header><article id="entry-body"><h1>Remote teams</h1>
+<h2>Why remote</h2>
 
-<p>Create an iterator</p>
+<ul>
+    <li>It's the future of work</li>
+    <li>Obvious things:
+    <ul>
+        <li>No rent!</li>
+        <li>Huge talent pool for hiring</li>
+    </ul></li>
+    <li>Can change relationship with work in major ways. If you're thoughtful in the boundaries, guidelines and processes set up - the change can be a huge positive for autonomous, self-accountable people. If run like an in-person team, it can be always-on, anxiety-inducing.
+    <ul>
+        <li>Changing schedules (like Best Buy work experiment)</li>
+    </ul></li>
+</ul>
 
-<pre><code>function utils.spairs(t, order)
-  -- collect the keys
-  local keys = {}
-  for k in pairs(t) do keys[#keys + 1] = k end
+<h2>Remote challenges</h2>
 
-  -- if order function given, sort by it by passing the table and keys a, b,
-  -- otherwise just sort the keys
-  if order then
-    table.sort(keys, function(a, b) return order(t, a, b) end)
-  else
-    table.sort(keys)
-  end
-
-  -- return the iterator function
-  local i = 0
-  return function()
-    i = i + 1
-    if keys![](i) then
-      return keys![t[keys[i](i])]
-    end
-  end
-end
-</code></pre>
-
-<p>Example usage (from <a href="mmx.html">{mmx}</a>):</p>
-
-<pre><code>local function make_sorted_entry_iterator(entries)
-  return utils.spairs(entries, function(es, name_a, name_b)
-    local entry_a = es![](name_a)
-    local entry_b = es![](name_b)
-    if entry_a.date or entry_b.date then
-      return (entry_a.date or MIN_DATE) &gt; (entry_b.date or MIN_DATE)
-    else
-      return name_a &lt; name_b
-    end
-  end)
-end
-</code></pre>
-
+<ul>
+    <li>Requires dedicated focus to build empathy across team</li>
+    <li>Work as social outlet doesn't come as naturally for remote teams</li>
+    <li>Need to iterate on process, especially at growth milestones</li>
+    <li>Communication, if treated like an in-person company, can be all-consuming and painful.</li>
+    <li>A shift in communication</li>
+    <li>Discussions in public, summary</li>
+    <li>Thoughtful organization of conversations</li>
+    <li>Discipline</li>
+</ul>
 
 </article><p style="color:#ccc"><em>Compiled 2023-1-5</em></p></div><footer>
   <div class='footer-row'>

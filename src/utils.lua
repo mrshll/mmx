@@ -26,10 +26,11 @@ function utils.list_folders(directory)
 
   local folder_names = {}
   for folder_name in pfile:lines() do
-    table.insert(folder_names, folder_name)
+    folder_name = folder_name:sub(#directory + 1)
+    if not utils.starts_with(folder_name, '.') and #folder_name > 0 then
+      table.insert(folder_names, folder_name)
+    end
   end
-
-  print(folder_names)
 
   pfile:close()
   return folder_names
@@ -43,6 +44,7 @@ function utils.list_files(directory, extension)
 
   local file_names = {}
   for file_name in pfile:lines() do
+    file_name = file_name:sub(#directory + 1)
     table.insert(file_names, file_name)
   end
 
@@ -151,7 +153,7 @@ function utils.today()
 end
 
 function utils.rss_date(date_str)
-  local handle = io.popen("gdate -R -d " .. date_str)
+  local handle = io.popen("date -R -d " .. date_str)
   if not handle then
     error("unable to run command in rss_date")
   end
