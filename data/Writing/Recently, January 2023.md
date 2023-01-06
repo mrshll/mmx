@@ -41,13 +41,18 @@ We've had _Even A Tree Can Shed Tears: Japanese Folk & Rock 1969-1973_ on the re
 ## Watching
 
 ![Frame from Chunking Express](img/chunking-express.jpeg)
-- Re-watched **Chunking Express (1994)**, which is in Alejandra and my's top films.
+Re-watched **Chunking Express (1994)**, which is in Alejandra and my's top films.
+
+![Frame from Castle in the Sky's intro](img/castle-in-the-sky.jpeg)
+Since we've been listening to so much Ghibli soundtrack music we re-watched **Castle in the Sky (1986)**
+
+![Picnic at Hanging Rock](img/picnic-at-hanging-rock.jpg)
+**Picnic at Hanging Rock (1975)** which had an [unexpected and brilliant soundtrack](https://www.youtube.com/watch?v=_guHfwfIIO4)
+
+On the net:
+
 - [Peter van Hardenberg - Why Can’t We Make Simple Software?](https://vimeo.com/780013486)
 - ["Weathering Software Winter", Handmade Seattle 2022](https://www.youtube.com/watch?v=9TJuOwy4aGA)
-![Frame from Castle in the Sky's intro](img/castle-in-the-sky.jpeg)
-- Since we've been listening to so much Ghibli soundtrack music we re-watched **Castle in the Sky (1986)**
-![Picnic at Hanging Rock](img/picnic-at-hanging-rock.jpg)
-- **Picnic at Hanging Rock (1975)** which had an [unexpected and brilliant soundtrack](https://www.youtube.com/watch?v=_guHfwfIIO4)
 
 ## Elsewhere
 
@@ -60,6 +65,3 @@ I've been playing with [uxn](https://wiki.xxiivv.com/site/uxn.html), which feels
 Watching talks from Handmade Seattle set me on a short jaunt learning about [[Local-first applications]]. Okay, it's true I run a business primarily built on cloud technologies and subscription models, but these are now applied as a default in ways that only harm users and communities. And we are exploring ways for organizations to run some of our technology (like our forecasting models) themselves on their own infrastructure. I'm excited for a resurgence of local-first applications with collaboration as a first-class consideration. [Earthstar](https://earthstar-project.org/) is another interesting technology that could enable a new kind of user ownership.
 
 I wrote two quick posts, one about [[Self-hosted Mastodon|hosting your own Mastodon instance]] and another about [[Running a basement server|running a basement server on old, forgotten hardware]].
-
-
-
