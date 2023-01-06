@@ -61,3 +61,5 @@ Watching talks from Handmade Seattle set me on a short jaunt learning about [[Lo
 
 I wrote two quick posts, one about [[Self-hosted Mastodon|hosting your own Mastodon instance]] and another about [[Running a basement server|running a basement server on old, forgotten hardware]].
 
+
+
