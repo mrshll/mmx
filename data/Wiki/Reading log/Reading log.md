@@ -11,7 +11,7 @@
 - _This Is How You Lose the Time War_ by Amal El-Mohtar and Max Gladstone
 - _Pachinko_ by Min Jin Lee
 - _Piranesi_ by Susanna Clarke
-- _[[Angle of Repose]]_ by Wallace Stegner (plagarizing Mary Hallock Foote)
+- _[[Angle of Repose]]_ by Wallace Stegner (plagiarizing Mary Hallock Foote)
 - _The Dispossessed: An Ambiguous Utopia_ by Ursula K. Le Guin
 - _The Goldfinch_ by Donna Tartt
 - _A Short History of Nearly Everything_ by Bill Bryson
