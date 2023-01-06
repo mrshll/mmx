@@ -9,6 +9,91 @@
       rel="self"
       type="application/rss+xml" />
     <description><![CDATA[ The feed of updates for mrshll.com ]]></description> <item>
+  <title><![CDATA[ Recently, January 2023 ]]></title>
+  <link>https://mrshll.com/recently__january_2023.html</link>
+  <guid>https://mrshll.com/recently__january_2023.html</guid>
+  <pubDate>Thu, 05 Jan 2023 00:00:00 -0500
+</pubDate>
+  <description><![CDATA[ 
+
+
+<p>Happy 2023! The fresh start. The clean slate. Especially for Alejandra and I, everything feels new. That's because we welcomed Meadow into our lives at the end of last year. We've both been on parental leave, and time is simultaneously whipping by and standing still.</p>
+
+<p>The last six weeks has been entirely spent with Meadow, learning how to be parents. It has been much more of a challenge than I naively expected, especially at the start. It's already getting easier as we get to know her and become more confident.</p>
+
+<p><img src="https://mrshll.com/img/meadow.png" alt="Welcoming Meadow"/></p>
+
+<hr/>
+
+<p>For a few years now, I've channeled my enjoyment of writing into [[Upstream Tech]]. I admire folks who have the deep archive of their public-facing writing, and some formats, like <a href="https://macwright.com/">Tom MacWright</a>'s "Recently" have a cadence built in that I love. I'm going to try it - thanks Tom for the inspiration!</p>
+
+<h2>Reading</h2>
+
+<p>Books finished recently:</p>
+
+<ul>
+    <li><em>This Is How You Lose the Time War</em> by Amal El-Mohtar and Max Gladstone</li>
+    <li><em>Pachinko</em> by Min Jin Lee</li>
+    <li><em>Piranesi</em> by Susanna Clarke</li>
+    <li><em>[[Angle of Repose]]</em> by Wallace Stegner (plagiarizing Mary Hallock Foote)</li>
+</ul>
+
+<p>Good stuff on the net:</p>
+
+<ul>
+    <li><a href="https://www.nber.org/papers/w29569">Using Neural Networks to Predict Micro-Spatial Economic Growth</a></li>
+    <li><a href="https://www.inkandswitch.com/local-first/">Local-First Software: You Own Your Data, in spite of the Cloud</a> <a href="https://www.inkandswitch.com/local-first/static/local-first.pdf">pdf</a></li>
+    <li><a href="https://googleprojectzero.blogspot.com/2021/12/a-deep-dive-into-nso-zero-click.html">A deep dive into an NSA zero-click iMessage exploit: Remote Code Execution</a></li>
+    <li><a href="https://evoniuk.github.io/posts/pitfall.html">How Pitfall Builds its World</a></li>
+    <li><a href="https://astralcodexten.substack.com/p/every-bay-area-house-party">Every Bay Area House Party</a> and <a href="https://astralcodexten.substack.com/p/even-more-bay-area-house-party">Even More Bay Area House Party</a></li>
+    <li><a href="https://compudanzas.net/uxn_tutorial.html">compudanzas' uxn tutorial</a></li>
+</ul>
+
+<p>Just started </p>
+
+<ul>
+    <li><em>You're Paid What You're Worth: And Other Myths of the Modern Economy</em> by Jake Rosenfeld</li>
+</ul>
+
+<h2>Listening</h2>
+
+<p>We've had <em>Even A Tree Can Shed Tears: Japanese Folk &amp; Rock 1969-1973</em> on the record player, and a Miyazaki soundtrack amalgamation instantly lulls Meadow to sleep.</p>
+
+<p><img src="https://mrshll.com/img/lita-japan-series2.jpeg" alt="Cover of Even A Tree Can Shed Tears"/></p>
+
+<h2>Watching</h2>
+
+<p><img src="https://mrshll.com/img/chunking-express.jpeg" alt="Frame from Chunking Express"/>
+Re-watched <strong>Chunking Express (1994)</strong>, which is in Alejandra and my's top films.</p>
+
+<p><img src="https://mrshll.com/img/castle-in-the-sky.jpeg" alt="Frame from Castle in the Sky's intro"/>
+Since we've been listening to so much Ghibli soundtrack music we re-watched <strong>Castle in the Sky (1986)</strong></p>
+
+<p><img src="https://mrshll.com/img/picnic-at-hanging-rock.jpg" alt="Picnic at Hanging Rock"/>
+<strong>Picnic at Hanging Rock (1975)</strong> which had an <a href="https://www.youtube.com/watch?v=_guHfwfIIO4">unexpected and brilliant soundtrack</a></p>
+
+<p>On the net:</p>
+
+<ul>
+    <li><a href="https://vimeo.com/780013486">Peter van Hardenberg - Why Can’t We Make Simple Software?</a></li>
+    <li><a href="https://www.youtube.com/watch?v=9TJuOwy4aGA">"Weathering Software Winter", Handmade Seattle 2022</a></li>
+</ul>
+
+<h2>Elsewhere</h2>
+
+<p>I rewrote [[mmx]]'s compiler in Lua, substantially simplifying the logic by integrating some "lessons learned" and shedding extra features that added a lot of complexity. Part of this migrated away from [[mmxup]] to markdown to improve interoperability with other applications, like Obsidian. The source is <a href="https://github.com/mrshll/mmx">here</a>.</p>
+
+<p>I've been playing with <a href="https://wiki.xxiivv.com/site/uxn.html">uxn</a>, which feels like I'm exercising my brain getting back into the stack machine mindset. One of my favorite assignments in college was building a <a href="https://www.cs.tufts.edu/comp/40-2011f/notes.html#toc100">Universal Machine</a>. This class was formative, and it's been a joy to play again in a similar language.</p>
+
+<p><img src="https://mrshll.com/img/screenshot_uxn-draw-with-keyboard.png" alt="uxn tutorial day 3 screenshot"/></p>
+
+<p>Watching talks from Handmade Seattle set me on a short jaunt learning about [[Local-first applications]]. Okay, it's true I run a business primarily built on cloud technologies and subscription models, but these models are too often applied by default in ways that only harm users and communities. And we are exploring ways for organizations to run some of our technology (like our forecasting models) themselves on their own infrastructure. I'm excited for a resurgence of local-first applications with collaboration as a first-class consideration. <a href="https://earthstar-project.org/">Earthstar</a> is another interesting technology that could enable a new kind of user ownership.</p>
+
+<p>I wrote two quick posts, one about [[Self-hosted Mastodon|hosting your own Mastodon instance]] and another about [[Running a basement server|running a basement server on old, forgotten hardware]].</p>
+
+ ]]></description>
+</item>
+<item>
   <title><![CDATA[ Self-hosted Mastodon ]]></title>
   <link>https://mrshll.com/self_hosted_mastodon.html</link>
   <guid>https://mrshll.com/self_hosted_mastodon.html</guid>
@@ -1488,91 +1573,6 @@ Love you both so much. xoxox</p>
 <p><img src="https://mrshll.com/img/front_beds.jpg" alt="Two raised beds in the front yard"/></p>
 
 <p>With the beds completed, I now spend the winter planning what to grow, ordering seeds, and trying to start seedlings in my basement. My plan, loosely, is to grow the [[Three Sisters]] combo of corn, beans and squash in mounds in the back raised beds, interspersed with herbs, peppers and tomatoes, with a mixture of raddishes, peas, flowers, cabbage and oakra in the front. 98 days until Spring. 140 days until the last frost.</p>
-
- ]]></description>
-</item>
-<item>
-  <title><![CDATA[ Recently, January 2023 ]]></title>
-  <link>https://mrshll.com/recently__january_2023.html</link>
-  <guid>https://mrshll.com/recently__january_2023.html</guid>
-  <pubDate>Sun, 05 Jan 2020 00:00:00 -0500
-</pubDate>
-  <description><![CDATA[ 
-
-
-<p>Happy 2023! The fresh start. The clean slate. Especially for Alejandra and I, everything feels new. That's because we welcomed Meadow into our lives at the end of last year. We've both been on parental leave, and time is simultaneously whipping by and standing still.</p>
-
-<p>The last six weeks has been entirely spent with Meadow, learning how to be parents. It has been much more of a challenge than I naively expected, especially at the start. It's already getting easier as we get to know her and become more confident.</p>
-
-<p><img src="https://mrshll.com/img/meadow.png" alt="Welcoming Meadow"/></p>
-
-<hr/>
-
-<p>For a few years now, I've channeled my enjoyment of writing into [[Upstream Tech]]. I admire folks who have the deep archive of their public-facing writing, and some formats, like <a href="https://macwright.com/">Tom MacWright</a>'s "Recently" have a cadence built in that I love. I'm going to try it - thanks Tom for the inspiration!</p>
-
-<h2>Reading</h2>
-
-<p>Books finished recently:</p>
-
-<ul>
-    <li><em>This Is How You Lose the Time War</em> by Amal El-Mohtar and Max Gladstone</li>
-    <li><em>Pachinko</em> by Min Jin Lee</li>
-    <li><em>Piranesi</em> by Susanna Clarke</li>
-    <li><em>[[Angle of Repose]]</em> by Wallace Stegner (plagiarizing Mary Hallock Foote)</li>
-</ul>
-
-<p>Good stuff on the net:</p>
-
-<ul>
-    <li><a href="https://www.nber.org/papers/w29569">Using Neural Networks to Predict Micro-Spatial Economic Growth</a></li>
-    <li><a href="https://www.inkandswitch.com/local-first/">Local-First Software: You Own Your Data, in spite of the Cloud</a> <a href="https://www.inkandswitch.com/local-first/static/local-first.pdf">pdf</a></li>
-    <li><a href="https://googleprojectzero.blogspot.com/2021/12/a-deep-dive-into-nso-zero-click.html">A deep dive into an NSA zero-click iMessage exploit: Remote Code Execution</a></li>
-    <li><a href="https://evoniuk.github.io/posts/pitfall.html">How Pitfall Builds its World</a></li>
-    <li><a href="https://astralcodexten.substack.com/p/every-bay-area-house-party">Every Bay Area House Party</a> and <a href="https://astralcodexten.substack.com/p/even-more-bay-area-house-party">Even More Bay Area House Party</a></li>
-    <li><a href="https://compudanzas.net/uxn_tutorial.html">compudanzas' uxn tutorial</a></li>
-</ul>
-
-<p>Just started </p>
-
-<ul>
-    <li><em>You're Paid What You're Worth: And Other Myths of the Modern Economy</em> by Jake Rosenfeld</li>
-</ul>
-
-<h2>Listening</h2>
-
-<p>We've had <em>Even A Tree Can Shed Tears: Japanese Folk &amp; Rock 1969-1973</em> on the record player, and a Miyazaki soundtrack amalgamation instantly lulls Meadow to sleep.</p>
-
-<p><img src="https://mrshll.com/img/lita-japan-series2.jpeg" alt="Cover of Even A Tree Can Shed Tears"/></p>
-
-<h2>Watching</h2>
-
-<p><img src="https://mrshll.com/img/chunking-express.jpeg" alt="Frame from Chunking Express"/>
-Re-watched <strong>Chunking Express (1994)</strong>, which is in Alejandra and my's top films.</p>
-
-<p><img src="https://mrshll.com/img/castle-in-the-sky.jpeg" alt="Frame from Castle in the Sky's intro"/>
-Since we've been listening to so much Ghibli soundtrack music we re-watched <strong>Castle in the Sky (1986)</strong></p>
-
-<p><img src="https://mrshll.com/img/picnic-at-hanging-rock.jpg" alt="Picnic at Hanging Rock"/>
-<strong>Picnic at Hanging Rock (1975)</strong> which had an <a href="https://www.youtube.com/watch?v=_guHfwfIIO4">unexpected and brilliant soundtrack</a></p>
-
-<p>On the net:</p>
-
-<ul>
-    <li><a href="https://vimeo.com/780013486">Peter van Hardenberg - Why Can’t We Make Simple Software?</a></li>
-    <li><a href="https://www.youtube.com/watch?v=9TJuOwy4aGA">"Weathering Software Winter", Handmade Seattle 2022</a></li>
-</ul>
-
-<h2>Elsewhere</h2>
-
-<p>I rewrote [[mmx]]'s compiler in Lua, substantially simplifying the logic by integrating some "lessons learned" and shedding extra features that added a lot of complexity. Part of this migrated away from [[mmxup]] to markdown to improve interoperability with other applications, like Obsidian. The source is <a href="https://github.com/mrshll/mmx">here</a>.</p>
-
-<p>I've been playing with <a href="https://wiki.xxiivv.com/site/uxn.html">uxn</a>, which feels like I'm exercising my brain getting back into the stack machine mindset. One of my favorite assignments in college was building a <a href="https://www.cs.tufts.edu/comp/40-2011f/notes.html#toc100">Universal Machine</a>. This class was formative, and it's been a joy to play again in a similar language.</p>
-
-<p><img src="https://mrshll.com/img/screenshot_uxn-draw-with-keyboard.png" alt="uxn tutorial day 3 screenshot"/></p>
-
-<p>Watching talks from Handmade Seattle set me on a short jaunt learning about [[Local-first applications]]. Okay, it's true I run a business primarily built on cloud technologies and subscription models, but these models are too often applied by default in ways that only harm users and communities. And we are exploring ways for organizations to run some of our technology (like our forecasting models) themselves on their own infrastructure. I'm excited for a resurgence of local-first applications with collaboration as a first-class consideration. <a href="https://earthstar-project.org/">Earthstar</a> is another interesting technology that could enable a new kind of user ownership.</p>
-
-<p>I wrote two quick posts, one about [[Self-hosted Mastodon|hosting your own Mastodon instance]] and another about [[Running a basement server|running a basement server on old, forgotten hardware]].</p>
 
  ]]></description>
 </item>

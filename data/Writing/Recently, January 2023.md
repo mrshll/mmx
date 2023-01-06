@@ -1,4 +1,4 @@
-2020-01-05
+2023-01-05
 
 Happy 2023! The fresh start. The clean slate. Especially for Alejandra and I, everything feels new. That's because we welcomed Meadow into our lives at the end of last year. We've both been on parental leave, and time is simultaneously whipping by and standing still.
 
