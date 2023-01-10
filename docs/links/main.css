@@ -36,6 +36,11 @@ a:hover {
   color: var(--bg-color);
 }
 
+.footnote {
+  font-size: 75%;
+  margin-bottom: 1rem;
+}
+
 h1,
 h2,
 h3,

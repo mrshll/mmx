@@ -736,7 +736,6 @@ local function code_spans(s)
       pos = stop + 1
     end
   end
-  return s
 end
 
 -- Encode alt text... enodes &, and ".
@@ -748,24 +747,8 @@ local function encode_alt(s)
   return s
 end
 
--- Forward declaration for link_db as returned by strip_link_definitions.
-local link_database
-
 -- Handle image references
 local function images(text)
-  local function reference_link(alt, id)
-    alt = encode_alt(alt:match("%b[]"):sub(2, -2))
-    id = id:match("%[(.*)%]"):lower()
-    if id == "" then id = text:lower() end
-    link_database[id] = link_database[id] or {}
-    if not link_database[id].url then return nil end
-    local url = link_database[id].url or id
-    url = encode_alt(url)
-    local title = encode_alt(link_database[id].title)
-    if title then title = " title=\"" .. title .. "\"" else title = "" end
-    return add_escape('<img src="' .. url .. '" alt="' .. alt .. '"' .. title .. "/>")
-  end
-
   local function inline_link(alt, link)
     alt = encode_alt(alt:match("%b[]"):sub(2, -2))
     local url, title = link:match("%(<?(.-)>?[ \t]*['\"](.+)['\"]")
@@ -779,26 +762,12 @@ local function images(text)
     end
   end
 
-  text = text:gsub("!(%b[])[ \t]*\n?[ \t]*(%b[])", reference_link)
   text = text:gsub("!(%b[])(%b())", inline_link)
   return text
 end
 
 -- Handle anchor references
 local function anchors(text)
-  local function reference_link(text, id)
-    text = text:match("%b[]"):sub(2, -2)
-    id = id:match("%b[]"):sub(2, -2):lower()
-    if id == "" then id = text:lower() end
-    link_database[id] = link_database[id] or {}
-    if not link_database[id].url then return nil end
-    local url = link_database[id].url or id
-    url = encode_alt(url)
-    local title = encode_alt(link_database[id].title)
-    if title then title = " title=\"" .. title .. "\"" else title = "" end
-    return add_escape("<a href=\"" .. url .. "\"" .. title .. ">") .. text .. add_escape("</a>")
-  end
-
   local function inline_link(text, link)
     text             = text:match("%b[]"):sub(2, -2)
     local url, title = link:match("%(<?(.-)>?[ \t]*['\"](.+)['\"]")
@@ -812,7 +781,6 @@ local function anchors(text)
     end
   end
 
-  text = text:gsub("(%b[])[ \t]*\n?[ \t]*(%b[])", reference_link)
   text = text:gsub("(%b[])(%b())", inline_link)
   return text
 end
@@ -917,6 +885,11 @@ local function line_breaks(text)
   return text:gsub("  +\n", " <br/>\n")
 end
 
+local function footnotes(text)
+  return text:gsub("%[%^(%d+)%]: ([^\n]+)", "<div class=\"footnote\" id=\"fn-%1\"><a href=\"#ref-%1\">%1</a>. %2</div>")
+    :gsub("%[%^(%d+)%]", "<a href=\"#fn-%1\" id=\"ref-%1\">[%1]</a>")
+end
+
 -- Perform all span level transforms.
 function span_transform(text)
   text = code_spans(text)
@@ -927,6 +900,7 @@ function span_transform(text)
   text = amps_and_angles(text)
   text = emphasis(text)
   text = line_breaks(text)
+  text = footnotes(text)
   return text
 end
 
@@ -954,30 +928,6 @@ local function cleanup(text)
   return "\n" .. text .. "\n"
 end
 
--- Strips link definitions from the text and stores the data in a lookup table.
-local function strip_link_definitions(text)
-  local linkdb = {}
-
-  local function link_def(id, url, title)
-    id = id:match("%[(.+)%]"):lower()
-    linkdb[id] = linkdb[id] or {}
-    linkdb[id].url = url or linkdb[id].url
-    linkdb[id].title = title or linkdb[id].title
-    return ""
-  end
-
-  local def_no_title = "\n ? ? ?(%b[]):[ \t]*\n?[ \t]*<?([^%s>]+)>?[ \t]*"
-  local def_title1 = def_no_title .. "[ \t]+\n?[ \t]*[\"'(]([^\n]+)[\"')][ \t]*"
-  local def_title2 = def_no_title .. "[ \t]*\n[ \t]*[\"'(]([^\n]+)[\"')][ \t]*"
-  local def_title3 = def_no_title .. "[ \t]*\n?[ \t]+[\"'(]([^\n]+)[\"')][ \t]*"
-
-  text = text:gsub(def_title1, link_def)
-  text = text:gsub(def_title2, link_def)
-  text = text:gsub(def_title3, link_def)
-  text = text:gsub(def_no_title, link_def)
-  return text, linkdb
-end
-
 -- Main markdown processing function
 local function markdown(text)
   init_hash(text)
@@ -985,7 +935,6 @@ local function markdown(text)
 
   text = cleanup(text)
   text = protect(text)
-  text, link_database = strip_link_definitions(text)
   text = block_transform(text)
   text = unescape_special_chars(text)
   return text
@@ -995,228 +944,4 @@ end
 -- End of module
 ----------------------------------------------------------------------
 
--- For compatibility, set markdown function as a global
-_G.markdown = markdown
-
--- Class for parsing command-line options
-local OptionParser = {}
-OptionParser.__index = OptionParser
-
--- Creates a new option parser
-function OptionParser:new()
-  local o = { short = {}, long = {} }
-  setmetatable(o, self)
-  return o
-end
-
--- Calls f() whenever a flag with specified short and long name is encountered
-function OptionParser:flag(short, long, f)
-  local info = { type = "flag", f = f }
-  if short then self.short[short] = info end
-  if long then self.long[long] = info end
-end
-
--- Calls f(param) whenever a parameter flag with specified short and long name is encountered
-function OptionParser:param(short, long, f)
-  local info = { type = "param", f = f }
-  if short then self.short[short] = info end
-  if long then self.long[long] = info end
-end
-
--- Calls f(v) for each non-flag argument
-function OptionParser:arg(f)
-  self.arg = f
-end
-
--- Runs the option parser for the specified set of arguments. Returns true if all arguments
--- where successfully parsed and false otherwise.
-function OptionParser:run(args)
-  local pos = 1
-  while pos <= #args do
-    local arg = args[pos]
-    if arg == "--" then
-      for i = pos + 1, #args do
-        if self.arg then self.arg(args[i]) end
-        return true
-      end
-    end
-    if arg:match("^%-%-") then
-      local info = self.long[arg:sub(3)]
-      if not info then print("Unknown flag: " .. arg) return false end
-      if info.type == "flag" then
-        info.f()
-        pos = pos + 1
-      else
-        local param = args[pos + 1]
-        if not param then print("No parameter for flag: " .. arg) return false end
-        info.f(param)
-        pos = pos + 2
-      end
-    elseif arg:match("^%-") then
-      for i = 2, arg:len() do
-        local c = arg:sub(i, i)
-        local info = self.short[c]
-        if not info then print("Unknown flag: -" .. c) return false end
-        if info.type == "flag" then
-          info.f()
-        else
-          if i == arg:len() then
-            local param = args[pos + 1]
-            if not param then print("No parameter for flag: -" .. c) return false end
-            info.f(param)
-            pos = pos + 1
-          else
-            local param = arg:sub(i + 1)
-            info.f(param)
-          end
-          break
-        end
-      end
-      pos = pos + 1
-    else
-      if self.arg then self.arg(arg) end
-      pos = pos + 1
-    end
-  end
-  return true
-end
-
-local function read_file(path, descr)
-  local file = io.open(path) or error("Could not open " .. descr .. " file: " .. path)
-  local contents = file:read("*a") or error("Could not read " .. descr .. " from " .. path)
-  file:close()
-  return contents
-end
-
--- Handles the case when markdown is run from the command line
-local function run_command_line(arg)
-  -- Generate output for input s given options
-  local function run(s, options)
-    s = markdown(s)
-    if not options.wrap_header then return s end
-    local header
-    if options.header then
-      header = read_file(options.header, "header")
-    else
-      header = [[
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=CHARSET" />
-    <title>TITLE</title>
-    <link rel="stylesheet" type="text/css" href="STYLESHEET" />
-</head>
-<body>
-]]
-      local title = options.title or s:match("<h1>(.-)</h1>") or s:match("<h2>(.-)</h2>") or
-          s:match("<h3>(.-)</h3>") or "Untitled"
-      header = header:gsub("TITLE", title)
-      if options.inline_style then
-        local style = read_file(options.stylesheet, "style sheet")
-        header = header:gsub('<link rel="stylesheet" type="text/css" href="STYLESHEET" />',
-          "<style type=\"text/css\"><!--\n" .. style .. "\n--></style>")
-      else
-        header = header:gsub("STYLESHEET", options.stylesheet)
-      end
-      header = header:gsub("CHARSET", options.charset)
-    end
-    local footer = "</body></html>"
-    if options.footer then
-      footer = read_file(options.footer, "footer")
-    end
-    return header .. s .. footer
-  end
-
-  -- Generate output path name from input path name given options.
-  local function outpath(path, options)
-    if options.append then return path .. ".html" end
-    local m = path:match("^(.+%.html)[^/\\]+$")
-    if m then return m end
-    m = path:match("^(.+%.)[^/\\]*$")
-    if m and path ~= m .. "html" then return m .. "html" end
-    return path .. ".html"
-  end
-
-  -- Default commandline options
-  local options = {
-    wrap_header = true,
-    header = nil,
-    footer = nil,
-    charset = "utf-8",
-    title = nil,
-    stylesheet = "default.css",
-    inline_style = false
-  }
-  local help = [[
-Usage: markdown.lua [OPTION] [FILE]
-Runs the markdown text markup to HTML converter on each file specified on the
-command line. If no files are specified, runs on standard input.
-
-No header:
-    -n, --no-wrap        Don't wrap the output in <html>... tags.
-Custom header:
-    -e, --header FILE    Use content of FILE for header.
-    -f, --footer FILE    Use content of FILE for footer.
-Generated header:
-    -c, --charset SET    Specifies charset (default utf-8).
-    -i, --title TITLE    Specifies title (default from first <h1> tag).
-    -s, --style STYLE    Specifies style sheet file (default default.css).
-    -l, --inline-style   Include the style sheet file inline in the header.
-Generated files:
-    -a, --append         Append .html extension (instead of replacing).
-Other options:
-    -h, --help           Print this help text.
-    -t, --test           Run the unit tests.
-]]
-
-  local run_stdin = true
-  local op = OptionParser:new()
-  op:flag("n", "no-wrap", function() options.wrap_header = false end)
-  op:param("e", "header", function(x) options.header = x end)
-  op:param("f", "footer", function(x) options.footer = x end)
-  op:param("c", "charset", function(x) options.charset = x end)
-  op:param("i", "title", function(x) options.title = x end)
-  op:param("s", "style", function(x) options.stylesheet = x end)
-  op:flag("l", "inline-style", function() options.inline_style = true end)
-  op:flag("a", "append", function() options.append = true end)
-  op:flag("t", "test", function()
-    local n = arg[0]:gsub("markdown%.lua", "markdown-tests.lua")
-    local f = io.open(n)
-    if f then
-      f:close()
-      package.loaded.markdown = markdown
-      dofile(n)
-    else
-      error("Cannot find markdown-tests.lua")
-    end
-    run_stdin = false
-  end)
-  op:flag("h", "help", function() print(help) run_stdin = false end)
-  op:arg(function(path)
-    local s = read_file(path, "input")
-    s = run(s, options)
-    local file = io.open(outpath(path, options), "w") or error("Could not open output file: " .. outpath(path, options))
-    file:write(s)
-    file:close()
-    run_stdin = false
-  end
-  )
-
-  if not op:run(arg) then
-    print(help)
-    run_stdin = false
-  end
-
-  if run_stdin then
-    local s = io.read("*a")
-    s = run(s, options)
-    io.write(s)
-  end
-end
-
--- If we are being run from the command-line, act accordingly
-if arg and arg[0]:find("markdown%.lua$") then
-  run_command_line(arg)
-else
-  return markdown
-end
+return markdown
