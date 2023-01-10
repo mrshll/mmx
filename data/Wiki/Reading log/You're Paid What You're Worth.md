@@ -1,3 +1,4 @@
+2020-01-09
 by Jake Rosenfeld
 
 ## Highlights and notes
