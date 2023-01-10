@@ -1,12 +1,12 @@
 ## In progress
 
 - *Quicksilver* by Neil Stevenson
-- *You're Paid What You're Worth: And Other Myths of the Modern Economy* by Jake Rosenfeld
 - *Game Programming Design Patterns* by Robery Nystrom
 - *Something Wicked This Way Comes* by Ray Bradbury
 
 ## Read
 
+- [[You're Paid What You're Worth]] by Jake Rosenfeld
 - [Using Neural Networks to Predict Micro-Spatial Economic Growth](https://www.nber.org/papers/w29569)
 - _This Is How You Lose the Time War_ by Amal El-Mohtar and Max Gladstone
 - _Pachinko_ by Min Jin Lee
