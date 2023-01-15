@@ -8,7 +8,7 @@ Books finished recently:
 
 Good stuff on the net:
 
-- 
+- [The Elm Architecture](https://guide.elm-lang.org/architecture/) via [charm.sh's bubbletea](https://github.com/charmbracelet/bubbletea)
 
 ## Listening
 
@@ -18,4 +18,5 @@ Good stuff on the net:
 
 ## Elsewhere
 
-
+- [Mynah](https://git.sr.ht/~eli_oat/mynah) helps you keep a digital garden, or wiki from a directory of markdown files.
+- ssh as an application protocol, a la [charm.sh](https://charm.sh/)

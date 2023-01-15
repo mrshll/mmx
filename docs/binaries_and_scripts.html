@@ -5,18 +5,20 @@
   <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Scripting" />
+  <meta property="og:title" content="Binaries and scripts" />
   <link rel="stylesheet" type="text/css" href="./links/normalize.css">
   <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
   <link rel="stylesheet" type="text/css" href="./links/main.css">
-  <title>mrshll.com - Scripting</title>
+  <title>mrshll.com - Binaries and scripts</title>
 </head>
-<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><mark><a href="wiki.html">Wiki</a></mark></li><li><a href="writing.html">Writing</a></li></ul><ul><li><a href="film_log.html">Film log</a></li><li><a href="framework_computers.html">Framework computers</a></li><li><a href="gardening.html">Gardening</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="local_first_applications.html">Local-first applications</a></li><li><a href="low_tech.html">Low tech</a></li><details><summary></summary><li><a href="lua.html">Lua</a></li><li><a href="organizations_and_collaboration.html">Organizations and collaboration</a></li><li><a href="reading_log.html">Reading log</a></li><li><mark><a href="scripting.html">Scripting</a></mark></li><li><a href="the_middlesex_fells.html">The Middlesex Fells</a></li><li><a href="things_to_learn_about.html">Things to learn about</a></li><li><a href="three_sisters.html">Three Sisters</a></li><li><a href="zombiebox.html">zombiebox</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Scripting</h1>
-<h2>date</h2>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><mark><a href="wiki.html">Wiki</a></mark></li><li><a href="writing.html">Writing</a></li></ul><ul><li><mark><a href="binaries_and_scripts.html">Binaries and scripts</a></mark></li><li><a href="film_log.html">Film log</a></li><li><a href="framework_computers.html">Framework computers</a></li><li><a href="gardening.html">Gardening</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="local_first_applications.html">Local-first applications</a></li><details><summary></summary><li><a href="low_tech.html">Low tech</a></li><li><a href="lua.html">Lua</a></li><li><a href="organizations_and_collaboration.html">Organizations and collaboration</a></li><li><a href="reading_log.html">Reading log</a></li><li><a href="the_middlesex_fells.html">The Middlesex Fells</a></li><li><a href="things_to_learn_about.html">Things to learn about</a></li><li><a href="three_sisters.html">Three Sisters</a></li><li><a href="zombiebox.html">zombiebox</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Binaries and scripts</h1>
+<h2>Binaries</h2>
+
+<h3>date</h3>
 <p><em>print or set the system date and time</em>
 * get dates for e.g. file names : <code>date -Iminutes</code></p>
 
-<h2>maim</h2>
+<h3>maim</h3>
 <p><em>maim (make image) takes screenshots of your desktop. It has options to take only a region, and relies on another program called slop to query the user for regions using the graphical interface.</em></p>
 
 <ul>
@@ -27,7 +29,7 @@
     <li>get color of selected pixel : <code>maim -st 0 | convert - -resize 1x1\! -format '%!!![]()()(pixel:p{0,0})' info:-</code></li>
 </ul>
 
-<h2>xclip</h2>
+<h3>xclip</h3>
 <p><em>command line interface to X selections (clipboard)</em></p>
 
 <ul>
@@ -35,11 +37,16 @@
     <li>pipe program output to clipboard : <code>head file.txt | xclip -selection clipbaord</code></li>
 </ul>
 
-<h2>tac</h2>
+<h3>tac</h3>
 <p><em>reverse input line-wise</em></p>
 
-<h2>rev</h2>
+<h3>rev</h3>
 <p><em>reverse input character-wise</em></p>
+
+<h3>didder</h3>
+<p><em>didder is an extensive, fast, and accurate command-line image dithering tool.</em>
+<a href="https://github.com/makeworld-the-better-one/didder">github</a></p>
+
 
 <h2>Scripts</h2>
 
@@ -48,7 +55,7 @@
 <pre><code>find . -type f -exec sed -i.txt "s/foo/bar/g" {} \;
 </code></pre>
 
-<h2>Rename file extension</h2>
+<h3>Rename file extension</h3>
 
 <pre><code>!#/bin/bash
 for f in *.JPG;
@@ -61,7 +68,7 @@ done
 <pre><code>ls -1 2021-08-*
 </code></pre>
 
-<h2>Migrating from .mmx to .mx</h2>
+<h3>Migrating from .mmx to .mx</h3>
 <p>Images</p>
 
 <pre><code>find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\!!![](](([^]((\S*)()]*))?\)/!![)(\3)(\1)/g" {} \;
@@ -72,7 +79,7 @@ done
 <pre><code>find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\{(\S*), (!!![](]()(^\})*)\}/[\2)(\1)/g" {} \;
 </code></pre>
 
-</article><p style="color:#ccc"><em>Compiled 2023-1-9</em></p></div><footer>
+</article><p style="color:#ccc"><em>Compiled 2023-1-15</em></p></div><footer>
   <div class='footer-row'>
     <a href="feed.rss">
       RSS
