@@ -46,7 +46,7 @@ In April 2002 while doing some final overdubs in NYC, I remember the overhead sc
   
 I MISS MY FAMILY AND I WANT TO GO HOME  
 
-![My dad, looking hip and pissed](img/Pasted%20image%2020230126131302.png)
+![My dad, looking hip and pissed](guster-dad.png)
   
 It’s pretty devastating, to read that and reflect on it now. I was too self-absorbed to feel the depth of it in the moment, but Roger (photo 4) didn’t know how to tell us that this process - six full months in the studio - with lots of experimentation and learning and some successes and some failures … had become a grind and he was ready to be done.  
   
