@@ -1,6 +1,6 @@
 2023-01-26
 
-_Originally posted on Instagram, copied for posterity._
+_Originally posted on Instagram by @Guster, copied for posterity._
 
 “So don’t look back, there ain’t nothing there to see” - this is especially true of the Keep It Together studio journals, which have been removed from the internet, but I remember it all. So let’s go. This is Part 1 of three in my KIT retrospective:  
   
