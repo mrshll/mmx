@@ -92,17 +92,20 @@ end
 local function process_images(str)
   return str:gsub("<img [^>]+>", function(img_tag)
     local alt = img_tag:match("alt=\"([^\"]*)\"")
+    local src_pattern = "src=\"([^\"]+)\""
+    local src = img_tag:match(src_pattern)
 
-    local processed_img_tag = img_tag:gsub("src=\"([^\"]+)\"", function(src)
+    local processed_img_tag = img_tag:gsub(src_pattern, function(s)
       -- we don't compress/process other image formats
-      if not (utils.ends_with(src, "jpg") or utils.ends_with(src, "jpeg") or utils.ends_with(src, "png")) then
-        return "src=\"" .. src .. "\""
+      if not (utils.ends_with(s, "jpg") or utils.ends_with(s, "jpeg") or utils.ends_with(s, "png")) then
+        return "src=\"" .. s .. "\""
       end
 
-      local parts = utils.split(src, ".")
+      local parts = utils.split(s, ".")
       return "loading=\"lazy\" src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
     end)
-    return "<figure>" .. processed_img_tag .. "<figcaption>" .. alt .. "</figcaption></figure>"
+    return "<figure><a href=\"" ..
+        src .. "\">" .. processed_img_tag .. "<a/><figcaption>" .. alt .. "</figcaption></figure>"
   end)
 end
 
@@ -149,7 +152,6 @@ local function render_rss(rss_entries)
   end
   utils.write_file(DOC_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))
 end
-
 
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
