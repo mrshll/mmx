@@ -4,9 +4,7 @@ Welcome to [[mmx]]. This started as a blank canvas for my digital identity, and 
 
 I started and run a climate and conservation company, [[Upstream Tech]]. I also make [[music]], [[garden|grow living things]], and have a number of technical and non-technical [[Projects]], hobbies and interests.
 
-This site is my place to [[writing|write]], keep [[Wiki|notes]], share [[log|ephemera]], and write about my [[projects]].
-
-I live in Medford, MA with Alejandra, our newborn Meadow, and dog Dax in our home.
+I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
 ---
 
