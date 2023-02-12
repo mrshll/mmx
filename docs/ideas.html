@@ -1,0 +1,92 @@
+<html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ideas" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Ideas</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><mark><a href="projects.html">Projects</a></mark></li><li><a href="wiki.html">Wiki</a></li><li><a href="writing.html">Writing</a></li></ul><ul><li><a href="mmx.html">mmx</a></li><li><a href="music.html">Music</a></li><li><a href="garden.html">Garden</a></li><li><a href="upstream_tech.html">Upstream Tech</a></li><li><a href="dormant_projects.html">Dormant projects</a></li><li><mark><a href="ideas.html">Ideas</a></mark></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Ideas</h1>
+<h2>Radio hub (working title "yourelisteningto.com")</h2>
+<p>The pandemic brought to the fore methods of communication over distance. {reading list, Reading} All the Light We Cannot See, setting up a microradio station (dormant) and sharing a lot of playlists with family and friends has kept the technology of "radio" simmering in the back of my mind as something I'd like to explore more. In setting up my microradio station, it became clear that while technologies like <a href="https://icecast.org/">Icecast</a> are mature and powerful, they are by no means easy. My pulse > <a href="https://www.musicpd.org/">mpd</a> > Icecast > website flow was a Rube Goldberg machine. I'd love for a small program that allowed anyone to easily set up an online station, with a page that served as hub of stations around the world.</p>
+
+<p>That hub could be the best place to start - indexing stations that stream on Twitch and via their own streaming stacks. If I wanted to take it further and provide some mechanism to do the streaming itself, I could:
++ build a native application that allows a user to mix audio-out and an audio-in (microphone) and combine them into a stream. (<a href="http://code.google.com/p/portaudio-go/,portaudio-go}">{https://github.com/moriyoshi/pulsego/, pulsego</a>)
++ build a web application that uses the browser's "share tab with audio" functionality to stream audio</p>
+
+<p>There may already be some protocols or open source building blocks to do this sort of streaming (I recall some sort of library being compatible with things like Twitch too). Both would expose the stream in the hub at some reserved address, i.e. <em>yourelisteningto.com/mrshll</em></p>
+
+<h2>Online Battleline (card game, working title "Formations")</h2>
+<p>From what I can tell, there does not exist an online version of <a href="https://www.gmtgames.com/p-939-battle-line-11th-printing.aspx">Battleline</a>. It would be fun to make one, possibly using <a href="https://boardgame.io/">boardgame.io</a> as the backing engine.</p>
+
+<h2><a href="mmx.html">{mmx}</a> internal</h2>
+<p>Aside from paper notebooks, I haven't found digital notetaking or brainstorming venues that have <em>stuck</em>. I sometimes want a version of mmx that is either a native or web-based client with editor capabilities to parse {mmxup} at runtime and create structure - sort of like <a href="https://obsidian.md/">Obsidian</a>.</p>
+
+<p>Web stuff is easy, but it would be a learning experience to build and deploy a native app across platforms. Since mmx was originally written in Golang, something like <a href="https://developer.fyne.io/">Fyne</a> could be interesting to play with.</p>
+
+</article><p style="color:#ccc"><em>Compiled 2023-2-11</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

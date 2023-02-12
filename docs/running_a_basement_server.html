@@ -1,0 +1,202 @@
+<html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Running a basement server" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Running a basement server</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="log.html">Log</a></li><li><a href="projects.html">Projects</a></li><li><a href="wiki.html">Wiki</a></li><li><mark><a href="writing.html">Writing</a></mark></li></ul><ul><li><a href="recently__january_2023.html">Recently, January 2023</a></li><li><a href="self_hosted_mastodon.html">Self-hosted Mastodon</a></li><li><mark><a href="running_a_basement_server.html">Running a basement server</a></mark></li><li><a href="ricoh_simplex_tls_repair.html">Ricoh Simplex TLS Repair</a></li><li><a href="5_year_gestalt.html">5-year gestalt</a></li><li><a href="work_in_progress.html">Work in Progress</a></li><details><summary></summary><li><a href="on_webrings.html">On Webrings</a></li><li><a href="on_running.html">On running</a></li><li><a href="rainwater.html">Rainwater</a></li><li><a href="mom_q_a.html">Mom Q&A</a></li><li><a href="tufts_talk_2020_02_23.html">Tufts Talk 2020-02-23</a></li><li><a href="how_we_work_remotely_in_2020.html">How We Work Remotely in 2020</a></li><li><a href="learning_to_grow__plants_.html">Learning to grow (plants)</a></li><li><a href="two_years_in___how_we_work_at_upstream.html">Two Years In - How We Work at Upstream</a></li><li><a href="upstream_joins_natel_energy.html">Upstream joins Natel Energy</a></li><li><a href="an_appeal_for_impact.html">An appeal for impact</a></li><li><a href="my_climate_journey_podcast.html">My Climate Journey podcast</a></li><li><a href="recently__february_2023.html">Recently, February 2023</a></li></details></ul><ul></ul></nav></header><article id="entry-body"><h1>Running a basement server</h1><div style='color:#ccc'>last updated 2022-12-16</div>
+
+
+<p>A few years ago, a laptop of mine experienced inexplicable battery failure. Each time the laptop violently ceased operation when A/C power was removed, it communicated with me. "I am a homebody," it said, "and I wish to remain in the proximal comfort of the outlet." And a makeshift basement server, {zombiebox}, was born.</p>
+
+<p><figure><a href="img/zombiebox.jpg"><img loading="lazy" src="img/zombiebox-720.jpg" alt="Zombiebox the home server running my the basement"/></a><figcaption>Zombiebox the home server running my the basement</figcaption></figure></p>
+
+<p>With any home server, especially one exposed to the internet, there are a few challenges one must overcome:
+1. Your home's <em>external</em> IP address will periodically change (unless you pay for a static IP, which I do not)
+2. Your local network might change your server's <em>local</em> IP address
+3. When a request is made to your home's <em>external</em> IP address, your router must know what to do with it</p>
+
+<p><em>Disclaimer</em>: most ISPs do not allow running "servers" from a residential subscription. Their terms are vague, but proceed at your own risk.</p>
+
+<h2>1. Dynamic DNS</h2>
+
+<p>To solve the first issue, where your home's <em>external</em> IP addresses periodically changes, you have to continually update your DNS records to reflect the current IP. For example, when setting up a Mastodon instance on werm.world, I needed the root A record to point to the IP address of my home. There used to be a number of daemons and somewhat questionable services that I would use for this - but this time around I found that Google Domains (my registrar for werm.world) had a (new?) hidden <em>Advanced Setting</em>. You should see if your registrar supports something like this natively - at its core, all you need is a programmatic way to update a DNS record so look for an API to do so. Hopefully, you can adapt some of the following for your purposes.</p>
+
+<p><figure><a href="img/google-dyn-dns.png"><img loading="lazy" src="img/google-dyn-dns-720.png" alt="Screenshot of the advanced settings for Google Domains DNS"/></a><figcaption>Screenshot of the advanced settings for Google Domains DNS</figcaption></figure></p>
+
+<p>By creating a Dynamic DNS record, Google Domains provides credentials that can then be used with their API to update the IP. So, on {zombiebox}, I patched together the following script:</p>
+
+<pre><code>#!/bin/sh
+
+HOSTNAME=""
+USERNAME=""
+PASSWORD=""
+
+LOG_IP_FILE="/tmp/ddns_ip.log"
+touch $LOG_IP_FILE
+
+LOG_FILE="/tmp/ddns.log"
+touch $LOG_FILE
+
+PUBLIC_IP=$(curl -s -k https://domains.google.com/checkip)
+DDNS_IP=$(echo ${LOG_IP_FILE})
+
+if [ "$PUBLIC_IP" != "$DDNS_IP" ]; then
+
+  URL="https://domains.google.com/nic/update?hostname=${HOSTNAME}&amp;myip=${PUBLIC_IP}"
+  RESP=$(curl -s -k --user "${USERNAME}:${PASSWORD}" "$URL")
+
+  case $RESP in
+    "good ${PUBLIC_IP}" | "nochg ${PUBLIC_IP}")
+      echo $PUBLIC_IP &gt; ${LOG_IP_FILE}
+      echo "`date`: ${HOSTNAME} successfully updated to ${PUBLIC_IP}." &gt;&gt; ${LOG_FILE}
+      ;;
+    "nohost")
+      echo "`date`: The host ${HOSTNAME} does not exist, or does not have Dynamic DNS enabled." &gt;&gt; ${LOG_FILE}
+      ;;
+    "badauth")
+      echo "`date`: The username / password combination is not valid for the host ${HOSTNAME}." &gt;&gt; ${LOG_FILE}
+      ;;
+    "notfqdn")
+      echo "`date`: The supplied hostname ${HOSTNAME} is not a valid fully-qualified domain name." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "badagent")
+      echo "`date`: Your Dynamic DNS client is making bad requests. Ensure the user agent is set in the request." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "abuse")
+      echo "`date`: Dynamic DNS access for the hostname ${HOSTNAME} has been blocked." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "911")
+      echo "`date`: An error happened on Googles end." &gt;&gt; ${LOG_FILE}
+      ;;
+    *)
+      echo "`date`: $RESP" &gt;&gt; ${LOG_FILE}
+  esac
+fi
+</code></pre>
+
+<p>And I added a cronjob to run it regularly with <code>crontab -e</code>:</p>
+
+<pre><code>*/15 * * * * ~/apps/update-google-dyndns.sh
+</code></pre>
+
+<p>That script will let Google Domains know what your IP is.</p>
+
+<p><figure><a href="img/google-dyn-dns-setup.png"><img loading="lazy" src="img/google-dyn-dns-setup-720.png" alt="Screenshot of Google Domains Dynamic DNS successfully configured and running"/></a><figcaption>Screenshot of Google Domains Dynamic DNS successfully configured and running</figcaption></figure></p>
+
+<p>To test without a browser you can run the following, noting the <em>ANSWER SECTION</em>:</p>
+
+<pre><code>~&gt; dig werm.world
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; werm.world
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 42265
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;werm.world.            IN  A
+
+;; ANSWER SECTION:
+werm.world.     60  IN  A   72.93.97.128
+
+;; Query time: 82 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1)
+;; WHEN: Sat Dec 17 12:51:48 EST 2022
+;; MSG SIZE  rcvd: 55
+</code></pre>
+
+<h2>2 + 3: Getting requests from the internet to the basement</h2>
+
+<p>Configuration depends on he server's operating system and the router used for the network. The crux of what is needed is threefold: 
+- the server must be setup to always request the same local IP address from the router,
+- the router must reserve that IP address for the server's hostname, and
+- the router must be configured to forward the right requests to the server</p>
+
+<p>If fiddling with your router is new to you, you must first find its address and log in to it's management application. For me, the router's address is 192.168.1.1, but it differs vendor to vendor. To check, you can look at your operating system's network settings for a "router" entry. Or, you can run the following while connected to the network:</p>
+
+<pre><code>~&gt; netstat -nr | grep default
+default            192.168.1.1        UGScg             en0
+</code></pre>
+
+<p>A router's management application will have username/password authentication which is either set to a vendor default or noted physically on the router.</p>
+
+<p>Look for DNS settings, often hidden under an "Advanced" veil. There, you can set the server's hostname (in my case "zombiebox.local") to be assigned a specific <em>local</em>. With a consistent <em>local</em> IP, the router can be configured to forward requests made to your <em>external</em> IP of a certain port (i.e. 443) to the server's <em>local</em> IP. To do this, look for "Port Forwarding" and select the server's IP as well as the port (in a webserver's case, 443 and/or 80).</p>
+
+<p>It's dependent on what you are hosting, but from there you can use something like nginx running on the server to route requests to the correct process depending on the domain/request.</p>
+
+<p>Proper security of a home network server is beyond the scope of this humble post, but in short forward the smallest set of ports possible for your server to function on the internet, and follow any application-specific guides closely on best practices for securely running the server.</p>
+
+</article><p style="color:#ccc"><em>Compiled 2023-2-11</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="img/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="img/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>
