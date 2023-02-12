@@ -105,7 +105,7 @@ local function process_images(str)
       return "loading=\"lazy\" src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
     end)
     return "<figure><a href=\"" ..
-        src .. "\">" .. processed_img_tag .. "<a/><figcaption>" .. alt .. "</figcaption></figure>"
+        src .. "\">" .. processed_img_tag .. "</a><figcaption>" .. alt .. "</figcaption></figure>"
   end)
 end
 
