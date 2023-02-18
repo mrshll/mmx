@@ -31,6 +31,8 @@ Total 25C tax credits across panel upgrades and all weatherization projects are 
 
 ALTERNATELY, build a perimeter stud wall on the interior side of the spray foam. Don’t insulate the stud wall. Cover it with non-paper-faced gypsum board as the thermal/ignition barrier on the interior side.  If metal studs are used for the interior wall, do not insulate it unless the metal studs are placed at least 1 inch to the interior side of the foundation wall insulation.
 
+[Foam Board vs Spray Foam… Insulating our steel building/garage | Tips and Tricks - YouTube](https://www.youtube.com/watch?v=7C_ED3NDJLQ)
+
 ## Past projects
 
 - Conversion from boiler with steam radiators to air source heat pumps
