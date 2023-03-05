@@ -9,6 +9,73 @@
       rel="self"
       type="application/rss+xml" />
     <description><![CDATA[ The feed of updates for mrshll.com ]]></description> <item>
+  <title><![CDATA[ Recently, March 2023 ]]></title>
+  <link>https://mrshll.com/recently__march_2023.html</link>
+  <guid>https://mrshll.com/recently__march_2023.html</guid>
+  <pubDate>Sun, 05 Mar 2023 00:00:00 -0500
+</pubDate>
+  <description><![CDATA[ 
+
+
+<p>Meadow is growing, work is A Lot, time is short, and the weather is weird. I think that sums up the time elapsed since [[Recently, January 2023]].
+<img src="https://mrshll.com/img/PXL_20230215_153011317.jpg" alt="Meadow and Dax, living in some sort of improbable unity"/></p>
+
+<p>My days end and begin anew with Meadow's snores and smiles. Her glad recognition, in the valley of fatigue, is stronger than a cup of coffee. We've found a rhythm this past month and have started exploring more confidently; last week we went on our first hike together in [[the Middlesex Fells]] with our pals Sam, Aliza, and Jude. </p>
+
+<p>Coincidentally, I'm now on the board of the <a href="https://www.friendsofthefells.org/">Friends of the Fells</a> which aims to protect and enhance the nature of the Fells.</p>
+
+<p><img src="https://mrshll.com/img/IMG_20230212_191046.jpg" alt="Wrapping up Meadow's first hike, with our friends Sam, Aliza, and Jude"/></p>
+
+<p>Getting back to work after my too-brief parental leave has been intense. Between the company ramping up a number of start-of-year efforts, taking meetings while feeding Meadow, and spinning up a fundraising process for the company, the days leave me worn out. I love my work, the <a href="https://upstream.tech/about">team I've built over the years</a>, the impact we have; adding Meadow into the mix has made me realize that I have to, at least in this phase, let many of my creative projects slumber and be especially disciplined to make time for recharging exercise in husk-state. Tough to swallow, but necessary for now.</p>
+
+<h2>Reading</h2>
+<p>Books finished recently:</p>
+
+<ul>
+    <li><em>[[You're Paid What You're Worth]]</em> by Jake Rosenfeld</li>
+    <li><em>Neuromancer</em> by William Gibson</li>
+</ul>
+
+<p>Up next:</p>
+
+<ul>
+    <li><em>The House of Spirits</em> by Isabel Allende</li>
+    <li><em>Make Shift: Dispatches from the Post-Pandemic Future</em> by Various Authors, part of the Twelve Tomorrows series</li>
+</ul>
+
+<p>Good stuff on the net:</p>
+
+<ul>
+    <li><a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">ChatGPT is a Blurry JPEG of the Web</a> by Ted Chiang</li>
+    <li><a href="https://intuitiveexplanations.com/tech/messenger">Reverse engineering the Facebook Messenger API</a>; I enjoyed this and shared it with our engineering team - the playful and curious approach, as well as some of the specific methods and tools used encapsulate what I think is core to a software engineer who is self-sufficient and good at debugging.</li>
+    <li><a href="https://anthonyhobday.com/sideprojects/saferules/">Visual design rules you can safely follow every time</a></li>
+</ul>
+
+<h2>Playing</h2>
+<p>Over the past few years, I've noticed that my preference of game has shifted from immersive, story-driven non-violent-ish single player games, to a seemingly disjoint group of multiplayer games. First it was Sea of Thieves at the start of the pandemic, then it was Hell Let Loose, and most recently DayZ. </p>
+
+<p>Immersion has always been something I look for in a game, to lose myself in the game-world. When I started playing multiplayer games in high school, I gravitated towards games with immersion through emergent social interactions. My friend Henry, who I play often with, hit the nail on the head recently when he said that the sub-genre we found so intriguing could be called "multiplayer story engines."</p>
+
+<p><img src="https://mrshll.com/img/sot.png" alt="In Sea of Thieves, my pals and I became a pirate crew"/></p>
+
+<p>In contrast to multiplayer games that require twitchy reactions and move at a lightning pace, story engines tend to unfold more slowly, and the game mechanic leans towards exploration and interaction, with a sparse or large game world. Proximity-based voice or text chat is also a common theme that leads to emergent and interesting interaction with other players.</p>
+
+<p>All of this is to say, I've been playing DayZ recently, which has all of these qualities in addition to a complicated (brutal) and intriguing game loop. I found it via a YouTuber named <a href="https://www.youtube.com/watch?v=jpZejlBxbXc">SourSweet</a>(link cw: violence, zombies), who edits together his adventures into episodes that are massively popular. A story engine at its finest.</p>
+
+<h2>Elsewhere</h2>
+<p>Internet pal <a href="https://eli.li/">Eli</a> shared <a href="https://git.sr.ht/~eli_oat/mynah">Mynah</a>, which helps you keep a digital garden/wiki from a directory of markdown files. I was smitten with the approach Eli took, which was to use a simple bash script that leveraged <a href="https://pandoc.org/">pandoc</a> to convert from markdown to html. It sparked a whole host of ideas, including one I toyed with (but had to pause) to create an Instapaper-esque cli that takes a web URL and uses html > markdown > html as a questionable compression method to create a local saved copy of web articles.</p>
+
+<p>I also came across the concept of ssh as an application protocol, a la <a href="https://charm.sh/">charm.sh</a>. That turned me on to <a href="https://charm.sh/libs/">their Go libraries</a>, to create rich and dynamic command line tools. I had some fun toying with their examples and making a CLI for the aforementioned web archiving tool.</p>
+
+<p>Check out Oppen's <a href="https://www.youtube.com/@oppenlabyorkshire1240">video devlog of Playdate audio applications</a> - very fast and polished progress that has been fun to follow.</p>
+
+<p>It's been a long time since coding was a core part of my job, but I've found time to sneak it in the in-betweens as it helps me decompress for other, more tiring responsibilities. I recently built a set of spatial visualizations that show hydrological, meteorological, and earth observation data as a spatial time series (be proud, Tufte!). I enjoy creating visualizations like these by rendering plain ol' svg elements with support from a melange of interpolation and scale libraries. Build some Javascript tooltip library? Nah, let's use <code>&lt;path&gt;&lt;title&gt;content&lt;/title&gt;&lt;/path&gt;</code>!</p>
+
+<p><img src="https://mrshll.com/img/hf-spatial.png" alt="A screenshot of the web dashboard of company's service HydroForecast showing a new spatial view that shoes the distribution of model inputs across hydrological sub-basins."/></p>
+
+ ]]></description>
+</item>
+<item>
   <title><![CDATA[ Department of A&C, a poem ]]></title>
   <link>https://mrshll.com/department_of_a_c__a_poem.html</link>
   <guid>https://mrshll.com/department_of_a_c__a_poem.html</guid>

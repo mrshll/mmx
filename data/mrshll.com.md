@@ -10,6 +10,7 @@ I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
 ## Recently
 
+- [[Recently, March 2023]]
 - [[Recently, January 2023]]
 - [[Self-hosted Mastodon]]
 - [[Running a basement server]]

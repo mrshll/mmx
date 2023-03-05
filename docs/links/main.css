@@ -161,7 +161,9 @@ blockquote {
 figure {
   display: flex;
   flex-flow: column;
+  align-items: flex-start;
   margin: 0 0 1.6rem;
+  background-color: var(--bg-contrast-color);
 }
 
 figcaption {

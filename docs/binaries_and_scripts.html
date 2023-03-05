@@ -47,6 +47,11 @@
 <p><em>didder is an extensive, fast, and accurate command-line image dithering tool.</em>
 <a href="https://github.com/makeworld-the-better-one/didder">github</a></p>
 
+<h3>ffmpeg</h3>
+
+<p>Create animated gif from screen area
+<code>ffmpeg -framerate 25 -f x11grab (slop -f '-video_size %wx%h -i :0.0+%x,%y' | string split ' ') ~/Videos/capture_(date -Iminutes).mkv</code></p>
+
 
 <h2>Scripts</h2>
 
@@ -79,7 +84,7 @@ done
 <pre><code>find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\{(\S*), (!!![](]()(^\})*)\}/[\2)(\1)/g" {} \;
 </code></pre>
 
-</article><p style="color:#ccc"><em>Compiled 2023-2-19</em></p></div><footer>
+</article><p style="color:#ccc"><em>Compiled 2023-3-5</em></p></div><footer>
   <div class='footer-row'>
     <a href="feed.rss">
       RSS

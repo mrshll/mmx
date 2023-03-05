@@ -29,6 +29,11 @@ _reverse input character-wise_
 _didder is an extensive, fast, and accurate command-line image dithering tool._
 [github](https://github.com/makeworld-the-better-one/didder)
 
+### ffmpeg
+
+Create animated gif from screen area
+`ffmpeg -framerate 25 -f x11grab (slop -f '-video_size %wx%h -i :0.0+%x,%y' | string split ' ') ~/Videos/capture_(date -Iminutes).mkv`
+
 
 ## Scripts
 
