@@ -1,11 +1,20 @@
 ## In progress
 
-- *Quicksilver* by Neil Stevenson
-- *Game Programming Design Patterns* by Robery Nystrom
-- *Something Wicked This Way Comes* by Ray Bradbury
-
+- _What the Dormouse Said_ by John Markoff
+- _The Tombs of Atuan_ by Ursula K. Le Guin
+- _Reinforcement Learning: An Introduction_ by Richard S. Sutton and Andrew G. Barto
+- _The Society of Mind_ by Marvin Minksy
 ## Read
 
+- _Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin
+- _Roadside Picnic_ by Arkady & Boris Strugatsky
+- _A Desolation Called Peace_ by Arkady Martine
+- _The House of the Spirits_ by Isabel Allende
+- _A Memory Called Empire_ by Arkady Martine
+- _Jonathan Strange & Mr Norrell_ by Susanna Clarke
+- _The Birth Partner_ by Penny Simkin with Katie Rohs
+- *Game Programming Design Patterns* by Robery Nystrom
+- *Something Wicked This Way Comes* by Ray Bradbury
 - [[You're Paid What You're Worth]] by Jake Rosenfeld
 - [Using Neural Networks to Predict Micro-Spatial Economic Growth](https://www.nber.org/papers/w29569)
 - _This Is How You Lose the Time War_ by Amal El-Mohtar and Max Gladstone

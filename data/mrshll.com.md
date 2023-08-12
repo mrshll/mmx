@@ -1,8 +1,8 @@
-![A person on a hand-built raft, from Studio Ghibli's Red Turtle](img/redturtle012.jpg)
+![Just before a walk - May 2023](img/log/PXL_20230527_112938270.jpg)
 
-Welcome to [[mmx]]. This started as a blank canvas for my digital identity, and has evolved into a place to log ephemera, share my projects, conduct fun experiments, and write.
+Welcome to [[mmx]], the place I log ephemera, write, and jot down notes.
 
-I started and run a climate and conservation company, [[Upstream Tech]]. I also make [[music]], [[garden|grow living things]], and have a number of technical and non-technical [[Projects]], hobbies and interests.
+I started and run a climate and conservation company, [[Upstream Tech]] (see [Work and Pursuits of Toil](Work%20and%20Pursuits%20of%20Toil.md) for more). I also make [[music]], [[garden|grow living things]], and have a number of technical and non-technical [[Projects]], hobbies and interests.
 
 I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
@@ -10,15 +10,13 @@ I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
 ## Recently
 
-- [[Recently, March 2023]]
-- [[Recently, January 2023]]
-- [[Self-hosted Mastodon]]
-- [[Running a basement server]]
+Meadow :) and fundraising for work :( has kept me busy and I haven't kept up with my personal writing.
 
 ## Active projects
 
-- Continuing to explore and evolve this site, [[mmx]]
-- Growing [[Upstream Tech]]
+- [[Work and Pursuits of Toil]]: Closing a fundraising round for [[Upstream Tech]]
+- Learning what it means to be a new parent
+- Staring into Meadow's eyes
 
 ## Contact
 
