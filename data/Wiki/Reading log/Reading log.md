@@ -4,6 +4,7 @@
 - _The Tombs of Atuan_ by Ursula K. Le Guin
 - _Reinforcement Learning: An Introduction_ by Richard S. Sutton and Andrew G. Barto
 - _The Society of Mind_ by Marvin Minksy
+
 ## Read
 
 - _Tomorrow, and Tomorrow, and Tomorrow_ by Gabrielle Zevin
