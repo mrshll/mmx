@@ -5,7 +5,7 @@
 
 **mmx** was started early 2021. Largely inspired by others on [webring](https://webring.xxiivv.com/), especially [Devine](https://wiki.xxiivv.com/site/home.html), the site aims to be a long term repository for my writing, notes, and research. Entries on my previous site (a precarious tower of javascript dependencies) were ported over.
 
-Originally, the site's compiler is written in [Go](https://golang.org). An [archival repository](https://github.com/mrshll/mmx-go) exists for my own reference. At the start of 2023, it was simplified and rewritten in [[Lua]]. It generates the static site you are reading by building a graph of entries. During this rewrite, entries were moved from a bespoke markup language [[mmxup]] to markdown so that it was more interoperable with other tools and maintainable going forward. mmx depends only on Lua, [GNU date binary](https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html), and `find`.
+Originally, the site's compiler is written in [Go](https://golang.org). An [archival repository](https://github.com/mrshll/mmx-go) exists for my own reference. At the start of 2023, it was simplified and rewritten in Lua. It generates the static site you are reading by building a graph of entries. During this rewrite, entries were moved from a bespoke markup language [[mmxup]] to markdown so that it was more interoperable with other tools and maintainable going forward. mmx depends only on Lua, [GNU date binary](https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html), and `find`.
 
 If you want to learn more, see the [source code](https://github.com/mrshll/mmx).
 
@@ -13,7 +13,7 @@ If you want to learn more, see the [source code](https://github.com/mrshll/mmx).
 
 I've historically defaulted to the technology du jour to build and rebuild my personal and company webpages. It's worked fine - there have been moments of fantastic efficiency, and others of abysmal reverse engineering of an errant configuration or plugin.
 
-In the spirit of [[Low tech]], and heavily inspired by others on the [webring](https://webring.xxiivv.com/), I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
+In the spirit of "low tech", and heavily inspired by others on the [webring](https://webring.xxiivv.com/), I sought out to simplify my dependencies, build something myself, and learn some new technologies in the process.
 
 To start, I mapped out my hoped-for characteristics of the end result. I landed on:
 

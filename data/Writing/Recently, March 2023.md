@@ -3,7 +3,7 @@
 Meadow is growing, work is A Lot, time is short, and the weather is weird. I think that sums up the time elapsed since [[Recently, January 2023]].
 ![Meadow and Dax, living in some sort of improbable unity](img/PXL_20230215_153011317.jpg)
 
-My days end and begin anew with Meadow's snores and smiles. Her glad recognition, in the valley of fatigue, is stronger than a cup of coffee. We've found a rhythm this past month and have started exploring more confidently; last week we went on our first hike together in [[the Middlesex Fells]] with our pals Sam, Aliza, and Jude. 
+My days end and begin anew with Meadow's snores and smiles. Her glad recognition, in the valley of fatigue, is stronger than a cup of coffee. We've found a rhythm this past month and have started exploring more confidently; last week we went on our first hike together in the Middlesex Fells with our pals Sam, Aliza, and Jude. 
 
 Coincidentally, I'm now on the board of the [Friends of the Fells](https://www.friendsofthefells.org/) which aims to protect and enhance the nature of the Fells.
 

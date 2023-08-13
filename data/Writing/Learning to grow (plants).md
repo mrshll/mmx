@@ -48,4 +48,4 @@ The two front beds were on the aforementioned slope, so I opted to do a combinat
 
 ![Two raised beds in the front yard](img/front_beds.jpg)
 
-With the beds completed, I now spend the winter planning what to grow, ordering seeds, and trying to start seedlings in my basement. My plan, loosely, is to grow the [[Three Sisters]] combo of corn, beans and squash in mounds in the back raised beds, interspersed with herbs, peppers and tomatoes, with a mixture of raddishes, peas, flowers, cabbage and oakra in the front. 98 days until Spring. 140 days until the last frost.
+With the beds completed, I now spend the winter planning what to grow, ordering seeds, and trying to start seedlings in my basement. My plan, loosely, is to grow the Three Sisters combo of corn, beans and squash in mounds in the back raised beds, interspersed with herbs, peppers and tomatoes, with a mixture of raddishes, peas, flowers, cabbage and oakra in the front. 98 days until Spring. 140 days until the last frost.

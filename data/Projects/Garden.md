@@ -6,10 +6,6 @@ Being largely confined at home in 2020, I took on many personal and introspectiv
 
 Through an inherited garden, I learned to love the dirt.
 
-### [[Gardening|Garden research, Research on supplies, materials, seeds and techniques]]
-
-As with most of my hobbies in their early days, I prepare through (over-) research. Lack of experience means I've relied on youtube videos, garden blog posts from 2011, and often conflicting information about building materials and planting timing.
-
 ### Starting in the basement
 
 Towards the end of January (?!), I started planting herbs in the basement - half to test my new grow lights, and half to will Spring into being. These were all planted through a mixture of recycled materials and paper origami pots.

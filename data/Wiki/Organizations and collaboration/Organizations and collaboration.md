@@ -1,1 +1,0 @@
-A collection of notes and ideas on how to organize teams and communities in ways that are equitable, transparent, and human. Most lean towards the circumstances specific to companies I've started, so although more radical change is possible, they assume, for the most part, existing in a capitalist environment.
