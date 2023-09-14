@@ -1,4 +1,4 @@
-![Just before a walk - May 2023](img/log/PXL_20230527_112938270.jpg)
+![Just before a walk - May 2023](img/PXL_20230527_112938270.jpg)
 
 Welcome to [[mmx]], the place I log ephemera, write, and jot down notes.
 
@@ -12,7 +12,7 @@ I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
 Meadow :) and fundraising for work :( has kept me busy and I haven't had much time for projects nor writing.
 
-I did recently update the [[Log]] and the [[Reading log]], and I wrote [[Work and Pursuits of Toil]] as a reflection on my professional life to date. 
+I did recently update the [[Log]] and the [[Reading log]], and I wrote [[Work and Pursuits of Toil]] as a reflection on my professional life to date.
 
 ## Active projects
 
