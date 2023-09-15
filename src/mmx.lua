@@ -102,6 +102,12 @@ local function process_images(str)
       end
 
       local parts = utils.split(s, ".")
+
+      -- if we've hard-specified one of our resolutions, don't append it
+      if (utils.ends_with(parts[1], "360") or utils.ends_with(parts[1], "720")) then
+        return "loading=\"lazy\" src=\"" .. s .. "\""
+      end
+
       return "loading=\"lazy\" src=\"" .. parts[1] .. "-720." .. parts[2] .. "\""
     end)
     return "<figure><a href=\"" ..

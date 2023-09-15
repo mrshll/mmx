@@ -1,4 +1,7 @@
-![A meadow of goldenrod in the misty morning](img/Log-2023_09_08.png)
+
+
+![Henry in the Green River](img/Log-2023_09_07.png)
+![Henry, Alejandra, and Meadow at MassMoca](img/Log-2023_08_17.png)
 ![Meadow's gaze, reflected](img/PXL_20230808_222517618.jpg)
 ![A visit from Henry and Olivia](img/PXL_20230702_230703440.jpg)
 ![Meadow and Dax, both behaving](img/PXL_20230723_174529717.jpg)

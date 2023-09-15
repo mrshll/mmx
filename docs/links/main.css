@@ -159,9 +159,7 @@ blockquote {
 }
 
 figure {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
+  display: inline-block;
   margin: 0 0 1.6rem;
   background-color: var(--bg-contrast-color);
 }
