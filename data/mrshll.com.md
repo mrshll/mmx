@@ -10,9 +10,9 @@ I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
 ## Recently
 
-Meadow :) and fundraising for work :( has kept me busy and I haven't had much time for projects nor writing.
-
-I did recently update the [[Log]] and the [[Reading log]], and I wrote [[Work and Pursuits of Toil]] as a reflection on my professional life to date.
+- [[Recently, mid-September 2023]] (now delivered through the [Neon Kiosk](https://kiosk.nightfall.city/))
+- I wrote [[Work and Pursuits of Toil]] as a reflection on my "career" to date, and to remind myself that I like taking risks to optimize for learning :)
+- Check out the [[Log]] and the [[Reading log]] for small updates
 
 ## Active projects
 
