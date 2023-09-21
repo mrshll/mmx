@@ -1,3 +1,5 @@
+2023-09-15
+
 We've spent the last few months in the mountains of the western part of the state. Cool, misty mornings and sunny afternoons perfect for swimming in the many lakes and streams. My trail shoes got some solid miles; on my last run before we came home I saw three bears, a mother and two cubs rolling and playing and scratching trees. I don't think they saw me as I observed for a while before doubling back to not disturb them. 
 
 We also did a first excursion up the green river, walking in and through the riverbed itself, shifting bank to bank to avoid the strongest currents and most harrowing rapids. I'd like next time to travel the full distance upstream to see where the river takes us.
