@@ -1,5 +1,5 @@
 
-![Meadow wearing a hoodie, getting ready for a walk; looking cute](Log-2023_09_20.png)
+![Meadow wearing a hoodie, getting ready for a walk; looking cute](img/Log-2023_09_20.png)
 ![Henry in the Green River](img/Log-2023_09_07.png)
 ![Henry, Alejandra, and Meadow at MassMoca](img/Log-2023_08_17.png)
 ![Meadow's gaze, reflected](img/PXL_20230808_222517618.jpg)
