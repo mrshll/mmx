@@ -108,9 +108,6 @@ hr {
   margin-left: 0;
 }
 
-article {
-  margin: 2rem 0;
-}
 
 p {
   margin-bottom: 1.2rem;
@@ -205,11 +202,11 @@ dl dd, details {
   position: relative;
 }
 
-#entry-body {
+main {
   margin: 2rem 0;
 }
 
-#entry-body details {
+main details {
   display: inline-block;
   border: 1px solid var(--bg-contrast-color);
   border-radius: .4rem;
@@ -217,17 +214,17 @@ dl dd, details {
   margin-right: .4rem;
 }
 
-#entry-body summary {
+main summary {
   margin: -.4rem -1rem 0;
   padding: .4rem 1rem;
 }
 
-#entry-body details[open] {
+main details[open] {
   padding: .4rem 1rem;
   display: block;
 }
 
-#entry-body details[open] summary {
+main details[open] summary {
   border-bottom: 1px solid var(--bg-contrast-color);
   margin-bottom: .5em;
 }

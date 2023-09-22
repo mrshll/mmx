@@ -139,7 +139,7 @@ local function render_body(entry, entries)
 end
 
 local function render_entry(entry, entries)
-  local html = string.format("<html>%s<body><div class=\"content\"><header>%s</header><article id=\"entry-body\">%s</article><p style=\"color:#ccc\"><em>Compiled %s</em></p></div>%s</body></html>"
+  local html = string.format("<html>%s<body><div class=\"content\"><header>%s</header><main id=\"entry-body\">%s</main><p style=\"color:#ccc\"><em>Compiled %s</em></p></div>%s</body></html>"
     ,
     render_head(entry), render_nav(entry, entries), render_body(entry, entries), utils.today(), render_footer())
   utils.write_file(DOC_DIR .. "/" .. entry.dest_file_name, html)
