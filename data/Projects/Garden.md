@@ -10,7 +10,7 @@ Through an inherited garden, I learned to love the dirt.
 
 Towards the end of January (?!), I started planting herbs in the basement - half to test my new grow lights, and half to will Spring into being. These were all planted through a mixture of recycled materials and paper origami pots.
 
-![A buncha plants in the basement under grow lights](img/2021-01-23.jpg)
+![A buncha plants in the basement under grow lights](img/Garden-2021_01-23.png)
 
 The first lesson I learned was to cover newly planted seed containers with plastic to trap the condensation. And if I could put it in a tray that I could fill shallowly with water, then the containers would soak it up, keeping things moist and ensuring germination. The basement is especially dry due to the furnace, so once I started doing this, I've had reliable and fast germination.
 
@@ -20,7 +20,7 @@ Another early mistake I made was planting the seeds too densly. I would imagine 
 
 I read [this New York Times article, "The Year-Round Garden"](https://www.nytimes.com/2021/02/03/realestate/the-year-round-garden.html), and figured with a bit of that fancy agriculture fabric, I could start a bit early, especially with some of my more established herb seedlings. I ordered Agribon-19, picked up a dozen 0.5-inch PVC pipes, and started fastening them to the beds. I'm being careful to limit the amount of interaction the PVC has with the soil, due to it's questionable industrial processes and toxicity. There are [loads of youtube videos](https://youtu.be/pHru4eZI1VA?t=314) from otherwise reputable gardener personalities that seem to think it's okay -- and a friend who is W A Y deeper into the gardening hobby waived it away.
 
-After experimenting with a few different fastening positions, I landed on one with that also allows for heigh adjustment across the season, which is pretty neat. For the back yard ones (higher elevation) I am going to install soaker hoses on a timer to make watering easy given their harder-to-access hoop house setup. The front yard beds will be easily fed by the rain barrel, which has a decent amount of pressure given the elevation change.
+After experimenting with a few different fastening positions, I landed on one with that also allows for height adjustment across the season, which is pretty neat. For the back yard ones (higher elevation) I am going to install soaker hoses on a timer to make watering easy given their harder-to-access hoop house setup. The front yard beds will be easily fed by the rain barrel, which has a decent amount of pressure given the elevation change.
 
 ### First seeds in the ground
 
