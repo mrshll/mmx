@@ -2,7 +2,7 @@
 
 Welcome to [[mmx]], the place I log ephemera, write, and jot down notes.
 
-I started and run a climate and conservation company, [[Upstream Tech]] (see [Work and Pursuits of Toil](Work%20and%20Pursuits%20of%20Toil.md) for more). I also make [[music]], [[garden|grow living things]], and have a number of technical and non-technical [[Projects]], hobbies and interests.
+I started and run a climate and conservation company, [[Upstream Tech]] (see [[Work and Pursuits of Toil]] for more). I also make [[music]], [[garden|grow living things]], and have a number of technical and non-technical [[Projects]], hobbies and interests.
 
 I live in Medford, MA with Alejandra, our newborn Meadow, and pup Dax.
 
