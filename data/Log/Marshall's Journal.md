@@ -1,6 +1,21 @@
 Also delivered via the [Neon Kiosk](https://kiosk.nightfall.city/)
 
 <article>
+## 2023-10-02
+
+We did it. Marsh, Meadow and dax, home alone for 48 hours after our mission abort trip to NYC due to the torrential rain and flooding. Alej went by train the next day while we three held down the fort. Very little time for my attention to wander, save nap times. During naps, I continue to think about weather forecasts, about the steep learning curve and convoluted methods of access. Of their centralization and points of failure (gov shutdown? sorry!).
+
+The uninterrupted and intense time with Meadow went much better than expected. She ate voraciously, slept consistently and was a joy to walk and play with. It's a silly thing, but I'm proud of myself for handling it with little stress and no mishaps.
+
+Tired now. Some things I want to write soon:
+1. Art imitates life, life imitates art: videogame edition: I've been studying some of the techniques and math behind shaders, game simulations and other technological feats and thinking about how they apply to problems in my universe of interest.
+2. A guide to starting a business/organization, if I were to do it again ;) I get a lot of outreach from folks asking me for "readmes" for my current co. Although I think I did quite a good job, I'd change a few things if I had the opportunity to.
+
+I drew some goldenrod and some architectural drawings (I'm very bad at the basics, consistent perspective and scale) - but fun nevertheless.
+
+</article>
+
+<article>
 
 ## 2023-09-20
 
