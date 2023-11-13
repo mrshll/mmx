@@ -1,5 +1,0 @@
-by George Saunders and Various Authors
-
-Saunders makes the art of fiction writing approachable and welcoming through the lens of Russia's greats. It drew me in twofold, first making writing fiction feel more within reach through exercise and experiment, and second introducing me to Chekhov, Turgnenv, Tolstoy and Gogol - with analyses from George to get more out of each story.
-
-> For the last twenty years, at Syracuse University, I've been teaching a class in the nineteenth-century Russian short story in translation. My students are some of the best young writers in America. (We pick six new students a year from an applicant pool of between six and seven hundred.) They arrive already wonderful. What we try to do over the next three years is help them achieve what I call their "iconic space"- the place from which they will write the stories only they could write, using what makes them uniquely themselves-their strengths, weak- nesses, obsessions, peculiarities, the whole deal. At this level, good writing is assumed; the goal is to help them acquire the technical means to become defiantly and joyfully themselves.

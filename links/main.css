@@ -170,6 +170,7 @@ figcaption {
 code, blockquote cite {
   background-color: var(--bg-contrast-color);
   border: none;
+  overflow: auto;
 }
 
 footer .footer-row > *{

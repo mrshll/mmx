@@ -1,15 +1,22 @@
 #!/bin/bash
 
-for f in src/plugins/*.sh; do
-  bash "$f" || break  # execute successfully or break
-done
+CONTENT_DIR=$1
 
-rm docs/*.html
-rm -r docs/links
+if [ -z $CONTENT_DIR ]; then
+  echo "error: content directory not provided"
+else
 
-mkdir -p docs/links
-cp -r links/* docs/links/
+  for f in src/plugins/*.sh; do
+    bash "$f" || break # execute successfully or break
+  done
 
-cp -r static/. docs/
+  rm $CONTENT_DIR/site/*.html
+  rm -r $CONTENT_DIR/site/links
 
-cd src && lua mmx.lua && cd ../
+  mkdir -p $CONTENT_DIR/site/links
+  cp -r links/* $CONTENT_DIR/site/links/
+
+  cp -r static/. $CONTENT_DIR/site/
+
+  cd src && lua mmx.lua $CONTENT_DIR && cd ../
+fi

@@ -1,1 +1,0 @@
-by Arkady Martine

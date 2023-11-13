@@ -2,16 +2,19 @@ local markdown = require "markdown"
 
 -- Splits the text into an array of separate lines.
 local function split(text, sep)
-  sep = sep or "\n"
-  local lines = {}
-  local pos = 1
-  while true do
-    local b, e = text:find(sep, pos)
-    if not b then table.insert(lines, text:sub(pos)) break end
-    table.insert(lines, text:sub(pos, b - 1))
-    pos = e + 1
-  end
-  return lines
+    sep = sep or "\n"
+    local lines = {}
+    local pos = 1
+    while true do
+        local b, e = text:find(sep, pos)
+        if not b then
+            table.insert(lines, text:sub(pos))
+            break
+        end
+        table.insert(lines, text:sub(pos, b - 1))
+        pos = e + 1
+    end
+    return lines
 end
 
 ----------------------------------------------------------------------
@@ -25,13 +28,13 @@ end
 -- order in which the tests are created so that we can process them in the right
 -- order.
 local tests_mt = {
-  __newindex = function(t, k, v)
-    if type(k) == "string" then
-      table.insert(t, k)
-    end
+    __newindex = function(t, k, v)
+        if type(k) == "string" then
+            table.insert(t, k)
+        end
 
-    rawset(t, k, v)
-  end
+        rawset(t, k, v)
+    end
 }
 local tests = setmetatable({}, tests_mt)
 
@@ -46,7 +49,7 @@ This is an h2
 <h1>This is an h1</h1>
 
 <h2>This is an h2</h2>
-~ 
+~
 # This is an h1
 
 ## This is an h2
@@ -58,7 +61,7 @@ This is an h2
 ## This is an h2 ##
 
 ### This is an h3 ######
-~ 
+~
 <h1>This is an h1</h1>
 
 <h2>This is an h2</h2>
@@ -87,7 +90,7 @@ tests.blockquotes = [[
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
+>
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 > id sem consectetuer libero luctus adipiscing.
 ~
@@ -124,33 +127,33 @@ id sem consectetuer libero luctus adipiscing.
 ~
 <blockquote>
 	<p>This is the first level of quoting.</p>
-	
+
 	<blockquote>
 		<p>Thisi s nested blockquote.</p>
 	</blockquote>
-	
+
 	<p>Back to the first level.</p>
 </blockquote>
 ~
 > ## This is a header.
-> 
+>
 > 1.   This is the first list item.
 > 2.   This is the second list item.
-> 
+>
 > Here's some example code:
-> 
+>
 >     return shell_exec("echo $input | $markdown_script");
 ~
 <blockquote>
 	<h2>This is a header.</h2>
-	
+
 	<ol>
 		<li>This is the first list item.</li>
 		<li>This is the second list item.</li>
 	</ol>
-	
+
 	<p>Here's some example code:</p>
-	
+
 <pre><code>return shell_exec("echo $input | $markdown_script");
 </code></pre>
 </blockquote>
@@ -252,7 +255,7 @@ Suspendisse id sem consectetuer libero luctus adipiscing.
 ~
 <ul>
 	<li><p>Bird</p></li>
-	
+
 	<li><p>Magic</p></li>
 </ul>
 ~
@@ -303,7 +306,7 @@ sit amet, consectetuer adipiscing elit.</p></li>
 ~
 <ul>
 	<li><p>A list item with a blockquote:</p>
-	
+
 	<blockquote>
 		<p>This is a blockquote
 		inside a list item.</p>
@@ -451,7 +454,7 @@ Visit [Daring Fireball][] for more information.
 <p>Visit <a href="http://daringfireball.net/">Daring Fireball</a> for more information.</p>
 ~
 I get 10 times more traffic from [Google] [1] than from
-[Yahoo] [2] or 
+[Yahoo] [2] or
 [MSN] [3].
 
   [1]: http://google.com/        "Google"
@@ -540,7 +543,7 @@ equivalent of <code>&amp;mdash;</code>.</p>
 ~
 Markdown treats asterisks (`*`) and underscores (`_`) as
 indicators of emphasis. Text wrapped with one `*` or `_` will be
-wrapped with an 
+wrapped with an
 ~
 <p>Markdown treats asterisks (<code>*</code>) and underscores
 (<code>_</code>) as indicators of emphasis. Text wrapped with one
@@ -578,7 +581,7 @@ Mail links <niklas@frykholm.se> and <mailto:niklas@frykholm.se>.
 &#x2e;s&#101;</a> and <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;n&#105;&#x6b;
 &#108;&#x61;&#115;&#x40;&#102;&#x72;y&#107;&#x68;&#111;&#x6c;&#109;&#x2e;&#115;&#x65;">
 &#x6e;&#105;&#x6b;&#108;&#x61;&#115;&#x40;f&#114;&#x79;&#107;&#x68;&#111;&#x6c;&#109;
-&#x2e;s&#101;</a>.</p> 
+&#x2e;s&#101;</a>.</p>
 ]]
 
 -- Test escape codes
@@ -590,8 +593,8 @@ tests.escapes = [[
 
 -- Test hard linebreaks
 tests.linebreaks = [[
-Poetry  
-in  
+Poetry
+in
 motion
 ~
 <p>Poetry<br/>
@@ -915,13 +918,13 @@ Minus: \-
 
 tests.markdown_blockquotes_with_codeblocks = [[
 > Example:
-> 
+>
 >     sub status {
 >         print "working";
 >     }
-> 
+>
 > Or:
-> 
+>
 >     sub status {
 >         return "working";
 >     }
@@ -933,7 +936,7 @@ tests.markdown_blockquotes_with_codeblocks = [[
     print "working";
 }
 </code></pre>
-  
+
   <p>Or:</p>
 
 <pre><code>sub status {
@@ -969,7 +972,7 @@ Dashes:
 ---
 
  ---
- 
+
   ---
 
    ---
@@ -979,7 +982,7 @@ Dashes:
 - - -
 
  - - -
- 
+
   - - -
 
    - - -
@@ -992,7 +995,7 @@ Asterisks:
 ***
 
  ***
- 
+
   ***
 
    ***
@@ -1002,7 +1005,7 @@ Asterisks:
 * * *
 
  * * *
- 
+
   * * *
 
    * * *
@@ -1015,7 +1018,7 @@ Underscores:
 ___
 
  ___
- 
+
   ___
 
    ___
@@ -1025,7 +1028,7 @@ ___
 _ _ _
 
  _ _ _
- 
+
   _ _ _
 
    _ _ _
@@ -1107,7 +1110,7 @@ _ _ _
 
 -- currently not supported by regular markdown, so we ignore it too
 --[[
-tests.markdown_inline_html_advanced = 
+tests.markdown_inline_html_advanced =
 Simple block on one line:
 
 <div>foo</div>
@@ -1183,12 +1186,12 @@ Code block:
 
 Just plain comment, with trailing spaces on the line:
 
-<!-- foo -->   
+<!-- foo -->
 
 Code:
 
 	<hr />
-	
+
 Hr's:
 
 <hr>
@@ -1197,11 +1200,11 @@ Hr's:
 
 <hr />
 
-<hr>   
+<hr>
 
-<hr/>  
+<hr/>
 
-<hr /> 
+<hr />
 
 <hr class="foo" id="bar" />
 
@@ -1255,7 +1258,7 @@ Blah
 
 <p>Just plain comment, with trailing spaces on the line:</p>
 
-<!-- foo -->   
+<!-- foo -->
 
 <p>Code:</p>
 
@@ -1270,11 +1273,11 @@ Blah
 
 <hr />
 
-<hr>   
+<hr>
 
-<hr/>  
+<hr/>
 
-<hr /> 
+<hr />
 
 <hr class="foo" id="bar" />
 
@@ -1456,7 +1459,7 @@ Markdown:
 
     A First Level Header
     ====================
-    
+
     A Second Level Header
     ---------------------
 
@@ -1466,11 +1469,11 @@ Markdown:
 
     The quick brown fox jumped over the lazy
     dog's back.
-    
+
     ### Header 3
 
     > This is a blockquote.
-    > 
+    >
     > This is the second paragraph in the blockquote.
     >
     > ## This is an H2 in a blockquote
@@ -1479,23 +1482,23 @@ Markdown:
 Output:
 
     <h1>A First Level Header</h1>
-    
+
     <h2>A Second Level Header</h2>
-    
+
     <p>Now is the time for all good men to come to
     the aid of their country. This is just a
     regular paragraph.</p>
-    
+
     <p>The quick brown fox jumped over the lazy
     dog's back.</p>
-    
+
     <h3>Header 3</h3>
-    
+
     <blockquote>
         <p>This is a blockquote.</p>
-        
+
         <p>This is the second paragraph in the blockquote.</p>
-        
+
         <h2>This is an H2 in a blockquote</h2>
     </blockquote>
 
@@ -1509,7 +1512,7 @@ Markdown:
 
     Some of these words *are emphasized*.
     Some of these words _are emphasized also_.
-    
+
     Use two asterisks for **strong emphasis**.
     Or, if you prefer, __use two underscores instead__.
 
@@ -1517,10 +1520,10 @@ Output:
 
     <p>Some of these words <em>are emphasized</em>.
     Some of these words <em>are emphasized also</em>.</p>
-    
+
     <p>Use two asterisks for <strong>strong emphasis</strong>.
     Or, if you prefer, <strong>use two underscores instead</strong>.</p>
-   
+
 
 
 ## Lists ##
@@ -1573,7 +1576,7 @@ list item text. You can create multi-paragraph list items by indenting
 the paragraphs by 4 spaces or 1 tab:
 
     *   A list item.
-    
+
         With multiple paragraphs.
 
     *   Another item in the list.
@@ -1585,7 +1588,7 @@ Output:
     <p>With multiple paragraphs.</p></li>
     <li><p>Another item in the list.</p></li>
     </ul>
-    
+
 
 
 ### Links ###
@@ -1680,7 +1683,7 @@ Output:
 
     <p>I strongly recommend against using any
     <code>&lt;blink&gt;</code> tags.</p>
-    
+
     <p>I wish SmartyPants used named entities like
     <code>&amp;mdash;</code> instead of decimal-encoded
     entites like <code>&amp;#8212;</code>.</p>
@@ -1703,7 +1706,7 @@ Output:
 
     <p>If you want your page to validate under XHTML 1.0 Strict,
     you've got to put paragraph tags in your blockquotes:</p>
-    
+
     <pre><code>&lt;blockquote&gt;
         &lt;p&gt;For example.&lt;/p&gt;
     &lt;/blockquote&gt;
@@ -1769,7 +1772,7 @@ dog's back.
 ### Header 3
 
 &gt; This is a blockquote.
-&gt; 
+&gt;
 &gt; This is the second paragraph in the blockquote.
 &gt;
 &gt; ## This is an H2 in a blockquote
@@ -2282,7 +2285,7 @@ wrap the text and put a `>` before every line:
     > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
     > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
     > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-    > 
+    >
     > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
     > id sem consectetuer libero luctus adipiscing.
 
@@ -2309,12 +2312,12 @@ Blockquotes can contain other Markdown elements, including headers, lists,
 and code blocks:
 
 	> ## This is a header.
-	> 
+	>
 	> 1.   This is the first list item.
 	> 2.   This is the second list item.
-	> 
+	>
 	> Here's some example code:
-	> 
+	>
 	>     return shell_exec("echo $input | $markdown_script");
 
 Any decent text editor should make email-style quoting easy. For
@@ -2559,7 +2562,7 @@ following lines will produce a horizontal rule:
     ***
 
     *****
-	
+
     - - -
 
     ---------------------------------------
@@ -2660,7 +2663,7 @@ multiple words in the link text:
 	Visit [Daring Fireball][] for more information.
 
 And then define the link:
-	
+
 	[Daring Fireball]: http://daringfireball.net/
 
 Link definitions can be placed anywhere in your Markdown document. I
@@ -2784,13 +2787,13 @@ one after the opening, one before the closing. This allows you to place
 literal backtick characters at the beginning or end of a code span:
 
 	A single backtick in a code span: `` ` ``
-	
+
 	A backtick-delimited string in a code span: `` `foo` ``
 
 will produce:
 
 	<p>A single backtick in a code span: <code>`</code></p>
-	
+
 	<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 
 With a code span, ampersands and angle brackets are encoded as HTML
@@ -2861,7 +2864,7 @@ use regular HTML `<img>` tags.
 Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:
 
     <http://example.com/>
-    
+
 Markdown will turn this into:
 
     <a href="http://example.com/">http://example.com/</a>
@@ -3167,7 +3170,7 @@ wrap the text and put a <code>&gt;</code> before every line:</p>
 <pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 &gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 &gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&gt; 
+&gt;
 &gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 &gt; id sem consectetuer libero luctus adipiscing.
 </code></pre>
@@ -3197,12 +3200,12 @@ adding additional levels of <code>&gt;</code>:</p>
 and code blocks:</p>
 
 <pre><code>&gt; ## This is a header.
-&gt; 
+&gt;
 &gt; 1.   This is the first list item.
 &gt; 2.   This is the second list item.
-&gt; 
+&gt;
 &gt; Here's some example code:
-&gt; 
+&gt;
 &gt;     return shell_exec("echo $input | $markdown_script");
 </code></pre>
 
@@ -3867,11 +3870,11 @@ tests.markdown_nested_blockquotes = [[
 ~
 <blockquote>
   <p>foo</p>
-  
+
   <blockquote>
     <p>bar</p>
   </blockquote>
-  
+
   <p>foo</p>
 </blockquote>
 ]]
@@ -3967,7 +3970,7 @@ Multiple paragraphs:
 
 	Item 2. graf two. The quick brown fox jumped over the lazy dog's
 	back.
-	
+
 2.	Item 2.
 
 3.	Item 3.
@@ -4176,7 +4179,7 @@ And:
 
 	+	this is an example list item
 		indented with tabs
-	
+
 	+   this is an example list item
 	    indented with spaces
 ~
@@ -4209,7 +4212,7 @@ indented with spaces</p></li>
 
 tests.markdown_tidyness = [[
 > A list within a blockquote:
-> 
+>
 > *	asterisk 1
 > *	asterisk 2
 > *	asterisk 3
@@ -4225,8 +4228,8 @@ tests.markdown_tidyness = [[
 ]]
 
 tests.bug_from_paul_chiusano_gmail_com = [[
-[context-free grammar][CFG]  
-[notated][BNF]  
+[context-free grammar][CFG]
+[notated][BNF]
 [unrestricted grammar][]
 
 [CFG]: <http://en.wikipedia.org/wiki/Context-free_grammar>
@@ -4381,7 +4384,7 @@ This is [an example] [id] reference-style link.
 
 [lulu]: lulu/file.lulu.png
 
-[50]: http://www.lua.org/manual/5.1/         
+[50]: http://www.lua.org/manual/5.1/
 ~
 <ul>
 <li>Idiomatic</li>
@@ -4398,75 +4401,77 @@ local quiet_mode
 
 -- Test running function
 local function run_tests()
-  -- Do any <pre></pre> sequences in s1 and s2 match up perfectly?
-  local function pre_equal(s1, s2)
-    local pre = {}
-    for p in s1:gmatch("<pre>.-</pre>") do
-      pre[#pre + 1] = p
+    -- Do any <pre></pre> sequences in s1 and s2 match up perfectly?
+    local function pre_equal(s1, s2)
+        local pre = {}
+        for p in s1:gmatch("<pre>.-</pre>") do
+            pre[#pre + 1] = p
+        end
+        for p in s2:gmatch("<pre>.-</pre>") do
+            if p ~= pre[1] then
+                return false
+            end
+            table.remove(pre, 1)
+        end
+        return #pre == 0
     end
-    for p in s2:gmatch("<pre>.-</pre>") do
-      if p ~= pre[1] then return false end
-      table.remove(pre, 1)
-    end
-    return #pre == 0
-  end
 
-  -- Are s1 and s2 equal except for whitespace issues.
-  local function nonspace_equal(s1, s2)
-    s1 = s1:gsub("[ \t\n\r]", "")
-    s2 = s2:gsub("[ \t\n\r]", "")
-    return s1 == s2
-  end
-
-  -- Runs a single test
-  local function run_single_test(name, source, desired)
-    local result = markdown(source)
-    local res = pre_equal(result, desired) and nonspace_equal(result, desired)
-    if not res and not quiet_mode then
-      print("********** TEST FAILED **********")
-      print(name)
-      print("----- Input:")
-      print(source)
-      print("----- Expected output:")
-      print(desired)
-      print("----- Actual output:")
-      print(result)
-      print("*********************************")
-      print()
+    -- Are s1 and s2 equal except for whitespace issues.
+    local function nonspace_equal(s1, s2)
+        s1 = s1:gsub("[ \t\n\r]", "")
+        s2 = s2:gsub("[ \t\n\r]", "")
+        return s1 == s2
     end
-    return res
-  end
 
-  -- Runs a specified test battery
-  local function run_test(name, code)
-    local failed, succeeded = 0, 0
-    local data = split(code, "\n~[ \t]*\n")
-    for i = 1, #data, 2 do
-      if run_single_test(name, data[i], data[i + 1]) then
-        succeeded = succeeded + 1
-      else
-        failed = failed + 1
-      end
+    -- Runs a single test
+    local function run_single_test(name, source, desired)
+        local result = markdown(source)
+        local res = pre_equal(result, desired) and nonspace_equal(result, desired)
+        if not res and not quiet_mode then
+            print("********** TEST FAILED **********")
+            print(name)
+            print("----- Input:")
+            print(source)
+            print("----- Expected output:")
+            print(desired)
+            print("----- Actual output:")
+            print(result)
+            print("*********************************")
+            print()
+        end
+        return res
     end
-    if failed > 0 and not quiet_mode then
-      print(string.format("%-20s %15s %5i %15s %5i", name, "Succeeded:", succeeded, "Failed:", failed))
-    end
-    return failed
-  end
 
-  local total_failed = 0
-  for _, k in ipairs(tests) do
-    total_failed = total_failed + run_test(k, tests[k])
-  end
-  if total_failed > 0 then
-    os.exit(-1)
-  end
+    -- Runs a specified test battery
+    local function run_test(name, code)
+        local failed, succeeded = 0, 0
+        local data = split(code, "\n~[ \t]*\n")
+        for i = 1, #data, 2 do
+            if run_single_test(name, data[i], data[i + 1]) then
+                succeeded = succeeded + 1
+            else
+                failed = failed + 1
+            end
+        end
+        if failed > 0 and not quiet_mode then
+            print(string.format("%-20s %15s %5i %15s %5i", name, "Succeeded:", succeeded, "Failed:", failed))
+        end
+        return failed
+    end
+
+    local total_failed = 0
+    for _, k in ipairs(tests) do
+        total_failed = total_failed + run_test(k, tests[k])
+    end
+    if total_failed > 0 then
+        os.exit(-1)
+    end
 end
 
 for i = 1, #arg do
-  if arg[i] == "-q" then
-    quiet_mode = true
-  end
+    if arg[i] == "-q" then
+        quiet_mode = true
+    end
 end
 
 run_tests()
