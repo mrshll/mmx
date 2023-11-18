@@ -8,11 +8,19 @@
 # Use with care and backup your images!
 # -----------------------------------------------------------------------------
 CONTENT_DIR=$1
+SITE_DIR=$2
+
+if [ -z $CONTENT_DIR ] || [ -z $SITE_DIR ]; then
+  echo "Usage: ./build.sh path/to/content path/to/site"
+  exit 1
+fi
 
 # path where the original images are located
-SRC="$CONTENT_DIR/data/media"
+SRC="$CONTENT_DIR/media"
 # path where the images will be stored
-DST="$CONTENT_DIR/docs/media"
+DST="$SITE_DIR/media"
+mkdir $DST
+
 # sizes to convert to
 SIZES=(360 720)
 MAXWIDTH=2400
@@ -36,7 +44,7 @@ function resize() {
 
     if ! grep -q -r "$name" $DST/../; then
       echo "${file} not used, skipping"
-      echo "${file}" >>$CONTENT_DIR/unused_media.txt
+      echo "${file}" >>unused_media.txt
       continue
     fi
 
@@ -97,6 +105,6 @@ function resize() {
   done
 }
 
-echo "" >$CONTENT_DIR/unused_media.txt
+echo "" >unused_media.txt
 # find all file in the source folder and run resize() on each
 find $SRC | while read file; do resize "${file}"; done

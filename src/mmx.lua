@@ -1,16 +1,16 @@
 local markdown = require "markdown"
 local utils = require "utils"
 
-if not arg[1] or arg[1] == '' then
-    error('no argument for the site was provided')
+if not arg[1] or arg[1] == '' or not arg[2] or arg[2] == '' then
+    error('usage: lua mmx.lua path/to/content path/to/site')
 end
 
 local SITE_NAME = 'mrshll.com'
 local INDEX_NAME = "index"
 local MIN_DATE = "0000-00-00"
 local MEDIA_DIR_NAME = 'media'
-local DATA_DIR = "../" .. arg[1] .. "/data"
-local SITE_DIR = "../" .. arg[1] .. "/site"
+local DATA_DIR = "../" .. arg[1]
+local SITE_DIR = "../" .. arg[2]
 local DATA_EXT = ".md"
 
 -- store all image paths to do a check to make sure they exist
