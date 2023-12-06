@@ -11,7 +11,7 @@ CONTENT_DIR=$1
 SITE_DIR=$2
 
 if [ -z $CONTENT_DIR ] || [ -z $SITE_DIR ]; then
-  echo "Usage: ./build.sh path/to/content path/to/site"
+  echo "Usage: ./processImages.sh path/to/content path/to/site"
   exit 1
 fi
 
