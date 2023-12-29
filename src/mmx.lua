@@ -140,7 +140,7 @@ local function process_images(str)
 end
 
 local function process_internal_links(string, entry, entries)
-    return string:gsub("%[%[([^%]]+)%]%]", function(match)
+    return string:gsub("[^!]%[%[([^%]]+)%]%]", function(match)
         local parts = utils.split(match, "|")
         local linked_name = parts[1]
         local display_name = parts[2] or linked_name
@@ -150,7 +150,7 @@ local function process_internal_links(string, entry, entries)
             return "{" .. display_name .. "}"
         end
 
-        return "<a href=\"" .. e.dest_file_name .. "\">{" .. display_name .. "}</a>"
+        return " <a href=\"" .. e.dest_file_name .. "\">{" .. display_name .. "}</a>"
     end)
 end
 
@@ -182,6 +182,19 @@ local function render_rss(rss_entries)
     utils.write_file(SITE_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))
 end
 
+-- expects an html body and will embed files with the ![[name]] syntax
+local function process_embeds(body_html, entries)
+    return body_html:gsub("!%[%[([^%]]+)%]%]", function(embedded_entry_name)
+        for _, entry in pairs(entries) do
+            if entry.name == embedded_entry_name then
+                return "<style> article h2 { display: none; } </style><h2><a href='" .. entry.dest_file_name .. "'>" ..
+                           entry.name .. "</a></h2><article><h2>" .. entry.name .. "</h2>" .. markdown(entry.body_raw) ..
+                           "</article>"
+            end
+        end
+    end)
+end
+
 local entries = {}
 local file_paths = utils.list_files(DATA_DIR, DATA_EXT)
 for _, file_path in pairs(file_paths) do
@@ -202,7 +215,8 @@ for _, file_path in pairs(file_paths) do
     local name = parts[#parts]:sub(0, -1 * #DATA_EXT - 1)
     local dest_file_name = utils.slugify(name) .. ".html"
 
-    if name == INDEX_NAME then
+    local is_index = name == INDEX_NAME
+    if is_index then
         name = parent_name
         if parent_name == SITE_NAME then
             -- root node
@@ -231,7 +245,8 @@ for _, file_path in pairs(file_paths) do
         parent_name = parent_name,
         body_raw = body,
         body_html = html,
-        date = date
+        date = date,
+        is_index = is_index
     }
 
     ::continue::
@@ -239,13 +254,14 @@ end
 
 local i = 0
 for _, entry in pairs(entries) do
+    entry.body_html = process_embeds(entry.body_html, entries)
     render_entry(entry, entries)
     i = i + 1
 end
 
 local rss_entries = {}
 for _, e in pairs(entries) do
-    if e.parent_name == "Writing" and e.date ~= nil then
+    if (e.parent_name == "Writing" or e.parent_name == 'Log') and e.date ~= nil then
         table.insert(rss_entries, e)
     end
 end
