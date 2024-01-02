@@ -77,7 +77,7 @@ function utils.starts_with(str, start)
 end
 
 function utils.ends_with(str, ending)
-    return ending == "" or str:sub(-#ending) == ending
+    return ending == "" or str:sub(- #ending) == ending
 end
 
 function utils.lines(str)
@@ -124,7 +124,7 @@ end
 
 function utils.get_key_case_insensitive(table, key)
     return table[key] or table[utils.capitalize(key)] or table[key:lower()] or table[key:upper()] or
-               table[utils.title_case(key)]
+        table[utils.title_case(key)]
 end
 
 function utils.spairs(t, order)
@@ -170,8 +170,6 @@ function utils.dump(o)
 end
 
 -- dates
---
---
 function utils.today()
     local date_table = os.date("*t")
     local year, month, day = date_table.year, date_table.month, date_table.day -- date_table.wday to date_table.day
@@ -179,11 +177,24 @@ function utils.today()
 end
 
 function utils.rss_date(date_str)
-    local handle = io.popen("date -R -d " .. date_str)
+    local handle = io.popen("gdate -R -d " .. date_str)
     if not handle then
         error("unable to run command in rss_date")
     end
     local result = handle:read("*a")
+    handle:close()
+    return result
+end
+
+function utils.process_image(data_dir, site_dir, img_path)
+    local cmd = "bash ../processImages.sh " .. data_dir .. " " .. site_dir .. " " .. img_path
+    print(cmd)
+    local handle = io.popen(cmd)
+    if not handle then
+        error("unable to process image " .. img_path)
+    end
+    local result = handle:read("*a")
+    print(result)
     handle:close()
     return result
 end

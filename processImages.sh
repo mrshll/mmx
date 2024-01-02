@@ -9,9 +9,10 @@
 # -----------------------------------------------------------------------------
 CONTENT_DIR=$1
 SITE_DIR=$2
+IMG_PATH=$3
 
 if [ -z $CONTENT_DIR ] || [ -z $SITE_DIR ]; then
-  echo "Usage: ./processImages.sh path/to/content path/to/site"
+  echo "Usage: ./processImages.sh path/to/content path/to/site [path/to/img]"
   exit 1
 fi
 
@@ -19,7 +20,6 @@ fi
 SRC="$CONTENT_DIR/media"
 # path where the images will be stored
 DST="$SITE_DIR/media"
-mkdir $DST
 
 # sizes to convert to
 SIZES=(360 720)
@@ -105,6 +105,11 @@ function resize() {
   done
 }
 
-echo "" >unused_media.txt
-# find all file in the source folder and run resize() on each
-find $SRC | while read file; do resize "${file}"; done
+if [[ -f $IMG_PATH ]]; then
+  resize $IMG_PATH
+else
+  mkdir $DST
+  echo "" > unused_media.txt
+  # find all file in the source folder and run resize() on each
+  find $SRC | while read file; do resize "${file}"; done
+fi

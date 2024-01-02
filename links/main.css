@@ -156,12 +156,14 @@ blockquote {
 }
 
 figure {
-  display: inline-block;
+  display: table;
   margin: 0 0 1.6rem;
   background-color: var(--bg-contrast-color);
 }
 
 figcaption {
+  display: table-caption;
+  caption-side: bottom;
   background-color: var(--bg-contrast-color);
   padding: .2rem;
   text-align: center;
