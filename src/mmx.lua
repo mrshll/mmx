@@ -102,7 +102,7 @@ local function render_nav(entry, entries)
         entry = parent
     end
 
-    return "<nav>" .. render_nav_section(entry, { entry }) .. acc .. "</nav>"
+    return "<nav>" .. render_nav_section(entry, {entry}) .. acc .. "</nav>"
 end
 
 local function process_images(str)
@@ -135,13 +135,13 @@ local function process_images(str)
         end)
         return
             "<figure><a href=\"" .. MEDIA_DIR_NAME .. "/" .. src .. "\">" .. processed_img_tag .. "</a><figcaption>" ..
-            alt .. "</figcaption></figure>"
+                alt .. "</figcaption></figure>"
     end)
 end
 
 local function process_internal_links(string, entry, entries)
-    return string:gsub("[^!]%[%[([^%]]+)%]%]", function(match)
-        local parts = utils.split(match, "|")
+    return string:gsub("[^!]%[%[[^%]]+%]%]", function(match)
+        local parts = utils.split(match:sub(4, -3), "|")
         local linked_name = parts[1]
         local display_name = parts[2] or linked_name
         local e = utils.get_key_case_insensitive(entries, linked_name)
@@ -150,15 +150,15 @@ local function process_internal_links(string, entry, entries)
             return "{" .. display_name .. "}"
         end
 
-        return " <a href=\"" .. e.dest_file_name .. "\">{" .. display_name .. "}</a>"
+        return match:sub(1, 1) .. "<a href=\"" .. e.dest_file_name .. "\">{" .. display_name .. "}</a>"
     end)
 end
 
 local function render_body(entry, entries)
     return process_images(process_internal_links(sub_entry_fields("<h1>{{EntryName}}</h1>" ..
-            (entry.date ~= nil and
-                "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or
-                "") .. "{{EntryBodyHtml}}", entry), entry,
+                                                                      (entry.date ~= nil and
+                                                                          "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or
+                                                                          "") .. "{{EntryBodyHtml}}", entry), entry,
         entries))
 end
 
@@ -176,8 +176,8 @@ local function render_rss(rss_entries)
     for _, e in make_sorted_entry_iterator(rss_entries) do
         local rss_date = utils.rss_date(e.date)
         items_str = items_str ..
-            sub_entry_fields(item_template, e):gsub("{{RSSDate}}", rss_date)
-            :gsub("src=\"img", "src=\"https://mrshll.com/img"):gsub("%%", "%%%%") -- this escapes %, which is lua's escape char, otherwise the final gsub fails
+                        sub_entry_fields(item_template, e):gsub("{{RSSDate}}", rss_date)
+                :gsub("src=\"img", "src=\"https://mrshll.com/img"):gsub("%%", "%%%%") -- this escapes %, which is lua's escape char, otherwise the final gsub fails
     end
     utils.write_file(SITE_DIR .. "/feed.rss", rss_template:gsub("{{Items}}", items_str))
 end
@@ -188,8 +188,8 @@ local function process_embeds(body_html, entries)
         for _, entry in pairs(entries) do
             if entry.name == embedded_entry_name then
                 return "<style> article h2 { display: none; } </style><h2><a href='" .. entry.dest_file_name .. "'>" ..
-                    entry.name .. "</a></h2><article><h2>" .. entry.name .. "</h2>" .. markdown(entry.body_raw) ..
-                    "</article>"
+                           entry.name .. "</a></h2><article><h2>" .. entry.name .. "</h2>" .. markdown(entry.body_raw) ..
+                           "</article>"
             end
         end
     end)

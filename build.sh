@@ -22,3 +22,6 @@ cp -r links/* $SITE_DIR/links/
 cp -r static/. $SITE_DIR
 
 cd src && lua mmx.lua $CONTENT_DIR $SITE_DIR && cd ../
+
+# temporary to support neon kiosk
+cp $SITE_DIR/Log.html $SITE_DIR/marshall_s_journal.html
