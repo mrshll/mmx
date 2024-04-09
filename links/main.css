@@ -143,10 +143,14 @@ li.sublist-container::marker {
 }
 
 footer {
-  border-top: 1.5px dotted;
-  padding: 3rem 4.6rem 0;
+  padding: 0 4.6rem;
   max-width: 720px;
   position: relative;
+}
+
+.footer-row {
+  padding: 3.6rem 0 0;
+  border-top: 1.5px dotted;
 }
 
 blockquote {
