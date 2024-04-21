@@ -25,3 +25,5 @@ cd src && lua mmx.lua $CONTENT_DIR $SITE_DIR && cd ../
 
 # temporary to support neon kiosk
 cp $SITE_DIR/Log.html $SITE_DIR/marshall_s_journal.html
+sed -e 's/<h1>Log<\/h1>/<h1>Marshlog<\/h1>/' $SITE_DIR/marshall_s_journal.html > $SITE_DIR/marshall_s_journal.html.new
+mv -- $SITE_DIR/marshall_s_journal.html.new $SITE_DIR/marshall_s_journal.html

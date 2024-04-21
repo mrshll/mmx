@@ -61,7 +61,7 @@ end
 local function find_first(s, patterns, index)
     local res = {}
     for _, p in ipairs(patterns) do
-        local match = {s:find(p, index)}
+        local match = { s:find(p, index) }
         if #match > 0 and (#res == 0 or match[1] < res[1]) then
             res = match
         end
@@ -113,7 +113,7 @@ local function tokenize_html(html)
     local tokens = {}
     local pos = 1
     while true do
-        local start = find_first(html, {"<!%-%-", "<[a-z/!$]", "<%?"}, pos)
+        local start = find_first(html, { "<!%-%-", "<[a-z/!$]", "<%?" }, pos)
         if not start then
             table.insert(tokens, {
                 type = "text",
@@ -225,8 +225,8 @@ local PD = {
     blocks = {},
 
     -- Block level tags that will be protected
-    tags = {"p", "div", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "table", "dl", "ol", "ul", "script",
-            "noscript", "form", "fieldset", "iframe", "math", "ins", "del"}
+    tags = { "p", "div", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "table", "dl", "ol", "ul", "script",
+        "noscript", "form", "fieldset", "iframe", "math", "ins", "del" }
 }
 
 -- Pattern for matching a block tag that begins and ends in the leftmost
@@ -276,8 +276,8 @@ local function protect(text)
     -- Then protect block tags at the line level.
     text = protect_matches(text, map(PD.tags, line_pattern))
     -- Protect <hr> and comment tags
-    text = protect_matches(text, {"\n<hr[^>]->[ \t]*\n"})
-    text = protect_matches(text, {"\n<!%-%-.-%-%->[ \t]*\n"})
+    text = protect_matches(text, { "\n<hr[^>]->[ \t]*\n" })
+    text = protect_matches(text, { "\n<!%-%-.-%-%->[ \t]*\n" })
     return text
 end
 
@@ -336,7 +336,7 @@ local function classify(line)
         return info
     end
 
-    for _, c in ipairs({'*', '-', '_', '='}) do
+    for _, c in ipairs({ '*', '-', '_', '=' }) do
         if is_ruler_of(line, c) then
             info.type = "ruler"
             info.ruler_char = c
@@ -462,12 +462,12 @@ local function lists(array, sublist)
         end
 
         local function split_list_items(arr)
-            local acc = {arr[1]}
+            local acc = { arr[1] }
             local res = {}
             for i = 2, #arr do
                 if arr[i].type == "list_item" then
                     table.insert(res, acc)
-                    acc = {arr[i]}
+                    acc = { arr[i] }
                 else
                     table.insert(acc, arr[i])
                 end
@@ -576,7 +576,7 @@ local function lists(array, sublist)
             type = "raw",
             html = text
         }
-        array = splice(array, start, stop, {info})
+        array = splice(array, start, stop, { info })
     end
 
     -- Convert any remaining list items to normal
@@ -645,7 +645,7 @@ local function blockquotes(lines)
             type = "raw",
             html = text
         }
-        lines = splice(lines, start, stop, {info})
+        lines = splice(lines, start, stop, { info })
     end
     return lines
 end
@@ -678,9 +678,9 @@ local function codeblocks(lines)
     end
 
     local function process_codeblock(lines)
-        local raw = detab(encode_code(outdent(lines[1].text or "")))
+        local raw = detab(encode_code(lines[1].text or ""))
         for i = 2, #lines do
-            raw = raw .. "\n" .. detab(encode_code(outdent(lines[i].text or "")))
+            raw = raw .. "\n" .. detab(encode_code(lines[i].text or ""))
         end
         return "<pre><code>" .. raw .. "\n</code></pre>"
     end
@@ -696,7 +696,7 @@ local function codeblocks(lines)
             type = "raw",
             html = text
         }
-        lines = splice(lines, start, stop, {info})
+        lines = splice(lines, start, stop, { info })
     end
     return lines
 end
@@ -907,7 +907,7 @@ local function auto_links(text)
             count = 0,
             rate = 0.1
         }
-        local codes = {hex, dec, plain}
+        local codes = { hex, dec, plain }
         local function swap(t, k1, k2)
             local temp = t[k2]
             t[k2] = t[k1]
@@ -988,11 +988,11 @@ end
 
 -- Handles emphasis markers (* and _) in the text.
 local function emphasis(text)
-    for _, s in ipairs {"%*%*", "%_%_"} do
+    for _, s in ipairs { "%*%*", "%_%_" } do
         text = text:gsub(s .. "([^%s][%*%_]?)" .. s, "<strong>%1</strong>")
         text = text:gsub(s .. "([^%s][^<>]-[^%s][%*%_]?)" .. s, "<strong>%1</strong>")
     end
-    for _, s in ipairs {"%*", "%_"} do
+    for _, s in ipairs { "%*", "%_" } do
         text = text:gsub(s .. "([^%s_])" .. s, "<em>%1</em>")
         text = text:gsub(s .. "(<strong>[^%s_]</strong>)" .. s, "<em>%1</em>")
         text = text:gsub(s .. "([^%s_][^<>_]-[^%s_])" .. s, "<em>%1</em>")
@@ -1035,7 +1035,7 @@ end
 local function cleanup(text)
     -- Standardize line endings
     text = text:gsub("\r\n", "\n") -- DOS to UNIX
-    text = text:gsub("\r", "\n") -- Mac to UNIX
+    text = text:gsub("\r", "\n")   -- Mac to UNIX
 
     -- Convert all tabs to spaces
     text = detab(text)

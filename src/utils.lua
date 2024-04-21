@@ -173,11 +173,11 @@ end
 function utils.today()
     local date_table = os.date("*t")
     local year, month, day = date_table.year, date_table.month, date_table.day -- date_table.wday to date_table.day
-    return string.format("%d-%d-%d", year, month, day)
+    return string.format("%d-%02d-%02d", year, month, day)
 end
 
 function utils.rss_date(date_str)
-    local handle = io.popen("date -R -d " .. date_str)
+    local handle = io.popen("gdate -R -d " .. date_str)
     if not handle then
         error("unable to run command in rss_date")
     end

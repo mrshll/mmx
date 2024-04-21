@@ -6,6 +6,8 @@
   --highlight-color: #fff9b5;
   --accent-color: tomato;
   --bg-contrast-color: lightgrey;
+  --mono-font: monospace;
+  --sans-font: sans-serif;
 }
 
 [data-theme="dark"] {
@@ -18,12 +20,12 @@
 }
 
 body {
-  font-family: monospace;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-family: var(--sans-font);
   color: var(--text-color);
   background-color: var(--bg-color);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 a {
@@ -47,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: monospace;
+  font-family: var(--mono-font);
   font-weight: 700;
   color: var(--header-color);
   margin-top: 2rem;
@@ -76,7 +78,7 @@ header {
 }
 
 nav {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: flex;
   overflow-x: auto;
 }
@@ -87,10 +89,10 @@ nav details summary {
 }
 
 nav details summary::before {
-  content: "Show all..."
+  content: "Show all...";
 }
 nav details[open] summary::before {
-  content: "Hide..."
+  content: "Hide...";
 }
 
 nav details summary::marker {
@@ -99,7 +101,7 @@ nav details summary::marker {
 
 hr {
   border: none;
-  height: .4rem;
+  height: 0.4rem;
   width: 10rem;
   background-color: var(--text-color);
   overflow: visible;
@@ -107,7 +109,6 @@ hr {
   height: 5px;
   margin-left: 0;
 }
-
 
 p {
   margin-bottom: 1.2rem;
@@ -118,13 +119,15 @@ s {
   text-decoration-color: var(--accent-color);
 }
 
-ol, ul, dl {
+ol,
+ul,
+dl {
   margin: 1rem 0 1rem 2rem;
   list-style-position: outside;
 }
 
 li {
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 nav ul {
@@ -144,7 +147,7 @@ li.sublist-container::marker {
 
 footer {
   padding: 0 4.6rem;
-  max-width: 720px;
+  max-width: 624px;
   position: relative;
 }
 
@@ -169,33 +172,34 @@ figcaption {
   display: table-caption;
   caption-side: bottom;
   background-color: var(--bg-contrast-color);
-  padding: .2rem;
+  padding: 0.2rem;
   text-align: center;
+  text-wrap: balance;
 }
 
-code, blockquote cite {
+code,
+blockquote cite {
   background-color: var(--bg-contrast-color);
   border: none;
   overflow: auto;
 }
 
-footer .footer-row > *{
+footer .footer-row > * {
   display: inline-block;
   margin-right: 1rem;
   margin-bottom: 3rem;
   vertical-align: middle;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
-[data-theme='dark'] footer img {
+[data-theme="dark"] footer img {
   filter: invert(100%);
 }
 
-
-
-dl dd, details {
-  margin-top: .2rem;
-  margin-bottom: .4rem;
+dl dd,
+details {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .incoming {
@@ -203,9 +207,9 @@ dl dd, details {
 }
 
 .content {
-  max-width: 720px;
+  max-width: 624px;
   padding: 2rem 4.6rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: relative;
 }
 
@@ -216,28 +220,28 @@ main {
 main details {
   display: inline-block;
   border: 1px solid var(--bg-contrast-color);
-  border-radius: .4rem;
-  padding: .4rem 1rem 0;
-  margin-right: .4rem;
+  border-radius: 0.4rem;
+  padding: 0.4rem 1rem 0;
+  margin-right: 0.4rem;
 }
 
 main summary {
-  margin: -.4rem -1rem 0;
-  padding: .4rem 1rem;
+  margin: -0.4rem -1rem 0;
+  padding: 0.4rem 1rem;
 }
 
 main details[open] {
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   display: block;
 }
 
 main details[open] summary {
   border-bottom: 1px solid var(--bg-contrast-color);
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-
-.content img, .content video {
+.content img,
+.content video {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -256,7 +260,6 @@ main details[open] summary {
 #low-tech-webring:hover table {
   visibility: visible;
 }
-
 
 #low-tech-webring table {
   position: fixed;
@@ -281,7 +284,8 @@ main details[open] summary {
   right: 4rem;
 }
 
-#lightswitch input, #lightswitch label {
+#lightswitch input,
+#lightswitch label {
   position: absolute;
 }
 
@@ -291,11 +295,26 @@ main details[open] summary {
 
 #lightswitch input + label:after {
   font-size: 2rem;
-  content: '💡'
+  content: "💡";
 }
 
 #lightswitch input:checked + label:after {
-  content: '🕯️'
+  content: "🕯️";
+}
+
+article {
+  border: 1px solid;
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+article h2 {
+  display: inline;
+}
+
+article h2 + a {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1000px) {
