@@ -155,7 +155,8 @@ local function process_internal_links(string, entry, entries)
 end
 
 local function render_body(entry, entries)
-    return process_images(process_internal_links(sub_entry_fields("<h1>{{EntryName}}</h1>" ..
+    local title_html = entry.name == SITE_NAME and "" or "<h1>{{EntryName}}</h1>"
+    return process_images(process_internal_links(sub_entry_fields(title_html ..
             (entry.date ~= nil and
                 "<div style='color:#ccc'>last updated {{EntryDate}}</div>" or
                 "") .. "{{EntryBodyHtml}}", entry), entry,
