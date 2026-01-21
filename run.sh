@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 CONTENT_DIR=$1
 SITE_DIR=$2
 
@@ -10,11 +10,11 @@ fi
 bash build.sh $CONTENT_DIR $SITE_DIR
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-  while fswatch -1 $CONTENT_DIR; do
+  while fswatch -1 --exclude '\.git' --exclude '\.obsidian' $CONTENT_DIR; do
     bash build.sh $CONTENT_DIR $SITE_DIR
   done
 else
-  while inotifywait -qqre modify $CONTENT_DIR; do
+  while inotifywait -qqre modify --exclude '\.git' --exclude '\.obsidian' $CONTENT_DIR; do
     bash build.sh $CONTENT_DIR $SITE_DIR
   done
 fi

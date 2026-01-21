@@ -45,64 +45,104 @@ local function make_sorted_entry_iterator(entries)
     end)
 end
 
-local function render_nav_section(entry, siblings)
-    local acc = "<ul>"
-    local i = 0
-    for _, e in make_sorted_entry_iterator(siblings) do
-        if i == 6 then
-            acc = acc .. "<details><summary></summary>"
+local function render_nav(current_entry, entries)
+    -- Build set of ancestor names for current entry
+    local ancestors = {}
+    local temp = current_entry
+    while temp do
+        ancestors[temp.name] = true
+        if temp.name == SITE_NAME then
+            break  -- Stop at root
         end
-
-        i = i + 1
-        local is_selected = entry ~= nil and e.name == entry.name
-        acc = acc .. "<li>"
-
-        if is_selected then
-            acc = acc .. "<mark>"
-        end
-        acc = acc .. "<a href=\"" .. e.dest_file_name .. "\">" .. e.name .. "</a>"
-        if is_selected then
-            acc = acc .. "</mark>"
-        end
-        acc = acc .. "</li>"
-    end
-    if i >= 6 then
-        acc = acc .. "</details>"
-    end
-    return acc .. "</ul>"
-end
-
-local function render_nav(entry, entries)
-    local acc = ""
-
-    local children = {}
-    for _, e in make_sorted_entry_iterator(entries) do
-        if e.parent_name == entry.name and e.name ~= SITE_NAME then
-            table.insert(children, e)
-        end
-    end
-    acc = acc .. render_nav_section(nil, children)
-
-    -- go until we are at root
-    while entry.name ~= SITE_NAME do
-        local siblings = {}
         local parent = nil
-        for _, e in make_sorted_entry_iterator(entries) do
-            if entry.parent_name == e.name then
+        for _, e in pairs(entries) do
+            if e.name == temp.parent_name then
                 parent = e
-            elseif e.parent_name == entry.parent_name then
-                table.insert(siblings, e)
+                break
             end
         end
-        acc = render_nav_section(entry, siblings) .. acc
-        if parent == nil then
-            error(entry.name .. "(" .. entry.src_path .. ") has no parent")
-        end
-
-        entry = parent
+        temp = parent
     end
 
-    return "<nav>" .. render_nav_section(entry, { entry }) .. acc .. "</nav>"
+    -- Get sorted children of a parent
+    local function get_children(parent_name)
+        local children = {}
+        for _, e in pairs(entries) do
+            if e.parent_name == parent_name and e.name ~= SITE_NAME then
+                table.insert(children, e)
+            end
+        end
+        -- Sort by date desc, then name asc
+        table.sort(children, function(a, b)
+            if a.date or b.date then
+                return (a.date or MIN_DATE) > (b.date or MIN_DATE)
+            else
+                return a.name < b.name
+            end
+        end)
+        return children
+    end
+
+    local items = {}
+
+    -- Recursive function to collect tree items
+    local function collect_items(parent_name, prefix)
+        local children = get_children(parent_name)
+
+        for i, child in ipairs(children) do
+            local is_last = (i == #children)
+            local is_current = (child.name == current_entry.name)
+            local is_ancestor = ancestors[child.name]
+
+            -- Choose tree characters
+            local branch = is_last and "└── " or "├── "
+            local child_prefix = prefix .. (is_last and "    " or "│   ")
+
+            table.insert(items, {
+                entry = child,
+                prefix = prefix .. branch,
+                is_current = is_current
+            })
+
+            -- Recursively collect children if this is an ancestor or current
+            if is_ancestor or is_current then
+                collect_items(child.name, child_prefix)
+            end
+        end
+    end
+
+    -- Start from root
+    collect_items(SITE_NAME, "")
+
+    local root_entry = entries[SITE_NAME]
+    local html = "<ul>"
+    local is_root_current = (current_entry.name == SITE_NAME)
+    html = html .. "<li>"
+    if is_root_current then
+        html = html .. "<mark>"
+    end
+    html = html .. "<a href=\"" .. root_entry.dest_file_name .. "\">" .. SITE_NAME .. "</a>"
+    if is_root_current then
+        html = html .. "</mark>"
+    end
+    html = html .. "</li>"
+
+    for _, item in ipairs(items) do
+        html = html .. "<li>"
+        html = html .. "<span class=\"tree-prefix\">" .. item.prefix .. "</span>"
+        if item.is_current then
+            html = html .. "<mark>"
+        end
+        html = html .. "<a href=\"" .. item.entry.dest_file_name .. "\">" .. item.entry.name .. "</a>"
+        if item.is_current then
+            html = html .. "</mark>"
+        end
+        html = html .. "</li>"
+    end
+
+    html = html .. "</ul>"
+
+    return "<nav>" .. html .. "</nav>"
 end
 
 local function process_images(str)
@@ -165,7 +205,7 @@ end
 
 local function render_entry(entry, entries)
     local html = string.format(
-        "<!doctype html><html>%s<body><div class=\"content\"><header>%s</header><main id=\"entry-body\">%s</main><p style=\"color:#ccc\"><em>Compiled %s</em></p></div>%s</body></html>",
+        "<!doctype html><html>%s<body><div class=\"layout\">%s<div class=\"content\"><main id=\"entry-body\">%s</main><p style=\"color:#ccc\"><em>Compiled %s</em></p></div></div>%s</body></html>",
         render_head(entry), render_nav(entry, entries), render_body(entry, entries), utils.today(), render_footer())
     utils.write_file(SITE_DIR .. "/" .. entry.dest_file_name, html)
 end
