@@ -65,22 +65,28 @@ mark {
   background-color: var(--highlight-color);
 }
 
-header {
-  position: relative;
-  padding-bottom: 2rem;
-  border-bottom: 1.5px dotted;
-}
-
 #fm {
   position: absolute;
   top: 0;
   right: 0;
 }
 
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
 nav {
   font-size: 1.6rem;
   display: flex;
-  overflow-x: auto;
+  flex-direction: column;
+  width: 200px;
+  padding: 2rem;
+  border-right: 1.5px dotted;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 nav details summary {
@@ -132,13 +138,21 @@ li {
 
 nav ul {
   padding: 0;
-  margin: 0 2rem 0 0;
+  margin: 0;
 }
 
 nav ul li {
   list-style-type: none;
+  white-space: nowrap;
+  margin-bottom: 0.2rem;
+}
+
+.tree-prefix {
+  font-family: var(--mono-font);
+  color: var(--text-color);
+  opacity: 0.5;
+  user-select: none;
   white-space: pre;
-  margin-bottom: 0.4rem;
 }
 
 li.sublist-container::marker {
@@ -149,6 +163,7 @@ footer {
   padding: 0 4.6rem;
   max-width: 624px;
   position: relative;
+  margin-left: 200px;
 }
 
 .footer-row {
@@ -322,11 +337,38 @@ article h2 + a {
     font-size: 12px;
   }
 
+  .layout {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: row;
+    min-width: unset;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1.5px dotted;
+    padding: 2rem 2.2rem;
+    overflow-x: auto;
+  }
+
+  .tree-prefix {
+    display: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
   .content {
     padding: 2rem 2.2rem;
   }
 
   footer {
     padding: 2rem 2.2rem 0;
+    margin-left: 0;
   }
 }
