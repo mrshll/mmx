@@ -339,7 +339,6 @@ article h2 + a {
 
   .layout {
     flex-direction: column;
-    transform: translateZ(0);
   }
 
   nav {
