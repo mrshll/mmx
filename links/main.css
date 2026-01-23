@@ -351,24 +351,28 @@ article h2 + a {
     border-bottom: 1.5px dotted;
     padding: 2rem 2.2rem;
     overflow-x: auto;
-  }
-
-  .tree-prefix {
-    display: none;
-  }
-
-  nav ul li {
-    display: inline-block;
-    margin-right: 1.5rem;
-    margin-bottom: 0.4rem;
+    box-sizing: border-box;
   }
 
   .content {
     padding: 2rem 2.2rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  pre {
+    overflow-x: auto;
+  }
+
+  code {
+    white-space: pre-wrap;
   }
 
   footer {
     padding: 2rem 2.2rem 0;
     margin-left: 0;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 }
