@@ -151,6 +151,15 @@ local function process_images(str)
         local src_pattern = "src=\"([^\"]+)\""
         local src = img_tag:match(src_pattern)
 
+        -- Handle video files
+        local video_exts = {"webm", "mp4", "mov", "ogv"}
+        for _, ext in ipairs(video_exts) do
+            if utils.ends_with(src, ext) then
+                local video_src =  MEDIA_DIR_NAME .. "/" .. src
+                return "<figure><video controls><source src=\"" .. video_src .. "\"></video><figcaption>" .. alt .. "</figcaption></figure>"
+            end
+        end
+
         local processed_img_tag = img_tag:gsub(src_pattern, function(s)
             -- we don't compress/process other image formats
             if utils.starts_with(s, "http") then
@@ -263,7 +272,7 @@ for _, file_path in pairs(file_paths) do
             dest_file_name = "index.html"
         else
             -- subtree root nodes
-            dest_file_name = name .. ".html"
+            dest_file_name = utils.slugify(name) .. ".html"
             parent_name = parts[#parts - 2] or SITE_NAME
         end
     end
@@ -273,8 +282,12 @@ for _, file_path in pairs(file_paths) do
     local date
     local date_start, date_end = body:find("%d%d%d%d%-%d%d%-%d%d")
     if date_start == 1 then
+        -- Date found at start of file content
         date = body:sub(date_start, date_end)
         body = body:sub(date_end + 1)
+    elseif name:match("^%d%d%d%d%-%d%d%-%d%d$") then
+        -- Filename itself is a date (e.g., 2023-01-05.md)
+        date = name
     end
 
     local html = markdown(body)
