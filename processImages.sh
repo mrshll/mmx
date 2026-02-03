@@ -27,6 +27,9 @@ MAXWIDTH=2400
 #dithering
 COLORS=16
 
+# Cache all referenced media filenames once (instead of grepping per-file)
+REFERENCED_FILES=$(grep -r -h -o '[^/"]*\.\(jpg\|jpeg\|png\|webm\|mp4\|gif\|svg\)' "$DST/../" 2>/dev/null | sort -u)
+
 function resize() {
 
   # Security check to prevent an endless loop when
@@ -42,7 +45,7 @@ function resize() {
     fileBase="${name%%.*}" # filename
     fileExt="${name#*.}"   # ext
 
-    if ! grep -q -r "$name" $DST/../; then
+    if ! echo "$REFERENCED_FILES" | grep -q -F "$name"; then
       echo "${file} not used, skipping"
       echo "${file}" >>unused_media.txt
       continue
