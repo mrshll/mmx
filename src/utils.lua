@@ -42,9 +42,9 @@ function utils.list_folders(directory)
 
     local folder_names = {}
     for folder_name in pfile:lines() do
-        folder_name = folder_name:sub(#directory + 1)
-        if not utils.starts_with(folder_name, '.') and #folder_name > 0 then
-            table.insert(folder_names, folder_name)
+        local trimmed = folder_name:sub(#directory + 1)
+        if not utils.starts_with(trimmed, '.') and #trimmed > 0 then
+            table.insert(folder_names, trimmed)
         end
     end
 
@@ -62,8 +62,8 @@ function utils.list_files(directory, extension)
 
     local file_names = {}
     for file_name in pfile:lines() do
-        file_name = file_name:sub(#directory + 1)
-        table.insert(file_names, file_name)
+        local trimmed = file_name:sub(#directory + 1)
+        table.insert(file_names, trimmed)
     end
 
     pfile:close()
@@ -158,10 +158,8 @@ function utils.dump(o)
     if type(o) == 'table' then
         local s = '{ '
         for k, v in pairs(o) do
-            if type(k) ~= 'number' then
-                k = '"' .. k .. '"'
-            end
-            s = s .. '[' .. k .. '] = ' .. utils.dump(v) .. ','
+            local key = type(k) ~= 'number' and ('"' .. k .. '"') or k
+            s = s .. '[' .. key .. '] = ' .. utils.dump(v) .. ','
         end
         return s .. '} '
     else

@@ -773,8 +773,8 @@ end
 local function unescape_special_chars(t)
     local tin = t
     for k, v in pairs(escape_table) do
-        k = k:gsub("%%", "%%%%")
-        t = t:gsub(v, k)
+        local escaped_k = k:gsub("%%", "%%%%")
+        t = t:gsub(v, escaped_k)
     end
     if t ~= tin then
         t = unescape_special_chars(t)
